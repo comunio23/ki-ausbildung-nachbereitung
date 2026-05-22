@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deine Ausbildung — Anlagenmechaniker SHK</title>
+<style>
+:root {
+  --primary: #1a3a5c;
+  --primary-light: #2563a8;
+  --fire: #e85d04;
+  --fire-light: #f48c06;
+  --water: #2d9cdb;
+  --water-light: #56cfe1;
+  --green: #2d6a4f;
+  --green-light: #52b788;
+  --bg: #f0f4f8;
+  --card: #ffffff;
+  --text: #1a202c;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --radius: 14px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.13);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 16px;
+}
+
+/* ── NAV ── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(26,58,92,0.97);
+  backdrop-filter: blur(10px);
+  padding: 0 24px;
+  display: flex; align-items: center; gap: 4px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+.nav-brand {
+  color: #fff; font-weight: 700; font-size: 1rem;
+  padding: 16px 0; margin-right: auto; letter-spacing: -0.3px;
+}
+.nav-brand span { color: var(--fire-light); }
+nav a {
+  color: rgba(255,255,255,0.8); text-decoration: none;
+  padding: 20px 12px; font-size: 0.82rem; font-weight: 500;
+  transition: color 0.2s; white-space: nowrap;
+}
+nav a:hover { color: #fff; }
+
+/* ── HERO ── */
+#hero {
+  background: linear-gradient(135deg, #1a3a5c 0%, #0f2440 50%, #1a1a2e 100%);
+  min-height: 90vh;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 80px 24px;
+  position: relative; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0; opacity: 0.06;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 48px, rgba(255,255,255,0.4) 48px, rgba(255,255,255,0.4) 50px),
+    repeating-linear-gradient(90deg, transparent, transparent 48px, rgba(255,255,255,0.4) 48px, rgba(255,255,255,0.4) 50px);
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(232,93,4,0.15);
+  border: 1px solid rgba(232,93,4,0.4);
+  color: var(--fire-light);
+  padding: 6px 18px; border-radius: 100px;
+  font-size: 0.8rem; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; margin-bottom: 24px;
+}
+#hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800; color: #fff;
+  line-height: 1.15; margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+#hero h1 span { color: var(--fire-light); }
+#hero p {
+  color: rgba(255,255,255,0.75);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  max-width: 600px; margin: 0 auto 36px;
+}
+.hero-stats {
+  display: flex; gap: 32px; justify-content: center;
+  flex-wrap: wrap; margin-top: 40px;
+}
+.hero-stat {
+  text-align: center;
+}
+.hero-stat .num {
+  display: block; font-size: 2.4rem; font-weight: 800;
+  color: var(--fire-light); line-height: 1;
+}
+.hero-stat .label {
+  font-size: 0.8rem; color: rgba(255,255,255,0.6);
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.hero-icons {
+  display: flex; gap: 20px; justify-content: center;
+  margin: 32px 0 0;
+}
+.hero-icon {
+  width: 56px; height: 56px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem;
+}
+
+/* ── SECTIONS ── */
+section { padding: 80px 24px; }
+.container { max-width: 1100px; margin: 0 auto; }
+
+.section-label {
+  text-align: center;
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 4px 14px; border-radius: 100px;
+  font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 1px; text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.section-center { text-align: center; }
+.section-center .section-label { margin-left: auto; margin-right: auto; display: block; }
+
+h2 {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 800; letter-spacing: -0.5px;
+  color: var(--primary); margin-bottom: 12px;
+}
+.subtitle {
+  color: var(--text-muted); font-size: 1.05rem;
+  max-width: 620px; margin: 0 auto 48px;
+}
+
+/* ── BERUF SECTION ── */
+#beruf { background: #fff; }
+.beruf-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 48px; align-items: center; margin-top: 48px;
+}
+@media(max-width:768px){ .beruf-grid { grid-template-columns: 1fr; } }
+.beruf-visual {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  border-radius: var(--radius); padding: 40px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.beruf-pillar {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px; padding: 16px 20px;
+  display: flex; align-items: center; gap: 16px;
+  color: #fff;
+}
+.beruf-pillar .icon { font-size: 2rem; flex-shrink: 0; }
+.beruf-pillar strong { display: block; font-size: 0.95rem; margin-bottom: 2px; }
+.beruf-pillar span { font-size: 0.8rem; opacity: 0.75; }
+.beruf-text h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; color: var(--primary); }
+.beruf-text p { color: var(--text-muted); margin-bottom: 16px; }
+.tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.tag {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 5px 13px; border-radius: 100px;
+  font-size: 0.8rem; font-weight: 500; color: var(--text-muted);
+}
+
+/* ── AUSBILDUNG TIMELINE ── */
+#ausbildung { background: var(--bg); }
+.timeline {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px; margin-top: 48px;
+}
+.timeline-item {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.timeline-item:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.timeline-header {
+  padding: 20px 24px 16px;
+  display: flex; align-items: center; gap: 14px;
+}
+.timeline-num {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 1.1rem; color: #fff;
+  flex-shrink: 0;
+}
+.tl-1 .timeline-num { background: var(--fire); }
+.tl-2 .timeline-num { background: var(--primary-light); }
+.tl-3 .timeline-num { background: var(--water); }
+.tl-4 .timeline-num { background: var(--green); }
+.timeline-header strong { font-size: 0.95rem; display: block; }
+.timeline-header span { font-size: 0.78rem; color: var(--text-muted); }
+.timeline-body { padding: 0 24px 20px; }
+.timeline-body p { font-size: 0.88rem; color: var(--text-muted); }
+.timeline-progress {
+  margin: 12px 24px;
+  height: 5px; background: var(--border); border-radius: 99px; overflow: hidden;
+}
+.timeline-bar {
+  height: 100%; border-radius: 99px;
+  animation: grow 1.5s ease forwards;
+}
+.tl-1 .timeline-bar { background: var(--fire); width: 25%; }
+.tl-2 .timeline-bar { background: var(--primary-light); width: 50%; }
+.tl-3 .timeline-bar { background: var(--water); width: 75%; }
+.tl-4 .timeline-bar { background: var(--green); width: 100%; }
+@keyframes grow { from { transform: scaleX(0); transform-origin: left; } to { transform: scaleX(1); } }
+
+/* ── TOPICS GRID ── */
+#lehrjahr1 { background: #fff; }
+.topics-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px; margin-top: 48px;
+}
+.topic-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.topic-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+}
+.topic-card.cat-measure::before { background: linear-gradient(90deg, #6c63ff, #48cae4); }
+.topic-card.cat-join::before { background: linear-gradient(90deg, var(--fire), var(--fire-light)); }
+.topic-card.cat-cut::before { background: linear-gradient(90deg, #4a4e69, #9a8c98); }
+.topic-card.cat-machine::before { background: linear-gradient(90deg, #343a40, #6c757d); }
+.topic-card.cat-maintain::before { background: linear-gradient(90deg, var(--primary), var(--primary-light)); }
+.topic-card.cat-pipe::before { background: linear-gradient(90deg, var(--water), var(--water-light)); }
+.topic-card.cat-electric::before { background: linear-gradient(90deg, #ffd60a, #f48c06); }
+.topic-card.cat-insulate::before { background: linear-gradient(90deg, var(--green), var(--green-light)); }
+.topic-card.cat-safety::before { background: linear-gradient(90deg, #d62828, #f77f00); }
+
+.topic-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.topic-icon {
+  width: 52px; height: 52px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem; margin-bottom: 16px;
+}
+.cat-measure .topic-icon { background: #ede9fe; }
+.cat-join .topic-icon { background: #fff3e0; }
+.cat-cut .topic-icon { background: #f3f4f6; }
+.cat-machine .topic-icon { background: #f1f5f9; }
+.cat-maintain .topic-icon { background: #e0f2fe; }
+.cat-pipe .topic-icon { background: #e0f7fa; }
+.cat-electric .topic-icon { background: #fffde7; }
+.cat-insulate .topic-icon { background: #e8f5e9; }
+.cat-safety .topic-icon { background: #fce4ec; }
+
+.topic-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; color: var(--primary); }
+.topic-card p { font-size: 0.87rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.55; }
+.topic-weeks {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 4px 12px; border-radius: 100px;
+  font-size: 0.78rem; font-weight: 600; color: var(--text-muted);
+}
+.topic-example {
+  margin-top: 14px;
+  background: var(--bg);
+  border-left: 3px solid var(--border);
+  padding: 10px 14px;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.83rem; color: var(--text-muted);
+}
+.topic-example strong { color: var(--text); display: block; margin-bottom: 2px; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* ── PRAXIS SECTION ── */
+#praxis { background: linear-gradient(135deg, #1a3a5c 0%, #0f2440 100%); }
+#praxis h2 { color: #fff; }
+#praxis .subtitle { color: rgba(255,255,255,0.65); }
+.praxis-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px; margin-top: 48px;
+}
+.praxis-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: background 0.2s;
+}
+.praxis-card:hover { background: rgba(255,255,255,0.12); }
+.praxis-card .num {
+  font-size: 2.5rem; font-weight: 800; color: var(--fire-light);
+  line-height: 1; margin-bottom: 10px;
+}
+.praxis-card h3 { color: #fff; font-size: 1rem; margin-bottom: 8px; }
+.praxis-card p { color: rgba(255,255,255,0.65); font-size: 0.87rem; }
+
+/* ── PRÜFUNG SECTION ── */
+#pruefung { background: var(--bg); }
+.pruefung-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 48px; }
+@media(max-width:768px){ .pruefung-wrapper { grid-template-columns: 1fr; } }
+.pruef-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.pruef-header {
+  padding: 22px 28px;
+  display: flex; align-items: center; gap: 14px;
+}
+.pruef-header.teil1 { background: linear-gradient(135deg, #fff3e0, #ffe0b2); }
+.pruef-header.teil2 { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
+.pruef-header h3 { font-size: 1.1rem; font-weight: 700; }
+.pruef-header span { font-size: 0.82rem; color: var(--text-muted); }
+.pruef-body { padding: 20px 28px; }
+.pruef-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid var(--border);
+}
+.pruef-item:last-child { border-bottom: none; }
+.pruef-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--primary-light); margin-top: 7px; flex-shrink: 0;
+}
+.pruef-item div strong { font-size: 0.9rem; display: block; }
+.pruef-item div span { font-size: 0.82rem; color: var(--text-muted); }
+
+.gewichtung-bar-wrap { margin-top: 32px; }
+.gew-item { margin-bottom: 12px; }
+.gew-label { display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; margin-bottom: 5px; }
+.gew-bar { height: 10px; background: var(--border); border-radius: 99px; overflow: hidden; }
+.gew-fill { height: 100%; border-radius: 99px; }
+
+/* ── QUIZ ── */
+#quiz { background: #fff; }
+.quiz-container {
+  max-width: 740px; margin: 48px auto 0;
+  background: var(--card);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+.quiz-header {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  padding: 28px 36px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.quiz-header h3 { color: #fff; font-size: 1.1rem; }
+.quiz-progress-wrap { display: flex; align-items: center; gap: 12px; }
+.quiz-progress-bar {
+  width: 140px; height: 6px;
+  background: rgba(255,255,255,0.25); border-radius: 99px; overflow: hidden;
+}
+.quiz-progress-fill {
+  height: 100%; background: var(--fire-light); border-radius: 99px;
+  transition: width 0.4s ease;
+}
+.quiz-counter { color: rgba(255,255,255,0.8); font-size: 0.85rem; font-weight: 600; }
+.quiz-body { padding: 36px; }
+.question-text {
+  font-size: 1.1rem; font-weight: 700; color: var(--primary);
+  margin-bottom: 24px; line-height: 1.45;
+}
+.answers { display: flex; flex-direction: column; gap: 12px; }
+.answer-btn {
+  background: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 20px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all 0.15s;
+  display: flex; align-items: center; gap: 14px;
+}
+.answer-btn:hover:not(:disabled) {
+  border-color: var(--primary-light);
+  background: #e8f0fe;
+}
+.answer-btn .ans-letter {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.85rem;
+  flex-shrink: 0; transition: all 0.15s;
+}
+.answer-btn.correct {
+  border-color: var(--green); background: #e8f5e9;
+}
+.answer-btn.correct .ans-letter { background: var(--green); color: #fff; }
+.answer-btn.wrong {
+  border-color: #d62828; background: #fce4ec;
+}
+.answer-btn.wrong .ans-letter { background: #d62828; color: #fff; }
+.answer-btn:disabled { cursor: default; }
+.quiz-feedback {
+  margin-top: 20px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  display: none;
+}
+.quiz-feedback.show { display: block; }
+.quiz-feedback.ok { background: #e8f5e9; color: #1b5e20; border-left: 4px solid var(--green); }
+.quiz-feedback.nope { background: #fce4ec; color: #b71c1c; border-left: 4px solid #d62828; }
+.quiz-next {
+  margin-top: 20px;
+  background: var(--primary);
+  color: #fff;
+  border: none; border-radius: 10px;
+  padding: 13px 28px;
+  font-size: 0.95rem; font-weight: 600; font-family: inherit;
+  cursor: pointer; display: none;
+  transition: background 0.15s;
+}
+.quiz-next:hover { background: var(--primary-light); }
+.quiz-next.show { display: inline-flex; align-items: center; gap: 8px; }
+.quiz-result {
+  text-align: center; padding: 48px 36px;
+  display: none;
+}
+.quiz-result.show { display: block; }
+.score-circle {
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  margin: 0 auto 24px;
+  box-shadow: 0 8px 24px rgba(26,58,92,0.3);
+}
+.score-circle .score-num { font-size: 2.2rem; font-weight: 800; color: #fff; line-height: 1; }
+.score-circle .score-total { font-size: 0.85rem; color: rgba(255,255,255,0.7); }
+.quiz-result h3 { font-size: 1.5rem; font-weight: 800; color: var(--primary); margin-bottom: 10px; }
+.quiz-result p { color: var(--text-muted); margin-bottom: 24px; }
+.quiz-restart {
+  background: var(--fire);
+  color: #fff; border: none; border-radius: 10px;
+  padding: 13px 28px;
+  font-size: 0.95rem; font-weight: 600; font-family: inherit;
+  cursor: pointer; transition: background 0.15s;
+}
+.quiz-restart:hover { background: var(--fire-light); }
+
+/* ── INTEGRATIVE BOX ── */
+.integrative-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px; margin-top: 32px;
+}
+.int-card {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  border-radius: var(--radius);
+  padding: 20px;
+  color: #fff;
+}
+.int-card .int-icon { font-size: 1.8rem; margin-bottom: 10px; }
+.int-card h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; }
+.int-card p { font-size: 0.8rem; opacity: 0.75; }
+
+/* ── FOOTER ── */
+footer {
+  background: #0f2440;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 40px 24px;
+  font-size: 0.85rem;
+}
+footer strong { color: var(--fire-light); }
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+  nav a { display: none; }
+  nav a:first-of-type { display: block; }
+  .hero-icons { gap: 10px; }
+  .hero-icon { width: 44px; height: 44px; font-size: 1.3rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-brand">SHK<span>—Ausbildung</span></div>
+  <a href="#beruf">Beruf</a>
+  <a href="#ausbildung">Aufbau</a>
+  <a href="#lehrjahr1">1. Lehrjahr</a>
+  <a href="#praxis">Praxis</a>
+  <a href="#pruefung">Prüfung</a>
+  <a href="#quiz">Quiz</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div style="position:relative;z-index:1;max-width:800px;">
+    <div class="hero-badge">Ausbildungsbegleiter · Stand 2016</div>
+    <h1>Willkommen als<br><span>Anlagenmechaniker SHK</span></h1>
+    <p>Hier findest du alles, was du über deine Ausbildung wissen musst — verständlich erklärt, praxisnah und direkt auf dein erstes Lehrjahr zugeschnitten.</p>
+    <div class="hero-icons">
+      <div class="hero-icon" title="Sanitär">🚿</div>
+      <div class="hero-icon" title="Heizung">🔥</div>
+      <div class="hero-icon" title="Klima">❄️</div>
+      <div class="hero-icon" title="Werkzeug">🔧</div>
+      <div class="hero-icon" title="Elektrik">⚡</div>
+      <div class="hero-icon" title="Rohre">🔩</div>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="num">3,5</span><span class="label">Jahre Ausbildung</span></div>
+      <div class="hero-stat"><span class="num">17</span><span class="label">Lernbereiche</span></div>
+      <div class="hero-stat"><span class="num">2</span><span class="label">Prüfungsteile</span></div>
+      <div class="hero-stat"><span class="num">4</span><span class="label">Einsatzgebiete</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- BERUF -->
+<section id="beruf">
+  <div class="container">
+    <div style="margin-bottom:8px;" class="section-label">Der Beruf</div>
+    <h2>Was macht ein Anlagenmechaniker SHK?</h2>
+    <div class="beruf-grid">
+      <div class="beruf-visual">
+        <div class="beruf-pillar">
+          <div class="icon">🚿</div>
+          <div>
+            <strong>Sanitärtechnik</strong>
+            <span>Wasserversorgung, Badinstallation, Abwasser</span>
+          </div>
+        </div>
+        <div class="beruf-pillar">
+          <div class="icon">🔥</div>
+          <div>
+            <strong>Heizungstechnik</strong>
+            <span>Heizkessel, Fußbodenheizung, Wärmepumpen</span>
+          </div>
+        </div>
+        <div class="beruf-pillar">
+          <div class="icon">❄️</div>
+          <div>
+            <strong>Lüftung & Klima</strong>
+            <span>Lüftungsanlagen, Klimageräte, Wärmerückgewinnung</span>
+          </div>
+        </div>
+        <div class="beruf-pillar">
+          <div class="icon">🌿</div>
+          <div>
+            <strong>Erneuerbare Energien</strong>
+            <span>Solarthermie, Wärmepumpen, Pelletheizungen</span>
+          </div>
+        </div>
+      </div>
+      <div class="beruf-text">
+        <h3>Mehr als nur Rohre verlegen</h3>
+        <p>Als Anlagenmechaniker SHK planst, installierst und wartest du die technischen Systeme, die unsere Gebäude bewohnbar machen. Du sorgst dafür, dass im Bad warmes Wasser fließt, im Winter die Heizung läuft und die Luft frisch bleibt.</p>
+        <p>Der Beruf verbindet <strong>Handwerk</strong>, <strong>Technik</strong> und immer mehr auch <strong>Elektronik</strong>. Moderne Heizungsanlagen werden digital gesteuert — du lernst, diese Systeme zu verstehen und zu programmieren.</p>
+        <p>Du arbeitest selbstständig auf Baustellen, in Privathaushalten und in Betrieben — jeden Tag andere Aufgaben, jeden Tag echte Ergebnisse, die man sieht.</p>
+        <div class="tag-list">
+          <span class="tag">Rohrinstallation</span>
+          <span class="tag">Löten &amp; Schweißen</span>
+          <span class="tag">Elektrik</span>
+          <span class="tag">Messen &amp; Prüfen</span>
+          <span class="tag">Kundenkontakt</span>
+          <span class="tag">Energieeffizienz</span>
+          <span class="tag">Inbetriebnahme</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUSBILDUNGSSTRUKTUR -->
+<section id="ausbildung">
+  <div class="container">
+    <div class="section-center">
+      <div class="section-label">Ausbildungsaufbau</div>
+      <h2>3,5 Jahre — dein Weg zum Gesellen</h2>
+      <p class="subtitle">Die Ausbildung dauert 3 Jahre und 6 Monate. Sie ist in Phasen aufgebaut — von den Grundlagen bis zur vollen Praxiskompetenz.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item tl-1">
+        <div class="timeline-header">
+          <div class="timeline-num">1</div>
+          <div><strong>1. Lehrjahr</strong><span>Monat 1–12 · Grundlagen</span></div>
+        </div>
+        <div class="timeline-progress"><div class="timeline-bar"></div></div>
+        <div class="timeline-body"><p>Du lernst das Handwerk von Grund auf: Messen, Sägen, Biegen, Löten, Schrauben. Du bekommst ein Gefühl für Werkzeuge, Materialien und Arbeitssicherheit.</p></div>
+      </div>
+      <div class="timeline-item tl-2">
+        <div class="timeline-header">
+          <div class="timeline-num">2</div>
+          <div><strong>1–2. Lehrjahr</strong><span>Monat 12–18 · Prüfungsvorbereitung</span></div>
+        </div>
+        <div class="timeline-progress"><div class="timeline-bar"></div></div>
+        <div class="timeline-body"><p>Im zweiten Halbjahr des ersten Lehrjahres werden die Inhalte für die <strong>Zwischenprüfung (Teil 1)</strong> vertieft. Du lernst Rohrleitungen zu installieren und Anlagen in Betrieb zu nehmen.</p></div>
+      </div>
+      <div class="timeline-item tl-3">
+        <div class="timeline-header">
+          <div class="timeline-num">3</div>
+          <div><strong>2–3. Lehrjahr</strong><span>Monat 19–36 · Spezialisierung</span></div>
+        </div>
+        <div class="timeline-progress"><div class="timeline-bar"></div></div>
+        <div class="timeline-body"><p>Jetzt wirst du tiefer in dein Einsatzgebiet (Sanitär, Heizung, Klima oder erneuerbare Energien) eingeführt. Fehleranalyse, Regelungstechnik und Instandhaltung stehen im Fokus.</p></div>
+      </div>
+      <div class="timeline-item tl-4">
+        <div class="timeline-header">
+          <div class="timeline-num">4</div>
+          <div><strong>Abschluss</strong><span>Monat 37–42 · Gesellenprüfung</span></div>
+        </div>
+        <div class="timeline-progress"><div class="timeline-bar"></div></div>
+        <div class="timeline-body"><p>Der krönende Abschluss: Du führst einen vollständigen Kundenauftrag durch, planst Arbeitsabläufe und beweist, dass du selbstständig arbeiten kannst.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 1. LEHRJAHR THEMEN -->
+<section id="lehrjahr1">
+  <div class="container">
+    <div class="section-center">
+      <div class="section-label">1. Lehrjahr · Monat 1–18</div>
+      <h2>Was du im ersten Lehrjahr lernst</h2>
+      <p class="subtitle">Der Ausbildungsrahmenplan legt fest, welche Fertigkeiten in welcher Reihenfolge vermittelt werden. Hier sind die Kernthemen deines ersten Lehrjahres.</p>
+    </div>
+    <div class="topics-grid">
+
+      <div class="topic-card cat-measure">
+        <div class="topic-icon">📐</div>
+        <h3>Prüfen und Messen</h3>
+        <p>Du lernst, mit Messschiebern, Messuhren und Multimetern präzise zu arbeiten. Maßhaltigkeit von Werkstücken, Spannungen, Ströme und Widerstände messen — das ist die Basis für alles andere.</p>
+        <div class="topic-weeks">⏱ ca. 5 Wochen</div>
+        <div class="topic-example">
+          <strong>Praxisbeispiel</strong>
+          Du prüfst mit einem Multimeter, ob eine Pumpe die richtige Betriebsspannung bekommt. Mit einem Messschieber kontrollierst du, ob ein Gewindesegment die richtige Wandstärke hat.
+        </div>
+      </div>
+
+      <div class="topic-card cat-join">
+        <div class="topic-icon">🔗</div>
+        <h3>Fügen — Verbindungen herstellen</h3>
+        <p>Das umfangreichste Thema im ersten Lehrjahr! Du lernst alle wichtigen Verbindungstechniken: Schrauben, Löten (Weich- und Hartlöten), Schweißen und Pressen. Jede Technik hat ihren Einsatzbereich.</p>
+        <div class="topic-weeks">⏱ ca. 14 Wochen</div>
+        <div class="topic-example">
+          <strong>Praxisbeispiel</strong>
+          Kupferrohre für eine Trinkwasserleitung werden hartgelötet. Stahlrohre für die Heizung können geschweißt oder gepresst werden. Die Wahl der Verbindung hängt vom Medium und Druck ab.
+        </div>
+      </div>
+
+      <div class="topic-card cat-cut">
+        <div class="topic-icon">✂️</div>
+        <h3>Manuelles Trennen, Spanen &amp; Umformen</h3>
+        <p>Mit Säge, Feile und Biegewerkzeug formst du Rohre und Bleche. Du lernst Gewinde zu schneiden, Rohre zu biegen (kalt und warm) und Werkstücke maßhaltig herzustellen.</p>
+        <div class="topic-weeks">⏱ ca. 6 Wochen</div>
+        <div class="topic-example">
+          <strong>Praxisbeispiel</strong>
+          Ein Kupferrohr muss um eine Ecke gebogen werden, ohne zu knicken. Du berechnest die gestreckte Länge und biegst das Rohr mit dem Rohrbiegeapparat in einem sauberen Bogen.
+        </div>
+      </div>
+
+      <div class="topic-card cat-machine">
+        <div class="topic-icon">⚙️</div>
+        <h3>Maschinelles Bearbeiten</h3>
+        <p>Bohrmaschine, Trennschleifer, Gewindeschneidmaschine — du lernst ortsfeste und handgeführte Maschinen sicher einzusetzen, die richtigen Drehzahlen einzustellen und Kühlmittel zu nutzen.</p>
+        <div class="topic-weeks">⏱ ca. 8 Wochen</div>
+        <div class="topic-example">
+          <strong>Praxisbeispiel</strong>
+          Mit der Rohrgewindeschneidmaschine schneidest du ein Außengewinde auf ein Stahlrohr. Das richtige Gewinde-Typ (R 1/2") und sauberes Schneiden ohne Grate sind entscheidend für dichte Verbindungen.
+        </div>
+      </div>
+
+      <div class="topic-card cat-maintain">
+        <div class="topic-icon">🛠️</div>
+        <h3>Instandhalten von Betriebsmitteln</h3>
+        <p>Werkzeuge und Maschinen müssen gepflegt werden, damit sie funktionieren. Du lernst Wartungspläne, Korrosionsschutz, Sicherheitskontrollen und den fachgerechten Aus- und Einbau von Bauteilen.</p>
+        <div class="topic-weeks">⏱ ca. 4 Wochen</div>
+        <div class="topic-example">
+          <strong>Praxisbeispiel</strong>
+          Die Gewindeschneidmaschine wird nach dem Einsatz gereinigt, das Schneidöl gewechselt und auf Beschädigungen geprüft. Doku im Wartungsprotokoll — damit der nächste Kollege weiß, was gemacht wurde.
+        </div>
+      </div>
+
+      <div class="topic-card cat-maintain">
+        <div class="topic-icon">🏗️</div>
+        <h3>Instandhalten von versorgungstechn. Anlagen</h3>
+        <p>Du lernst, bestehende Heizungs-, Sanitär- und Klimaanlagen zu inspizieren, zu warten und instand zu setzen. Dichtheitsprüfungen, Armaturen prüfen, Bauteile tauschen — systematisch und dokumentiert.</p>
+        <div class="topic-weeks">⏱ ca. 14 Wochen</div>
+        <div class="topic-example">
+          <strong>Praxisbeispiel</strong>
+          Bei einer Jahreswartung der Heizung: Ausdehnungsgefäß prüfen, Heizkörperventile gangbar machen, Anlage entlüften, Betriebsdruck kontrollieren, Sicherheitsventil testen — alles ins Wartungsprotokoll.
+        </div>
+      </div>
+
+      <div class="topic-card cat-electric">
+        <div class="topic-icon">⚡</div>
+        <h3>Installieren elektrischer Baugruppen</h3>
+        <p>SHK-Anlagen werden elektrisch gesteuert. Du lernst Grundlagen der Elektrotechnik, wie Kabel verlegt und angeschlossen werden, und wie Steuerungskomponenten (Thermostate, Sensoren) eingebaut werden.</p>
+        <div class="topic-weeks">⏱ ca. 7 Wochen (1. Lj.) + 6 Wochen (2. Lj.)</div>
+        <div class="topic-example">
+          <strong>Praxisbeispiel</strong>
+          Du baust einen Raumthermostat ein, verlägst das Steuerkabel zur Heizungsregelung und schließt es nach Schaltplan an. Dann prüfst du mit dem Multimeter, ob Spannung und Steuerung korrekt sind.
+        </div>
+      </div>
+
+      <div class="topic-card cat-pipe">
+        <div class="topic-icon">🔩</div>
+        <h3>Montieren und Demontieren von Rohrleitungen</h3>
+        <p>Du lernst Rohrleitungen aus verschiedenen Materialien (Kupfer, Stahl, Kunststoff) zu planen, zu verlegen und zu befestigen. Gefälle, Wärmedehnung, Schalldämmung und Brandschutz müssen dabei beachtet werden.</p>
+        <div class="topic-weeks">⏱ ca. 8 Wochen (1. Lj.) + 8 Wochen (2. Lj.)</div>
+        <div class="topic-example">
+          <strong>Praxisbeispiel</strong>
+          Die Kaltwasser-Zuleitung zum Waschbecken: Du wählst das richtige Rohr (Kupfer Ø15mm), berechnest die Dämmdicke gegen Kondensation, setzt Rohrschellen mit 2m Abstand und berücksichtigst Gefälle für die Entwässerung.
+        </div>
+      </div>
+
+      <div class="topic-card cat-pipe">
+        <div class="topic-icon">🏠</div>
+        <h3>Montieren, Demontieren und Transportieren von Anlagen</h3>
+        <p>Komplette Anlagen werden aufgebaut: von Heizkessel bis Heizkörper, von Pumpe bis Armatur. Du lernst sicheres Heben, Transportieren und Aufstellen von Geräten nach technischen Vorschriften.</p>
+        <div class="topic-weeks">⏱ ca. 4 Wochen (1. Lj.) + 10 Wochen (2. Lj.)</div>
+        <div class="topic-example">
+          <strong>Praxisbeispiel</strong>
+          Ein Heizkörper wird demontiert (Anlage drucklos machen, Verbindungen lösen), der neue angepasst und montiert, angeschlossen, Anlage befüllt, entlüftet und auf Dichtheit geprüft.
+        </div>
+      </div>
+
+      <div class="topic-card cat-insulate">
+        <div class="topic-icon">🧱</div>
+        <h3>Dämm-, Dichtungs- und Schutzmaßnahmen</h3>
+        <p>Rohre dämmen spart Energie. Du lernst, welche Dämmmaterialien wofür verwendet werden, wie Abdichtungen an Sanitäreinrichtungen ausgeführt werden und wie du aktiven und passiven Korrosionsschutz anwendest.</p>
+        <div class="topic-weeks">⏱ ca. 5 Wochen</div>
+        <div class="topic-example">
+          <strong>Praxisbeispiel</strong>
+          Heizungsrohre im Keller werden mit Steinwollschalen gedämmt (Mindestdicke nach EnEV). Eine Badewanne erhält eine fachgerechte Silikon-Verfugung gegen Feuchtigkeit. Stahl-Rohre bekommen Korrosionsschutzfarbe.
+        </div>
+      </div>
+
+      <div class="topic-card cat-safety">
+        <div class="topic-icon">🦺</div>
+        <h3>Arbeitssicherheit &amp; Gesundheitsschutz</h3>
+        <p>Sicherheit ist keine Option — sie ist Pflicht. Du lernst Gefährdungen zu erkennen, Schutzausrüstung richtig einzusetzen, Unfälle zu melden und erste Hilfe zu leisten. Diese Themen begleiten dich durch die gesamte Ausbildung.</p>
+        <div class="topic-weeks">⏱ Gesamte Ausbildung</div>
+        <div class="topic-example">
+          <strong>Praxisbeispiel</strong>
+          Beim Arbeiten in engen Räumen (Schacht) trägst du Helm, Handschuhe und Schutzbrille. Vor Elektroarbeiten wird geprüft, ob die Anlage spannungsfrei ist. Auf Leitern gilt: drei Kontaktpunkte immer.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Integrative Inhalte -->
+    <div style="margin-top:56px;">
+      <h3 style="font-size:1.2rem;font-weight:700;color:var(--primary);margin-bottom:8px;">Immer dabei: Integrative Lerninhalte</h3>
+      <p style="color:var(--text-muted);font-size:0.9rem;max-width:650px;margin-bottom:8px;">Diese Themen werden nicht in einem Block, sondern <strong>durchgehend</strong> während der gesamten Ausbildung vermittelt.</p>
+      <div class="integrative-grid">
+        <div class="int-card">
+          <div class="int-icon">📋</div>
+          <h4>Berufsbildung &amp; Recht</h4>
+          <p>Ausbildungsvertrag, Arbeitsrecht, Tarifverträge, Rechte und Pflichten</p>
+        </div>
+        <div class="int-card">
+          <div class="int-icon">🏢</div>
+          <h4>Betrieb &amp; Organisation</h4>
+          <p>Wie funktioniert dein Betrieb? Beschaffung, Verwaltung, Betriebsrat</p>
+        </div>
+        <div class="int-card">
+          <div class="int-icon">🌱</div>
+          <h4>Umweltschutz</h4>
+          <p>Abfälle vermeiden, Materialien recyclen, energieschonend arbeiten</p>
+        </div>
+        <div class="int-card">
+          <div class="int-icon">💬</div>
+          <h4>Kommunikation</h4>
+          <p>Zeichnungen lesen, Protokolle schreiben, Kundengespräche führen</p>
+        </div>
+        <div class="int-card">
+          <div class="int-icon">📊</div>
+          <h4>Arbeitsplanung</h4>
+          <p>Aufträge planen, Material disponieren, Zeiten und Kosten im Blick behalten</p>
+        </div>
+        <div class="int-card">
+          <div class="int-icon">✅</div>
+          <h4>Qualitätssicherung</h4>
+          <p>Arbeit kontrollieren, Fehler dokumentieren, stetig besser werden</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRAXIS -->
+<section id="praxis">
+  <div class="container">
+    <div class="section-center">
+      <div class="section-label" style="background:rgba(255,255,255,0.15);color:#fff;">Praxisbezug</div>
+      <h2>So sieht dein Alltag aus</h2>
+      <p class="subtitle" style="color:rgba(255,255,255,0.65);">Ein Blick auf typische Aufgaben, die du als Azubi im ersten Jahr erleben wirst.</p>
+    </div>
+    <div class="praxis-grid">
+      <div class="praxis-card">
+        <div class="num">01</div>
+        <h3>Badezimmer-Sanierung</h3>
+        <p>Alte Armaturen ausbauen, neue Rohrleitungen verlegen, Waschbecken, WC und Dusche anschließen, abdichten und in Betrieb nehmen. Du siehst am Ende des Tages, was du geleistet hast.</p>
+      </div>
+      <div class="praxis-card">
+        <div class="num">02</div>
+        <h3>Heizungsanlage warten</h3>
+        <p>Jährliche Inspektion beim Kunden: Drücke prüfen, Ausdehnungsgefäß kontrollieren, Heizkörperventile testen, Anlage entlüften, Protokoll schreiben — und dem Kunden alles erklären.</p>
+      </div>
+      <div class="praxis-card">
+        <div class="num">03</div>
+        <h3>Rohrleitungen verlegen</h3>
+        <p>Im Neubau verlegst du Meter für Meter die Rohrleitungen nach Plan: Kupfer für Trinkwasser, Stahl oder Kunststoff für Heizung. Rohre biegen, löten oder pressen, Halterungen setzen.</p>
+      </div>
+      <div class="praxis-card">
+        <div class="num">04</div>
+        <h3>Reparatur &amp; Störungsbehebung</h3>
+        <p>Ein Heizkörper wird nicht warm, ein Ventil tropft: Fehler systematisch eingrenzen, richtiges Bauteil identifizieren, Anlage drucklos machen, Reparatur durchführen — unter Zeitdruck beim Kunden.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRÜFUNG -->
+<section id="pruefung">
+  <div class="container">
+    <div class="section-center">
+      <div class="section-label">Gesellenprüfung</div>
+      <h2>So läuft deine Prüfung ab</h2>
+      <p class="subtitle">Die Gesellenprüfung ist in zwei Teile aufgeteilt. Teil 1 findet vor Ende des 2. Lehrjahres statt, Teil 2 am Ende der Ausbildung.</p>
+    </div>
+    <div class="pruefung-wrapper">
+      <div class="pruef-card">
+        <div class="pruef-header teil1">
+          <div style="font-size:2rem;">🔧</div>
+          <div><h3>Teil 1 — Versorgungstechnik</h3><span>Vor Ende des 2. Ausbildungsjahres · 30 %</span></div>
+        </div>
+        <div class="pruef-body">
+          <div class="pruef-item">
+            <div class="pruef-dot"></div>
+            <div><strong>Praktische Arbeitsaufgabe</strong><span>Bauteil oder Baugruppe anfertigen und prüfen nach Unterlagen · 7 Stunden gesamt</span></div>
+          </div>
+          <div class="pruef-item">
+            <div class="pruef-dot"></div>
+            <div><strong>Situatives Fachgespräch</strong><span>Gespräch über deine Arbeitsaufgabe · max. 10 Minuten</span></div>
+          </div>
+          <div class="pruef-item">
+            <div class="pruef-dot"></div>
+            <div><strong>Schriftliche Aufgaben</strong><span>Fragen zur Arbeitsaufgabe · 60 Minuten</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="pruef-card">
+        <div class="pruef-header teil2">
+          <div style="font-size:2rem;">🏆</div>
+          <div><h3>Teil 2 — Gesellenprüfung</h3><span>Am Ende der Ausbildung · 70 % gesamt</span></div>
+        </div>
+        <div class="pruef-body">
+          <div class="pruef-item">
+            <div class="pruef-dot" style="background:var(--fire);"></div>
+            <div><strong>Kundenauftrag (35 %)</strong><span>Vollständige Anlage einrichten/instandhalten · 15 Stunden + Fachgespräch 20 Min.</span></div>
+          </div>
+          <div class="pruef-item">
+            <div class="pruef-dot"></div>
+            <div><strong>Arbeitsplanung (15 %)</strong><span>Schriftlicher Montage- und Inbetriebnahmeplan · 150 Minuten</span></div>
+          </div>
+          <div class="pruef-item">
+            <div class="pruef-dot"></div>
+            <div><strong>Systemanalyse &amp; Instandhaltung (10 %)</strong><span>Fehlerdiagnose und Lösungsvorschläge · 90 Minuten</span></div>
+          </div>
+          <div class="pruef-item">
+            <div class="pruef-dot"></div>
+            <div><strong>Wirtschafts- &amp; Sozialkunde (10 %)</strong><span>Allgemeine Berufskenntnisse · 60 Minuten</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width:600px;margin:48px auto 0;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px 32px;">
+      <h3 style="font-size:1.1rem;font-weight:700;color:var(--primary);margin-bottom:20px;">Prüfungsgewichtung auf einen Blick</h3>
+      <div class="gewichtung-bar-wrap">
+        <div class="gew-item">
+          <div class="gew-label"><span>Kundenauftrag</span><span>35 %</span></div>
+          <div class="gew-bar"><div class="gew-fill" style="width:35%;background:var(--fire);"></div></div>
+        </div>
+        <div class="gew-item">
+          <div class="gew-label"><span>Versorgungstechnik (Teil 1)</span><span>30 %</span></div>
+          <div class="gew-bar"><div class="gew-fill" style="width:30%;background:var(--primary-light);"></div></div>
+        </div>
+        <div class="gew-item">
+          <div class="gew-label"><span>Arbeitsplanung</span><span>15 %</span></div>
+          <div class="gew-bar"><div class="gew-fill" style="width:15%;background:var(--water);"></div></div>
+        </div>
+        <div class="gew-item">
+          <div class="gew-label"><span>Systemanalyse &amp; Instandhaltung</span><span>10 %</span></div>
+          <div class="gew-bar"><div class="gew-fill" style="width:10%;background:var(--green);"></div></div>
+        </div>
+        <div class="gew-item">
+          <div class="gew-label"><span>Wirtschafts- &amp; Sozialkunde</span><span>10 %</span></div>
+          <div class="gew-bar"><div class="gew-fill" style="width:10%;background:#9c6644;"></div></div>
+        </div>
+      </div>
+      <p style="margin-top:16px;font-size:0.83rem;color:var(--text-muted);">Bestanden wenn: Gesamtergebnis mind. ausreichend, Teil 2 mind. ausreichend, Kundenauftrag mind. ausreichend, mindestens 2 weitere Prüfungsbereiche ausreichend, kein Prüfungsbereich ungenügend.</p>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz">
+  <div class="container">
+    <div class="section-center">
+      <div class="section-label">Wissenscheck</div>
+      <h2>Teste dein Wissen!</h2>
+      <p class="subtitle">10 Fragen rund um dein erstes Lehrjahr. Keine Angst — hier geht es ums Lernen, nicht ums Bestehen.</p>
+    </div>
+
+    <div class="quiz-container">
+      <div class="quiz-header">
+        <h3 id="quiz-title">Frage 1 von 10</h3>
+        <div class="quiz-progress-wrap">
+          <div class="quiz-progress-bar">
+            <div class="quiz-progress-fill" id="quiz-progress" style="width:10%"></div>
+          </div>
+          <span class="quiz-counter" id="quiz-score-live">0 / 10</span>
+        </div>
+      </div>
+
+      <div class="quiz-body" id="quiz-body">
+        <div class="question-text" id="question-text"></div>
+        <div class="answers" id="answers"></div>
+        <div class="quiz-feedback" id="quiz-feedback"></div>
+        <button class="quiz-next" id="quiz-next">Weiter →</button>
+      </div>
+
+      <div class="quiz-result" id="quiz-result">
+        <div class="score-circle">
+          <span class="score-num" id="final-score">0</span>
+          <span class="score-total">von 10</span>
+        </div>
+        <h3 id="result-title"></h3>
+        <p id="result-text"></p>
+        <button class="quiz-restart" onclick="startQuiz()">🔄 Nochmal spielen</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p style="font-size:1.4rem;margin-bottom:8px;">🔧 💧 🔥</p>
+  <p><strong>Viel Erfolg in deiner Ausbildung!</strong></p>
+  <p style="margin-top:6px;">Anlagenmechaniker SHK — Ausbildungsordnung vom 28. April 2016 (BGBl. I Nr. 20) · Erstellt für den Ausbildungsbetrieb · Nur zur internen Verwendung</p>
+</footer>
+
+<script>
+const questions = [
+  {
+    q: "Wie lange dauert die Ausbildung zum Anlagenmechaniker für Sanitär-, Heizungs- und Klimatechnik?",
+    answers: ["2 Jahre", "3 Jahre", "3,5 Jahre", "4 Jahre"],
+    correct: 2,
+    explanation: "Die Ausbildung dauert genau 3 Jahre und 6 Monate (42 Monate), wie in § 2 der Ausbildungsverordnung von 2016 festgelegt."
+  },
+  {
+    q: "Was bedeutet 'Fügen' in der Fachsprache des SHK-Handwerks?",
+    answers: [
+      "Rohre auf die richtige Länge sägen",
+      "Werkstücke oder Bauteile dauerhaft oder lösbar verbinden",
+      "Rohre biegen und formen",
+      "Maße und Winkel prüfen"
+    ],
+    correct: 1,
+    explanation: "Fügen bezeichnet alle Verbindungstechniken: Löten, Schweißen, Schrauben, Pressen, Kleben. Es ist der umfangreichste Lernbereich im ersten Lehrjahr mit ca. 14 Wochen."
+  },
+  {
+    q: "Welche Verbindungstechnik ist für Kupferrohre in Trinkwasserleitungen besonders geeignet und hygienisch unbedenklich?",
+    answers: [
+      "Schweißen mit Elektrode",
+      "Hartlöten mit Silberlotstab",
+      "Kleben mit Epoxidharz",
+      "Nieten"
+    ],
+    correct: 1,
+    explanation: "Hartlöten (mit Silberlot oder Phosphorkupferlot) ist die Standardverbindung für Kupferwasserleitungen. Es ist trinkwassergeeignet, langlebig und dicht. Weichlöten darf bei Trinkwasser nicht verwendet werden!"
+  },
+  {
+    q: "Wofür steht die Abkürzung SHK?",
+    answers: [
+      "Sicherheit, Hygiene, Kontrolle",
+      "Sanitär-, Heizungs- und Klimatechnik",
+      "Stahl, Hydraulik, Kühlung",
+      "Sanitär, Hochbau, Kältetechnik"
+    ],
+    correct: 1,
+    explanation: "SHK steht für Sanitär-, Heizungs- und Klimatechnik. Das ist das Kerngebiet dieses Handwerksberufs."
+  },
+  {
+    q: "Welches Dokument muss ein Auszubildender während der gesamten Ausbildung regelmäßig führen?",
+    answers: [
+      "Kassenbuch für Materialausgaben",
+      "Schriftlichen Ausbildungsnachweis (Berichtsheft)",
+      "Stundenzettel für den Kunden",
+      "Einkaufsliste für Betriebsmittel"
+    ],
+    correct: 1,
+    explanation: "Laut § 6 der Ausbildungsordnung müssen Azubis einen schriftlichen Ausbildungsnachweis (Berichtsheft) führen. Der Ausbilder muss diesen regelmäßig durchsehen und abzeichnen."
+  },
+  {
+    q: "Warum werden Heizungsrohre im Keller gedämmt?",
+    answers: [
+      "Nur aus ästhetischen Gründen",
+      "Zur Schalldämmung gegen laute Strömungsgeräusche",
+      "Um Wärmeverluste zu minimieren und Energie zu sparen (Energieeffizienz)",
+      "Damit die Rohre nicht rosten"
+    ],
+    correct: 2,
+    explanation: "Rohrdämmung reduziert Wärmeverluste auf dem Weg vom Kessel zum Heizkörper. Die Energieeinsparverordnung schreibt Mindest-Dämmdicken vor. Energieeffizienz ist ein Kernthema im SHK-Beruf."
+  },
+  {
+    q: "Was kontrollierst du als Erstes, wenn ein Heizkörper kalt bleibt, obwohl die Heizung läuft?",
+    answers: [
+      "Sofort den Kessel demontieren",
+      "Thermostatventil prüfen, Heizkörper entlüften und Durchfluss kontrollieren",
+      "Den Stromanschluss der Rohre prüfen",
+      "Das Fenster schließen und warten"
+    ],
+    correct: 1,
+    explanation: "Systematische Fehlersuche: Erst prüfen, ob das Thermostatventil offen ist, ob Luft im Heizkörper ist (entlüften!) und ob Vorlauf- und Rücklauf-Armaturen geöffnet sind. Erst danach weitersuchen."
+  },
+  {
+    q: "In welchem Prüfungsbereich hast du bei der Gesellenprüfung die höchste Gewichtung?",
+    answers: [
+      "Arbeitsplanung (15 %)",
+      "Versorgungstechnik Teil 1 (30 %)",
+      "Kundenauftrag (35 %)",
+      "Wirtschafts- und Sozialkunde (10 %)"
+    ],
+    correct: 2,
+    explanation: "Der Prüfungsbereich 'Kundenauftrag' hat mit 35 % die höchste Gewichtung. Dort führst du über 15 Stunden einen vollständigen Auftrag durch — von der Planung bis zur Inbetriebnahme."
+  },
+  {
+    q: "Was versteht man unter 'Instandhaltung' einer versorgungstechnischen Anlage?",
+    answers: [
+      "Nur das Reinigen der Anlage",
+      "Inspizieren, Warten, Instandsetzen und vorbeugende Maßnahmen",
+      "Die Anlage neu bauen",
+      "Die Anlage außer Betrieb setzen"
+    ],
+    correct: 1,
+    explanation: "Instandhaltung umfasst alle Maßnahmen: Inspektion (Zustand prüfen), Wartung (planmäßige Pflege), Instandsetzung (Reparatur) und vorbeugendende Maßnahmen. Ein Kernthema mit ca. 14 Wochen im ersten Lehrjahr."
+  },
+  {
+    q: "Welche Schutzmaßnahme ist beim Arbeiten an elektrischen Anlagen im SHK-Bereich IMMER Pflicht?",
+    answers: [
+      "Gummihandschuhe aus dem Baumarkt reichen",
+      "Prüfen ob die Anlage spannungsfrei ist (5 Sicherheitsregeln anwenden)",
+      "Einfach schnell arbeiten, damit man keinen Stromschlag bekommt",
+      "Nur bei Regen absichern"
+    ],
+    correct: 1,
+    explanation: "Die 5 Sicherheitsregeln der Elektrotechnik: 1. Freischalten, 2. Gegen Wiedereinschalten sichern, 3. Spannungsfreiheit feststellen, 4. Erden und kurzschließen, 5. Benachbarte spannungsführende Teile abdecken."
+  }
+];
+
+let currentQ = 0;
+let score = 0;
+let answered = false;
+
+function startQuiz() {
+  currentQ = 0;
+  score = 0;
+  answered = false;
+  document.getElementById('quiz-result').classList.remove('show');
+  document.getElementById('quiz-body').style.display = 'block';
+  showQuestion();
+}
+
+function showQuestion() {
+  const q = questions[currentQ];
+  answered = false;
+  document.getElementById('quiz-title').textContent = `Frage ${currentQ + 1} von ${questions.length}`;
+  document.getElementById('quiz-progress').style.width = `${((currentQ + 1) / questions.length) * 100}%`;
+  document.getElementById('quiz-score-live').textContent = `${score} / ${questions.length}`;
+  document.getElementById('question-text').textContent = q.q;
+  const fb = document.getElementById('quiz-feedback');
+  fb.className = 'quiz-feedback';
+  fb.textContent = '';
+  document.getElementById('quiz-next').classList.remove('show');
+  const letters = ['A', 'B', 'C', 'D'];
+  const container = document.getElementById('answers');
+  container.innerHTML = '';
+  q.answers.forEach((ans, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'answer-btn';
+    btn.innerHTML = `<span class="ans-letter">${letters[i]}</span>${ans}`;
+    btn.onclick = () => selectAnswer(i);
+    container.appendChild(btn);
+  });
+}
+
+function selectAnswer(idx) {
+  if (answered) return;
+  answered = true;
+  const q = questions[currentQ];
+  const btns = document.querySelectorAll('.answer-btn');
+  btns.forEach(b => b.disabled = true);
+  const fb = document.getElementById('quiz-feedback');
+  if (idx === q.correct) {
+    score++;
+    btns[idx].classList.add('correct');
+    fb.textContent = '✅ Richtig! ' + q.explanation;
+    fb.className = 'quiz-feedback show ok';
+  } else {
+    btns[idx].classList.add('wrong');
+    btns[q.correct].classList.add('correct');
+    fb.textContent = '❌ Leider falsch. ' + q.explanation;
+    fb.className = 'quiz-feedback show nope';
+  }
+  document.getElementById('quiz-score-live').textContent = `${score} / ${questions.length}`;
+  const nextBtn = document.getElementById('quiz-next');
+  nextBtn.textContent = currentQ < questions.length - 1 ? 'Weiter →' : 'Ergebnis anzeigen 🏆';
+  nextBtn.classList.add('show');
+}
+
+document.getElementById('quiz-next').onclick = function() {
+  currentQ++;
+  if (currentQ < questions.length) {
+    showQuestion();
+  } else {
+    showResult();
+  }
+};
+
+function showResult() {
+  document.getElementById('quiz-body').style.display = 'none';
+  const result = document.getElementById('quiz-result');
+  result.classList.add('show');
+  document.getElementById('final-score').textContent = score;
+  let title, text;
+  if (score === 10) {
+    title = "Perfekt! Absoluter Profi! 🏆";
+    text = "Du hast alle 10 Fragen richtig beantwortet. Damit bist du bestens vorbereitet. Weiter so!";
+  } else if (score >= 8) {
+    title = "Sehr gut gemacht! 🎉";
+    text = `${score} von 10 — das ist eine starke Leistung! Schau dir die falschen Fragen nochmal an.`;
+  } else if (score >= 6) {
+    title = "Gut unterwegs! 👍";
+    text = `${score} von 10 — solide Basis. Mit etwas mehr Wiederholung bist du bald dabei.`;
+  } else if (score >= 4) {
+    title = "Noch Luft nach oben! 📚";
+    text = `${score} von 10 — lies die Erklärungen nochmal durch und probier es erneut!`;
+  } else {
+    title = "Frisch eingestiegen? 💪";
+    text = `${score} von 10 — das ist der Anfang! Geh die Themen nochmal durch und starte neu.`;
+  }
+  document.getElementById('result-title').textContent = title;
+  document.getElementById('result-text').textContent = text;
+}
+
+// Start quiz on load
+startQuiz();
+</script>
+</body>
+</html>
