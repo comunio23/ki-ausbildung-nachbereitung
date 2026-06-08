@@ -1,0 +1,2470 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synclaro KI-Coaching · Lernplattform 2026</title>
+<style>
+:root{
+  --s1:#3B82F6; --s1l:#EFF6FF; --s1d:#1D4ED8;
+  --s2:#7C3AED; --s2l:#F5F3FF; --s2d:#5B21B6;
+  --s3:#059669; --s3l:#ECFDF5; --s3d:#047857;
+  --s4:#F97316; --s4l:#FFF7ED; --s4d:#C2410C;
+  --s5:#0891B2; --s5l:#ECFEFF; --s5d:#0E7490;
+  --s6:#E11D48; --s6l:#FFF1F2; --s6d:#9F1239;
+  --s7:#6D28D9; --s7l:#F5F3FF; --s7d:#4C1D95;
+  --bg:#F1F5F9; --white:#FFFFFF; --dark:#0F172A;
+  --text:#1E293B; --muted:#64748B; --border:#E2E8F0;
+  --learn-bg:#FFFBEB; --learn-br:#F59E0B;
+  --praxis-bg:#EFF6FF; --praxis-br:#93C5FD;
+  --quote-bg:#F8FAFC; --quote-br:#CBD5E1;
+  --warn-bg:#FEF2F2; --warn-br:#FCA5A5;
+  --code-bg:#1E293B; --r:12px; --r-sm:8px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;}
+a{color:inherit;}
+
+/* ── HEADER ─────────────────── */
+.hdr{background:var(--dark);padding:20px 32px;display:flex;align-items:center;gap:16px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.4);}
+.hdr-logo{flex-shrink:0;}
+.hdr-title{color:#fff;font-size:1.15rem;font-weight:700;letter-spacing:-.02em;}
+.hdr-sub{color:#94A3B8;font-size:.8rem;margin-top:2px;}
+.hdr-badge{margin-left:auto;background:#334155;color:#94A3B8;font-size:.72rem;padding:4px 10px;border-radius:20px;}
+
+/* ── TABS ────────────────────── */
+.tabs{display:flex;gap:0;background:#fff;border-bottom:2px solid var(--border);padding:0 24px;overflow-x:auto;position:sticky;top:65px;z-index:99;box-shadow:0 1px 4px rgba(0,0,0,.06);}
+.tab-btn{padding:14px 22px;border:none;background:none;cursor:pointer;font-size:.9rem;font-weight:500;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:all .2s;display:flex;align-items:center;gap:8px;}
+.tab-btn:hover{color:var(--text);}
+.tab-btn.active-s1{color:var(--s1);border-bottom-color:var(--s1);}
+.tab-btn.active-s2{color:var(--s2);border-bottom-color:var(--s2);}
+.tab-btn.active-s3{color:var(--s3);border-bottom-color:var(--s3);}
+.tab-btn.active-s4{color:var(--s4);border-bottom-color:var(--s4);}
+.tab-btn.active-s5{color:var(--s5);border-bottom-color:var(--s5);}
+.tab-btn.active-s6{color:var(--s6);border-bottom-color:var(--s6);}
+.tab-btn.active-s7{color:var(--s7);border-bottom-color:var(--s7);}
+.tab-new{background:var(--s3);color:#fff;font-size:.65rem;padding:2px 6px;border-radius:10px;font-weight:700;}
+
+/* ── LAYOUT ──────────────────── */
+.session{display:none;padding:28px 24px;max-width:1100px;margin:0 auto;}
+.session.active{display:block;}
+
+/* ── SESSION HERO ────────────── */
+.hero{border-radius:var(--r);padding:28px 32px;margin-bottom:28px;display:flex;gap:24px;align-items:center;}
+.hero-s1{background:linear-gradient(135deg,#1D4ED8,#3B82F6);color:#fff;}
+.hero-s2{background:linear-gradient(135deg,#5B21B6,#7C3AED);color:#fff;}
+.hero-s3{background:linear-gradient(135deg,#047857,#059669);color:#fff;}
+.hero-s4{background:linear-gradient(135deg,#C2410C,#F97316,#FB923C);color:#fff;}
+.hero-icon{font-size:3.5rem;flex-shrink:0;}
+.hero h2{font-size:1.6rem;font-weight:800;margin-bottom:6px;}
+.hero p{opacity:.88;font-size:.95rem;}
+.hero-meta{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap;}
+.hero-tag{background:rgba(255,255,255,.18);padding:4px 12px;border-radius:20px;font-size:.78rem;font-weight:500;}
+
+/* ── SECTION HEADING ─────────── */
+.sec-head{display:flex;align-items:center;gap:10px;margin:32px 0 16px;}
+.sec-head h3{font-size:1.15rem;font-weight:700;color:var(--dark);}
+.sec-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+
+/* ── GRID ────────────────────── */
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;}
+
+/* ── CARD ────────────────────── */
+.card{background:var(--white);border-radius:var(--r);padding:24px;box-shadow:0 1px 4px rgba(0,0,0,.07);border:1px solid var(--border);}
+.card-title{font-weight:700;font-size:1rem;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.card p,.card li{font-size:.9rem;color:var(--text);}
+.card ul,.card ol{padding-left:18px;}
+.card li{margin-bottom:5px;}
+.card-accent-s1{border-left:4px solid var(--s1);}
+.card-accent-s2{border-left:4px solid var(--s2);}
+.card-accent-s3{border-left:4px solid var(--s3);}
+.card-accent-s4{border-left:4px solid var(--s4);}
+.card-accent-s5{border-left:4px solid var(--s5);}
+.card-accent-s6{border-left:4px solid var(--s6);}
+.card-accent-s7{border-left:4px solid var(--s7);}
+
+/* ── WIDE CARD (full width) ──── */
+.card-wide{background:var(--white);border-radius:var(--r);padding:28px;box-shadow:0 1px 4px rgba(0,0,0,.07);border:1px solid var(--border);margin-bottom:20px;}
+.card-wide .cw-title{font-weight:700;font-size:1.05rem;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+
+/* ── LEARNING BOX ────────────── */
+.learn{background:var(--learn-bg);border:1.5px solid var(--learn-br);border-radius:var(--r-sm);padding:16px 18px;margin-top:16px;}
+.learn-head{font-weight:700;font-size:.85rem;color:#92400E;margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.learn ul{padding-left:16px;}
+.learn li{font-size:.87rem;color:#78350F;margin-bottom:4px;}
+
+/* ── PRAXISFALL BOX ──────────── */
+.praxis{background:var(--praxis-bg);border:1.5px solid var(--praxis-br);border-radius:var(--r-sm);padding:16px 18px;margin-top:14px;}
+.praxis-head{font-weight:700;font-size:.85rem;color:#1D4ED8;margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.praxis p,.praxis li{font-size:.87rem;color:#1e3a6e;}
+.praxis ul{padding-left:16px;}
+.praxis li{margin-bottom:4px;}
+
+/* ── QUOTE BOX ───────────────── */
+.quote{background:var(--quote-bg);border-left:4px solid var(--border);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:12px 16px;margin:14px 0;font-style:italic;color:var(--muted);font-size:.88rem;}
+
+/* ── CODE BLOCK ──────────────── */
+.code{background:var(--code-bg);color:#E2E8F0;border-radius:var(--r-sm);padding:14px 18px;font-family:'Cascadia Code','Fira Code','Courier New',monospace;font-size:.82rem;overflow-x:auto;margin:12px 0;line-height:1.7;}
+.code-comment{color:#64748B;}
+.code-cmd{color:#86EFAC;}
+.code-flag{color:#FCD34D;}
+.code-val{color:#93C5FD;}
+
+/* ── INLINE CODE ─────────────── */
+code{background:#F1F5F9;color:#BE185D;padding:1px 5px;border-radius:4px;font-size:.83em;font-family:'Cascadia Code','Fira Code',monospace;}
+
+/* ── TABLE ───────────────────── */
+.tbl{width:100%;border-collapse:collapse;font-size:.87rem;margin:12px 0;}
+.tbl th{background:#F8FAFC;font-weight:600;padding:9px 12px;text-align:left;border-bottom:2px solid var(--border);color:var(--dark);}
+.tbl td{padding:8px 12px;border-bottom:1px solid var(--border);vertical-align:top;}
+.tbl tr:last-child td{border-bottom:none;}
+.tbl tr:hover td{background:#FAFAFA;}
+
+/* ── CHECKLIST ───────────────── */
+.checklist{list-style:none;padding:0;}
+.checklist li{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--border);font-size:.9rem;}
+.checklist li:last-child{border-bottom:none;}
+.check-box{width:18px;height:18px;border:2px solid var(--s3);border-radius:4px;flex-shrink:0;margin-top:2px;}
+
+/* ── HERO COLORS (extra sessions) ── */
+.hero-s5{background:linear-gradient(135deg,#0E7490,#0891B2,#22D3EE);color:#fff;}
+.hero-s6{background:linear-gradient(135deg,#9F1239,#E11D48,#FB7185);color:#fff;}
+.hero-s7{background:linear-gradient(135deg,#4C1D95,#6D28D9,#8B5CF6);color:#fff;}
+/* ── PROJECT CARD ─────────────── */
+.proj-card{background:var(--white);border-radius:var(--r);padding:24px;box-shadow:0 2px 8px rgba(0,0,0,.08);border:1px solid var(--border);position:relative;overflow:hidden;}
+.proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;}
+.proj-card-1::before{background:var(--s1);}
+.proj-card-2::before{background:var(--s3);}
+.proj-card-3::before{background:var(--s4);}
+.proj-card-4::before{background:var(--s2);}
+.proj-card-5::before{background:var(--s6);}
+.proj-icon{font-size:2.2rem;margin-bottom:12px;}
+.proj-name{font-size:1.05rem;font-weight:800;color:var(--dark);margin-bottom:6px;}
+.proj-desc{font-size:.87rem;color:var(--muted);margin-bottom:12px;line-height:1.6;}
+.proj-tag{display:inline-block;background:var(--bg);border:1px solid var(--border);padding:3px 10px;border-radius:12px;font-size:.75rem;color:var(--muted);margin:2px 2px 2px 0;}
+.proj-live{display:inline-flex;align-items:center;gap:5px;background:#ECFDF5;border:1.5px solid #6EE7B7;color:#047857;padding:4px 12px;border-radius:20px;font-size:.78rem;font-weight:700;margin-top:8px;}
+/* ── KMS LEVELS ──────────────── */
+.levels{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:16px 0;}
+.level{background:var(--white);border-radius:var(--r);padding:20px;border:2px solid var(--border);text-align:center;transition:border-color .2s;}
+.level:hover{border-color:var(--s3);}
+.level-num{font-size:1.8rem;font-weight:900;color:var(--s3);margin-bottom:8px;}
+.level-name{font-weight:700;font-size:.95rem;margin-bottom:6px;}
+.level-desc{font-size:.82rem;color:var(--muted);}
+
+/* ── STAMP ───────────────────── */
+.stamp{display:inline-flex;align-items:center;gap:6px;background:var(--code-bg);color:#86EFAC;padding:4px 12px;border-radius:20px;font-family:'Cascadia Code',monospace;font-size:.82rem;font-weight:600;}
+
+/* ── COMMAND REF ─────────────── */
+.cmd-ref{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;font-size:.87rem;}
+.cmd-ref code{grid-column:1;}
+.cmd-ref span{grid-column:2;color:var(--muted);padding:3px 0;}
+
+/* ── 8 QUESTIONS ─────────────── */
+.q-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:12px 0;}
+.q-item{background:#F8FAFC;border-radius:var(--r-sm);padding:12px;border:1px solid var(--border);}
+.q-icon{font-size:1.2rem;margin-bottom:4px;}
+.q-label{font-weight:700;font-size:.82rem;color:var(--dark);}
+.q-desc{font-size:.77rem;color:var(--muted);margin-top:3px;}
+
+/* ── PARTICIPANT CARD ─────────── */
+.pcard{background:var(--white);border-radius:var(--r-sm);padding:14px;border:1px solid var(--border);}
+.pcard-name{font-weight:700;font-size:.9rem;}
+.pcard-role{font-size:.78rem;color:var(--muted);margin-top:2px;}
+.pcard-built{font-size:.82rem;margin-top:8px;color:var(--text);}
+.pcard-built span{color:var(--s3);font-weight:600;}
+
+/* ── ROLE PILL ───────────────── */
+.role-pill{display:inline-block;padding:5px 14px;border-radius:20px;font-size:.82rem;font-weight:600;margin:4px 4px 4px 0;}
+
+/* ── DIVIDER ─────────────────── */
+.divider{height:1px;background:var(--border);margin:28px 0;}
+
+/* ── FOOTER ──────────────────── */
+footer{text-align:center;padding:28px;color:var(--muted);font-size:.8rem;margin-top:32px;border-top:1px solid var(--border);}
+
+/* ── TIMELINE ────────────────── */
+.timeline{position:relative;padding:0;margin:0 0 28px;}
+.timeline::before{content:'';position:absolute;left:27px;top:8px;bottom:8px;width:3px;background:linear-gradient(to bottom,var(--s4d),var(--s4),#FED7AA);border-radius:2px;}
+.tl-item{display:flex;gap:24px;margin-bottom:28px;position:relative;align-items:flex-start;}
+.tl-badge{width:56px;height:56px;border-radius:50%;background:var(--s4);color:white;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;box-shadow:0 0 0 4px var(--s4l),0 0 0 6px var(--s4);z-index:1;position:relative;}
+.tl-content{flex:1;background:var(--white);border-radius:var(--r);padding:20px 24px;box-shadow:0 1px 4px rgba(0,0,0,.07);border:1px solid var(--border);}
+.tl-bc4{border-left:4px solid var(--s4);}
+.tl-phase{font-size:.72rem;font-weight:700;color:var(--s4);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;}
+.tl-title{font-size:1.1rem;font-weight:800;color:var(--dark);margin-bottom:8px;}
+.tl-desc{font-size:.9rem;color:var(--muted);margin-bottom:0;}
+
+/* ── ACHIEVE BANNER ──────────── */
+.achieve-banner{background:linear-gradient(135deg,#C2410C,#F97316);border-radius:var(--r);padding:22px 28px;margin-bottom:28px;display:flex;gap:20px;align-items:center;color:#fff;box-shadow:0 4px 20px rgba(249,115,22,.3);}
+.achieve-icon{font-size:2.8rem;flex-shrink:0;}
+.achieve-title{font-weight:800;font-size:1.1rem;margin-bottom:6px;}
+.achieve-text{font-size:.9rem;opacity:.95;line-height:1.65;}
+
+/* ── MAGIC PROMPT BOX ────────── */
+.magic-prompt{background:var(--code-bg);border-radius:var(--r);padding:20px 24px;border:2px solid var(--s4);margin-top:16px;}
+.magic-label{color:#FDBA74;font-size:.8rem;font-weight:700;margin-bottom:10px;font-family:'Cascadia Code','Fira Code',monospace;}
+.magic-text{color:#E2E8F0;font-size:.88rem;font-family:'Cascadia Code','Fira Code',monospace;line-height:1.7;border-left:3px solid var(--s4);padding-left:14px;font-style:italic;}
+.magic-note{color:#64748B;font-size:.78rem;margin-top:10px;font-family:'Cascadia Code','Fira Code',monospace;}
+
+/* ── RESPONSIVE ──────────────── */
+@media(max-width:600px){
+  .session{padding:16px 12px;}
+  .hero{flex-direction:column;text-align:center;padding:20px;}
+  .tabs{padding:0 8px;}
+  .tab-btn{padding:12px 14px;font-size:.82rem;}
+}
+@media print{
+  .hdr,.tabs{position:static;}
+  .session{display:block!important;}
+  .tab-btn{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="hdr">
+  <div class="hdr-logo">
+    <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+      <rect width="38" height="38" rx="10" fill="#3B82F6"/>
+      <circle cx="19" cy="14" r="6" fill="white" opacity=".9"/>
+      <rect x="10" y="23" width="18" height="3" rx="1.5" fill="white" opacity=".6"/>
+      <rect x="13" y="28" width="12" height="3" rx="1.5" fill="white" opacity=".4"/>
+    </svg>
+  </div>
+  <div>
+    <div class="hdr-title">Synclaro KI-Coaching</div>
+    <div class="hdr-sub">Lernplattform · Gruppencoaching Mai 2026</div>
+  </div>
+  <div class="hdr-badge">7 Kapitel · Mai 2026</div>
+</header>
+
+<!-- ═══════════════ TABS ════════════════ -->
+<nav class="tabs" id="tabs">
+  <button class="tab-btn" data-s="1" onclick="show(1)">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#3B82F6" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#3B82F6" font-weight="700">1</text></svg>
+    Session 1 · 29. April
+  </button>
+  <button class="tab-btn" data-s="2" onclick="show(2)">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#7C3AED" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#7C3AED" font-weight="700">2</text></svg>
+    Session 2 · 6. Mai
+  </button>
+  <button class="tab-btn" data-s="3" onclick="show(3)">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#059669" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#059669" font-weight="700">3</text></svg>
+    Session 3 · 13. Mai
+  </button>
+  <button class="tab-btn" data-s="4" onclick="show(4)">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#F97316" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#F97316" font-weight="700">4</text></svg>
+    Session 4 · 27. Mai
+  </button>
+  <button class="tab-btn" data-s="5" onclick="show(5)">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#0891B2" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#0891B2" font-weight="700">5</text></svg>
+    🧠 WM V2
+  </button>
+  <button class="tab-btn" data-s="6" onclick="show(6)">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#E11D48" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#E11D48" font-weight="700">6</text></svg>
+    🔧 Betriebsanleitung
+  </button>
+  <button class="tab-btn" data-s="7" onclick="show(7)">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#6D28D9" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#6D28D9" font-weight="700">7</text></svg>
+    🗂️ Meine Projekte
+  </button>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SESSION 1
+══════════════════════════════════════════════════════════ -->
+<div id="s1" class="session">
+
+  <div class="hero hero-s1">
+    <div class="hero-icon">🧠</div>
+    <div>
+      <h2>Session 1 — KI-Grundlagen</h2>
+      <p>Wie funktioniert KI wirklich? Next-Word-Prediction, Tools, Harness und die drei Rollen von KI.</p>
+      <div class="hero-meta">
+        <span class="hero-tag">📅 29. April 2026</span>
+        <span class="hero-tag">⏱ ~2,5 Stunden</span>
+        <span class="hero-tag">👥 5 Teilnehmer</span>
+        <span class="hero-tag">🎯 Theorie-Fundament</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- THEMA 1 -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s1)"></div><h3>Die drei Rollen von KI</h3></div>
+  <div class="grid-3">
+    <div class="card card-accent-s1">
+      <div class="card-title">🗣️ Sparringspartner</div>
+      <p>Claude, ChatGPT, Gemini, Perplexity — alle antworten auf Fragen, schreiben Texte, geben Ideen.</p>
+      <p style="margin-top:8px;font-size:.82rem;color:var(--muted)">Marcos Zeitanteil: <strong>~70 %</strong> der Gespräche</p>
+      <div style="margin-top:8px;"><span class="role-pill" style="background:#EFF6FF;color:#1D4ED8">✓ Das kennen wir schon</span></div>
+    </div>
+    <div class="card card-accent-s1">
+      <div class="card-title">💻 ITler / Programmierer</div>
+      <p>KI schreibt Code, baut Skripte, liest Dateien — auf Anweisung in natürlicher Sprache.</p>
+      <p style="margin-top:8px;font-size:.82rem;color:var(--muted)">Zeitanteil aller Marcos KIs: <strong>~60 %</strong></p>
+      <div style="margin-top:8px;"><span class="role-pill" style="background:#ECFDF5;color:#047857">✓ Ab Session 2</span></div>
+    </div>
+    <div class="card card-accent-s1">
+      <div class="card-title">⚙️ Automatisierer</div>
+      <p>KI baut und betreibt automatisierte Prozesse — E-Mails verteilen, Dokumente sortieren, Daten übertragen.</p>
+      <p style="margin-top:8px;font-size:.82rem;color:var(--muted)">„2024" → wird die meiste Zeit sparen</p>
+      <div style="margin-top:8px;"><span class="role-pill" style="background:#F5F3FF;color:#5B21B6">→ Ziel des Coachings</span></div>
+    </div>
+  </div>
+
+  <div class="praxis" style="margin-top:16px;">
+    <div class="praxis-head">🔧 Praxisfall — Dokumenten-Management (Marco's Firma)</div>
+    <p>E-Mails kommen rein → Automatismus liest den Text → <strong>KI ordnet den Absender einer Person zu</strong> (braucht echte Intelligenz, keine stumpfe Wenn-Dann-Regel) → Dokument landet automatisch im richtigen Ordner. Rolle 1 allein schafft das nicht. Erst Rolle 2 + 3 machen es möglich.</p>
+  </div>
+  <div class="learn">
+    <div class="learn-head">💡 Kernlearning</div>
+    <ul>
+      <li>Die meisten KMUs nutzen KI nur als Sparringspartner (Rolle 1) — das ist „2024"</li>
+      <li>Das echte Potenzial: Faktor 10 mehr Anwendungsfälle durch Rolle 2 + 3</li>
+      <li>KI und Automatisierung sind zwei verschiedene Welten — KI kann Automatisierungen bauen und steuern</li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- THEMA 2 -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s1)"></div><h3>Wie denkt eine KI? — Next-Word-Prediction</h3></div>
+  <div class="card-wide">
+    <div class="cw-title">🔤 Das Grundprinzip: Drei Wörter</div>
+
+    <!-- SVG: Next-Word-Prediction -->
+    <svg viewBox="0 0 700 130" style="width:100%;max-width:700px;display:block;margin:0 auto 16px;" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#64748B"/>
+        </marker>
+      </defs>
+      <!-- Token boxes -->
+      <rect x="10" y="45" width="90" height="40" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+      <text x="55" y="70" text-anchor="middle" font-size="13" fill="#1D4ED8" font-weight="600">Der Hund</text>
+      <line x1="102" y1="65" x2="128" y2="65" stroke="#64748B" stroke-width="1.5" marker-end="url(#arr)"/>
+
+      <rect x="132" y="45" width="70" height="40" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+      <text x="167" y="70" text-anchor="middle" font-size="13" fill="#1D4ED8" font-weight="600">bellt</text>
+      <line x1="204" y1="65" x2="230" y2="65" stroke="#64748B" stroke-width="1.5" marker-end="url(#arr)"/>
+
+      <rect x="234" y="45" width="70" height="40" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+      <text x="269" y="70" text-anchor="middle" font-size="13" fill="#1D4ED8" font-weight="600">laut</text>
+      <line x1="306" y1="65" x2="332" y2="65" stroke="#64748B" stroke-width="1.5" marker-end="url(#arr)"/>
+
+      <!-- Transformer Box -->
+      <rect x="336" y="25" width="130" height="80" rx="10" fill="#1E293B" stroke="#3B82F6" stroke-width="2"/>
+      <text x="401" y="55" text-anchor="middle" font-size="11" fill="#93C5FD" font-weight="700">Transformer</text>
+      <text x="401" y="72" text-anchor="middle" font-size="10" fill="#64748B">GPT-Durchlauf</text>
+      <text x="401" y="88" text-anchor="middle" font-size="10" fill="#FCD34D">→ höchste Wahrsch.</text>
+      <line x1="468" y1="65" x2="494" y2="65" stroke="#64748B" stroke-width="1.5" marker-end="url(#arr)"/>
+
+      <!-- Next token -->
+      <rect x="498" y="40" width="90" height="50" rx="8" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="2"/>
+      <text x="543" y="60" text-anchor="middle" font-size="11" fill="#065F46">nächstes</text>
+      <text x="543" y="76" text-anchor="middle" font-size="13" fill="#047857" font-weight="700">Token</text>
+
+      <!-- Label -->
+      <text x="350" y="120" font-size="10" fill="#94A3B8">jeder Durchlauf = 1 Token → wiederholt sich für jedes Wort der Antwort</text>
+    </svg>
+
+    <div class="grid-2">
+      <div>
+        <p style="font-size:.9rem;margin-bottom:10px;">Janine's Erklärung (vom Coach als <strong>perfekt</strong> bewertet):</p>
+        <div class="quote">"KI ist eine riesige Datenbank, die Informationen miteinander in Verbindung setzt und versucht herauszufinden, was die wahrscheinlichste Fortsetzung ist."</div>
+        <p style="font-size:.88rem;color:var(--muted);">KI ist <strong>keine Magie</strong> — sie ist Wahrscheinlichkeitsrechnung auf einer Wort-Korrelationstabelle. Jedes Wort kostet einen Transformer-Durchlauf.</p>
+      </div>
+      <div>
+        <table class="tbl">
+          <tr><th>Wort-Paar</th><th>Vorkommen</th></tr>
+          <tr><td>„Himmel" + „Blau"</td><td>318 ×</td></tr>
+          <tr><td>„Finanzamt" + „glücklich"</td><td>7 ×</td></tr>
+          <tr><td>→ KI wählt immer die höchste Zahl</td><td>—</td></tr>
+        </table>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:8px;">Das Modell wurde mit allen Texten der Welt trainiert — Internet, Bücher, Twitter, Gerichtsurteile.</p>
+      </div>
+    </div>
+    <div class="learn">
+      <div class="learn-head">💡 Kernlearning</div>
+      <ul>
+        <li>KI folgt immer der höchsten Wahrscheinlichkeit — nicht der Wahrheit</li>
+        <li>Das erklärt seltsame Fehler: die KI „halluziniert" wahrscheinliche, aber falsche Antworten</li>
+        <li>Nicht deterministisch: gleiche Frage → leicht unterschiedliche Antworten (Temperatur)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- THEMA 3 -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s1)"></div><h3>Thinking & Reasoning Modelle</h3></div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">⚡ Standard-Modus</div>
+      <p>Prompt rein → sofort Transformer → Wort raus → Wort raus → …</p>
+      <p style="margin-top:8px;font-size:.87rem;">Kein Nachdenken. Einfach losfeuern. Schnell, günstig, gut für einfache Anfragen.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">🧩 Thinking-Modus</div>
+      <p>KI macht erst „stille" Transformer-Durchläufe (nicht sichtbar), prüft eigene Antwort, startet ggf. neuen Gedankengang — dann erst spricht sie.</p>
+      <p style="margin-top:8px;font-size:.87rem;color:var(--muted);">Wie ein Mensch, der kurz die Luft anhält und nachdenkt, bevor er antwortet.</p>
+    </div>
+  </div>
+  <div class="praxis">
+    <div class="praxis-head">🔧 Wann Reasoning nutzen?</div>
+    <ul>
+      <li><strong>Ja:</strong> Kostenvoranschläge mit vielen Bedingungen, juristische Analysen, Mathematik, mehrstufige Planung</li>
+      <li><strong>Nein:</strong> Einfache E-Mails, kurze Texte, Standard-Übersetzungen — da ist Standard schneller und günstiger</li>
+    </ul>
+  </div>
+  <div class="learn">
+    <div class="learn-head">💡 Kernlearning</div>
+    <ul>
+      <li>Thinking = Reasoning = Extended Thinking = Effort — alle Begriffe bedeuten dasselbe</li>
+      <li>Bei schlechten Antworten: zuerst Reasoning-Aufwand erhöhen, dann Prompt verbessern</li>
+      <li>Mehr Rechenzeit ≠ immer besser — für einfache Fragen übertrieben</li>
+    </ul>
+  </div>
+
+  <!-- THEMA 4 -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s1)"></div><h3>Tools & Harness — der Iron-Man-Anzug</h3></div>
+  <div class="card-wide">
+    <!-- SVG Iron Man Analogie -->
+    <svg viewBox="0 0 600 120" style="width:100%;max-width:600px;display:block;margin:0 auto 16px;" xmlns="http://www.w3.org/2000/svg">
+      <!-- LLM -->
+      <rect x="10" y="20" width="130" height="80" rx="10" fill="#EFF6FF" stroke="#93C5FD" stroke-width="2"/>
+      <text x="75" y="50" text-anchor="middle" font-size="22">🧠</text>
+      <text x="75" y="72" text-anchor="middle" font-size="11" fill="#1D4ED8" font-weight="700">LLM / Claude</text>
+      <text x="75" y="87" text-anchor="middle" font-size="9" fill="#64748B">klug, aber ohne Arme</text>
+      <!-- Plus -->
+      <text x="157" y="68" text-anchor="middle" font-size="28" fill="#64748B" font-weight="300">+</text>
+      <!-- Harness -->
+      <rect x="175" y="20" width="130" height="80" rx="10" fill="#F5F3FF" stroke="#C4B5FD" stroke-width="2"/>
+      <text x="240" y="50" text-anchor="middle" font-size="22">🔧</text>
+      <text x="240" y="72" text-anchor="middle" font-size="11" fill="#5B21B6" font-weight="700">Harness / Tools</text>
+      <text x="240" y="87" text-anchor="middle" font-size="9" fill="#64748B">Dateien · Web · Code</text>
+      <!-- Equals -->
+      <text x="322" y="68" text-anchor="middle" font-size="28" fill="#64748B" font-weight="300">=</text>
+      <!-- Result -->
+      <rect x="340" y="10" width="250" height="100" rx="10" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="2.5"/>
+      <text x="465" y="48" text-anchor="middle" font-size="22">🦾</text>
+      <text x="465" y="72" text-anchor="middle" font-size="12" fill="#047857" font-weight="800">Claude Code</text>
+      <text x="465" y="89" text-anchor="middle" font-size="9" fill="#065F46">kann Dinge TUN — nicht nur antworten</text>
+      <text x="465" y="103" text-anchor="middle" font-size="9" fill="#94A3B8">(Dateien · Terminal · Netzwerk · Web)</text>
+    </svg>
+
+    <div class="grid-2">
+      <div>
+        <p style="font-size:.9rem;margin-bottom:8px;"><strong>Wie Tools technisch funktionieren:</strong></p>
+        <ol style="padding-left:18px;font-size:.87rem;line-height:1.8;">
+          <li>KI schreibt im Transformer-Lauf: <code>tool_use: research</code></li>
+          <li>Der Harness (normales Programm) erkennt das Codewort</li>
+          <li>Harness führt die Suche aus und gibt das Ergebnis zurück</li>
+          <li>KI verarbeitet das Ergebnis und antwortet</li>
+        </ol>
+      </div>
+      <div>
+        <p style="font-size:.9rem;margin-bottom:8px;"><strong>Tools in modernen Harnessen:</strong></p>
+        <ul style="font-size:.87rem;padding-left:18px;line-height:1.9;">
+          <li>🔍 Internetrecherche</li>
+          <li>💻 Code-Ausführung / Terminal</li>
+          <li>📁 Dateien lesen &amp; schreiben</li>
+          <li>🖥️ Browser Use / Computer Use</li>
+          <li>📸 Bildgenerierung</li>
+        </ul>
+      </div>
+    </div>
+    <div class="learn">
+      <div class="learn-head">💡 Kernlearning</div>
+      <ul>
+        <li>KI ohne Werkzeuge = kluge Person ohne Arme</li>
+        <li>Der Harness gibt der KI Hände — erst dann kann sie echte Arbeit erledigen</li>
+        <li>Claude.ai = Fiat Punto | Claude Code = Rennwagen auf der Strecke</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- THEMA 5 -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s1)"></div><h3>System Prompts — die unsichtbare Grundlage</h3></div>
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-title" style="color:var(--muted);">① Anbieter-Prompt</div>
+      <p style="font-size:.87rem;">Von Anthropic geschrieben. ~6.000 Token. Macht Claude höflich, hilfsbereit, sicher. Ohne ihn wäre Claude brutal ehrlich.</p>
+    </div>
+    <div class="card">
+      <div class="card-title" style="color:var(--muted);">② Harness-Prompt</div>
+      <p style="font-size:.87rem;">Von Claude Code geschrieben. Erklärt der KI: Welche Tools hast du? Wie rufst du sie auf? Was darfst du tun?</p>
+    </div>
+    <div class="card" style="border-color:var(--s1);">
+      <div class="card-title" style="color:var(--s1);">③ User-Prompt ← WIR</div>
+      <p style="font-size:.87rem;">Von uns editierbar. Eigene Verhaltensanweisungen: „Du sprichst mit Handwerkern. Du kennst unser KMS. Du schreibst immer Log-Einträge."</p>
+    </div>
+  </div>
+  <div class="learn" style="margin-top:12px;">
+    <div class="learn-head">💡 Kernlearning</div>
+    <ul>
+      <li>System Prompts werden unsichtbar vor jedem Chat vorangestellt — Claude "weiß" es immer</li>
+      <li>Nur der dritte Prompt ist editierbar → das ist die CLAUDE.md (→ Session 3)</li>
+    </ul>
+  </div>
+
+</div><!-- end s1 -->
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SESSION 2
+══════════════════════════════════════════════════════════ -->
+<div id="s2" class="session" style="display:none">
+
+  <div class="hero hero-s2">
+    <div class="hero-icon">⌨️</div>
+    <div>
+      <h2>Session 2 — Claude Code in der Praxis</h2>
+      <p>Installation, erste Tool-Nutzung, Context Window und smarte Prompts.</p>
+      <div class="hero-meta">
+        <span class="hero-tag">📅 6. Mai 2026</span>
+        <span class="hero-tag">⏱ 124 Minuten</span>
+        <span class="hero-tag">👥 5 Teilnehmer</span>
+        <span class="hero-tag">🎯 Praxis-Einstieg</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- THEMA 1 -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s2)"></div><h3>Prompts richtig schreiben: Vollständigkeit schlägt Perfektion</h3></div>
+  <div class="card-wide">
+    <div class="cw-title">✍️ Die 90/10-Regel</div>
+    <div class="quote">"90 Prozent der Qualität hängt von der Vollständigkeit des Prompts ab. Nur 10 Prozent von der Reihenfolge innerhalb des Prompts." — Marco Heer</div>
+    <div class="grid-2">
+      <div>
+        <p style="font-size:.87rem;font-weight:600;color:#DC2626;margin-bottom:6px;">❌ Schlechter Prompt</p>
+        <div class="code">Schreib mir einen Text über KI</div>
+        <p style="font-size:.82rem;color:var(--muted);">Kein Kontext → generische, unbrauchbare Antwort</p>
+      </div>
+      <div>
+        <p style="font-size:.87rem;font-weight:600;color:#059669;margin-bottom:6px;">✅ Guter Prompt</p>
+        <div class="code">Ich bin Digitalisierungsberater bei der HWK
+Potsdam. Ich spreche nächste Woche vor 15
+Handwerksbetrieben über KI-Einsatz. Schreib
+mir eine 200-Wörter-Einleitung, die Skepsis
+aufgreift und Neugierde weckt.</div>
+        <p style="font-size:.82rem;color:var(--muted);">Kontext + Ziel + Format → passgenaue Antwort</p>
+      </div>
+    </div>
+    <div class="praxis">
+      <div class="praxis-head">🔧 Praxistipp: Veraltete Software-Infos</div>
+      <p>KI hat einen Trainingsstichtag — bei Software-Fragen immer recherchieren lassen:</p>
+      <div class="code" style="margin-top:8px;">Hier ist ein Screenshot von [Programm]. Ich suche
+die Einstellung für [X]. Bedenke: Es ist der
+Mai 2026. Bitte recherchier kurz, ob sich
+etwas geändert hat.</div>
+    </div>
+    <div class="learn">
+      <div class="learn-head">💡 Kernlearning</div>
+      <ul>
+        <li>Einfach losreden (WhisperFlow) — KI versteht auch unstrukturierte Sprache</li>
+        <li>Das Datum im Prompt mitnennen hilft bei aktuellen Infos</li>
+        <li><code>Win + Shift + S</code> = Windows-Screenshot direkt in Zwischenablage</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- THEMA 2 -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s2)"></div><h3>Was ist Claude Code? Der Rennwagen</h3></div>
+  <div class="card-wide">
+    <table class="tbl">
+      <tr><th></th><th>Claude AI (App)</th><th>Claude Code (CLI)</th></tr>
+      <tr><td><strong>Was es ist</strong></td><td>Chat-Interface im Browser</td><td>Harness + Modell auf dem eigenen Computer</td></tr>
+      <tr><td><strong>Metapher</strong></td><td>Fiat Punto zum Einkaufen</td><td>Rennwagen auf der Strecke</td></tr>
+      <tr><td><strong>Werkzeuge</strong></td><td>Sehr begrenzt (nur Browser)</td><td>Dateien, Terminal, Netzwerk, Web, …</td></tr>
+      <tr><td><strong>Stärke</strong></td><td>Schnell Fragen stellen</td><td>Dinge TUN — Dateien erstellen, Programme ausführen</td></tr>
+    </table>
+    <div class="learn">
+      <div class="learn-head">💡 Kernlearning</div>
+      <ul>
+        <li>Claude Code ≠ Claude App — es ist ein komplett anderes Werkzeug</li>
+        <li>Die Eingabeaufforderung ist hässlich, aber die Basis für alles</li>
+        <li>Jeder grüne Punkt im Terminal = ein Werkzeug wurde eingesetzt</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- THEMA 3 -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s2)"></div><h3>Installation Claude Code — Schritt für Schritt</h3></div>
+  <div class="card-wide">
+    <ol style="padding-left:20px;font-size:.9rem;line-height:2.2;">
+      <li>Browser → Google: <code>Claude Code Windows Installation</code> → offizielle Anthropic-Doku öffnen</li>
+      <li>Installations-Befehl kopieren</li>
+      <li>Eingabeaufforderung öffnen (<code>Windows-Taste → "Eingabeaufforderung"</code>)</li>
+      <li>Befehl einfügen (Rechtsklick → Einfügen) → Enter → 2–3 Minuten warten</li>
+      <li>Umgebungsvariable setzen (Anleitung via Claude AI holen)</li>
+      <li>Eingabeaufforderung schließen und neu öffnen</li>
+      <li><code>claude</code> eintippen → Enter → Mit Konto verbinden</li>
+    </ol>
+    <div style="margin-top:12px;" class="praxis">
+      <div class="praxis-head">🔧 Bei Fehlern</div>
+      <p>Fehlermeldung kopieren → Claude AI → <em>"Ich will Claude Code installieren und kriege diesen Fehler: [Fehler]. Was soll ich machen?"</em> → KI hilft bei ihrer eigenen Installation.</p>
+    </div>
+  </div>
+
+  <!-- THEMA 4 -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s2)"></div><h3>Context Window — das Kurzzeitgedächtnis</h3></div>
+  <div class="card-wide">
+    <!-- SVG Context Window -->
+    <svg viewBox="0 0 680 100" style="width:100%;max-width:680px;display:block;margin:0 auto 16px;" xmlns="http://www.w3.org/2000/svg">
+      <rect x="10" y="30" width="660" height="40" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.5"/>
+      <rect x="10" y="30" width="200" height="40" rx="8" fill="#BFDBFE"/>
+      <text x="110" y="54" text-anchor="middle" font-size="10" fill="#1D4ED8" font-weight="600">Deine Fragen &amp; Antworten</text>
+      <rect x="210" y="30" width="120" height="40" fill="#BBF7D0"/>
+      <text x="270" y="54" text-anchor="middle" font-size="10" fill="#047857" font-weight="600">Tool-Ergebnisse</text>
+      <rect x="330" y="30" width="80" height="40" fill="#FED7AA"/>
+      <text x="370" y="54" text-anchor="middle" font-size="10" fill="#C2410C" font-weight="600">Dateien</text>
+      <rect x="410" y="30" width="260" height="40" rx="0 8 8 0" fill="#F8FAFC" stroke-dasharray="4 3" stroke="#CBD5E1" stroke-width="1.5"/>
+      <text x="540" y="54" text-anchor="middle" font-size="10" fill="#94A3B8">noch frei — ca. 150.000 Token</text>
+      <!-- Label -->
+      <text x="344" y="16" text-anchor="middle" font-size="10" fill="#64748B">← 200.000 Token Context Window (≈ 1× Herr der Ringe) →</text>
+      <text x="344" y="90" text-anchor="middle" font-size="9" fill="#94A3B8">Beim Schließen des Chats: alles weg — außer mit KMS (→ Session 3)</text>
+    </svg>
+
+    <div class="grid-2">
+      <div>
+        <p style="font-size:.9rem;font-weight:600;margin-bottom:6px;">Was ist das Context Window?</p>
+        <p style="font-size:.87rem;">Das „Kurzzeitgedächtnis" der KI für eine Konversation. Alles, was Claude in einer Sitzung weiß — Deine Fragen, seine Antworten, geladene Dateien, Tool-Ergebnisse — liegt darin.</p>
+        <p style="font-size:.87rem;margin-top:8px;">200.000 Token ≈ 150.000 Wörter ≈ ganzer Roman.</p>
+      </div>
+      <div>
+        <p style="font-size:.9rem;font-weight:600;margin-bottom:6px;">Auto-Compacting</p>
+        <p style="font-size:.87rem;">Wenn das Context Window fast voll ist, fasst Claude die bisherige Konversation automatisch zusammen und gibt Platz frei. Die Zusammenfassung bleibt, Details gehen verloren.</p>
+        <p style="font-size:.87rem;margin-top:8px;">→ Deshalb ist das KMS so wichtig: wichtiges Wissen muss dauerhaft in Dateien gespeichert werden.</p>
+      </div>
+    </div>
+    <div class="learn">
+      <div class="learn-head">💡 Kernlearning</div>
+      <ul>
+        <li>Beim Schließen des Chats: alles weg — Claude erinnert sich an nichts</li>
+        <li>Auto-Compacting ist automatisch, verlustbehaftet und nicht umkehrbar</li>
+        <li>Lösung: Wissen in Dateien persistieren → KMS (Session 3)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- THEMA 5 -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s2)"></div><h3>Slash-Commands &amp; Skills</h3></div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">⌨️ Standard-Commands</div>
+      <div class="cmd-ref">
+        <code>/help</code><span>Alle verfügbaren Commands anzeigen</span>
+        <code>/exit</code><span>Claude Code beenden</span>
+        <code>/clear</code><span>Konversation löschen (Context leeren)</span>
+        <code>Escape</code><span>Aktuelle Aktion abbrechen</span>
+        <code>Strg+O</code><span>Tool-Details ein-/ausblenden</span>
+        <code>↑</code><span>Letzten Befehl wiederholen</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">🔖 Eigene Skills erstellen</div>
+      <p style="font-size:.87rem;">Skills = eingepackte, wiederverwendbare Prompts. Erreichbar per <code>/skillname</code>.</p>
+      <p style="font-size:.87rem;margin-top:8px;">Beispiel: <code>/post</code> führt automatisch den Abschluss-Check für das Logbuch aus — ohne den langen Prompt jedes Mal neu eingeben zu müssen.</p>
+      <p style="font-size:.82rem;color:var(--muted);margin-top:8px;">Einmal erstellt → Claude neu starten → ab sofort verfügbar.</p>
+    </div>
+  </div>
+
+  <!-- Praxisfall Website -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s2)"></div><h3>Praxisfall: Website analysieren und neu designen</h3></div>
+  <div class="card-wide card-accent-s2">
+    <div class="cw-title">🌐 Demo aus der Session — Mirko Mold Website</div>
+    <p style="font-size:.9rem;margin-bottom:12px;">Janine von Mirko Mold lässt die eigene Firmenhomepage analysieren und eine modernere Version vorschlagen.</p>
+    <div class="code"><span class="code-comment"># Prompt (via WhisperFlow diktiert)</span>
+<span class="code-cmd">Hier ist die URL unserer Website: mirkomold.de
+Analysiere die aktuelle Site. Was funktioniert gut,
+was nicht? Erstell mir eine moderne HTML-Version
+mit verbessertem Layout — offline-fähig, kein Internet
+nötig.</span></div>
+    <p style="font-size:.87rem;margin-top:10px;">→ Claude liest die Website, analysiert Struktur und Design, erstellt eine neue HTML-Datei mit modernem Layout — ohne externe Abhängigkeiten.</p>
+    <div class="learn">
+      <div class="learn-head">💡 Kernlearning</div>
+      <ul>
+        <li>Claude Code kann Websites lesen und als Basis für Redesigns nutzen</li>
+        <li>HTML-Dateien sind portabel: Doppelklick → Browser → fertig. Kein Server nötig.</li>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- end s2 -->
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SESSION 3
+══════════════════════════════════════════════════════════ -->
+<div id="s3" class="session" style="display:none">
+
+  <div class="hero hero-s3">
+    <div class="hero-icon">🗃️</div>
+    <div>
+      <h2>Session 3 — CLAUDE.md &amp; Wissensmanagement</h2>
+      <p>System-Prompt-Strategie, Terminal-Flags, Markdown und der vollständige KMS-Aufbau mit 4 Levels.</p>
+      <div class="hero-meta">
+        <span class="hero-tag">📅 13. Mai 2026</span>
+        <span class="hero-tag">⏱ 126 Minuten</span>
+        <span class="hero-tag">👥 5 Teilnehmer</span>
+        <span class="hero-tag">🎯 KMS komplett aufbauen</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HAUSAUFGABEN-RUNDE -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s3)"></div><h3>Hausaufgaben-Runde: Was alle gebaut haben</h3></div>
+  <div class="grid-2">
+    <div class="pcard">
+      <div class="pcard-name">Janine</div>
+      <div class="pcard-role">Ingenieurbüro · NRW</div>
+      <div class="pcard-built"><span>Lernwebsite</span> für die Grundlagenvorlesung ihres Mannes (Dozent an der Uni) — mehrere verknüpfte HTML-Dateien mit interaktivem Quiz. Feedback-Loop: Sprachnachricht per WhatsApp → transkribieren → in KI.</div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-name">Marvin</div>
+      <div class="pcard-role">Schachverein · 80 Mitglieder</div>
+      <div class="pcard-built"><span>Geburtstags-Automation</span>: Google Sheet → Google Apps Script → automatische Gmail zwischen 9–10 Uhr. Problem: Excel-Datei statt Google Sheet → nach Konvertierung lief es. + Tetris-Spiel für die Kinder + Präsentations-HTML für Workshops.</div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-name">Fabian</div>
+      <div class="pcard-role">Tiefbau · Kaiserslautern</div>
+      <div class="pcard-built"><span>Bagger-Bedienungsanleitung</span>: 180-seitiges PDF → interaktive HTML-Seite mit Fokus auf Ladungssicherung und Sondersteuerung. Problem: ~30 Mal auf „Ja" klicken → Anlass für heutigen Admin-Modus.</div>
+    </div>
+    <div class="pcard">
+      <div class="pcard-name">Tobias</div>
+      <div class="pcard-role">Feuerfest- und Schornsteinbau</div>
+      <div class="pcard-built"><span>Erste Eigenversuche</span>: Excel-Tabellen, Hotel-Anfragen, E-Mail-Überarbeitungen, Transkript-Arbeit. Hinweis: Das 20€-Abo läuft bei intensiver Nutzung schnell ab.</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ADMIN MODUS -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s3)"></div><h3>Admin-Modus &amp; Terminal-Flags</h3></div>
+  <div class="card-wide">
+    <div class="cw-title">🔐 Claude ohne Rückfragen starten</div>
+    <p style="font-size:.9rem;margin-bottom:14px;">Im normalen Modus fragt Claude vor jeder Dateioperation nach Genehmigung. Der Admin-Modus hebt das auf. <strong>Empfehlung:</strong> erst nutzen, wenn man den normalen Modus kennt.</p>
+
+    <div class="grid-2">
+      <div>
+        <p style="font-size:.88rem;font-weight:600;margin-bottom:6px;">Die drei wichtigsten Flags:</p>
+        <div class="code"><span class="code-cmd">claude</span> <span class="code-flag">--dangerously-skip-permissions</span>
+<span class="code-comment"># Admin-Modus — keine Ja/Nein-Fragen mehr</span>
+<span class="code-comment"># Unten im Terminal: "Bypass Permissions"</span>
+
+<span class="code-cmd">claude</span> <span class="code-flag">--continue</span>
+<span class="code-comment"># Letzten Chatverlauf fortsetzen</span>
+
+<span class="code-cmd">claude</span> <span class="code-flag">--resume</span>
+<span class="code-comment"># Alle Chatverläufe dieses Ordners anzeigen</span></div>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:6px;">Flags lassen sich beliebig kombinieren.</p>
+      </div>
+      <div>
+        <p style="font-size:.88rem;font-weight:600;margin-bottom:6px;">Chathistorie ist ordnergebunden:</p>
+        <div class="code"><span class="code-comment"># Im Ordner Desktop gestartet:</span>
+<span class="code-cmd">claude --resume</span>
+<span class="code-val">→ zeigt Chats vom Desktop</span>
+
+<span class="code-comment"># Im Ordner Synclaro gestartet:</span>
+<span class="code-cmd">claude --resume</span>
+<span class="code-val">→ zeigt andere Chats</span></div>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:6px;">Die Chathistorie wird in einer Datei im aktuellen Ordner gespeichert.</p>
+      </div>
+    </div>
+
+    <div class="praxis">
+      <div class="praxis-head">🔧 Praxisfall — Fabians Bagger-Manual</div>
+      <p>Fabian musste ~30 Mal auf „Ja" klicken, weil Claude jede Datei-Operation bestätigen wollte. Lösung: Admin-Modus einschalten. Claude arbeitet dann das gesamte 180-Seiten-PDF durch, ohne Unterbrechung. <strong>Vorgehen:</strong> <code>claude --dangerously-skip-permissions</code> → Prompt mit Aufgabe → durchlaufen lassen → Ergebnis prüfen.</p>
+    </div>
+    <div class="learn">
+      <div class="learn-head">💡 Kernlearning</div>
+      <ul>
+        <li><strong>Flag-Name merken:</strong> <code>--dangerously-skip-permissions</code> — einmal notieren, dann per ↑ Pfeiltaste abrufbar</li>
+        <li>Admin-Modus erst nutzen, wenn man das Verhalten von Claude kennt und einschätzen kann</li>
+        <li>Chathistorie ist ordnergebunden — <code>--resume</code> zeigt immer nur Chats des aktuellen Ordners</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TERMINAL NAVIGATION -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s3)"></div><h3>Terminal-Navigation</h3></div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">📂 Die drei Grundbefehle</div>
+      <table class="tbl" style="margin-top:8px;">
+        <tr><th>Befehl</th><th>Funktion</th></tr>
+        <tr><td><code>cd Ordner</code></td><td>In einen Ordner wechseln</td></tr>
+        <tr><td><code>cd ..</code></td><td>Eine Ebene nach oben</td></tr>
+        <tr><td><code>ls</code></td><td>Dateien &amp; Ordner auflisten</td></tr>
+      </table>
+      <div class="code" style="margin-top:10px;"><span class="code-comment"># Tab-Autovervollständigung nutzen:</span>
+<span class="code-cmd">cd pr</span>[Tab] → <span class="code-val">cd privat/</span>
+<span class="code-cmd">cd privat/pro</span>[Tab] → <span class="code-val">cd privat/programmierung/</span></div>
+    </div>
+    <div class="card">
+      <div class="card-title">💡 Tipp von Marco</div>
+      <p style="font-size:.87rem;margin-bottom:10px;">Claude selbst als Navigations-Hilfe nutzen:</p>
+      <div class="quote">"Ich frage einen laufenden Claude: 'Gib mir den CD-Befehl, um in den Holzbau-März-Ordner reinzukommen.' Er sucht schnell und gibt mir den Befehl."</div>
+      <p style="font-size:.82rem;color:var(--muted);margin-top:8px;">Man muss nur <strong>bis zur KI kommen</strong> — dann kann sie bei allem anderen helfen.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CLAUDE MD -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s3)"></div><h3>CLAUDE.md — der User-System-Prompt</h3></div>
+  <div class="card-wide">
+    <div class="cw-title">📄 Was ist CLAUDE.md?</div>
+    <p style="font-size:.9rem;margin-bottom:16px;">Der User-System-Prompt ist die einzige der drei System-Prompt-Ebenen, die <strong>wir selbst editieren können</strong>. Er steht noch vor unserem ersten Chat-Prompt und gibt Claude dauerhaftes Wissen über uns. Er wird in einer Datei namens <strong>CLAUDE.md</strong> gespeichert.</p>
+
+    <!-- SVG CLAUDE.md Hierarchy -->
+    <svg viewBox="0 0 680 200" style="width:100%;max-width:680px;display:block;margin:0 auto 16px;" xmlns="http://www.w3.org/2000/svg">
+      <!-- Folder Tree -->
+      <!-- Level 0: C:\ -->
+      <rect x="10" y="10" width="100" height="32" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+      <text x="60" y="30" text-anchor="middle" font-size="11" fill="#94A3B8" font-weight="600">C:\</text>
+      <!-- Global CLAUDE.md -->
+      <rect x="160" y="10" width="160" height="32" rx="6" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="2"/>
+      <text x="240" y="24" text-anchor="middle" font-size="10" fill="#047857" font-weight="700">🌐 Globale CLAUDE.md</text>
+      <text x="240" y="36" text-anchor="middle" font-size="9" fill="#064E3B">IMMER geladen · überall</text>
+      <line x1="110" y1="26" x2="158" y2="26" stroke="#6EE7B7" stroke-width="1.5" stroke-dasharray="4 2"/>
+      <!-- Badge -->
+      <rect x="330" y="14" width="90" height="22" rx="11" fill="#059669"/>
+      <text x="375" y="28" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">✓ immer aktiv</text>
+
+      <!-- Level 1: Users -->
+      <line x1="60" y1="42" x2="60" y2="70" stroke="#475569" stroke-width="1.5"/>
+      <rect x="10" y="72" width="100" height="32" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+      <text x="60" y="90" text-anchor="middle" font-size="11" fill="#94A3B8">Users\</text>
+
+      <!-- Level 2: FBöhmer -->
+      <line x1="60" y1="104" x2="60" y2="130" stroke="#475569" stroke-width="1.5"/>
+      <rect x="10" y="132" width="100" height="32" rx="6" fill="#1E293B" stroke="#475569" stroke-width="1.5"/>
+      <text x="60" y="150" text-anchor="middle" font-size="10" fill="#94A3B8">FBöhmer\</text>
+
+      <!-- Level 3: Desktop -->
+      <line x1="60" y1="164" x2="60" y2="168" stroke="#475569" stroke-width="1.5"/>
+      <line x1="60" y1="168" x2="120" y2="168" stroke="#475569" stroke-width="1.5"/>
+      <rect x="122" y="154" width="90" height="28" rx="6" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+      <text x="167" y="172" text-anchor="middle" font-size="10" fill="#94A3B8">Desktop\</text>
+      <!-- Optional CLAUDE.md Desktop -->
+      <rect x="222" y="154" width="145" height="28" rx="6" fill="#F5F3FF" stroke="#C4B5FD" stroke-width="1.5"/>
+      <text x="295" y="168" text-anchor="middle" font-size="9" fill="#5B21B6" font-weight="600">📄 CLAUDE.md (optional)</text>
+      <text x="295" y="179" text-anchor="middle" font-size="8" fill="#7C3AED">geladen, wenn Claude hier startet</text>
+      <line x1="212" y1="168" x2="220" y2="168" stroke="#C4B5FD" stroke-width="1.5" stroke-dasharray="3 2"/>
+
+      <!-- Level 4: KI Ordner -->
+      <line x1="167" y1="182" x2="167" y2="190" stroke="#475569" stroke-width="1.5"/>
+      <line x1="167" y1="190" x2="240" y2="190" stroke="#475569" stroke-width="1.5"/>
+      <rect x="242" y="180" width="80" height="22" rx="5" fill="#059669" stroke="#047857" stroke-width="1.5"/>
+      <text x="282" y="194" text-anchor="middle" font-size="9" fill="#fff" font-weight="700">📂 KI\ ← hier</text>
+      <!-- Optional CLAUDE.md KI -->
+      <rect x="332" y="180" width="145" height="22" rx="5" fill="#F5F3FF" stroke="#C4B5FD" stroke-width="1.5"/>
+      <text x="405" y="194" text-anchor="middle" font-size="9" fill="#5B21B6">📄 CLAUDE.md (optional)</text>
+      <line x1="322" y1="191" x2="330" y2="191" stroke="#C4B5FD" stroke-width="1.5" stroke-dasharray="3 2"/>
+
+      <text x="490" y="194" font-size="8" fill="#94A3B8">geladen wenn Claude im KI-Ordner läuft</text>
+    </svg>
+
+    <div class="grid-2">
+      <div>
+        <p style="font-size:.9rem;font-weight:600;margin-bottom:8px;">Ladereihenfolge:</p>
+        <ol style="font-size:.87rem;padding-left:18px;line-height:1.9;">
+          <li>Globale CLAUDE.md <em>(immer, egal wo)</em></li>
+          <li>CLAUDE.md auf Desktop <em>(wenn Claude dort startet)</em></li>
+          <li>CLAUDE.md im KI-Ordner <em>(wenn Claude dort startet)</em></li>
+        </ol>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:8px;">Dateien unterhalb oder neben dem aktuellen Ordner werden NICHT geladen.</p>
+      </div>
+      <div>
+        <p style="font-size:.9rem;font-weight:600;margin-bottom:8px;">Strategie-Empfehlung (Marco):</p>
+        <ul style="font-size:.87rem;padding-left:18px;line-height:1.9;">
+          <li><strong>Einfach:</strong> Nur eine globale CLAUDE.md — alles an einem Ort</li>
+          <li><strong>Modular:</strong> Globale für immer-gültige Infos + lokale für Themenordner</li>
+          <li><strong>Max. 2</strong> KMS-Systeme pro Computer</li>
+        </ul>
+        <div class="quote" style="margin-top:8px;">"Eigentlich musst du nie mehr selbst in Dateien reinschreiben. Die Zeit ist vorbei. Du sagst Claude, was er da reinschreiben soll."</div>
+      </div>
+    </div>
+    <div class="learn">
+      <div class="learn-head">💡 Kernlearning</div>
+      <ul>
+        <li>CLAUDE.md ist der einzige Dateiname, der automatisch geladen wird — alle anderen .md-Dateien müssen explizit geöffnet werden</li>
+        <li>Globale CLAUDE.md = die Mutter aller CLAUDE.mds — wird immer geladen</li>
+        <li>Inhalt: beliebig — von Claude selbst schreiben lassen (z. B. per WhisperFlow einsprechen)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- MARKDOWN -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s3)"></div><h3>Markdown — das Format für Mensch &amp; Maschine</h3></div>
+  <div class="card-wide">
+    <div class="grid-2">
+      <div>
+        <p style="font-size:.9rem;font-weight:600;margin-bottom:8px;">Warum Markdown?</p>
+        <table class="tbl">
+          <tr><th>Format</th><th>Mensch</th><th>Maschine</th></tr>
+          <tr><td>Word (.docx)</td><td>✅</td><td>❌</td></tr>
+          <tr><td>Plain Text (.txt)</td><td>✅</td><td>⚠️</td></tr>
+          <tr><td><strong>Markdown (.md)</strong></td><td>✅</td><td>✅</td></tr>
+          <tr><td>Python / JS</td><td>❌</td><td>✅</td></tr>
+        </table>
+      </div>
+      <div>
+        <p style="font-size:.9rem;font-weight:600;margin-bottom:8px;">Wichtige Syntax:</p>
+        <table class="tbl">
+          <tr><th>Schreibe</th><th>Bedeutung</th></tr>
+          <tr><td><code># Titel</code></td><td>Überschrift 1 (größte)</td></tr>
+          <tr><td><code>## Abschnitt</code></td><td>Überschrift 2</td></tr>
+          <tr><td><code>**fett**</code></td><td>Fettdruck</td></tr>
+          <tr><td><code>*kursiv*</code></td><td>Kursivdruck</td></tr>
+          <tr><td><code>- Punkt</code></td><td>Aufzählung</td></tr>
+          <tr><td><code>| Spalte |</code></td><td>Tabelle</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="learn">
+      <div class="learn-head">💡 Kernlearning</div>
+      <ul>
+        <li>KI hat keine Augen → optische Formatierung (fett, Größe) muss durch Zeichen ausgedrückt werden</li>
+        <li>Markdown = perfekter Kompromiss — alle KMS-Dateien werden in .md geschrieben</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- KMS LEVELS OVERVIEW -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s3)"></div><h3>Das Wissensmanagement-System — 4 Levels</h3></div>
+
+  <div class="levels">
+    <div class="level">
+      <div class="level-num">1</div>
+      <div class="level-name">📒 Logbuch</div>
+      <div class="level-desc">Vollständige Chronik aller Aktivitäten mit Stempel-System [LOG-XXXX]</div>
+    </div>
+    <div class="level">
+      <div class="level-num">2</div>
+      <div class="level-name">✅ /post-Command</div>
+      <div class="level-desc">Zweite Sicherheitsstufe — prüft am Sitzungsende ob alles geloggt wurde</div>
+    </div>
+    <div class="level">
+      <div class="level-num">3</div>
+      <div class="level-name">🔍 Indexierung</div>
+      <div class="level-desc">Index am Dateianfang für effizienten Zugriff ohne alles zu laden</div>
+    </div>
+    <div class="level">
+      <div class="level-num">4</div>
+      <div class="level-name">🏷️ Learnings &amp; Decisions</div>
+      <div class="level-desc">Zwei spezialisierte Dateien für die wichtigsten Erkenntnisse und Entscheidungen</div>
+    </div>
+  </div>
+
+  <!-- KMS LEVEL 1 -->
+  <div class="card-wide" style="border:2px solid var(--s3);">
+    <div class="cw-title" style="color:var(--s3);">Level 1 — Das Logbuch</div>
+
+    <!-- SVG KMS Struktur -->
+    <svg viewBox="0 0 580 130" style="width:100%;max-width:580px;display:block;margin:0 auto 16px;" xmlns="http://www.w3.org/2000/svg">
+      <!-- KI Ordner -->
+      <rect x="10" y="45" width="80" height="40" rx="8" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+      <text x="50" y="68" text-anchor="middle" font-size="11" fill="#94A3B8" font-weight="600">KI/</text>
+      <line x1="90" y1="65" x2="118" y2="65" stroke="#475569" stroke-width="1.5"/>
+      <!-- KMS Ordner -->
+      <rect x="120" y="45" width="80" height="40" rx="8" fill="#334155" stroke="#059669" stroke-width="2"/>
+      <text x="160" y="68" text-anchor="middle" font-size="11" fill="#6EE7B7" font-weight="700">KMS/</text>
+      <!-- Files -->
+      <line x1="200" y1="55" x2="220" y2="40" stroke="#475569" stroke-width="1.5"/>
+      <line x1="200" y1="65" x2="220" y2="65" stroke="#475569" stroke-width="1.5"/>
+      <line x1="200" y1="75" x2="220" y2="90" stroke="#475569" stroke-width="1.5"/>
+      <!-- logbuch.md -->
+      <rect x="222" y="22" width="145" height="38" rx="8" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="2"/>
+      <text x="295" y="40" text-anchor="middle" font-size="11" fill="#047857" font-weight="700">📒 logbuch.md</text>
+      <text x="295" y="54" text-anchor="middle" font-size="9" fill="#065F46">[LOG-XXXX] · vollständig</text>
+      <!-- learnings.md -->
+      <rect x="222" y="48" width="145" height="38" rx="8" fill="#FFFBEB" stroke="#FCD34D" stroke-width="2"/>
+      <text x="295" y="64" text-anchor="middle" font-size="11" fill="#92400E" font-weight="700">💡 learnings.md</text>
+      <text x="295" y="78" text-anchor="middle" font-size="9" fill="#78350F">[L-XXXX] · kompakt</text>
+      <!-- decisions.md -->
+      <rect x="222" y="74" width="145" height="38" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="2"/>
+      <text x="295" y="90" text-anchor="middle" font-size="11" fill="#1D4ED8" font-weight="700">🎯 decisions.md</text>
+      <text x="295" y="104" text-anchor="middle" font-size="9" fill="#1e3a6e">[D-XXXX] · kompakt</text>
+      <!-- CLAUDE.md -->
+      <line x1="200" y1="65" x2="390" y2="20" stroke="#475569" stroke-width="1" stroke-dasharray="4 2"/>
+      <rect x="390" y="8" width="180" height="28" rx="6" fill="#F5F3FF" stroke="#C4B5FD" stroke-width="1.5"/>
+      <text x="480" y="26" text-anchor="middle" font-size="9" fill="#5B21B6" font-weight="600">🌐 globale CLAUDE.md → KMS-Pfad</text>
+      <!-- Label -->
+      <text x="295" y="120" text-anchor="middle" font-size="9" fill="#94A3B8">Alle drei Dateien haben einen INDEX-Abschnitt am Anfang</text>
+    </svg>
+
+    <p style="font-size:.9rem;margin-bottom:14px;"><strong>Was kommt in jeden Logeintrag?</strong> Jeder Eintrag beantwortet diese 8 Fragen:</p>
+    <div class="q-grid">
+      <div class="q-item"><div class="q-icon">❓</div><div class="q-label">Was?</div><div class="q-desc">Welche Aktion, Datei, welches Thema?</div></div>
+      <div class="q-item"><div class="q-icon">🔧</div><div class="q-label">Wie?</div><div class="q-desc">Tools, Befehle, Methoden</div></div>
+      <div class="q-item"><div class="q-icon">📍</div><div class="q-label">Wo?</div><div class="q-desc">Verzeichnis, System, App</div></div>
+      <div class="q-item"><div class="q-icon">📅</div><div class="q-label">Wann?</div><div class="q-desc">Datum und Uhrzeit</div></div>
+      <div class="q-item"><div class="q-icon">🎯</div><div class="q-label">Warum?</div><div class="q-desc">Motivation, Auftrag, Ziel</div></div>
+      <div class="q-item"><div class="q-icon">👥</div><div class="q-label">Umstände?</div><div class="q-desc">Wer war dabei? Welcher Rahmen?</div></div>
+      <div class="q-item"><div class="q-icon">⏮️</div><div class="q-label">Vorher?</div><div class="q-desc">Relevante Ereignisse davor</div></div>
+      <div class="q-item"><div class="q-icon">⏭️</div><div class="q-label">Nachher?</div><div class="q-desc">Ergebnis, offene Punkte</div></div>
+    </div>
+
+    <div class="code" style="margin-top:14px;"><span class="code-comment"># Stempel-Format (wird nie verändert, nie wiederverwendet)</span>
+<span class="code-val">[LOG-0001]</span>
+Datum & Uhrzeit    : 2026-05-13, ca. 14:00 Uhr
+Sitzung            : Synclaro KI-Coaching, Session 3
+Thema der Sitzung  : KMS-Einrichtung
+
+<span class="code-comment">## Was wurde gemacht?</span>
+KMS-Ordner erstellt, logbuch.md angelegt, ...
+
+<span class="code-comment">## Wie wurde es gemacht?</span>
+Claude Code CLI, Write-Tool, globale CLAUDE.md befüllt, ...</div>
+
+    <div class="praxis">
+      <div class="praxis-head">🔧 Marcos Motiv — der Bordstein-Mitarbeiter</div>
+      <p>"Wir haben mit Claude einen äußerst fähigen Mitarbeiter, den wir auf dem Bordstein vor unserer Firma getroffen haben. Super smartes Kerlchen. Aber er weiß über unsere Firma nichts." — Das Logbuch macht ihn zum eingearbeiteten Mitarbeiter, der Bescheid weiß.</p>
+    </div>
+    <div class="learn">
+      <div class="learn-head">💡 Kernlearning</div>
+      <ul>
+        <li><strong>Keine Token-Sparmaßnahmen</strong> im Logbuch — maximale Vollständigkeit hat Priorität</li>
+        <li>Stempel [LOG-XXXX] sind unveränderlich — stabiler als Seitenzahlen, die sich verschieben</li>
+        <li>Die globale CLAUDE.md trägt den Verweis auf den KMS-Pfad — jede Claude-Session kennt das KMS</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- KMS LEVEL 2 -->
+  <div class="card-wide">
+    <div class="cw-title" style="color:var(--s3);">Level 2 — /post-Command: zweite Sicherheitsstufe</div>
+    <div class="grid-2">
+      <div>
+        <p style="font-size:.9rem;margin-bottom:10px;"><strong>Das Problem:</strong></p>
+        <div class="quote">"LLMs haben wie wir Menschen eine Konzentration, die mit der Zeit sinkt. Eine Anweisung von vor 5 Stunden wird nicht mehr so konsequent befolgt. Das unterscheidet eine KI von einem deterministischen Skript."</div>
+        <p style="font-size:.87rem;margin-top:8px;">Die CLAUDE.md-Anweisung allein reicht nicht — bei langen Sessions wird sie „überschrieben" durch neuere Inhalte im Context Window.</p>
+      </div>
+      <div>
+        <p style="font-size:.9rem;margin-bottom:10px;"><strong>Die Lösung: /post</strong></p>
+        <div class="code"><span class="code-comment"># Am Ende jeder Sitzung eingeben:</span>
+<span class="code-cmd">/post</span>
+
+<span class="code-comment"># Claude prüft dann:</span>
+<span class="code-comment"># - Wurden alle Aktivitäten geloggt?</span>
+<span class="code-comment"># - Fehlen Einträge?</span>
+<span class="code-comment"># - Alles vollständig?</span>
+<span class="code-comment"># - Fehlende Einträge werden nachgeholt.</span></div>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:6px;">Der /post-Skill ist ein eingepackter Prompt. Er wird einmal erstellt und dann per <code>/post</code> aufgerufen.</p>
+      </div>
+    </div>
+    <div class="praxis">
+      <div class="praxis-head">🔧 Das Feierabend-Ritual</div>
+      <p>Vor dem Schließen von Claude Code immer: <code>/post</code> eingeben → Claude überprüft die Session → fehlende Logs werden nachgetragen → dann schließen. Die Kombination aus CLAUDE.md (passiv) und /post (aktiv) macht das Logging robust.</p>
+    </div>
+    <div class="learn">
+      <div class="learn-head">💡 Kernlearning</div>
+      <ul>
+        <li>Skills = wiederverwendbare Prompts, gespeichert in einer Konfigurationsdatei</li>
+        <li>Nach dem Erstellen eines Skills: Claude einmal neu starten (wie ein frisch installiertes Programm)</li>
+        <li>/post ist das Feierabend-Ritual — schützt das KMS vor Lücken</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- KMS LEVEL 3 -->
+  <div class="card-wide">
+    <div class="cw-title" style="color:var(--s3);">Level 3 — Indexierung: Das Kapitelverzeichnis</div>
+    <div class="grid-2">
+      <div>
+        <p style="font-size:.9rem;font-weight:600;margin-bottom:8px;">Das Problem ohne Index:</p>
+        <p style="font-size:.87rem;">Ein Logbuch mit 500 Einträgen vollständig in das Context Window laden = riesige Token-Verschwendung. Bei jedem Aufruf würde die KI Tausende von Tokens lesen, nur um einen Eintrag zu finden.</p>
+        <div class="quote" style="margin-top:10px;">"Wie ein Roman, der 1.000 Seiten hat. Ohne Inhaltsverzeichnis muss man immer alles lesen." — Marco</div>
+      </div>
+      <div>
+        <p style="font-size:.9rem;font-weight:600;margin-bottom:8px;">Das Such-Protokoll mit Index:</p>
+        <ol style="font-size:.87rem;padding-left:18px;line-height:1.9;">
+          <li>Nur die ersten ~30 Zeilen laden (der Index)</li>
+          <li>Stichwort suchen → Stempel identifizieren</li>
+          <li>Volltext-Suche nach z. B. <code>0236</code></li>
+          <li>Findet exakt <strong>2 Treffer</strong>: Index-Zeile + Eintrag</li>
+          <li>Nur diesen Abschnitt laden</li>
+        </ol>
+      </div>
+    </div>
+    <div class="code" style="margin-top:12px;"><span class="code-comment"># So sieht der Index aus (oben in der Datei):</span>
+<span class="code-comment">## INDEX</span>
+<span class="code-val">[LOG-0001]</span> — KMS-Grundeinrichtung: Ordner und Logbuch angelegt
+<span class="code-val">[LOG-0002]</span> — /post-Command als zweite Sicherheitsstufe eingerichtet
+<span class="code-val">[LOG-0003]</span> — Logbuch-Index konzipiert und implementiert
+...
+<span class="code-val">[LOG-0236]</span> — Bauvorhaben-Management: neues System eingerichtet
+---
+<span class="code-comment"># Suche nach "Bauvorhaben" → findet LOG-0236</span>
+<span class="code-comment"># Suche nach "0236" → exakt 2 Treffer → Eintrag laden</span></div>
+    <div class="learn">
+      <div class="learn-head">💡 Kernlearning</div>
+      <ul>
+        <li><strong>Warum Stempel statt Seitenzahlen?</strong> In digitalen Dateien können Zeilen verschoben werden — der Stempel bleibt immer eindeutig</li>
+        <li>Jeder Stempel kommt genau zweimal vor: im INDEX und beim Eintragskopf</li>
+        <li>Das ist <strong>Context Engineering</strong>: Nur das Nötige laden, nicht die ganze Datei</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- KMS LEVEL 4 -->
+  <div class="card-wide">
+    <div class="cw-title" style="color:var(--s3);">Level 4 — learnings.md &amp; decisions.md</div>
+    <div class="quote">"Learnings und Entscheidungen sind lebensbestimmende Events in unserem Leben. Sie verdienen es, nochmal irgendwo anders separat festgehalten zu werden." — Marco Heer</div>
+    <div class="grid-2" style="margin-top:14px;">
+      <div>
+        <div style="background:var(--learn-bg);border:1.5px solid var(--learn-br);border-radius:var(--r-sm);padding:14px;">
+          <p style="font-size:.9rem;font-weight:700;color:#92400E;margin-bottom:8px;">💡 learnings.md — Format</p>
+          <div class="code" style="font-size:.78rem;"><span class="code-val">[L-0001]</span>
+Datum     : 2026-05-13
+Kategorie : KI-Verhalten
+Learning  : 2–5 Sätze. Klar verständlich
+            ohne das Logbuch zu lesen.
+Kontext   : Wie/Wo/Warum gelernt? 1–3 Sätze.
+→ Log-Referenz: <span class="code-val">[LOG-0001]</span>  ← PFLICHT</div>
+        </div>
+      </div>
+      <div>
+        <div style="background:var(--praxis-bg);border:1.5px solid var(--praxis-br);border-radius:var(--r-sm);padding:14px;">
+          <p style="font-size:.9rem;font-weight:700;color:#1D4ED8;margin-bottom:8px;">🎯 decisions.md — Format</p>
+          <div class="code" style="font-size:.78rem;"><span class="code-val">[D-0001]</span>
+Datum        : 2026-05-13
+Bereich      : Wissensmanagement
+Entscheidung : Was wurde beschlossen?
+               2–5 Sätze.
+Begründung   : Warum? 1–3 Sätze.
+Auswirkung   : Was ändert sich? 1–3 Sätze.
+→ Log-Referenz: <span class="code-val">[LOG-0001]</span>  ← PFLICHT</div>
+        </div>
+      </div>
+    </div>
+    <div class="praxis" style="margin-top:14px;">
+      <div class="praxis-head">🔧 Praxisfall — Marco's Zwei-Jahre-Erinnerung</div>
+      <p>"In zwei Jahren entscheide ich mich, etwas zu machen. Claude sagt mir: 'Laut Decision 534 wolltest du das eigentlich niemals mehr machen. Der Grund steht in Log-Eintrag 302 — wir sind damals auf die Schnauze gefallen. Willst du das wirklich tun?'"</p>
+    </div>
+    <div class="learn">
+      <div class="learn-head">💡 Kernlearning</div>
+      <ul>
+        <li>Logbuch = „Warum und Wie" (Vollständigkeit) · Learnings/Decisions = „Was und Ergebnis" (Schnellzugriff)</li>
+        <li>Jeder Eintrag hat eine Pflicht-Quereferenz zurück zum Logbuch — ausnahmslos</li>
+        <li>Beide Dateien haben ebenfalls einen Index am Anfang</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- KMS GEMEINSAM -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s3)"></div><h3>KMS als gemeinsames System — Mensch &amp; KI</h3></div>
+  <div class="card-wide" style="border:2px solid var(--s3);">
+    <div class="cw-title">🤝 Die zwei Grundprinzipien</div>
+    <div class="grid-2">
+      <div>
+        <p style="font-size:.9rem;font-weight:700;color:var(--s3);margin-bottom:8px;">Prinzip 1: Gemeinsames Eigentum</p>
+        <ul style="font-size:.87rem;padding-left:16px;line-height:1.8;">
+          <li><strong>Der Mensch trägt ein:</strong> Persönliche Erkenntnisse, Entscheidungen, Erlebnisse</li>
+          <li><strong>Die KI trägt ein:</strong> Aktionen, erkannte Fehler, Entscheidungen im Auftrag</li>
+          <li>Fehler festhalten = kein Versagen — es ist der Kern des Lernprozesses</li>
+        </ul>
+        <div class="quote" style="margin-top:8px;">"‚Ich habe einen Fehler gemacht' ist kein Versagen — es ist ein wertvoller Eintrag."</div>
+      </div>
+      <div>
+        <p style="font-size:.9rem;font-weight:700;color:var(--s3);margin-bottom:8px;">Prinzip 2: Erst nachschlagen, dann handeln</p>
+        <p style="font-size:.87rem;margin-bottom:8px;">Vor jeder neuen Aufgabe konsultiert Claude das KMS:</p>
+        <ol style="font-size:.87rem;padding-left:16px;line-height:1.9;">
+          <li>decisions.md-Index prüfen — Entscheidungen zu diesem Thema?</li>
+          <li>learnings.md-Index prüfen — Fehler, die sich nicht wiederholen sollen?</li>
+          <li>Bei Treffern: Eintrag laden → dann erst anfangen</li>
+        </ol>
+        <div class="quote" style="margin-top:8px;">"Das KMS ist kein Archiv, das verstaubt. Es ist aktives Arbeitswerkzeug."</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <p style="font-size:.9rem;font-weight:600;margin-bottom:10px;">Wann schreibt wer was?</p>
+    <table class="tbl">
+      <tr><th>Ereignis</th><th>logbuch.md</th><th>learnings.md</th><th>decisions.md</th></tr>
+      <tr><td>Aktion ausgeführt (Datei, Code, …)</td><td style="color:var(--s3);font-weight:600;">✓</td><td>—</td><td>—</td></tr>
+      <tr><td>Etwas Neues gelernt / erkannt</td><td style="color:var(--s3);font-weight:600;">✓</td><td style="color:var(--s3);font-weight:600;">✓</td><td>—</td></tr>
+      <tr><td>Entscheidung getroffen</td><td style="color:var(--s3);font-weight:600;">✓</td><td>—</td><td style="color:var(--s3);font-weight:600;">✓</td></tr>
+      <tr><td>Learning + Entscheidung zusammen</td><td style="color:var(--s3);font-weight:600;">✓</td><td style="color:var(--s3);font-weight:600;">✓</td><td style="color:var(--s3);font-weight:600;">✓</td></tr>
+    </table>
+
+    <div class="learn" style="margin-top:14px;">
+      <div class="learn-head">💡 Das große Bild</div>
+      <ul>
+        <li>Studien: Mitarbeiter verbringen <strong>40 Minuten/Tag</strong> mit Informationssuche → mit KMS auf ein Zehntel reduzierbar</li>
+        <li>Wissensmanagement → Erfahrungsmanagement: KI greift auf gespeicherte Erfahrungen zurück, bevor sie handelt</li>
+        <li>Heute = Stufe 1 von 5. Nächste Stufen: Vektordatenbanken, Server, weltweit erreichbar</li>
+        <li><strong>"Das ist State of the Art. Das ist, was moderne KI-Nutzung ausmacht."</strong> — Marco Heer</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SETUP CHECKLISTE -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s3)"></div><h3>Setup-Checkliste: KMS in 6 Schritten einrichten</h3></div>
+  <div class="card-wide">
+    <ul class="checklist">
+      <li><div class="check-box"></div><div><strong>Schritt 1:</strong> Ordner <code>KI/KMS/</code> auf dem Desktop erstellen</div></li>
+      <li><div class="check-box"></div><div><strong>Schritt 2:</strong> <code>logbuch.md</code> im KMS-Ordner erstellen lassen (per Claude-Prompt)</div></li>
+      <li><div class="check-box"></div><div><strong>Schritt 3:</strong> Globale CLAUDE.md mit KMS-Verweis befüllen lassen (Pfad + Anweisung)</div></li>
+      <li><div class="check-box"></div><div><strong>Schritt 4:</strong> <code>/post</code>-Skill erstellen → Claude neu starten → testen mit <code>/post</code></div></li>
+      <li><div class="check-box"></div><div><strong>Schritt 5:</strong> Index-Abschnitt in <code>logbuch.md</code> einbauen lassen</div></li>
+      <li><div class="check-box"></div><div><strong>Schritt 6:</strong> <code>learnings.md</code> und <code>decisions.md</code> erstellen lassen</div></li>
+    </ul>
+    <div class="praxis" style="margin-top:14px;">
+      <div class="praxis-head">🔧 Marco's Initialisierungs-Prompt (Kurzform)</div>
+      <div class="code" style="margin-top:6px;font-size:.8rem;"><span class="code-comment"># In Claude Code eingeben (Admin-Modus empfohlen):</span>
+Hallo Claude. Ich lerne KI-Nutzung im Coaching bei Synclaro.
+Erstelle bitte:
+1. Ordner KI/KMS/ auf dem Desktop
+2. logbuch.md mit Stempel-Format [LOG-XXXX] und
+   den 8 Pflichtfragen (Was/Wie/Wo/Wann/Warum/
+   Umstände/Vorher/Nachher) — keine Token sparen,
+   maximale Vollständigkeit
+3. learnings.md mit Stempel [L-XXXX]
+4. decisions.md mit Stempel [D-XXXX]
+5. Alle drei Dateien mit Index-Abschnitt am Anfang
+6. Schreib in die globale CLAUDE.md, dass das KMS
+   existiert, wo es liegt, und dass du vor jeder
+   Aufgabe die Indizes prüfen sollst. Außerdem soll
+   das KMS von Mensch und KI gemeinsam gepflegt
+   werden.
+Schreib danach den ersten Logeintrag [LOG-0001]
+über diese Einrichtung.</div>
+    </div>
+  </div>
+
+  <!-- GLOSSAR S3 -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s3)"></div><h3>Glossar dieser Session</h3></div>
+  <div class="card-wide">
+    <table class="tbl">
+      <tr><th>Begriff</th><th>Erklärung</th></tr>
+      <tr><td><code>--dangerously-skip-permissions</code></td><td>Claude-Code-Flag für Admin-Modus: keine Rückfragen mehr</td></tr>
+      <tr><td><code>--continue</code></td><td>Letzten Chatverlauf des aktuellen Ordners fortsetzen</td></tr>
+      <tr><td><code>--resume</code></td><td>Alle Chatverläufe des aktuellen Ordners anzeigen</td></tr>
+      <tr><td>Flag</td><td>Parameter beim Programmstart mit <code>--</code>, steuert das Verhalten</td></tr>
+      <tr><td>CLAUDE.md</td><td>Dateiname für den User-System-Prompt — automatisch vom Harness geladen</td></tr>
+      <tr><td>Globale CLAUDE.md</td><td>Die CLAUDE.md im Claude-Code-Konfigurationsverzeichnis — wird immer geladen</td></tr>
+      <tr><td>Markdown (.md)</td><td>Textformat: Kompromiss zwischen menschlicher und maschineller Lesbarkeit</td></tr>
+      <tr><td>KMS</td><td>Knowledge Management System — Ordner mit strukturierten Wissens-Dateien</td></tr>
+      <tr><td>Skill / /post</td><td>Wiederverwendbarer Prompt, erreichbar per <code>/skillname</code></td></tr>
+      <tr><td>Indexierung</td><td>Index am Dateianfang für effizienten Zugriff ohne alles zu laden</td></tr>
+      <tr><td>[LOG-XXXX]</td><td>Log-Stempel — eindeutig, unveränderlich, kommt exakt 2× pro Datei vor</td></tr>
+      <tr><td>Context Engineering</td><td>Gezieltes Laden von Informationen — nur was gebraucht wird, ins Context Window</td></tr>
+      <tr><td>Erfahrungsmanagement</td><td>KMS auf dem nächsten Level: KI greift auf gespeicherte Erfahrungen zurück</td></tr>
+    </table>
+  </div>
+
+</div><!-- end s3 -->
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SESSION 4 — VON NULL ZU NETLIFY
+══════════════════════════════════════════════════════════ -->
+<div id="s4" class="session">
+
+  <div class="hero hero-s4">
+    <div class="hero-icon">🚀</div>
+    <div>
+      <h2>Session 4 — GitHub, Netlify &amp; APIs</h2>
+      <p>Der große Durchbruch: Von der lokalen HTML-Datei zur live Web-App, die weltweit erreichbar ist. Claude Code übernimmt GitHub, Netlify und alles dazwischen.</p>
+      <div class="hero-meta">
+        <span class="hero-tag">📅 27. Mai 2026</span>
+        <span class="hero-tag">🐙 GitHub CLI</span>
+        <span class="hero-tag">🌐 Netlify Deploy</span>
+        <span class="hero-tag">🔑 API-Schlüssel</span>
+        <span class="hero-tag">⚡ One-Prompt App</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEILNEHMER -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s4)"></div><h3>Wer dabei war</h3></div>
+  <div class="grid-3">
+    <div class="pcard"><div class="pcard-name">Marco Heer</div><div class="pcard-role">Coach &amp; Speaker · Synclaro</div><div class="pcard-built">Demonstriert den One-Prompt-Builder live. Zeigt Meta Brain Encoder-Demo. Erklärt GitHub-Geschichte.</div></div>
+    <div class="pcard"><div class="pcard-name">Marvin (ZFG)</div><div class="pcard-role">HWK-Berater · Testproband</div><div class="pcard-built">Heute freiwilliger Testproband. Zeiterfassungs-App auf <span>GitHub</span> + <span>Netlify</span> live gebracht.</div></div>
+    <div class="pcard"><div class="pcard-name">Tobias</div><div class="pcard-role">Teilnehmer</div><div class="pcard-built">KMS komplett gelöscht → mit Betriebsanleitung neu eingerichtet. <span>Alles in Minuten</span> wieder sauber.</div></div>
+    <div class="pcard"><div class="pcard-name">Fabian</div><div class="pcard-role">Teilnehmer</div><div class="pcard-built">Plant Ausschreibungsportal-Automatisierung. <span>GitHub</span> eingerichtet, Projekt hochgeladen.</div></div>
+    <div class="pcard"><div class="pcard-name">Andreas</div><div class="pcard-role">Teilnehmer</div><div class="pcard-built"><span>Netlify-Deploy</span> live gemacht. API-Key erstellt. Firmenwebsite in Firmen-CI umgestaltet — live.</div></div>
+    <div class="pcard"><div class="pcard-name">Janine</div><div class="pcard-role">Teilnehmer</div><div class="pcard-built">40 Dateien auf <span>GitHub</span> hochgeladen. Plant Dokumentenmanagement-System mit Drag &amp; Drop-Konvertierung.</div></div>
+  </div>
+
+  <!-- DER TOBIAS-MOMENT -->
+  <div class="sec-head" style="margin-top:28px;"><div class="sec-dot" style="background:var(--s4)"></div><h3>Der Tobias-Moment — KMS von Null neu einrichten</h3></div>
+  <div class="card-wide" style="background:#FFF7ED;border:1.5px solid #FDBA74;">
+    <div class="cw-title" style="color:var(--s4d);">🔥 Was passiert ist</div>
+    <p style="font-size:.9rem;">Tobias hatte frustriert alles gelöscht — nach 25 erfolglosen Versuchen, dasselbe wie Fabian hinzubekommen. Heute zog Marco eine klare Konsequenz: <strong>Nicht debuggen — von vorne starten, aber diesmal mit der Betriebsanleitung.</strong></p>
+    <div class="grid-2" style="margin-top:14px;">
+      <div class="card" style="margin:0;border-left:3px solid var(--s4);">
+        <div class="card-title">📋 Was Marco erklärt hat</div>
+        <p style="font-size:.87rem;">Die Betriebsanleitung (MD-Datei im Portal) enthält <strong>alle Prompts aus Session 3 in strukturierter Form</strong>. Einfach reinziehen in Claude Code — und es installiert alles. Der Grund, warum Session 3 Schritt für Schritt ablief: damit ihr versteht, was passiert.</p>
+      </div>
+      <div class="card" style="margin:0;border-left:3px solid var(--s3);">
+        <div class="card-title">✅ Das Ergebnis</div>
+        <p style="font-size:.87rem;">Claude bekam die Betriebsanleitung + einen klaren Ergänzungsprompt: <em>"Ohne GitHub, ohne Vektoren — nur Logbuch, Decisions, Learnings, Wissensordner und /post-Skill."</em> Tobias hatte in Minuten ein sauberes, funktionsfähiges KMS.</p>
+      </div>
+    </div>
+    <div class="learn" style="margin-top:14px;">
+      <div class="learn-head">💡 Das Learning dahinter</div>
+      <ul>
+        <li>LLMs auf verschiedenen Computern liefern bei gleichem Prompt unterschiedliche Ergebnisse — wie Menschen</li>
+        <li>Ursachenanalyse ist manchmal weniger wertvoll als ein sauberer Neustart mit besserem Prompt</li>
+        <li>Die Betriebsanleitung ist das destillierte Wissen aus Sessions 1–3 — sie macht das Setup reproduzierbar</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- GITHUB: WARUM UND WIE -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s4)"></div><h3>GitHub — Warum es der Kern von allem ist</h3></div>
+  <div class="grid-2">
+    <div class="card card-accent-s4">
+      <div class="card-title">📖 Die Geschichte von Git</div>
+      <p style="font-size:.87rem;">2004 hat ein Entwickler hart auf die Schnauze gefallen, weil er keine Speicherstände hatte. Er erfand Git: <em>"Lass uns Speicherstände machen, zu denen wir zurückkehren können."</em> Aus einem Versionierungstool wurde eine Community — GitHub. Heute ist es das größte Developer-Netzwerk der Welt.</p>
+    </div>
+    <div class="card card-accent-s4">
+      <div class="card-title">🎯 Die drei Kern-Bedürfnisse, die GitHub löst</div>
+      <ul style="font-size:.87rem;">
+        <li><strong>Rückgängig machen:</strong> Scheiße gebaut? Zurück zum alten Stand — wie Speicherpunkt beim Zocken</li>
+        <li><strong>Zusammenarbeiten:</strong> Fabian und Andreas an derselben Code-Basis gleichzeitig</li>
+        <li><strong>Single Source of Truth:</strong> <em>"Wo ist der neueste Stand?"</em> → immer auf GitHub</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card-wide" style="margin-top:14px;background:#1E293B;border-color:#334155;">
+    <div class="cw-title" style="color:#FDBA74;">⚙️ GitHub CLI — Installation in der Praxis</div>
+    <div class="code" style="margin:0;padding:10px 14px;">
+<span class="code-comment"># Claude Code installiert die GitHub CLI für dich</span>
+<span class="code-cmd">gh</span>                    <span class="code-comment"># GitHub CLI — Claude Code kann alles für dich machen</span>
+
+<span class="code-comment"># Einloggen — das machst du einmalig selbst (Sicherheit)</span>
+<span class="code-flag">!</span><span class="code-cmd">gh auth login</span>         <span class="code-comment"># ! = Befehl direkt ans Terminal (nicht an Claude)</span>
+
+<span class="code-comment"># Danach erledigt Claude Code alles automatisch:</span>
+<span class="code-cmd">gh repo create</span> <span class="code-val">zeiterfassung</span> <span class="code-comment"># Repo anlegen</span>
+<span class="code-cmd">git add . &amp;&amp; git commit -m "..."</span> <span class="code-comment"># Commiten</span>
+<span class="code-cmd">git push -u origin main</span>          <span class="code-comment"># Hochladen</span></div>
+    <p style="color:#94A3B8;font-size:.82rem;margin-top:10px;">Das Ausrufezeichen <code style="background:#334155;color:#86EFAC;">!</code> ist ein Claude-Code-Feature: Es leitet Befehle direkt ans Terminal weiter — nicht an die KI. Für den <code style="background:#334155;color:#86EFAC;">gh auth login</code> ist das nötig, weil du dich persönlich im Browser verifizieren musst.</p>
+  </div>
+
+  <!-- API-SCHLÜSSEL: DAS ZAUBERWORT -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s4)"></div><h3>API-Schlüssel — Der Zauberschlüssel zur Automatisierung</h3></div>
+  <div class="card-wide" style="background:#FFF7ED;border:2px solid var(--s4);">
+    <div class="cw-title" style="color:var(--s4d);">🔑 Was ist eine API und warum ist das die wichtigste Erkenntnis dieser Session?</div>
+    <p style="font-size:.9rem;margin-bottom:14px;">Netlify, GitHub, und alle anderen modernen Tools haben eine <strong>API</strong> — eine Schnittstelle, über die Claude Code das Tool <em>für dich bedienen</em> kann. Der API-Schlüssel ist wie ein Haustürschlüssel: Wer ihn hat, kommt rein. Du gibst ihn einmal an Claude, und ab dann musst du die Oberfläche von Netlify nie wieder manuell öffnen.</p>
+    <div class="grid-2">
+      <div class="card" style="margin:0;">
+        <div class="card-title">📋 Netlify API-Schlüssel erstellen</div>
+        <ol style="font-size:.87rem;padding-left:16px;">
+          <li>Netlify → Profilbild unten links</li>
+          <li>User Settings → OAuth → Personal Access Token</li>
+          <li>Name: <code>Claude Code</code>, Expiration: <strong>kein Ablauf</strong></li>
+          <li>Token kopieren → Claude Code: <em>"Hinterlege diesen Schlüssel permanent"</em></li>
+        </ol>
+      </div>
+      <div class="card" style="margin:0;">
+        <div class="card-title">💡 Was das bedeutet</div>
+        <p style="font-size:.87rem;">Ab jetzt kann Claude: Neue Sites anlegen · Updates deployen · Domains konfigurieren · Logs prüfen — <strong>alles ohne dass du die Netlify-Oberfläche je wieder öffnest.</strong></p>
+        <p style="font-size:.87rem;margin-top:8px;color:var(--muted);">Windows-Umgebungsvariable: <code>NETLIFY_AUTH_TOKEN</code></p>
+      </div>
+    </div>
+    <div class="praxis" style="margin-top:14px;">
+      <div class="praxis-head">🔧 Marcos Aussage zur Macht der API-Schlüssel</div>
+      <p><em>"Wenn wir später Ausschreibungsportale bedienen wollen, haben die manchmal sogar einen API-Zugang, den die Stadtverwaltung zur Verfügung stellt. Nicht jede Stadt ist so modern — aber manchmal geht es recht easy. Ein API-Schlüssel ermöglicht es, dass Claude Code für euch Programme bedient."</em></p>
+    </div>
+  </div>
+
+  <!-- DER ONE-PROMPT-BUILDER -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s4)"></div><h3>Der One-Prompt-Website-Builder — Marcos Live-Demo</h3></div>
+  <div class="card-wide" style="background:#1E293B;border:2px solid var(--s4);">
+    <div class="magic-label">🎯 MARCOS DEMO-PROMPT — live vor der Gruppe vorgetragen:</div>
+    <div class="magic-text">"Erstelle eine neue Webseite für die Kfz-Meisterwerkstatt Max Müller von nebenan. Recherchiere diese kurz, hol dir die Inhalte und überleg, wie du die Website deutlich moderner gestalten kannst. Gestalte die Website dann von vorn bis hinten durch und hör nicht auf zu arbeiten, bevor du nicht fertig bist. Das ganze Projekt speicherst du bitte auf GitHub und legst dann in Netlify eine neue Webseite an, die du mit dem GitHub Repository verknüpfst und bringst alles direkt live. Ich gehe jetzt Kaffee trinken. Wenn ich wiederkomme, möchte ich eine URL öffnen und die fertige neue Website entgegennehmen — perfektioniertes Design, Impressum, Datenschutz, KI-generierte Bilder."</div>
+    <div class="magic-note">→ Ein Prompt · Kaffee trinken · zurückkommen · fertige Live-Website mit HTTPS-URL</div>
+  </div>
+  <div class="grid-2" style="margin-top:14px;">
+    <div class="card card-accent-s4">
+      <div class="card-title">📱 Marcos Remote-Control Setup</div>
+      <p style="font-size:.87rem;">Marco fernsteuert Claude Code von seinem Handy über einen Apple-Server zu Hause. Bei HWK-Vorträgen: Prompt per Sprache (Whisper Flow) → Claude baut live → Link nach 5 Min teilen. <strong>"30 Sekunden eigener Aufwand, 270 Sekunden Claude."</strong></p>
+    </div>
+    <div class="card card-accent-s4">
+      <div class="card-title">🎯 Was das für die HWK bedeutet</div>
+      <p style="font-size:.87rem;">Marco ist Speaker bei <strong>32 Handwerkskammern deutschlandweit</strong>. Der One-Prompt-Builder ist sein Showstopper. Marvin: <em>"Ich muss da auch mal meine Kollegen fragen..."</em> Marco: <em>"Ich mache das meistens online, je nach Größe auch vor Ort."</em></p>
+    </div>
+  </div>
+
+  <!-- GITHUB-NETLIFY BRÜCKE -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s4)"></div><h3>Die GitHub-Netlify-Brücke — Einmal verbinden, für immer automatisch</h3></div>
+  <div class="card-wide">
+    <div class="cw-title">🔗 Wie die automatische Verbindung funktioniert</div>
+    <p style="font-size:.9rem;margin-bottom:16px;">Netlify und GitHub werden einmalig verbunden. Danach: Jeder neue <code>git push</code> → Netlify erkennt die Änderung automatisch → deployt die neue Version. Claude muss Netlify nie mehr direkt ansprechen — er pusht zu GitHub, der Rest läuft von allein.</p>
+    <svg viewBox="0 0 640 90" style="width:100%;max-width:640px;display:block;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
+      <defs><marker id="nb4" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#F97316"/></marker></defs>
+      <rect x="10" y="25" width="110" height="40" rx="8" fill="#FFF7ED" stroke="#FDBA74" stroke-width="1.5"/>
+      <text x="65" y="43" text-anchor="middle" font-size="10" fill="#C2410C" font-weight="700">💬 Dein Prompt</text>
+      <text x="65" y="57" text-anchor="middle" font-size="9" fill="#92400E">1 Satz</text>
+      <line x1="122" y1="45" x2="148" y2="45" stroke="#F97316" stroke-width="2" marker-end="url(#nb4)"/>
+      <rect x="150" y="15" width="120" height="60" rx="8" fill="#1E293B" stroke="#F97316" stroke-width="2"/>
+      <text x="210" y="40" text-anchor="middle" font-size="11" fill="#FDBA74" font-weight="700">⚙️ Claude Code</text>
+      <text x="210" y="55" text-anchor="middle" font-size="9" fill="#94A3B8">baut + committet</text>
+      <text x="210" y="67" text-anchor="middle" font-size="9" fill="#64748B">git push</text>
+      <line x1="272" y1="45" x2="298" y2="45" stroke="#F97316" stroke-width="2" marker-end="url(#nb4)"/>
+      <rect x="300" y="20" width="110" height="50" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+      <text x="355" y="41" text-anchor="middle" font-size="11" fill="#1D4ED8" font-weight="700">🐙 GitHub</text>
+      <text x="355" y="55" text-anchor="middle" font-size="9" fill="#64748B">notifiziert Netlify</text>
+      <line x1="412" y1="45" x2="438" y2="45" stroke="#059669" stroke-width="2" marker-end="url(#nb4)"/>
+      <rect x="440" y="20" width="110" height="50" rx="8" fill="#F0FDF4" stroke="#6EE7B7" stroke-width="2"/>
+      <text x="495" y="41" text-anchor="middle" font-size="11" fill="#047857" font-weight="700">🌐 Netlify</text>
+      <text x="495" y="55" text-anchor="middle" font-size="9" fill="#065F46">deployt automatisch</text>
+      <line x1="552" y1="45" x2="578" y2="45" stroke="#059669" stroke-width="2" marker-end="url(#nb4)"/>
+      <rect x="580" y="28" width="52" height="34" rx="8" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="2"/>
+      <text x="606" y="43" text-anchor="middle" font-size="9" fill="#047857" font-weight="700">✅ Live</text>
+      <text x="606" y="54" text-anchor="middle" font-size="8" fill="#065F46">URL ready</text>
+    </svg>
+    <div class="learn" style="margin-top:14px;">
+      <div class="learn-head">💡 Staging vs. Production</div>
+      <ul>
+        <li><strong>Production:</strong> Die echte Live-URL, die alle Nutzer sehen — nur absegnen lassen, wenn es fertig ist</li>
+        <li><strong>Staging:</strong> Eine zweite Netlify-Domain, die nur du kennst — zum Testen, bevor es live geht</li>
+        <li>Claude erstellt beides via API-Schlüssel — du musst die Netlify-Oberfläche nie öffnen</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- META BRAIN ENCODER -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s4)"></div><h3>Bonus-Demo: Meta Trimodal Brain Encoder</h3></div>
+  <div class="card-wide" style="background:linear-gradient(135deg,#0F172A,#1E1B4B);border-color:#4C1D95;">
+    <div class="cw-title" style="color:#C4B5FD;">🧠 Was Marco gezeigt hat — und warum es krass ist</div>
+    <p style="color:#E2E8F0;font-size:.9rem;margin-bottom:14px;">Meta hat 700 Probanden über 1 Jahr MRT-Daten während Videokonsum gesammelt und daraus ein KI-Modell gebaut, das <strong>mit 75% Genauigkeit vorhersagt, wie ein Gehirn auf bestimmten Content reagiert</strong>. Dieses Modell ist Open Source — jeder kann es nutzen.</p>
+    <div class="grid-2" style="margin-top:12px;">
+      <div class="card" style="margin:0;background:#1E293B;border-color:#334155;">
+        <div class="card-title" style="color:#C4B5FD;">🎬 Wie Marco es vorgeführt hat</div>
+        <p style="font-size:.87rem;color:#94A3B8;">Claude hat den Kino-Trailer "Sintel" geladen → Modell hat 5-6 Stunden gerechnet → Ergebnis: Ein simuliertes Gehirn, das live mitläuft. Links das Gehirn mit leuchtenden Regionen, rechts der Trailer. Drei Spuren: Bild, Ton, Sprache.</p>
+      </div>
+      <div class="card" style="margin:0;background:#1E293B;border-color:#334155;">
+        <div class="card-title" style="color:#C4B5FD;">🔮 Wohin das führt</div>
+        <p style="font-size:.87rem;color:#94A3B8;">Netflix-Filme werden in 2 Jahren vorab ausgewertet. Werbung läuft heute schon so bei Konzernen. <em>"Was nur Konzerne konnten, kann Marco jetzt mit seinem MacBook — und ihr bald auch."</em></p>
+      </div>
+    </div>
+    <div style="background:#0F172A;border-radius:8px;padding:12px 16px;margin-top:12px;">
+      <p style="color:#94A3B8;font-size:.82rem;">Name: <strong style="color:#C4B5FD;">Meta Trimodal Brain Encoder</strong> · Präzision: <strong style="color:#86EFAC;">75%</strong> · Modalitäten: Bild + Audio + Sprache · Open Source: Ja, Antrag bei Meta stellen</p>
+    </div>
+  </div>
+
+  <!-- SCHLÜSSELZITATE -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s4)"></div><h3>Schlüsselzitate aus Session 4</h3></div>
+  <div class="card-wide">
+    <div class="quote">"Wenn ihr nur wissen wollt, wie — dann wären wir im Bezahlbereich des Coachings. Das ist aber erst Woche 4 von 26." — Marco Heer</div>
+    <div class="quote">"GitHub ist wie eine OneDrive, die von eurem Claude Code bedient wird. Single Source of Truth — immer." — Marco Heer</div>
+    <div class="quote">"Heute war die wahre Message nicht GitHub und Netlify. Die wahre Message war: Ein API-Schlüssel ermöglicht es, dass Claude Code für euch Programme bedient." — Marco Heer</div>
+    <div class="quote">"Wenn Claude 322 Log-Einträge hat, wo er sieht — der Marvin, der macht hier krassen Scheiß — dann wird Claude solche dummen Vorschläge nicht mehr machen." — Marco Heer über den Wert des KMS</div>
+    <div class="quote">"Wir sind heute in Woche 4 von 26. Ihr habt noch nicht mal einen Kopf unter Wasser gesteckt — da ist noch richtig was." — Marco Heer</div>
+  </div>
+
+  <!-- ZIEL-BANNER -->
+  <div class="achieve-banner">
+    <div class="achieve-icon">🎯</div>
+    <div>
+      <div class="achieve-title">Das Ziel, das du erreicht hast</div>
+      <div class="achieve-text">Du kannst heute mit einem einzigen Satz bei Claude Code eine vollständige Web-App erstellen lassen — und sie landet Minuten später live im Browser, für jeden erreichbar, kostenlos gehostet auf Netlify. Was früher Stunden- oder Tagewerk für einen Entwickler war, ist jetzt ein einziger Prompt.</div>
+    </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s4)"></div><h3>Dein vollständiger Lernweg — Von Session 1 bis heute</h3></div>
+
+  <div class="timeline">
+
+    <!-- ── PHASE 1 ── -->
+    <div class="tl-item">
+      <div class="tl-badge">🧠</div>
+      <div class="tl-content tl-bc4">
+        <div class="tl-phase">Phase 1</div>
+        <div class="tl-title">Claude Code verstehen — Was ist das überhaupt?</div>
+        <p class="tl-desc">Der erste Schritt war zu verstehen, warum Claude Code ein anderes Werkzeug ist als ein Browser-Chat.</p>
+        <div class="grid-2" style="margin-top:14px;">
+          <div class="card" style="margin:0;">
+            <div class="card-title">💬 Browser-Chat (davor)</div>
+            <p>Prompts schreiben → Antworten lesen → Copy-Paste in Dateien. Die KI kann nur reden — nicht eigenständig handeln. Jede Umsetzung liegt bei dir.</p>
+          </div>
+          <div class="card card-accent-s4" style="margin:0;">
+            <div class="card-title">⚡ Claude Code (jetzt)</div>
+            <p>CLI-Tool direkt am Rechner: Claude liest und schreibt Dateien, führt Befehle aus, surft das Web — <strong>ohne dass du Copy-Paste brauchst</strong>. Claude ist Mitarbeiter, nicht Berater.</p>
+          </div>
+        </div>
+        <div class="learn" style="margin-top:14px;">
+          <div class="learn-head">💡 Kernunterschied</div>
+          <ul>
+            <li>Claude Code ist kein Chat — es ist ein <strong>Agenten-System mit echten Werkzeugen</strong></li>
+            <li>Es läuft im Terminal (CLI) mit direktem Zugriff auf deinen Computer</li>
+            <li>Der <strong>Harness</strong> verbindet Claude mit der realen Welt: Dateisystem, Browser, Git, APIs</li>
+            <li>Ein Chat-KI <em>erklärt</em>, wie man eine Datei anlegt — Claude Code <em>legt sie an</em></li>
+          </ul>
+        </div>
+        <!-- Architektur-Diagramm -->
+        <svg viewBox="0 0 580 110" style="width:100%;max-width:580px;display:block;margin:16px auto 0;" xmlns="http://www.w3.org/2000/svg">
+          <defs><marker id="a4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#F97316"/></marker></defs>
+          <!-- Du -->
+          <rect x="10" y="35" width="90" height="40" rx="8" fill="#FFF7ED" stroke="#FDBA74" stroke-width="2"/>
+          <text x="55" y="58" text-anchor="middle" font-size="12" fill="#C2410C" font-weight="700">👤 Du</text>
+          <text x="55" y="70" text-anchor="middle" font-size="9" fill="#9A3412">Natürliche Sprache</text>
+          <line x1="102" y1="55" x2="128" y2="55" stroke="#F97316" stroke-width="2" marker-end="url(#a4)"/>
+          <!-- Claude Code -->
+          <rect x="130" y="20" width="140" height="70" rx="10" fill="#1E293B" stroke="#F97316" stroke-width="2"/>
+          <text x="200" y="48" text-anchor="middle" font-size="12" fill="#FDBA74" font-weight="700">⚙️ Claude Code</text>
+          <text x="200" y="62" text-anchor="middle" font-size="9" fill="#94A3B8">KI + Harness + Tools</text>
+          <text x="200" y="76" text-anchor="middle" font-size="9" fill="#64748B">CLAUDE.md + KMS</text>
+          <line x1="272" y1="45" x2="298" y2="30" stroke="#F97316" stroke-width="1.5" marker-end="url(#a4)"/>
+          <line x1="272" y1="55" x2="298" y2="55" stroke="#F97316" stroke-width="1.5" marker-end="url(#a4)"/>
+          <line x1="272" y1="65" x2="298" y2="80" stroke="#F97316" stroke-width="1.5" marker-end="url(#a4)"/>
+          <!-- Echte Welt -->
+          <rect x="300" y="10" width="110" height="28" rx="7" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+          <text x="355" y="28" text-anchor="middle" font-size="10" fill="#475569" font-weight="600">📁 Dateisystem</text>
+          <rect x="300" y="44" width="110" height="28" rx="7" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+          <text x="355" y="62" text-anchor="middle" font-size="10" fill="#475569" font-weight="600">⚙️ Terminal / Git</text>
+          <rect x="300" y="78" width="110" height="28" rx="7" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+          <text x="355" y="96" text-anchor="middle" font-size="10" fill="#475569" font-weight="600">🌐 Web / APIs</text>
+          <!-- Ergebnis -->
+          <line x1="412" y1="55" x2="438" y2="55" stroke="#F97316" stroke-width="2" marker-end="url(#a4)"/>
+          <rect x="440" y="35" width="130" height="40" rx="8" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="2"/>
+          <text x="505" y="53" text-anchor="middle" font-size="11" fill="#047857" font-weight="700">✅ Echtes Ergebnis</text>
+          <text x="505" y="67" text-anchor="middle" font-size="9" fill="#065F46">Dateien, Apps, Deploys</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- ── PHASE 2 ── -->
+    <div class="tl-item">
+      <div class="tl-badge">💻</div>
+      <div class="tl-content tl-bc4">
+        <div class="tl-phase">Phase 2</div>
+        <div class="tl-title">Installation — Claude Code auf dem Rechner einrichten</div>
+        <p class="tl-desc">Drei Schritte, und Claude Code ist einsatzbereit. Einmal eingerichtet, für immer nutzbar.</p>
+        <div class="code" style="margin-top:14px;"><span class="code-comment"># 1. Node.js installieren → nodejs.org → LTS-Version</span>
+
+<span class="code-comment"># 2. Claude Code global installieren</span>
+<span class="code-cmd">npm install -g @anthropic-ai/claude-code</span>
+
+<span class="code-comment"># 3. Claude Code starten (im gewünschten Verzeichnis)</span>
+<span class="code-cmd">claude</span>
+
+<span class="code-comment"># API-Key beim ersten Start eingeben</span>
+<span class="code-comment"># → console.anthropic.com → API Keys → neuen Key anlegen</span></div>
+        <div class="grid-2" style="margin-top:14px;">
+          <div class="card card-accent-s4" style="margin:0;">
+            <div class="card-title">📁 Das Verzeichnis-Prinzip</div>
+            <p>Claude Code operiert <strong>immer im aktuellen Verzeichnis</strong>. Wo du das Terminal öffnest, ist Claudes Arbeitswelt. Für ein neues Projekt: Terminal im Projektordner öffnen → <code>claude</code> starten.</p>
+          </div>
+          <div class="card card-accent-s4" style="margin:0;">
+            <div class="card-title">🔑 Die wichtigsten Flags</div>
+            <div class="code" style="font-size:.77rem;margin:6px 0 0 0;padding:10px 14px;"><span class="code-cmd">claude</span> <span class="code-flag">--dangerously-skip-permissions</span>
+<span class="code-comment">  # Admin-Modus: keine Rückfragen mehr</span>
+<span class="code-cmd">claude</span> <span class="code-flag">--continue</span>
+<span class="code-comment">  # Letzten Chat fortsetzen</span>
+<span class="code-cmd">claude</span> <span class="code-flag">--resume</span>
+<span class="code-comment">  # Chat aus Verlauf auswählen</span></div>
+          </div>
+        </div>
+        <div class="praxis" style="margin-top:14px;">
+          <div class="praxis-head">🔧 Was danach möglich ist</div>
+          <p>Nach der Installation kannst du Claude Code aus jedem Ordner starten — und Claude sieht alle Dateien dort, kann sie lesen, schreiben, ausführen. Es ist, als würde ein sehr fähiger Entwickler direkt neben dir sitzen und deinen Bildschirm sehen.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PHASE 3 ── -->
+    <div class="tl-item">
+      <div class="tl-badge">📚</div>
+      <div class="tl-content tl-bc4">
+        <div class="tl-phase">Phase 3</div>
+        <div class="tl-title">KMS einrichten — Das institutionelle Gedächtnis</div>
+        <p class="tl-desc">Claude Code vergisst nach jeder Sitzung alles. Das KMS (Knowledge Management System) löst dieses Problem dauerhaft — und macht Claude mit jeder Sitzung smarter.</p>
+        <!-- KMS Diagram -->
+        <svg viewBox="0 0 620 170" style="width:100%;max-width:620px;display:block;margin:14px auto 16px;" xmlns="http://www.w3.org/2000/svg">
+          <defs><marker id="b4" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#475569"/></marker></defs>
+          <!-- CLAUDE.md -->
+          <rect x="185" y="6" width="250" height="32" rx="8" fill="#F5F3FF" stroke="#C4B5FD" stroke-width="1.5"/>
+          <text x="310" y="26" text-anchor="middle" font-size="11" fill="#5B21B6" font-weight="700">🌐 globale CLAUDE.md — KMS-Pfad hinterlegt</text>
+          <line x1="310" y1="38" x2="310" y2="62" stroke="#C4B5FD" stroke-width="1.5" stroke-dasharray="4 2"/>
+          <!-- Harness -->
+          <rect x="215" y="62" width="190" height="36" rx="8" fill="#1E293B" stroke="#F97316" stroke-width="2"/>
+          <text x="310" y="85" text-anchor="middle" font-size="11" fill="#FDBA74" font-weight="700">⚙️ Claude Code Harness</text>
+          <!-- Linien zu KMS-Dateien -->
+          <line x1="256" y1="98" x2="110" y2="126" stroke="#475569" stroke-width="1.5" marker-end="url(#b4)"/>
+          <line x1="310" y1="98" x2="310" y2="126" stroke="#475569" stroke-width="1.5" marker-end="url(#b4)"/>
+          <line x1="364" y1="98" x2="510" y2="126" stroke="#475569" stroke-width="1.5" marker-end="url(#b4)"/>
+          <!-- logbuch.md -->
+          <rect x="22" y="126" width="176" height="38" rx="8" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="2"/>
+          <text x="110" y="144" text-anchor="middle" font-size="11" fill="#047857" font-weight="700">📒 logbuch.md</text>
+          <text x="110" y="157" text-anchor="middle" font-size="9" fill="#065F46">[LOG-XXXX] · maximal ausführlich</text>
+          <!-- learnings.md -->
+          <rect x="222" y="126" width="176" height="38" rx="8" fill="#FFFBEB" stroke="#FCD34D" stroke-width="2"/>
+          <text x="310" y="144" text-anchor="middle" font-size="11" fill="#92400E" font-weight="700">💡 learnings.md</text>
+          <text x="310" y="157" text-anchor="middle" font-size="9" fill="#78350F">[L-XXXX] · kompakte Erkenntnisse</text>
+          <!-- decisions.md -->
+          <rect x="422" y="126" width="176" height="38" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="2"/>
+          <text x="510" y="144" text-anchor="middle" font-size="11" fill="#1D4ED8" font-weight="700">🎯 decisions.md</text>
+          <text x="510" y="157" text-anchor="middle" font-size="9" fill="#1e3a6e">[D-XXXX] · kompakte Entscheidungen</text>
+        </svg>
+        <div class="grid-2" style="margin-top:4px;">
+          <div class="card card-accent-s4" style="margin:0;">
+            <div class="card-title">📒 logbuch.md — Die vollständige Chronik</div>
+            <p>Jede Aktion, jeder Fehler, jede Erkenntnis — vollständig und maximal ausführlich. <strong>8 Pflichtfragen</strong> pro Eintrag: Was? Wie? Wo? Wann? Warum? Umstände? Vorher? Nachher?</p>
+            <p style="margin-top:8px;font-size:.84rem;color:var(--muted);">Stempel: <code>[LOG-XXXX]</code> — eindeutig, unveränderlich</p>
+          </div>
+          <div class="card card-accent-s4" style="margin:0;">
+            <div class="card-title">💡 + 🎯 Learnings &amp; Decisions</div>
+            <p>Kompakte Wissens-Extrakte: Was wurde gelernt? Was wurde entschieden? Beide Dateien verweisen IMMER auf den zugehörigen Log-Eintrag.</p>
+            <p style="margin-top:8px;font-size:.84rem;color:var(--muted);">Stempel: <code>[L-XXXX]</code> und <code>[D-XXXX]</code></p>
+          </div>
+        </div>
+        <div class="praxis" style="margin-top:14px;">
+          <div class="praxis-head">🔧 Warum das KMS so wertvoll ist — Marco Heers Kerngedanke</div>
+          <p>Jeder Fehler, den du einmal mühsam korrigiert hast, steht im KMS. Jede Entscheidung, die nach reiflicher Überlegung getroffen wurde, steht im KMS. Beim nächsten Mal liest Claude das nach — und macht denselben Fehler kein zweites Mal. <strong>Das KMS macht Claude mit jeder Sitzung smarter.</strong> Fehler passieren einmal. Gute Entscheidungen werden nicht zufällig neu erfunden.</p>
+        </div>
+        <div class="learn" style="margin-top:12px;">
+          <div class="learn-head">💡 Kern-Learning aus Session 3</div>
+          <ul>
+            <li>LLMs können bei langen Sitzungen frühe Instruktionen "überlager" — das KMS + <code>/post</code> ist die Lösung</li>
+            <li>Große Wissens-Dateien brauchen einen <strong>Index am Anfang</strong> — sonst kostet jede Suche zu viele Token</li>
+            <li>Stempel wie <code>[LOG-0042]</code> sind stabiler als Zeilennummern — sie bleiben gültig, egal was sich ändert</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PHASE 4 ── -->
+    <div class="tl-item">
+      <div class="tl-badge">🔧</div>
+      <div class="tl-content tl-bc4">
+        <div class="tl-phase">Phase 4</div>
+        <div class="tl-title">Harness-Werkzeuge — Was Claude Code wirklich kann</div>
+        <p class="tl-desc">Der Harness ist die Brücke zwischen Claude und deiner realen Welt. Diese Werkzeuge machen aus einem Chat-KI einen echten Mitarbeiter.</p>
+        <div class="grid-3" style="margin-top:14px;">
+          <div class="card" style="margin:0;border-left:3px solid var(--s4);">
+            <div class="card-title">📂 Dateisystem</div>
+            <p><code>Read</code> <code>Write</code> <code>Edit</code> <code>Glob</code> <code>Grep</code></p>
+            <p style="margin-top:6px;font-size:.85rem;">Claude liest und schreibt Dateien direkt. Kein Copy-Paste, kein Zwischenschritt.</p>
+          </div>
+          <div class="card" style="margin:0;border-left:3px solid var(--s4);">
+            <div class="card-title">⚙️ Terminal</div>
+            <p><code>Bash</code> / <code>PowerShell</code></p>
+            <p style="margin-top:6px;font-size:.85rem;">Claude führt echte Shell-Befehle aus: npm, git, python — alles, was du im Terminal tippen würdest.</p>
+          </div>
+          <div class="card" style="margin:0;border-left:3px solid var(--s4);">
+            <div class="card-title">🌐 Web</div>
+            <p><code>WebSearch</code> <code>WebFetch</code></p>
+            <p style="margin-top:6px;font-size:.85rem;">Claude recherchiert eigenständig im Internet, liest Docs und findet aktuelle Informationen.</p>
+          </div>
+          <div class="card" style="margin:0;border-left:3px solid var(--s4);">
+            <div class="card-title">📋 Aufgaben-Management</div>
+            <p><code>TaskCreate</code> <code>TaskUpdate</code> <code>TaskList</code></p>
+            <p style="margin-top:6px;font-size:.85rem;">Claude plant komplexe Vorhaben selbst, trackt den Fortschritt und arbeitet strukturiert.</p>
+          </div>
+          <div class="card" style="margin:0;border-left:3px solid var(--s4);">
+            <div class="card-title">🤖 Sub-Agents</div>
+            <p><code>Agent</code> (Explore, Plan, …)</p>
+            <p style="margin-top:6px;font-size:.85rem;">Claude startet spezialisierte Unter-Agenten für parallele Aufgaben: Code-Review, Recherche, Architektur.</p>
+          </div>
+          <div class="card" style="margin:0;border-left:3px solid var(--s4);">
+            <div class="card-title">🧠 Auto-Memory</div>
+            <p><code>~/.claude/projects/</code></p>
+            <p style="margin-top:6px;font-size:.85rem;">Claude merkt sich Präferenzen, Entscheidungen und Kontext — über Sitzungen hinweg, dauerhaft.</p>
+          </div>
+        </div>
+        <div class="card-wide" style="margin-top:14px;background:#FFF7ED;border:1.5px solid #FDBA74;">
+          <div class="cw-title" style="color:var(--s4d);">⚡ Das Bild dahinter — Der Harness als Brücke</div>
+          <svg viewBox="0 0 620 80" style="width:100%;max-width:620px;display:block;margin:8px auto 0;" xmlns="http://www.w3.org/2000/svg">
+            <defs><marker id="c4" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#F97316"/></marker></defs>
+            <rect x="10" y="20" width="120" height="40" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+            <text x="70" y="38" text-anchor="middle" font-size="10" fill="#1D4ED8" font-weight="700">🧠 Claude</text>
+            <text x="70" y="52" text-anchor="middle" font-size="9" fill="#3730A3">(Sprachmodell)</text>
+            <line x1="132" y1="40" x2="158" y2="40" stroke="#F97316" stroke-width="2" marker-end="url(#c4)"/>
+            <rect x="160" y="8" width="140" height="64" rx="8" fill="#1E293B" stroke="#F97316" stroke-width="2"/>
+            <text x="230" y="32" text-anchor="middle" font-size="11" fill="#FDBA74" font-weight="700">⚙️ Harness</text>
+            <text x="230" y="47" text-anchor="middle" font-size="9" fill="#94A3B8">Read/Write/Bash/Web</text>
+            <text x="230" y="61" text-anchor="middle" font-size="9" fill="#64748B">Git/Tasks/Agents</text>
+            <line x1="302" y1="40" x2="328" y2="40" stroke="#F97316" stroke-width="2" marker-end="url(#c4)"/>
+            <rect x="330" y="8" width="140" height="64" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+            <text x="400" y="32" text-anchor="middle" font-size="10" fill="#334155" font-weight="700">🌍 Echte Welt</text>
+            <text x="400" y="47" text-anchor="middle" font-size="9" fill="#64748B">Dateien · Terminal</text>
+            <text x="400" y="61" text-anchor="middle" font-size="9" fill="#64748B">GitHub · Netlify · Web</text>
+            <line x1="472" y1="40" x2="498" y2="40" stroke="#059669" stroke-width="2" marker-end="url(#c4)"/>
+            <rect x="500" y="20" width="110" height="40" rx="8" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="2"/>
+            <text x="555" y="38" text-anchor="middle" font-size="10" fill="#047857" font-weight="700">✅ Ergebnis</text>
+            <text x="555" y="52" text-anchor="middle" font-size="9" fill="#065F46">Live-App · Code</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PHASE 5 ── -->
+    <div class="tl-item">
+      <div class="tl-badge">⚡</div>
+      <div class="tl-content tl-bc4">
+        <div class="tl-phase">Phase 5</div>
+        <div class="tl-title">Skills &amp; /post — Deine Schnellanweisungen</div>
+        <p class="tl-desc">Skills sind gespeicherte Prompts, die du mit einem Schrägstrich-Befehl blitzschnell aufrufen kannst — für wiederkehrende Aufgaben, die immer gleich ablaufen sollen.</p>
+        <div class="grid-2" style="margin-top:14px;">
+          <div class="card card-accent-s4" style="margin:0;">
+            <div class="card-title">⚡ Was sind Skills?</div>
+            <ul>
+              <li>Wiederverwendbare Prompt-Vorlagen</li>
+              <li>Abrufbar mit <code>/skillname</code> im Terminal</li>
+              <li>Gespeichert in <code>~/.claude/commands/</code></li>
+              <li>Von Anthropic mitgeliefert <em>oder</em> selbst erstellt</li>
+              <li>Können Variablen, Abfragen und komplexe Abläufe enthalten</li>
+            </ul>
+          </div>
+          <div class="card" style="margin:0;background:#ECFDF5;border:1.5px solid #6EE7B7;">
+            <div class="card-title" style="color:#047857;">🏁 /post — Das Sitzungs-Ritual</div>
+            <p style="color:#065F46;"><strong>Der wichtigste Skill:</strong> <code>/post</code> am Ende jeder Sitzung aufrufen.</p>
+            <ul style="margin-top:8px;color:#065F46;">
+              <li>Prüft, ob alle Aktivitäten ins KMS geloggt wurden</li>
+              <li>Schreibt fehlende logbuch-, learnings-, decisions-Einträge nach</li>
+              <li>Das "Feierabend-Ritual" vor dem Schließen</li>
+            </ul>
+          </div>
+        </div>
+        <div class="code" style="margin-top:14px;"><span class="code-comment"># Verfügbare Skills — einfach tippen und Enter drücken</span>
+<span class="code-cmd">/post</span>            <span class="code-comment"># Sitzung abschließen, KMS-Einträge prüfen &amp; vervollständigen</span>
+<span class="code-cmd">/review</span>          <span class="code-comment"># Code-Review des aktuellen Git-Branches</span>
+<span class="code-cmd">/init</span>            <span class="code-comment"># CLAUDE.md für ein neues Projekt anlegen</span>
+<span class="code-cmd">/run</span>             <span class="code-comment"># App starten und im Browser testen</span>
+<span class="code-cmd">/schedule</span>        <span class="code-comment"># Aufgaben zeitgesteuert einplanen</span>
+<span class="code-cmd">/security-review</span> <span class="code-comment"># Sicherheits-Audit des aktuellen Branches</span></div>
+        <div class="praxis" style="margin-top:14px;">
+          <div class="praxis-head">🔧 Warum /post so wichtig ist — die zweite Sicherheitsstufe</div>
+          <p>Bei langen Sitzungen kann Claude Logging-Instruktionen aus frühen Sitzungsphasen inhaltlich "überlager" — nicht technisch vergessen, aber andere Inhalte dominieren. <code>/post</code> ist die aktiv ausgelöste zweite Sicherheitsstufe: Es garantiert vollständiges KMS-Logging unabhängig davon, wie lang die Sitzung war.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PHASE 6 ── -->
+    <div class="tl-item">
+      <div class="tl-badge">🐙</div>
+      <div class="tl-content tl-bc4">
+        <div class="tl-phase">Phase 6</div>
+        <div class="tl-title">GitHub einrichten — Die Infrastruktur für alles weitere</div>
+        <p class="tl-desc">GitHub ist die Brücke zwischen deinem lokalen Code und der Welt. Ohne GitHub kein automatisches Netlify-Hosting. Es ist die Grundlage, auf der der finale Schritt aufbaut.</p>
+        <div class="grid-2" style="margin-top:14px;">
+          <div class="card card-accent-s4" style="margin:0;">
+            <div class="card-title">📋 Was eingerichtet wurde</div>
+            <ul>
+              <li>GitHub-Account: <code>comunio23</code></li>
+              <li>Git 2.54.0 lokal installiert</li>
+              <li>GitHub CLI (<code>gh</code>) 2.92.0 installiert</li>
+              <li>Authentifizierung eingerichtet (HTTPS/Token)</li>
+              <li>Claude darf <code>git</code> + <code>gh</code> selbstständig nutzen</li>
+            </ul>
+          </div>
+          <div class="card card-accent-s4" style="margin:0;">
+            <div class="card-title">🔄 Der Git-Workflow — Claude macht das alles</div>
+            <div class="code" style="font-size:.77rem;margin:8px 0 0 0;padding:10px 14px;"><span class="code-cmd">gh repo create</span>    <span class="code-comment"># Repo anlegen</span>
+<span class="code-cmd">git init</span>          <span class="code-comment"># Lokal starten</span>
+<span class="code-cmd">git add .</span>          <span class="code-comment"># Dateien stagen</span>
+<span class="code-cmd">git commit -m "..."</span><span class="code-comment"># Commit</span>
+<span class="code-cmd">git push -u origin main</span>
+<span class="code-comment">                   # Zu GitHub pushen</span></div>
+          </div>
+        </div>
+        <div class="card-wide" style="margin-top:14px;background:#ECFDF5;border:1.5px solid #6EE7B7;">
+          <div class="cw-title" style="color:#047857;">✅ Deine eingerichteten Repositories</div>
+          <table class="tbl">
+            <tr><th>Repository</th><th>Zweck</th><th>Live-URL</th></tr>
+            <tr><td><code>comunio23/zeiterfassung-app</code></td><td>Zeiterfassungs-App (HTML/JS) — Rapportzettel, Unterschrift, Mitarbeiter-Auswahl</td><td><span style="color:var(--s3);font-weight:600;">zeiterfassungs-app.netlify.app</span></td></tr>
+          </table>
+        </div>
+        <div class="learn" style="margin-top:14px;">
+          <div class="learn-head">💡 Warum GitHub die Grundlage ist</div>
+          <ul>
+            <li>Versionskontrolle: Jede Änderung ist rückgängig machbar — kein Code geht verloren</li>
+            <li>Netlify "hört" auf GitHub — jeder Push löst automatisch ein neues Deployment aus</li>
+            <li>Claude darf selbstständig Repos erstellen, committen und pushen (in CLAUDE.md verankert)</li>
+            <li>Einmal eingerichtet: <strong>komplett unsichtbar im Alltag</strong> — Claude erledigt es im Hintergrund</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PHASE 7 — DAS ZIEL ── -->
+    <div class="tl-item">
+      <div class="tl-badge" style="background:linear-gradient(135deg,#C2410C,#F97316);box-shadow:0 0 0 4px #FFF7ED,0 0 0 7px #F97316,0 0 24px rgba(249,115,22,.45);font-size:1.6rem;">🚀</div>
+      <div class="tl-content" style="border-left:4px solid var(--s4);background:linear-gradient(135deg,#FFF7ED,#FFFBEB);border-color:var(--s4);">
+        <div class="tl-phase" style="color:var(--s4d);">Phase 7 — Das Ziel erreicht</div>
+        <div class="tl-title" style="font-size:1.2rem;">Netlify &amp; Live-Deployment — Ein Prompt reicht</div>
+        <p class="tl-desc">Der Moment, für den alles aufgebaut wurde: Eine Web-App, die in Minuten weltweit erreichbar ist.</p>
+        <div class="grid-2" style="margin-top:16px;">
+          <div class="card" style="margin:0;border:2px solid var(--s4);">
+            <div class="card-title">🌐 Was ist Netlify?</div>
+            <ul>
+              <li>Kostenloser Hoster für statische Web-Apps (HTML/CSS/JS)</li>
+              <li>Verbindet sich mit GitHub — jeder Push deployt automatisch</li>
+              <li>HTTPS inklusive, eigene Domains möglich (Ionos → Netlify)</li>
+              <li>Token als Windows-Umgebungsvariable: <code>NETLIFY_AUTH_TOKEN</code></li>
+              <li>Claude nutzt ihn automatisch bei jedem Deployment</li>
+            </ul>
+          </div>
+          <div class="card" style="margin:0;border:2px solid var(--s4);">
+            <div class="card-title">⚡ Der Deployment-Flow</div>
+            <svg viewBox="0 0 220 140" style="width:100%;max-width:220px;display:block;margin:8px auto 0;" xmlns="http://www.w3.org/2000/svg">
+              <defs><marker id="d4" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#F97316"/></marker></defs>
+              <rect x="10" y="8" width="200" height="28" rx="6" fill="#FFF7ED" stroke="#FDBA74" stroke-width="1.5"/>
+              <text x="110" y="26" text-anchor="middle" font-size="11" fill="#C2410C" font-weight="600">💬 Dein Prompt (1 Satz)</text>
+              <line x1="110" y1="36" x2="110" y2="52" stroke="#F97316" stroke-width="2" marker-end="url(#d4)"/>
+              <rect x="35" y="52" width="150" height="28" rx="6" fill="#1E293B" stroke="#F97316" stroke-width="1.5"/>
+              <text x="110" y="70" text-anchor="middle" font-size="11" fill="#FDBA74" font-weight="600">⚙️ Claude Code baut</text>
+              <line x1="110" y1="80" x2="110" y2="96" stroke="#F97316" stroke-width="2" marker-end="url(#d4)"/>
+              <rect x="35" y="96" width="150" height="28" rx="6" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+              <text x="110" y="114" text-anchor="middle" font-size="11" fill="#475569" font-weight="600">🐙 GitHub Push</text>
+              <line x1="110" y1="124" x2="110" y2="128" stroke="#F97316" stroke-width="2" marker-end="url(#d4)"/>
+              <rect x="20" y="126" width="180" height="12" rx="4" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="2"/>
+              <text x="110" y="136" text-anchor="middle" font-size="9" fill="#047857" font-weight="700">🌐 Live auf Netlify ✓ &lt;URL&gt;</text>
+            </svg>
+          </div>
+        </div>
+        <!-- DER MAGISCHE PROMPT -->
+        <div class="magic-prompt">
+          <div class="magic-label">🎯 DER MAGISCHE PROMPT — Ein Satz. Eine App. Live im Browser:</div>
+          <div class="magic-text">"Erstell mir eine Web-App für [Zweck]. Sie soll [Features beschreiben]. Pushe sie auf GitHub und deploy sie auf Netlify."</div>
+          <div class="magic-note">→ Claude erstellt alle Dateien &nbsp;→&nbsp; committet zu GitHub &nbsp;→&nbsp; deployt auf Netlify &nbsp;→&nbsp; gibt dir die Live-URL</div>
+        </div>
+        <div class="praxis" style="margin-top:14px;">
+          <div class="praxis-head">🔧 Was das im Alltag bedeutet</div>
+          <p>Du hast eine Idee für ein Tool — zum Beispiel eine App für deine Kollegen in der Handwerkskammer, eine Checkliste, ein Formular, ein Angebotsrechner. Du beschreibst sie in einem Satz. Zehn bis fünfzehn Minuten später ist die App live — mit HTTPS, für jeden erreichbar, kostenlos. <strong>Das war früher Stunden- oder Tagewerk für einen Entwickler. Jetzt ist es ein Prompt.</strong></p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end timeline -->
+
+  <div class="divider"></div>
+
+  <!-- ZUSAMMENFASSUNG: Was du jetzt kannst -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s4)"></div><h3>Was du heute kannst — dein neues Werkzeugset</h3></div>
+  <div class="grid-3">
+    <div class="card" style="text-align:center;border:2px solid var(--s4);">
+      <div style="font-size:2.2rem;margin-bottom:8px;">🧠</div>
+      <div class="card-title" style="justify-content:center;">KI wirklich verstehen</div>
+      <p>Du weißt, wie Claude denkt, was der Harness ist und warum Claude Code kein Chat-Bot ist. Du kennst den Unterschied zwischen Ratgeber und Mitarbeiter.</p>
+    </div>
+    <div class="card" style="text-align:center;border:2px solid var(--s4);">
+      <div style="font-size:2.2rem;margin-bottom:8px;">📚</div>
+      <div class="card-title" style="justify-content:center;">Wissen akkumulieren</div>
+      <p>Dein KMS wächst mit jeder Sitzung. Claude wird mit dir smarter. Kein Fehler passiert zweimal. Das ist institutionelles Gedächtnis — für Mensch und Maschine.</p>
+    </div>
+    <div class="card" style="text-align:center;border:2px solid var(--s4);">
+      <div style="font-size:2.2rem;margin-bottom:8px;">🚀</div>
+      <div class="card-title" style="justify-content:center;">Apps selbst deployen</div>
+      <p>Ein Prompt → fertige Web-App → GitHub → Netlify → Live-URL. Der vollständige Weg in unter 15 Minuten. Keine Entwickler-Kenntnisse nötig.</p>
+    </div>
+  </div>
+
+  <!-- GLOSSAR -->
+  <div class="sec-head" style="margin-top:28px;"><div class="sec-dot" style="background:var(--s4)"></div><h3>Glossar — Alle Begriffe auf einen Blick</h3></div>
+  <div class="card-wide">
+    <table class="tbl">
+      <tr><th>Begriff</th><th>Was es ist — kurz und klar</th></tr>
+      <tr><td><strong>Claude Code</strong></td><td>CLI-Tool von Anthropic — Claude direkt am Rechner mit echten Werkzeugen. Kein Browser-Chat, ein Agenten-System.</td></tr>
+      <tr><td><strong>CLI</strong></td><td>Command Line Interface — Programm, das im Terminal läuft, nicht im Browser.</td></tr>
+      <tr><td><strong>Harness</strong></td><td>Die Werkzeug-Brücke zwischen Claude und dem Betriebssystem: Dateien lesen/schreiben, Terminal ausführen, Web abrufen, Git nutzen.</td></tr>
+      <tr><td><strong>CLAUDE.md</strong></td><td>Konfigurations-Datei, die Claude als dauerhaften Kontext erhält — globale Instruktionen, die bei jedem Start geladen werden.</td></tr>
+      <tr><td><strong>Flag</strong></td><td>Parameter beim Programmstart mit <code>--</code>, z.B. <code>--dangerously-skip-permissions</code> für den Admin-Modus.</td></tr>
+      <tr><td><strong>KMS</strong></td><td>Knowledge Management System — drei Dateien (logbuch, learnings, decisions) als institutionelles Gedächtnis für Mensch und KI.</td></tr>
+      <tr><td><code>[LOG-XXXX]</code></td><td>Log-Stempel — eindeutig, unveränderlich, kommt exakt 2× in der Datei vor (Index + Eintrag).</td></tr>
+      <tr><td><strong>Skill</strong></td><td>Wiederverwendbarer Prompt-Baustein, abrufbar mit <code>/skillname</code> im Terminal.</td></tr>
+      <tr><td><code>/post</code></td><td>Der wichtigste Skill: Sitzungs-Abschluss-Ritual, das KMS-Einträge prüft und vervollständigt.</td></tr>
+      <tr><td><strong>GitHub</strong></td><td>Versionskontrolle und Code-Hosting — die Infrastruktur-Basis für automatisches Netlify-Deployment.</td></tr>
+      <tr><td><code>gh</code></td><td>GitHub CLI — Claude darf eigenständig Repos erstellen, committen, pushen, ohne dass du etwas tippen musst.</td></tr>
+      <tr><td><strong>Netlify</strong></td><td>Kostenloser Hoster für statische Web-Apps — verbindet sich mit GitHub, deployt automatisch bei jedem Push.</td></tr>
+      <tr><td><code>NETLIFY_AUTH_TOKEN</code></td><td>Windows-Umgebungsvariable mit dem Netlify-Zugangstoken — Claude nutzt ihn für das automatische Deployment.</td></tr>
+      <tr><td><strong>Context Engineering</strong></td><td>Gezieltes Laden von Informationen ins Context-Window — nur was gebraucht wird, nicht alles auf einmal.</td></tr>
+    </table>
+  </div>
+
+</div><!-- end s4 -->
+
+<!-- ══════════════════════════════════════════════════════════
+     SESSION 5 — WISSENSMANAGEMENT V2
+     ══════════════════════════════════════════════════════════ -->
+<div id="s5" class="session">
+
+  <div class="hero hero-s5">
+    <div class="hero-icon">🧠</div>
+    <div>
+      <h2>Wissensmanagement V2 — Das vollständige System</h2>
+      <p>GitHub als Single Source of Truth, Supabase als semantische Suchmaschine, MCP-Server als universelle Schnittstelle für alle KI-Agenten. Das KMS, das nicht mehr vergisst.</p>
+      <div class="hero-meta">
+        <span class="hero-tag">🐙 GitHub Repository</span>
+        <span class="hero-tag">🔍 pgvector RAG</span>
+        <span class="hero-tag">🔧 23 MCP-Tools</span>
+        <span class="hero-tag">🤖 Multi-Agent</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOURCE OF TRUTH -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s5)"></div><h3>Die Architektur — Zwei Ebenen</h3></div>
+  <div class="grid-2">
+    <div class="card" style="border:2px solid var(--s5);text-align:center;">
+      <div style="font-size:2rem;margin-bottom:8px;">🐙</div>
+      <div class="card-title" style="justify-content:center;color:var(--s5d);">GitHub Repository</div>
+      <p style="font-size:.87rem;"><strong>Die einzige Source of Truth</strong> für alles geschriebene Wissen. Kein Device hält lokale Wahrheit. Alle lesen und schreiben via Git. Jeder Push auf <code>main</code> triggert automatisch das Re-Embedding der Vektordatenbank.</p>
+    </div>
+    <div class="card" style="border:2px solid var(--s5);text-align:center;">
+      <div style="font-size:2rem;margin-bottom:8px;">🔍</div>
+      <div class="card-title" style="justify-content:center;color:var(--s5d);">Supabase pgvector</div>
+      <p style="font-size:.87rem;"><strong>Die vektorisierte Spiegelung</strong> für semantisches Retrieval. Jedes Dokument wird in 1024-dimensionale Vektoren übersetzt. Suche nach Bedeutung statt nach Stichworten. Embedding-Modell: <strong>Voyage-4-large</strong>.</p>
+    </div>
+  </div>
+
+  <!-- INVASIV vs ADDITIV -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s5)"></div><h3>Kernprinzip 1 — INVASIV vs. ADDITIV</h3></div>
+  <div class="card-wide">
+    <div class="cw-title" style="color:var(--s5d);">🔄 Jede Datei im System ist eines von beidem — das bestimmt, wie sie geschrieben wird</div>
+    <div class="grid-2" style="margin-top:12px;">
+      <div class="card" style="margin:0;background:#FEF2F2;border:1.5px solid #FCA5A5;">
+        <div class="card-title" style="color:#991B1B;">🔴 INVASIV = Snapshot</div>
+        <p style="font-size:.87rem;color:#7F1D1D;margin-bottom:10px;">Wird bei jeder Aktualisierung <strong>komplett überschrieben</strong>. Keine Historie innerhalb der Datei — nur der aktuelle Stand zählt.</p>
+        <ul style="font-size:.85rem;color:#7F1D1D;padding-left:16px;">
+          <li><code>status-quo.md</code> — Nur Gegenwart, max 100 Zeilen</li>
+          <li><code>wissen/README.md</code> — Routing-Tabelle, immer aktuell</li>
+        </ul>
+      </div>
+      <div class="card" style="margin:0;background:#F0FDF4;border:1.5px solid #6EE7B7;">
+        <div class="card-title" style="color:#065F46;">🟢 ADDITIV = Gedächtnis</div>
+        <p style="font-size:.87rem;color:#064E3B;margin-bottom:10px;">Nur anfügen, <strong>nie ändern</strong>. Bestehende Einträge werden nicht verändert oder gelöscht. Das ist das unveränderliche Archiv.</p>
+        <ul style="font-size:.85rem;color:#064E3B;padding-left:16px;">
+          <li><code>logbuch.md</code> — Jeder Eintrag bleibt für immer</li>
+          <li><code>DECISIONS.md</code> — Kein Zeilenlimit, kumulativ</li>
+          <li><code>LEARNINGS.md</code> — CRITICAL-Einträge werden NIE archiviert</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PERMANENT vs VOLATIL -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s5)"></div><h3>Kernprinzip 2 — PERMANENT vs. VOLATIL</h3></div>
+  <div class="grid-2">
+    <div class="card" style="border-left:4px solid var(--s5);">
+      <div class="card-title" style="color:var(--s5d);">🗿 PERMANENT</div>
+      <p style="font-size:.87rem;">Kernwissen, das sich selten ändert: Strategie, Methodik, Frameworks, Unternehmensstruktur. Wird nur ergänzt, nie ersetzt. Wenn sich Kernwissen fundamental ändert → als Entscheidung in <code>DECISIONS.md</code> dokumentieren.</p>
+    </div>
+    <div class="card" style="border-left:4px solid #F59E0B;">
+      <div class="card-title" style="color:#92400E;">⚡ VOLATIL</div>
+      <p style="font-size:.87rem;">Wissen, das veraltet: Metriken, Kampagnen-Daten, Preise, Marktanalysen. Darf überschrieben werden. Staleness-Warnung wenn <code>Letzte Aktualisierung</code> &gt; 30 Tage alt. Änderungen werden als Learning dokumentiert.</p>
+    </div>
+  </div>
+
+  <!-- ORDNERSTRUKTUR -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s5)"></div><h3>Ordnerstruktur</h3></div>
+  <div class="card-wide" style="background:#1E293B;border-color:#334155;">
+    <div class="cw-title" style="color:#86EFAC;">📁 Das Repository</div>
+    <div class="code" style="margin:0;font-size:.8rem;">
+<span class="code-val">repository/</span>
+├── <span class="code-cmd">status-quo.md</span>             <span class="code-comment">← Gegenwart (INVASIV, max 100 Zeilen)</span>
+├── <span class="code-cmd">logbuch.md</span>                <span class="code-comment">← Alles was passiert (ADDITIV, unbegrenzt)</span>
+├── <span class="code-cmd">DECISIONS.md</span>              <span class="code-comment">← Entscheidungen (ADDITIV, kein Zeilenlimit)</span>
+├── <span class="code-cmd">LEARNINGS.md</span>              <span class="code-comment">← Learnings (ADDITIV, kein Zeilenlimit)</span>
+├── <span class="code-val">wissen/</span>                   <span class="code-comment">← Wissensbibliothek</span>
+│   ├── <span class="code-cmd">README.md</span>             <span class="code-comment">← Knowledge Router (INVASIV)</span>
+│   ├── <span class="code-cmd">[THEMA].md</span>            <span class="code-comment">← Wissensbücher (PERMANENT/VOLATIL)</span>
+│   └── <span class="code-cmd">attachments/</span>          <span class="code-comment">← Binärdateien (PDF, HTML, etc.)</span>
+├── <span class="code-val">archiv/</span>                   <span class="code-comment">← Rotierte Einträge</span>
+├── <span class="code-val">system/</span>                   <span class="code-comment">← System-Dokumentation</span>
+│   ├── <span class="code-cmd">WISSENSMANAGEMENT.md</span>  <span class="code-comment">← Diese Verfassung</span>
+│   └── <span class="code-cmd">TEMPLATES.md</span>          <span class="code-comment">← Vorlagen für alle Dateitypen</span>
+├── <span class="code-val">scripts/</span>                  <span class="code-comment">← Automatisierung</span>
+│   ├── <span class="code-cmd">sync-kb-to-supabase.py</span> <span class="code-comment">← VDB-Sync</span>
+│   └── <span class="code-cmd">compliance-check.py</span>    <span class="code-comment">← 7-Punkt-Prüfung</span>
+└── <span class="code-val">.github/workflows/</span>        <span class="code-comment">← CI/CD (VDB-Sync + Compliance bei Push)</span></div>
+  </div>
+
+  <!-- MCP SERVER -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s5)"></div><h3>MCP Server — 23 Tools, eine Schnittstelle für alle Agenten</h3></div>
+  <div class="card-wide">
+    <div class="cw-title" style="color:var(--s5d);">⚙️ Warum ein eigener MCP Server?</div>
+    <p style="font-size:.9rem;margin-bottom:14px;">Jeder Agent — egal ob Claude Code auf dem Laptop, ein Telegram-Bot, ein Web-Chat oder ein zukünftiger Agent — verbindet sich über dieselbe Schnittstelle (Model Context Protocol) und benutzt dieselben Tools. Kein Agent muss wissen, wie das System intern funktioniert.</p>
+    <div class="grid-2" style="margin-bottom:14px;">
+      <div class="card" style="margin:0;background:var(--s5l);border:1.5px solid var(--s5);">
+        <div class="card-title" style="color:var(--s5d);">📖 7 Read-Tools (immer verfügbar)</div>
+        <table class="tbl" style="margin:8px 0 0 0;font-size:.82rem;">
+          <tr><td><code>search_knowledge</code></td><td>RAG-Suche via Supabase</td></tr>
+          <tr><td><code>read_document</code></td><td>Wissensdatei lesen (Stempel-Navigation)</td></tr>
+          <tr><td><code>list_documents</code></td><td>Dateien auflisten</td></tr>
+          <tr><td><code>get_decisions</code></td><td>Entscheidungen abfragen</td></tr>
+          <tr><td><code>get_learnings</code></td><td>Learnings abfragen</td></tr>
+          <tr><td><code>get_status</code></td><td>status-quo.md laden</td></tr>
+          <tr><td><code>get_log_entries</code></td><td>Logbuch-Einträge lesen</td></tr>
+        </table>
+      </div>
+      <div class="card" style="margin:0;border-left:4px solid var(--s5);">
+        <div class="card-title" style="color:var(--s5d);">✏️ 16 Write-Tools (bei Write-Enabled)</div>
+        <p style="font-size:.82rem;margin-bottom:8px;color:var(--muted);">Kerneinträge: <code>add_log_entry</code> · <code>add_decision</code> · <code>add_learning</code> · <code>update_status</code> · <code>update_document</code> · <code>create_document</code> · <code>git_sync</code></p>
+        <p style="font-size:.82rem;margin-bottom:8px;color:var(--muted);">Dateiverwaltung: <code>overwrite_file</code> · <code>append_to_document</code> · <code>update_readme</code></p>
+        <p style="font-size:.82rem;color:var(--muted);">Qualität: <code>run_compliance</code> · <code>check_limits</code> · <code>archive_entries</code> · <code>get_next_ids</code> · <code>git_pull</code> · <code>preflight</code></p>
+      </div>
+    </div>
+    <div class="code" style="font-size:.8rem;">
+<span class="code-comment"># Typischer Agent-Workflow (8 Schritte)</span>
+<span class="code-cmd">1. preflight</span>        <span class="code-comment">→ Git pull, Status laden, Probleme erkennen</span>
+<span class="code-cmd">2. search_knowledge</span> <span class="code-comment">→ Relevantes Wissen finden (RAG)</span>
+<span class="code-cmd">3. read_document</span>    <span class="code-comment">→ Kapitel lesen (Stempel-Navigation)</span>
+<span class="code-cmd">4. [Arbeit]</span>
+<span class="code-cmd">5. add_log_entry</span>    <span class="code-comment">→ Dokumentieren was gemacht wurde</span>
+<span class="code-cmd">6. add_decision</span>     <span class="code-comment">→ Falls Entscheidung getroffen</span>
+<span class="code-cmd">7. add_learning</span>     <span class="code-comment">→ Falls neue Erkenntnis</span>
+<span class="code-cmd">8. git_sync</span>         <span class="code-comment">→ Commit + Push → VDB-Sync automatisch</span></div>
+  </div>
+
+  <!-- VDB -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s5)"></div><h3>Vektordatenbank — Semantische Suche</h3></div>
+  <div class="grid-2">
+    <div class="card card-accent-s5" style="--card-accent:var(--s5);">
+      <div class="card-title">🔬 Technische Details</div>
+      <table class="tbl" style="margin:8px 0 0 0;font-size:.83rem;">
+        <tr><td>Embedding-Modell</td><td><strong>Voyage-4-large</strong> (1024d)</td></tr>
+        <tr><td>Index-Typ</td><td><strong>HNSW</strong> (m=16, ef=64)</td></tr>
+        <tr><td>Query-Modell</td><td>Voyage-4-lite (günstiger)</td></tr>
+        <tr><td>Threshold</td><td>0.15 (Voyage-Scores tiefer als OpenAI)</td></tr>
+        <tr><td>Chunking</td><td>Section-Aware (## → ### → Paragraph)</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <div class="card-title">🔁 Sync-Pipeline</div>
+      <p style="font-size:.85rem;line-height:1.8;"><code>git push origin main</code><br>→ GitHub Action startet<br>→ Python: <code>sync-kb-to-supabase.py</code><br>→ Section-Aware Chunking<br>→ Context-Prefix injizieren<br>→ Voyage-4-large: Text → 1024d Embedding<br>→ Upsert in Supabase</p>
+    </div>
+  </div>
+
+  <!-- MULTI-AGENT -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s5)"></div><h3>Multi-Agent-Architektur</h3></div>
+  <div class="card-wide">
+    <div class="cw-title" style="color:var(--s5d);">🤖 Mehrere KI-Agenten, eine Wissensbasis</div>
+    <table class="tbl">
+      <tr><th>Rolle</th><th>Schreibzugriff</th><th>Typischer Agent</th></tr>
+      <tr><td>Primärer Arbeitsagent</td><td>Alles</td><td>Claude Code (lokale Arbeit)</td></tr>
+      <tr><td>Spezialisierter Agent</td><td>Alles via MCP</td><td>Buchhaltungs-Bot, CRM-Bot</td></tr>
+      <tr><td>Read-only Agent</td><td>Nur Lesen</td><td>Chat-Bot, Recherche-Agent</td></tr>
+      <tr><td>Zukünftige Agenten</td><td>Konfigurierbar</td><td>Per <code>MCP_WRITE_ENABLED</code> steuerbar</td></tr>
+    </table>
+    <div class="learn" style="margin-top:14px;">
+      <div class="learn-head">💡 Kernprinzipien des V2-Systems</div>
+      <ul>
+        <li><strong>Werkstatt-Prinzip:</strong> Dokumentation WÄHREND der Arbeit, nicht danach</li>
+        <li><strong>Proaktives Retrieval:</strong> Vor jeder Antwort prüfen, was das System weiß — kein Retrieval = schlechte Arbeit</li>
+        <li><strong>Stempel-Navigation:</strong> Große Dateien nie komplett laden — Summary + Index → gezielt springen</li>
+        <li><strong>Automatische Compliance:</strong> Git Hooks + CI/CD + 7-Punkt-Check — das System prüft sich selbst</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- INFORMATIONSFLUSS -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s5)"></div><h3>Der vollständige Informationsfluss</h3></div>
+  <div class="card-wide" style="background:var(--s5l);border:1.5px solid var(--s5);">
+    <div class="cw-title" style="color:var(--s5d);">🔁 Das System ist ein Kreislauf</div>
+    <div class="code" style="font-size:.82rem;">
+<span class="code-val">Quelle</span> (Chat · Transkript · E-Mail · Recherche · Arbeit)
+  ↓
+<span class="code-cmd">KI-Agent</span> (via MCP Server oder lokal)
+  ↓
+<span class="code-cmd">logbuch.md</span>  ←── Alles was passiert (Intention → Aktion → Ergebnis)
+  ├→ <span class="code-val">DECISIONS.md</span>   (max 25 Worte + LOG-Ref)
+  ├→ <span class="code-val">LEARNINGS.md</span>   (max 30 Worte + LOG-Ref)
+  ├→ <span class="code-val">wissen/*.md</span>    (thematisch einpflegen)
+  └→ <span class="code-val">status-quo.md</span>  (wird überschrieben)
+  ↓
+<span class="code-cmd">git push origin main</span>
+  ↓
+<span class="code-val">GitHub Action</span> → VDB-Sync (automatisch)
+  ↓
+<span class="code-val">Supabase pgvector</span> (durchsuchbar via RAG)
+  ↓
+<span class="code-cmd">Jeder Agent</span> kann das Wissen finden (MCP oder RAG-API)</div>
+  </div>
+
+</div><!-- end s5 -->
+
+<!-- ══════════════════════════════════════════════════════════
+     SESSION 6 — BETRIEBSANLEITUNG
+     ══════════════════════════════════════════════════════════ -->
+<div id="s6" class="session">
+
+  <div class="hero hero-s6">
+    <div class="hero-icon">🔧</div>
+    <div>
+      <h2>Betriebsanleitung — KMS installieren &amp; betreiben</h2>
+      <p>Der vollständige Installations-Guide. Alles, was eine KI braucht, um das Wissensmanagement von Null einzurichten — inkl. /pre, /post, Werkstatt-Prinzip und GitHub-Sync.</p>
+      <div class="hero-meta">
+        <span class="hero-tag">📋 Schritt für Schritt</span>
+        <span class="hero-tag">🌐 Global oder Lokal</span>
+        <span class="hero-tag">⚡ /pre und /post</span>
+        <span class="hero-tag">🐙 GitHub-Sync</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- INSTALLATION -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s6)"></div><h3>Schritt 1 — Global oder Lokal?</h3></div>
+  <div class="grid-2">
+    <div class="card" style="border:2px solid var(--s3);">
+      <div class="card-title" style="color:var(--s3d);">🌐 GLOBAL (empfohlen)</div>
+      <p style="font-size:.87rem;">Die Verhaltensregeln werden in <code>~/.claude/CLAUDE.md</code> geschrieben. Egal in welchem Ordner Claude gestartet wird — er pflegt das KMS <strong>immer</strong>. Alle Dateien in einem zentralen Ordner.</p>
+      <div class="learn" style="margin-top:10px;padding:10px 12px;">
+        <div class="learn-head">💡 Empfehlung</div>
+        <p style="font-size:.82rem;color:#78350F;">Für die meisten Nutzer die richtige Wahl. Das KMS ist projektübergreifend und immer aktiv.</p>
+      </div>
+    </div>
+    <div class="card" style="border:1px solid var(--border);">
+      <div class="card-title">📁 LOKAL</div>
+      <p style="font-size:.87rem;">Verhaltensregeln nur in der <code>CLAUDE.md</code> des jeweiligen Projektordners. Gilt NUR wenn Claude in diesem Ordner gestartet wird.</p>
+      <p style="font-size:.82rem;color:var(--muted);margin-top:8px;">Sinnvoll wenn: Verschiedene Projekte unterschiedliche KMS-Strukturen benötigen.</p>
+    </div>
+  </div>
+
+  <!-- ORDNERSTRUKTUR -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s6)"></div><h3>Schritt 2 — Was eingerichtet wird</h3></div>
+  <div class="card-wide" style="background:#1E293B;border-color:#334155;">
+    <div class="cw-title" style="color:#86EFAC;">📁 Die Ordnerstruktur</div>
+    <div class="code" style="margin:0;font-size:.8rem;">
+<span class="code-val">[KMS-Ordner]/</span>  <span class="code-comment">← NICHT in Cloud-Sync (OneDrive, Dropbox)!</span>
+├── <span class="code-cmd">status-quo.md</span>       <span class="code-comment">← Wo stehen wir gerade? (max 100 Zeilen)</span>
+├── <span class="code-cmd">log.md</span>              <span class="code-comment">← Alles was passiert ist (unbegrenzt)</span>
+├── <span class="code-cmd">decisions.md</span>        <span class="code-comment">← Alle Entscheidungen (max 150 Zeilen)</span>
+├── <span class="code-cmd">learnings.md</span>        <span class="code-comment">← Alle Learnings (max 200 Zeilen)</span>
+├── <span class="code-val">archiv/</span>
+│   ├── <span class="code-cmd">decisions_archiv.md</span>
+│   └── <span class="code-cmd">learnings_archiv.md</span>
+└── <span class="code-val">wissen/</span>             <span class="code-comment">← Die Bibliothek</span>
+    ├── <span class="code-cmd">README.md</span>       <span class="code-comment">← Der Bibliothekar</span>
+    └── <span class="code-cmd">*.md</span>            <span class="code-comment">← Wissensbücher nach Bedarf</span></div>
+    <p style="color:#F87171;font-size:.82rem;margin-top:10px;">⚠️ <strong>Wichtig:</strong> Der KMS-Ordner darf NICHT in OneDrive, Dropbox oder Google Drive liegen, wenn Git genutzt wird. Cloud-Sync + Git = Lock-File-Konflikte und .git-Korruption.</p>
+  </div>
+
+  <!-- ZEILENLIMITS -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s6)"></div><h3>Zeilenlimits — Strikt einhalten</h3></div>
+  <div class="card-wide">
+    <table class="tbl">
+      <tr><th>Datei</th><th>Max Zeilen</th><th>Bei Überschreitung</th></tr>
+      <tr><td><code>CLAUDE.md</code> (Regelwerk)</td><td style="font-weight:700;">70</td><td>Kürzen, Details auslagern</td></tr>
+      <tr><td><code>status-quo.md</code></td><td style="font-weight:700;">100</td><td>Immer überschreiben (INVASIV)</td></tr>
+      <tr><td><code>decisions.md</code></td><td style="font-weight:700;">150</td><td>Älteste abgeschlossene nach archiv/</td></tr>
+      <tr><td><code>learnings.md</code></td><td style="font-weight:700;">200</td><td>Älteste nicht-kritische nach archiv/</td></tr>
+      <tr><td><code>log.md</code></td><td style="font-weight:700;">Unbegrenzt</td><td>Checkpoint alle ~300 Zeilen</td></tr>
+      <tr><td><code>wissen/*.md</code></td><td style="font-weight:700;">Unbegrenzt</td><td>Kapitelverzeichnis am Anfang Pflicht</td></tr>
+    </table>
+  </div>
+
+  <!-- WERKSTATT-PRINZIP -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s6)"></div><h3>Das Werkstatt-Prinzip — KRITISCH</h3></div>
+  <div class="card-wide" style="background:#FFF1F2;border:2px solid var(--s6);">
+    <div class="cw-title" style="color:var(--s6d);">🔨 Permanent pflegen — NICHT erst am Ende</div>
+    <p style="font-size:.9rem;margin-bottom:14px;">Das Wissensmanagement folgt dem Werkstatt-Prinzip: Die Werkstatt wird <strong>WÄHREND der Arbeit</strong> permanent sauber gehalten, nicht erst nach Feierabend aufgeräumt.</p>
+    <div class="grid-2">
+      <div class="card" style="margin:0;background:#FEF2F2;border:1.5px solid #FCA5A5;">
+        <div class="card-title" style="color:#991B1B;">❌ Falsch</div>
+        <ul style="font-size:.87rem;color:#7F1D1D;padding-left:16px;">
+          <li>4-5 Sessions durcharbeiten</li>
+          <li>Dann erst alles dokumentieren</li>
+          <li>Ergebnis: Erste Sessions fast vergessen</li>
+          <li>/post als "großes Aufräumen" missbrauchen</li>
+        </ul>
+      </div>
+      <div class="card" style="margin:0;background:#F0FDF4;border:1.5px solid #6EE7B7;">
+        <div class="card-title" style="color:#065F46;">✅ Richtig</div>
+        <ul style="font-size:.87rem;color:#064E3B;padding-left:16px;">
+          <li>Jede wesentliche Aktion SOFORT in log.md</li>
+          <li>Jede Entscheidung SOFORT in decisions.md</li>
+          <li>Jedes Learning SOFORT in learnings.md</li>
+          <li>/post ist nur der letzte Kontrollgang</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- /pre und /post -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s6)"></div><h3>Slash-Commands — /pre und /post</h3></div>
+  <div class="grid-2">
+    <div class="card" style="border:2px solid var(--s5);background:var(--s5l);">
+      <div class="card-title" style="color:var(--s5d);">🚀 /pre [optionales Thema]</div>
+      <p style="font-size:.87rem;margin-bottom:10px;"><strong>Intelligente Session-Initialisierung.</strong> Lädt relevanten Kontext, ohne das Kontextfenster zu vermüllen.</p>
+      <ol style="font-size:.85rem;padding-left:16px;">
+        <li><strong>git pull</strong> — neuesten Stand holen</li>
+        <li><strong>status-quo.md</strong> laden, Staleness prüfen</li>
+        <li><strong>Thematische Filterung:</strong> Mit Thema → nur relevante Bücher. Ohne Thema → genereller Überblick</li>
+        <li><strong>Strukturierter Überblick</strong> ausgeben</li>
+      </ol>
+      <div class="code" style="font-size:.78rem;margin-top:10px;padding:8px 12px;">
+<span class="code-cmd">/pre</span>                     <span class="code-comment">← Genereller Überblick</span>
+<span class="code-cmd">/pre</span> <span class="code-val">SEO-Strategie</span>     <span class="code-comment">← Nur SEO-relevantes</span>
+<span class="code-cmd">/pre</span> <span class="code-val">Kalkulation Holzbau</span> <span class="code-comment">← Spezifisch</span></div>
+    </div>
+    <div class="card" style="border:2px solid var(--s3);background:#ECFDF5;">
+      <div class="card-title" style="color:var(--s3d);">🏁 /post</div>
+      <p style="font-size:.87rem;margin-bottom:10px;"><strong>Letzter Kontrollgang am Ende einer Session.</strong> Prüft Vollständigkeit, füllt Lücken, synchronisiert mit GitHub.</p>
+      <ol style="font-size:.85rem;padding-left:16px;color:#065F46;">
+        <li><strong>Vollständigkeits-Prüfung:</strong> Alle Aktionen geloggt? Format korrekt? Index aktuell?</li>
+        <li><strong>Lücken füllen</strong> — falls etwas fehlt: jetzt nachtragen</li>
+        <li><strong>Ergebnis-Bericht</strong> — was fehlte, was ergänzt wurde</li>
+        <li><strong>git commit + push</strong> — alles zu GitHub synchronisieren</li>
+      </ol>
+      <div class="praxis" style="margin-top:10px;padding:8px 12px;">
+        <div class="praxis-head">⚠️ Wichtig</div>
+        <p style="font-size:.82rem;">/post ist KEIN Ersatz für permanentes Pflegen. Es ist die Qualitätssicherung, nicht der Hauptprozess.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLAUDE.MD REGELWERK -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s6)"></div><h3>Das CLAUDE.md Regelwerk — Unter 70 Zeilen</h3></div>
+  <div class="card-wide" style="background:#1E293B;border-color:#334155;">
+    <div class="cw-title" style="color:#FDBA74;">📋 Template für die CLAUDE.md (strikt unter 70 Zeilen)</div>
+    <div class="code" style="font-size:.78rem;margin:0;padding:12px 16px;">
+<span class="code-val"># Wissensmanagement Regelwerk</span>
+
+<span class="code-flag">**WISSENSBASIS:**</span> <span class="code-val">[PFAD ZUM KMS-ORDNER]</span> (Git-Repo: <span class="code-val">[REPO-NAME]</span>)
+
+<span class="code-flag">## PFLICHT bei Session-Start</span>
+1. status-quo.md lesen. Staleness &gt;48h = Warnung + sofort aktualisieren
+2. wissen/README.md scannen - welche Bücher relevant?
+3. decisions.md + learnings.md überfliegen
+4. Wissensdateien &gt;200 Zeilen: NUR erste 40-60 Zeilen, dann per Stempel-Suche
+
+<span class="code-flag">## WERKSTATT-PRINZIP: PERMANENT pflegen, NICHT erst am Ende</span>
+Jede wesentliche Aktion SOFORT dokumentieren. Nicht warten. Sofort:
+- log.md (ADDITIV): LOG-XXX mit Intent/Kontext/Aktion/Ergebnis/Dateien/Nächster/Refs
+- status-quo.md (INVASIV): Nach Änderungen ÜBERSCHREIBEN. Max 100 Zeilen
+- decisions.md (ADDITIV): D-XXX, 5-10 Worte + LOG-Ref. Max 150 Zeilen
+- learnings.md (ADDITIV): L-XXX, max 15 Worte + LOG-Ref. Max 200 Zeilen
+- wissen/*.md: Neues Wissen sofort. README aktualisieren. PERMANENT/VOLATIL
+
+<span class="code-flag">## Stempel (KEINE Zeilennummern)</span>
+LOG-XXX | L-XXX | D-XXX | CP-XXX | [#wissen-dateiname-X]
+
+<span class="code-flag">## Navigationsregel</span>
+Wissensdateien &gt;200 Zeilen: NUR Executive Summary + Kapitelverzeichnis (erste 40-60 Zeilen)</div>
+  </div>
+
+  <!-- GITHUB SYNC -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s6)"></div><h3>GitHub-Synchronisation — Multi-Device</h3></div>
+  <div class="card-wide">
+    <div class="cw-title" style="color:var(--s6d);">🔄 Der Sync-Ablauf</div>
+    <div class="code" style="font-size:.82rem;">
+<span class="code-cmd">/pre</span> auslösen
+    → <span class="code-val">git pull</span>  <span class="code-comment">(neuester Stand von GitHub)</span>
+    → Kontext laden
+    → <span class="code-comment">Arbeiten... Werkstatt-Prinzip: permanent pflegen</span>
+<span class="code-cmd">/post</span> auslösen
+    → Vollständigkeits-Check
+    → <span class="code-val">git add + commit + push</span>  <span class="code-comment">(Änderungen zu GitHub)</span></div>
+    <div class="learn" style="margin-top:14px;">
+      <div class="learn-head">💡 Goldene Regeln für Multi-Device</div>
+      <ul>
+        <li>Immer <code>/pre</code> am Anfang und <code>/post</code> am Ende einer Session</li>
+        <li>ADDITIV-Dateien (log, decisions, learnings) können grundsätzlich konfliktfrei zusammengeführt werden</li>
+        <li>INVASIV-Datei <code>status-quo.md</code> kann Konflikte erzeugen — im Zweifel die neuere Version behalten</li>
+        <li>Auf weiteren Computern: Repository klonen → CLAUDE.md erstellen → /pre und /post kopieren → fertig</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- EINRICHTUNGS-CHECKLISTE -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s6)"></div><h3>Einrichtungs-Checkliste — 12 Schritte</h3></div>
+  <div class="card-wide">
+    <div class="cw-title" style="color:var(--s6d);">✅ Was Claude bei der Installation tut</div>
+    <ul class="checklist">
+      <li><span class="check-box" style="border-color:var(--s6);"></span>Global oder lokal? Antwort abwarten</li>
+      <li><span class="check-box" style="border-color:var(--s6);"></span>Speicherort wählen: <code>~/Wissensmanagement</code> (NICHT in Cloud-Sync)</li>
+      <li><span class="check-box" style="border-color:var(--s6);"></span>Alle Dateien und Ordner gemäß Struktur erstellen</li>
+      <li><span class="check-box" style="border-color:var(--s6);"></span>Git-Repository initialisieren + privates GitHub-Repo anlegen (<code>gh repo create</code>)</li>
+      <li><span class="check-box" style="border-color:var(--s6);"></span>Regelwerk in CLAUDE.md schreiben (global oder lokal)</li>
+      <li><span class="check-box" style="border-color:var(--s6);"></span>Slash-Commands <code>/pre</code> und <code>/post</code> in <code>~/.claude/commands/</code> erstellen</li>
+      <li><span class="check-box" style="border-color:var(--s6);"></span>Ersten Log-Eintrag schreiben (LOG-001: Wissensmanagement eingerichtet)</li>
+      <li><span class="check-box" style="border-color:var(--s6);"></span>Ersten Status-Quo schreiben</li>
+      <li><span class="check-box" style="border-color:var(--s6);"></span>Erste Decisions und Learnings anlegen</li>
+      <li><span class="check-box" style="border-color:var(--s6);"></span>Initial Commit + Push zu GitHub</li>
+      <li><span class="check-box" style="border-color:var(--s6);"></span>Bestätigung + Ordnerstruktur zeigen</li>
+      <li><span class="check-box" style="border-color:var(--s6);"></span>Ab sofort: Werkstatt-Prinzip bei JEDER Interaktion</li>
+    </ul>
+  </div>
+
+</div><!-- end s6 -->
+
+<!-- ══════════════════════════════════════════════════════════
+     SESSION 7 — MEINE PROJEKTE
+     ══════════════════════════════════════════════════════════ -->
+<div id="s7" class="session">
+
+  <div class="hero hero-s7">
+    <div class="hero-icon">🗂️</div>
+    <div>
+      <h2>Meine Projekte — Was ich mit Claude Code gebaut habe</h2>
+      <p>Von der einfachen Zeiterfassung bis zum Vergabevermerk-Generator mit PDF-Export. Diese Apps entstanden innerhalb weniger Wochen — jede mit einem Prompt als Startpunkt.</p>
+      <div class="hero-meta">
+        <span class="hero-tag">🌐 Netlify Live-Apps</span>
+        <span class="hero-tag">📱 Offline-fähige HTML-Apps</span>
+        <span class="hero-tag">🔧 Google Apps Script</span>
+        <span class="hero-tag">📄 PDF/Word/Excel-Export</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s7)"></div><h3>5 Apps — entstanden im Coaching</h3></div>
+
+  <div class="grid-2">
+
+    <!-- PROJEKT 1: ZEITERFASSUNG -->
+    <div class="proj-card proj-card-1">
+      <div class="proj-icon">⏱️</div>
+      <div class="proj-name">Zeiterfassungs-App</div>
+      <div class="proj-desc">Digitale Rapportzettel für Mitarbeiter und Subunternehmer. Zwei Ansichten: Büro-View für den Chef und Mitarbeiter-View für die Erfassung. Mit Unterschriftsliste für Kunden — fertig zum Ausdrucken.</div>
+      <div>
+        <span class="proj-tag">HTML / JS</span>
+        <span class="proj-tag">localStorage</span>
+        <span class="proj-tag">Unterschrift</span>
+        <span class="proj-tag">2 Ansichten</span>
+      </div>
+      <div style="margin-top:12px;">
+        <div class="proj-live">🌐 Live: zeiterfassungs-app.netlify.app</div>
+      </div>
+      <div class="learn" style="margin-top:12px;">
+        <div class="learn-head">💡 Entstanden in Session 4</div>
+        <p style="font-size:.84rem;color:#78350F;">Marvin hat diese App live in Session 4 auf GitHub hochgeladen und auf Netlify deployed — als Testproband für den ersten gemeinsamen Deploy-Workflow der Gruppe.</p>
+      </div>
+    </div>
+
+    <!-- PROJEKT 2: HWK PROTOKOLL-GENERATOR -->
+    <div class="proj-card proj-card-2">
+      <div class="proj-icon">📋</div>
+      <div class="proj-name">HWK Protokoll-Generator</div>
+      <div class="proj-desc">Einzelne HTML-Datei für die Erstellung von Beratungsprotokollen bei Betriebsbesuchen der Handwerkskammer. Läuft komplett offline — kein Server, keine Cloud. Daten bleiben lokal.</div>
+      <div>
+        <span class="proj-tag">Single-File HTML</span>
+        <span class="proj-tag">Offline-fähig</span>
+        <span class="proj-tag">Druckoptimiert</span>
+        <span class="proj-tag">Kein Server</span>
+      </div>
+      <div style="margin-top:12px;">
+        <div style="display:inline-flex;align-items:center;gap:5px;background:#F8FAFC;border:1.5px solid var(--border);color:var(--muted);padding:4px 12px;border-radius:20px;font-size:.78rem;font-weight:600;">📁 Lokal gespeichert</div>
+      </div>
+      <div class="praxis" style="margin-top:12px;">
+        <div class="praxis-head">🔧 Warum offline-first?</div>
+        <p style="font-size:.84rem;">Präsentationen und Tools für die HWK müssen offline-fähig sein — Internet in Betrieben ist nicht immer zuverlässig. Das Single-File-Pattern ist das optimale Format dafür. (<a href="#" onclick="show(1);return false;" style="color:var(--s1)">Lerning L-0013</a>)</p>
+      </div>
+    </div>
+
+    <!-- PROJEKT 3: BAUSTELLEN-DOKUMENTATION -->
+    <div class="proj-card proj-card-3">
+      <div class="proj-icon">🏗️</div>
+      <div class="proj-name">Baustellen-Dokumentation</div>
+      <div class="proj-desc">Dokumentations-App mit zwei verschiedenen URL-Ansichten für dieselbe App: <code>?buero</code> für die Büroansicht und <code>?default</code> für die Feldansicht auf der Baustelle. Daten werden im localStorage gespeichert.</div>
+      <div>
+        <span class="proj-tag">HTML / JS</span>
+        <span class="proj-tag">localStorage</span>
+        <span class="proj-tag">URL-Parameter</span>
+        <span class="proj-tag">2 Ansichten</span>
+      </div>
+      <div style="margin-top:12px;">
+        <div style="display:inline-flex;align-items:center;gap:5px;background:#F8FAFC;border:1.5px solid var(--border);color:var(--muted);padding:4px 12px;border-radius:20px;font-size:.78rem;font-weight:600;">📁 Lokal gespeichert</div>
+      </div>
+    </div>
+
+    <!-- PROJEKT 4: VERGABEVERMERK-GENERATOR -->
+    <div class="proj-card proj-card-4">
+      <div class="proj-icon">📄</div>
+      <div class="proj-name">Vergabevermerk-Generator</div>
+      <div class="proj-desc">Multi-File-Webanwendung zur Erstellung rechtssicherer Vergabevermerke für die Handwerkskammer. Exportiert in drei Formaten gleichzeitig: PDF, Word und Excel. Formularbasiert, strukturiert.</div>
+      <div>
+        <span class="proj-tag">Multi-File HTML</span>
+        <span class="proj-tag">PDF-Export</span>
+        <span class="proj-tag">Word-Export</span>
+        <span class="proj-tag">Excel-Export</span>
+        <span class="proj-tag">HWK-Konform</span>
+      </div>
+      <div style="margin-top:12px;">
+        <div style="display:inline-flex;align-items:center;gap:5px;background:#F8FAFC;border:1.5px solid var(--border);color:var(--muted);padding:4px 12px;border-radius:20px;font-size:.78rem;font-weight:600;">📁 Lokal gespeichert</div>
+      </div>
+      <div class="learn" style="margin-top:12px;">
+        <div class="learn-head">💡 Komplexität wächst mit dem Zweck</div>
+        <p style="font-size:.84rem;color:#78350F;">Multi-File-Ansatz mit drei Export-Formaten — zeigt, dass Claude Code auch komplexere Dokumenten-Workflows beherrscht.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FEUERWEHR-APP -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s7)"></div><h3>Weitere App</h3></div>
+  <div class="grid-2">
+    <div class="proj-card proj-card-5">
+      <div class="proj-icon">🚒</div>
+      <div class="proj-name">Feuerwehr-App</div>
+      <div class="proj-desc">Demo-App für Feuerwehr-Einsatzdokumentation mit localStorage. Live auf Netlify als Showcase für das "Ein Prompt → Live-App"-Muster. Zeigt, wie schnell branchenspezifische Apps entstehen können.</div>
+      <div>
+        <span class="proj-tag">HTML / JS</span>
+        <span class="proj-tag">localStorage</span>
+        <span class="proj-tag">Demo-App</span>
+      </div>
+      <div style="margin-top:12px;">
+        <div class="proj-live">🌐 Live auf Netlify</div>
+      </div>
+    </div>
+
+    <div class="card" style="border:2px dashed var(--s7);background:var(--s7l);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:32px;">
+      <div style="font-size:2.5rem;margin-bottom:12px;">➕</div>
+      <div style="font-weight:700;color:var(--s7d);margin-bottom:8px;">Dein nächstes Projekt?</div>
+      <p style="font-size:.87rem;color:var(--muted);">Noch 22 Wochen Coaching. Noch viele Apps, Automatisierungen und Systeme, die entstehen werden. Jede davon mit einem Prompt als Startpunkt.</p>
+      <div class="magic-prompt" style="margin-top:16px;font-size:.78rem;padding:12px 16px;">
+        <div class="magic-label">💬 Der universelle Startpunkt:</div>
+        <div class="magic-text">"Erstelle eine [App-Typ] für [Zweck]. Sie soll [Features]. Pushe auf GitHub und deploy auf Netlify."</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GESAMTBILANZ -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s7)"></div><h3>Muster und Erkenntnisse</h3></div>
+  <div class="grid-3">
+    <div class="card" style="text-align:center;border-top:3px solid var(--s1);">
+      <div style="font-size:1.8rem;margin-bottom:6px;">🌐</div>
+      <div class="card-title" style="justify-content:center;font-size:.9rem;">Live auf Netlify</div>
+      <p style="font-size:.82rem;color:var(--muted);">Zeiterfassungs-App + Feuerwehr-App — weltweit erreichbar, kostenlos gehostet, auto-deployt via GitHub</p>
+    </div>
+    <div class="card" style="text-align:center;border-top:3px solid var(--s3);">
+      <div style="font-size:1.8rem;margin-bottom:6px;">📁</div>
+      <div class="card-title" style="justify-content:center;font-size:.9rem;">Single-File HTML</div>
+      <p style="font-size:.82rem;color:var(--muted);">HWK Protokoll-Generator — das optimale Format für offline-fähige, internet-unabhängige Tools bei Betriebsbesuchen</p>
+    </div>
+    <div class="card" style="text-align:center;border-top:3px solid var(--s4);">
+      <div style="font-size:1.8rem;margin-bottom:6px;">📄</div>
+      <div class="card-title" style="justify-content:center;font-size:.9rem;">Multi-Format-Export</div>
+      <p style="font-size:.82rem;color:var(--muted);">Vergabevermerk-Generator — PDF + Word + Excel gleichzeitig. Claude Code beherrscht auch komplexe Dokumenten-Workflows</p>
+    </div>
+  </div>
+
+</div><!-- end s7 -->
+
+<footer>
+  Synclaro KI-Coaching · Gruppencoaching Mai 2026 &nbsp;·&nbsp; Erstellt mit Claude Code (claude-sonnet-4-6) &nbsp;·&nbsp; Offline-fähig · keine externen Abhängigkeiten
+</footer>
+
+<script>
+function show(n){
+  ['s1','s2','s3','s4','s5','s6','s7'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el) el.style.display='none';
+  });
+  const target=document.getElementById('s'+n);
+  if(target) target.style.display='block';
+  document.querySelectorAll('.tab-btn').forEach(b=>{
+    b.className='tab-btn';
+  });
+  const btn=document.querySelector('[data-s="'+n+'"]');
+  if(btn) btn.className='tab-btn active-s'+n;
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+document.addEventListener('DOMContentLoaded',()=>show(4));
+</script>
+</body>
+</html>
