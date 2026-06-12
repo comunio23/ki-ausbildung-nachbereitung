@@ -43,6 +43,7 @@ a{color:inherit;}
 .tab-btn.active-s5{color:var(--s5);border-bottom-color:var(--s5);}
 .tab-btn.active-s6{color:var(--s6);border-bottom-color:var(--s6);}
 .tab-btn.active-s7{color:var(--s7);border-bottom-color:var(--s7);}
+.tab-btn.active-s8{color:var(--s7);border-bottom-color:var(--s7);}
 .tab-new{background:var(--s3);color:#fff;font-size:.65rem;padding:2px 6px;border-radius:10px;font-weight:700;}
 
 /* ── LAYOUT ──────────────────── */
@@ -259,14 +260,18 @@ footer{text-align:center;padding:28px;color:var(--muted);font-size:.8rem;margin-
   </button>
   <button class="tab-btn" data-s="5" onclick="show(5)">
     <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#0891B2" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#0891B2" font-weight="700">5</text></svg>
-    🧠 WM V2
+    Session 5 · 10. Juni
   </button>
   <button class="tab-btn" data-s="6" onclick="show(6)">
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#E11D48" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#E11D48" font-weight="700">6</text></svg>
-    🔧 Betriebsanleitung
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#0891B2" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#0891B2" font-weight="700">6</text></svg>
+    🧠 WM V2
   </button>
   <button class="tab-btn" data-s="7" onclick="show(7)">
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#6D28D9" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#6D28D9" font-weight="700">7</text></svg>
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#E11D48" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#E11D48" font-weight="700">7</text></svg>
+    🔧 Betriebsanleitung
+  </button>
+  <button class="tab-btn" data-s="8" onclick="show(8)">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#6D28D9" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#6D28D9" font-weight="700">8</text></svg>
     🗂️ Meine Projekte
   </button>
 </nav>
@@ -1888,9 +1893,244 @@ Schreib danach den ersten Logeintrag [LOG-0001]
 </div><!-- end s4 -->
 
 <!-- ══════════════════════════════════════════════════════════
-     SESSION 5 — WISSENSMANAGEMENT V2
+     SESSION 5 — APIs, Schnittstellen & Telegram-Bots
+     10. Juni 2026
+══════════════════════════════════════════════════════════ -->
+<div id="s5" class="session" style="display:none">
+
+  <div class="hero hero-s5">
+    <div class="hero-icon">🔌</div>
+    <div>
+      <h2>APIs, Schnittstellen &amp; Telegram-Bots</h2>
+      <p>Die Stunde, in der Theorie zur Praxis wurde: Erster eigener Telegram-Bot mit KI-Anbindung gebaut — live in der Session. OpenAI-TTS-Hörbuch direkt als MP3 ans Smartphone gesendet.</p>
+      <div class="hero-meta">
+        <span class="hero-tag">📅 10. Juni 2026</span>
+        <span class="hero-tag">⏱️ ~2 Stunden</span>
+        <span class="hero-tag">🤖 Telegram Bot live</span>
+        <span class="hero-tag">🔌 API in Aktion</span>
+        <span class="hero-tag">🎧 TTS Hörbuch</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- THEMENÜBERBLICK -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s5)"></div><h3>Themen dieser Session</h3></div>
+  <div class="grid-3">
+    <div class="card" style="border-top:3px solid var(--s5);text-align:center;">
+      <div style="font-size:1.8rem;margin-bottom:6px;">🦮</div>
+      <div class="card-title" style="justify-content:center;font-size:.9rem;">KI ist blind</div>
+      <p style="font-size:.82rem;color:var(--muted);">Optik & Formatierung — warum KI keine Schönheit wahrnimmt und wie ein Style-Guide das löst</p>
+    </div>
+    <div class="card" style="border-top:3px solid var(--s5);text-align:center;">
+      <div style="font-size:1.8rem;margin-bottom:6px;">🔌</div>
+      <div class="card-title" style="justify-content:center;font-size:.9rem;">API-Grundlagen</div>
+      <p style="font-size:.82rem;color:var(--muted);">Was ist ein Endpoint? Restaurant-Metapher. DATEV-Beispiel. OpenAI-Schnittstellen live erklärt.</p>
+    </div>
+    <div class="card" style="border-top:3px solid var(--s5);text-align:center;">
+      <div style="font-size:1.8rem;margin-bottom:6px;">🤖</div>
+      <div class="card-title" style="justify-content:center;font-size:.9rem;">Telegram Bot + TTS</div>
+      <p style="font-size:.82rem;color:var(--muted);">Bot erstellt, GPT angebunden, Fehler 429 live behoben — MP3-Hörbuch per Telegram erhalten.</p>
+    </div>
+  </div>
+
+  <!-- KI IST BLIND + CLAUDE AI VS CLAUDE CODE -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s5)"></div><h3>KI-Optik & Claude AI vs. Claude Code</h3></div>
+  <div class="grid-2">
+    <div class="card card-accent-s5">
+      <div class="card-title">🦮 Das Kernproblem: KI sieht nicht</div>
+      <p>KI-Modelle haben kein visuelles Empfinden. Sie schließen aus Wörtern wie "modern" oder "elegant", was gemeint ist — auf Basis von Trainingsdaten. Wer nur sagt "mach es schön", bekommt KI-Durchschnitt, weil alle Modelle dieselben Trainingsdaten kennen.</p>
+      <div class="learn" style="margin-top:12px;">
+        <div class="learn-head">💡 Lösungen</div>
+        <ul>
+          <li><strong>Style-Guide:</strong> Präzise Referenz im Prompt (Farben, Abstände, Schriften)</li>
+          <li><strong>Vision-Modelle:</strong> Subagenten, die Screenshots analysieren können</li>
+          <li>Konkret beschreiben, was gewünscht ist — nicht nur "schön"</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card card-accent-s5">
+      <div class="card-title">🆚 Claude AI vs. Claude Code — nicht dasselbe</div>
+      <table class="tbl" style="margin-top:8px;">
+        <tr><th>Claude AI (Web/App)</th><th>Claude Code (CLI)</th></tr>
+        <tr><td>Multimodal, offen</td><td>Profi-Modus, Tool-gesteuert</td></tr>
+        <tr><td>Fotos, Bilder, Dokumente</td><td>Dateisystem, Bash, KMS-Pflege</td></tr>
+        <tr><td>Für breiten Einsatz</td><td>Für Automation & Code</td></tr>
+        <tr><td>Kein direkter Dateizugriff</td><td>Direkte Datei- & Shell-Kontrolle</td></tr>
+      </table>
+      <div class="praxis" style="margin-top:12px;">
+        <div class="praxis-head">🔧 Faustregel</div>
+        <p>Claude AI für Bildanalyse & Entwürfe. Claude Code für Dateien, Scripts, GitHub-Push und KMS-Pflege.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- API GRUNDLAGEN -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s5)"></div><h3>API-Grundlagen — Die Speisekarte des Internets</h3></div>
+  <div class="card-wide">
+    <div class="cw-title">🍽️ Die Restaurant-Metapher (Marco Heer)</div>
+    <div class="grid-2" style="margin-top:4px;">
+      <div>
+        <p><strong>API = der Kellner.</strong> Du (Programm A) sitzt am Tisch. Die Küche (Programm B) kann kochen. Aber du redest nicht direkt mit der Küche — du redest mit dem Kellner. Er nimmt deine Bestellung und bringt das Ergebnis. Du musst nicht wissen, wie die Küche intern funktioniert.</p>
+        <p style="margin-top:10px;"><strong>Endpoint = ein Gericht auf der Speisekarte.</strong> OpenAI-Beispiele:</p>
+        <ul style="padding-left:18px;margin-top:8px;font-size:.88rem;">
+          <li style="margin-bottom:4px;"><code>/chat/completions</code> — GPT antwortet auf Text</li>
+          <li style="margin-bottom:4px;"><code>/audio/speech</code> — Text → MP3 (TTS)</li>
+          <li style="margin-bottom:4px;"><code>/images/generations</code> — Text → Bild</li>
+          <li><code>/embeddings</code> — Text → Vektoren (für Suche)</li>
+        </ul>
+      </div>
+      <div>
+        <p><strong>API-Key = digitaler Ausweis.</strong> OpenAI muss wissen, wer fragt — Abrechnung in Tokens. Geheim halten wie ein Passwort.</p>
+        <p style="margin-top:10px;"><strong>Praxisbeispiel DATEV:</strong> Buchhaltungssoftware schickt Daten per API an DATEV-Server. Das Ergebnis kommt als JSON zurück. Das Programm muss DATEV nicht "verstehen" — es kennt nur den Endpoint.</p>
+        <div class="learn" style="margin-top:12px;">
+          <div class="learn-head">💡 Der Kernsatz</div>
+          <p style="font-size:.87rem;color:#78350F;font-style:italic;">"Integration mit Integration mit Integration — so macht man sich sein Leben leichter. Und das macht langsam richtig Spaß." — Marco Heer</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TELEGRAM BOT + TTS LIVE -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s5)"></div><h3>Live in der Session: Telegram-Bot + TTS-Hörbuch</h3></div>
+  <div class="grid-2">
+    <div class="card card-accent-s5">
+      <div class="card-title">🤖 Telegram-Bot — So wurde er gebaut</div>
+      <p>Claude Code hat via Browser-Automatisierung den Telegram-Bot selbstständig eingerichtet:</p>
+      <ol style="padding-left:18px;margin-top:10px;font-size:.87rem;">
+        <li style="margin-bottom:5px;">Bot bei @BotFather erstellen → Token erhalten</li>
+        <li style="margin-bottom:5px;">Node.js-Projekt: <code>node-telegram-bot-api</code> installieren</li>
+        <li style="margin-bottom:5px;">OpenAI <code>gpt-5.4-mini</code> als Antwort-LLM anbinden</li>
+        <li style="margin-bottom:5px;"><strong>Fehler 429</strong> (kein Guthaben) → OpenAI-Konto aufladen → gelöst</li>
+        <li>Bot läuft — antwortet live auf Telegram-Nachrichten</li>
+      </ol>
+      <div class="code" style="margin-top:10px;">
+        <span class="code-comment">// Architektur:</span><br>
+        Telegram App →<br>
+        &nbsp;&nbsp;Bot-Token (API) →<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Node.js Bot →<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OpenAI API →<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Antwort zurück
+      </div>
+    </div>
+    <div class="card card-accent-s5">
+      <div class="card-title">🎧 TTS-Hörbuch — Live gesendet &amp; gehört</div>
+      <p>Das API-Hörbuch wurde in der Session direkt als MP3 über Telegram empfangen — drei API-Calls in einer Kette:</p>
+      <ol style="padding-left:18px;margin-top:10px;font-size:.87rem;">
+        <li style="margin-bottom:5px;"><strong>Claude Code</strong> schreibt den Hörbuchtext (LLM)</li>
+        <li style="margin-bottom:5px;"><strong>OpenAI TTS</strong> (<code>/audio/speech</code>) macht daraus eine MP3</li>
+        <li><strong>Telegram API</strong> (<code>sendAudio</code>) sendet die MP3 ans Smartphone</li>
+      </ol>
+      <div class="praxis" style="margin-top:12px;">
+        <div class="praxis-head">✅ Ergebnis: MP3 live im Posteingang</div>
+        <p>Alle Teilnehmer haben das Hörbuch in Telegram empfangen und gehört. Drei APIs — automatisch verkettet.</p>
+      </div>
+      <div class="learn" style="margin-top:10px;">
+        <div class="learn-head">💡 Was das zeigt</div>
+        <ul>
+          <li>Jeder Dienst macht, was er am besten kann</li>
+          <li>APIs sind Lego-Bausteine — beliebig kombinierbar</li>
+          <li>Fehler (Error 429) sind normal — dazugehören und lösen</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- COACHING CARLA DEMO -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s5)"></div><h3>Demo: Coaching Carla — Marcos vollautomatisches Briefing-System</h3></div>
+  <div class="card-wide">
+    <div class="cw-title">🤖 Was Marco täglich bekommt — vollautomatisch</div>
+    <p style="margin-bottom:14px;">Marco hat live demonstriert, was mit API-Integration möglich wird. Ein System, das ihm jeden Abend um 22 Uhr ein Audio-Briefing für den nächsten Tag vorbereitet:</p>
+    <div class="code">
+      <span class="code-comment">// Jede Nacht um 22 Uhr (vollautomatisch via API):</span><br>
+      1. Kalender-API → "Was hat Marco morgen für Termine?"<br>
+      2. LLM-Prompt: Alle Transkripte + Curriculum → Briefing schreiben<br>
+      3. Briefing landet in Supabase-Datenbank<br>
+      <br>
+      <span class="code-comment">// Am nächsten Morgen (auf Abruf):</span><br>
+      4. Coaching Carla (Telegram-Bot): "Zeig mir das Briefing für Cohort 3"<br>
+      5. "Als Audio oder Text?" → Audio<br>
+      6. OpenAI TTS → MP3 → Telegram in &lt;2 Minuten<br>
+      7. Marco hört sein Briefing im Auto auf dem Weg zum Coaching
+    </div>
+    <div class="learn" style="margin-top:14px;">
+      <div class="learn-head">💡 Erkenntnis</div>
+      <p style="font-size:.87rem;color:#78350F;">Das ist keine Magie — das sind API-Calls. Kalender-API + LLM-API + Supabase-API + TTS-API + Telegram-API. Jeder Baustein macht eine Sache. Die Kombination erzeugt den Nutzen.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       HAUSAUFGABEN — EXPLIZIT HERVORGEHOBEN
+       ═══════════════════════════════════════════════ -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:#F59E0B"></div><h3>🏠 Hausaufgaben bis zur nächsten Session</h3></div>
+
+  <div style="background:linear-gradient(135deg,#FFFBEB,#FEF3C7);border:2.5px solid #F59E0B;border-radius:var(--r);padding:28px;margin-bottom:20px;">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;">
+      <div style="font-size:2.8rem;">📋</div>
+      <div>
+        <div style="font-weight:800;font-size:1.2rem;color:#92400E;">Hausaufgaben Session 5</div>
+        <div style="font-size:.85rem;color:#78350F;margin-top:3px;">Von Marco Heer am Ende der Session explizit vergeben — fürs nächste Mal vorbereiten</div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="gap:16px;">
+      <div style="background:#fff;border-radius:var(--r-sm);padding:20px;border:1.5px solid #FCD34D;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+          <div style="background:#F59E0B;color:#fff;font-weight:800;font-size:.88rem;padding:4px 14px;border-radius:20px;">Aufgabe 1</div>
+          <div style="font-weight:700;color:#92400E;">APIs tiefer verstehen</div>
+        </div>
+        <ul style="padding-left:18px;font-size:.9rem;">
+          <li style="margin-bottom:8px;"><strong>Was ist ein Endpoint?</strong><br><span style="color:var(--muted);font-size:.84rem;">Recherchiere mit Claude: Lass dir Endpoints an einem selbstgewählten Beispiel erklären.</span></li>
+          <li style="margin-bottom:8px;"><strong>Welche Endpoints hat OpenAI?</strong><br><span style="color:var(--muted);font-size:.84rem;">platform.openai.com → API Reference durchstöbern.</span></li>
+          <li style="background:#FEF9C3;border-radius:4px;padding:6px 8px;list-style:none;margin-left:-4px;"><strong>⭐ Janines Sonder-HA:</strong> Welche Endpoints hat Microsoft Azure / SharePoint?</li>
+        </ul>
+      </div>
+      <div style="background:#fff;border-radius:var(--r-sm);padding:20px;border:1.5px solid #FCD34D;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+          <div style="background:#F59E0B;color:#fff;font-weight:800;font-size:.88rem;padding:4px 14px;border-radius:20px;">Aufgabe 2</div>
+          <div style="font-weight:700;color:#92400E;">Eigenes Programm bauen</div>
+        </div>
+        <ul style="padding-left:18px;font-size:.9rem;">
+          <li style="margin-bottom:8px;"><strong>Mindestens eine API-Schnittstelle</strong> nach eigener Wahl anbinden</li>
+          <li style="margin-bottom:8px;"><strong>Architekturdiagramm</strong> erstellen:<br><span style="color:var(--muted);font-size:.84rem;">Zeige, welche Bausteine mit welchen reden — z.B. Telegram ↔ OpenAI ↔ TTS</span></li>
+          <li><strong>Beim nächsten Mal zeigen</strong> und erklären können</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="background:#FEF9C3;border:1px solid #FDE68A;border-radius:var(--r-sm);padding:16px;margin-top:18px;">
+      <div style="font-weight:700;font-size:.88rem;color:#92400E;margin-bottom:8px;">💬 Marco Heers Worte am Ende der Session:</div>
+      <p style="font-size:.87rem;color:#78350F;font-style:italic;">"Heute ist der Eintritt in die echte KI-Welt geschehen. Die ganze Macht der KI liegt zu euren Füßen — aber ihr fühlt euch noch ein bisschen überfordert. Das ist normal. Wer API-Calls gemeistert hat, kann alles bauen. Ich kann euch nicht jeden Dschungel zeigen, aber ich kann euch zeigen, was dahinter ist. Ihr habt KI — und KI ist der perfekte Erklärbär."</p>
+    </div>
+  </div>
+
+  <!-- AUSBLICK -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s5)"></div><h3>Ausblick</h3></div>
+  <div class="grid-2">
+    <div class="card card-accent-s5">
+      <div class="card-title">🔮 Session 6</div>
+      <p>Inhalt richtet sich nach den Hausaufgaben-Ergebnissen und Gruppeninteressen. Marcos Briefing-System bereitet es automatisch vor.</p>
+      <p style="margin-top:8px;font-size:.84rem;color:var(--muted);">Hinweis: Janine ist beim nächsten Termin nicht dabei. Tobias evtl. übernächste Woche (Urlaub).</p>
+    </div>
+    <div class="card card-accent-s5">
+      <div class="card-title">🏁 Das große Ziel</div>
+      <p>12 Einheiten Grundausbildung + 12 Einheiten Umsetzungsbegleitung. Am Ende bringt jeder eigene Projekte mit — Claude Code setzt sie um.</p>
+      <div class="learn" style="margin-top:12px;">
+        <div class="learn-head">💡 Wer APIs begreift, kann alles bauen</div>
+        <ul>
+          <li>Eigene Workflows vollautomatisch ablaufen lassen</li>
+          <li>Fremde Dienste (CRM, Buchhaltung ...) anbinden</li>
+          <li>Apps bauen, die echten Geschäftswert schaffen</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end s5 -->
+
+<!-- ══════════════════════════════════════════════════════════
+     SESSION 6 — WISSENSMANAGEMENT V2
      ══════════════════════════════════════════════════════════ -->
-<div id="s5" class="session">
+<div id="s6" class="session">
 
   <div class="hero hero-s5">
     <div class="hero-icon">🧠</div>
@@ -2085,12 +2325,12 @@ Schreib danach den ersten Logeintrag [LOG-0001]
 <span class="code-cmd">Jeder Agent</span> kann das Wissen finden (MCP oder RAG-API)</div>
   </div>
 
-</div><!-- end s5 -->
+</div><!-- end s6 -->
 
 <!-- ══════════════════════════════════════════════════════════
      SESSION 6 — BETRIEBSANLEITUNG
      ══════════════════════════════════════════════════════════ -->
-<div id="s6" class="session">
+<div id="s7" class="session">
 
   <div class="hero hero-s6">
     <div class="hero-icon">🔧</div>
@@ -2290,12 +2530,12 @@ Wissensdateien &gt;200 Zeilen: NUR Executive Summary + Kapitelverzeichnis (erste
     </ul>
   </div>
 
-</div><!-- end s6 -->
+</div><!-- end s7 -->
 
 <!-- ══════════════════════════════════════════════════════════
      SESSION 7 — MEINE PROJEKTE
      ══════════════════════════════════════════════════════════ -->
-<div id="s7" class="session">
+<div id="s8" class="session">
 
   <div class="hero hero-s7">
     <div class="hero-icon">🗂️</div>
@@ -2442,7 +2682,7 @@ Wissensdateien &gt;200 Zeilen: NUR Executive Summary + Kapitelverzeichnis (erste
     </div>
   </div>
 
-</div><!-- end s7 -->
+</div><!-- end s8 -->
 
 <footer>
   Synclaro KI-Coaching · Gruppencoaching Mai 2026 &nbsp;·&nbsp; Erstellt mit Claude Code (claude-sonnet-4-6) &nbsp;·&nbsp; Offline-fähig · keine externen Abhängigkeiten
@@ -2450,7 +2690,7 @@ Wissensdateien &gt;200 Zeilen: NUR Executive Summary + Kapitelverzeichnis (erste
 
 <script>
 function show(n){
-  ['s1','s2','s3','s4','s5','s6','s7'].forEach(id=>{
+  ['s1','s2','s3','s4','s5','s6','s7','s8'].forEach(id=>{
     const el=document.getElementById(id);
     if(el) el.style.display='none';
   });

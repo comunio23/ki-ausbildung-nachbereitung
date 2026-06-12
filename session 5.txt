@@ -1,0 +1,2785 @@
+ [00:04] Speaker A: Janine, wie geht's? Ja, läuft.
+
+[00:09] Speaker B: Alltag plus ein bisschen Zusatzarbeit.
+
+[00:13] Speaker C: Ja, eher so doppelter Alltag.
+
+[00:16] Speaker B: So doppelter Alltag.
+
+[00:17] Speaker D: Dadurch, dass jetzt nur durch den Alltag oder durch das, was wir hier machen,
+
+[00:20] Speaker C: ne, das kommt noch so ein bisschen on top, aber eigentlich ist mehr so doppelte Projektbelastung, gerade durch eine Kündigung.
+
+[00:28] Speaker D: Dann ist ja gut, dass unsere Tage 72 Stunden haben, oder?
+
+[00:32] Speaker C: Das finden meine Kinder auch.
+
+[00:33] Speaker A: Ja, super, super. Ja, perfekt. Wem geht es noch so?
+
+[00:40] Speaker B: Oder sind alle anderen Kinder los und haben irgendwie ein normales Leben?
+
+[00:45] Speaker E: Die Tochter ist gerade zur Ostsee mit der Oma. Insofern ist schon mal nur 50 Prozent des Spektakels.
+
+[00:51] Speaker A: Ach ja, schön.
+
+[00:52] Speaker E: Aber bevor wir so viel über Kinder bashen, die sind ja auch toll.
+
+[00:55] Speaker D: Ja, meine ist auch ganz toll die
+
+[00:59] Speaker B: ganze Nacht wachgehalten, aber ich habe sie trotzdem lieb.
+
+[01:02] Speaker E: Ansonsten war die Woche eigentlich ganz cool. Ich habe mal auf so einer kleinen Webseite einen kleinen Chatbot implementiert, der auch sogar funktioniert, habe ich gemerkt,
+
+[01:14] Speaker A: für meine
+
+[01:15] Speaker E: Frau so eine Online Anwendung für Fuhrparkmanagement mal zu 80 Prozent gebaut. Bei uns intern finde ich auch immer mehr Sachen so mit lokalen kleinen Dateien oder Anwendungen, die man machen kann, wenn es so um Generatoren geht, so Protokolle, also immer die gleichen Protokolle generieren aus irgendwelchen Sitzungen solche Sachen oder dieser Vergabevermerk. Und da ist mir aufgefallen, was du mir aber zwischendurch jetzt nochmal beantwortet hast, dass wenn ich irgendwelche Dokumente habe, wo ich denke, es kann nicht so schwer sein, dass er mir 1 zu 1 die gleichen Formatierungen rausgibt, dass er am Ende dann doch umgeschaltet hat. Ich weiß noch nicht warum, aber jetzt bin ich nochmal rein, hab den ganz genau alles so idiotensicher gesagt, also Zeilenabstände, Rand, Seitenränder, Schriftgrößen und dann hat es auch, sagen wir mal, zu 95 Prozent gepasst. Aber ich verstehe trotzdem nicht, warum er sich damit so schwer tut, weil ich
+
+[02:01] Speaker A: würde ja denken als Laie, er sieht
+
+[02:03] Speaker E: es, kann es irgendwie einschätzen, analysieren und mir am Ende des Tages sofort wieder ausgeben bei dem ganzen anderen, was er so kann.
+
+[02:11] Speaker B: Kommen wir gleich zu.
+
+[02:12] Speaker D: Kommen wir gleich zu Tobias, wie geht es denn dir?
+
+[02:16] Speaker F: Ich war gesundheitlich angeschlagen, bin immer noch angeschlagen, Erkältung, Nebenhöhlenentzündung. Mein Plan, dass ich die zwei ausgefallenen Stunden nutze und bisschen lerne, ist somit nicht aufgegangen. Ja ich habe ich habe ein paar Kleinigkeiten bei unseren wöchentlichen Personaleinsatzplan per KI programmieren lassen, dass der einfach bisschen digitaler, smarter und so weiter ist.
+
+[02:43] Speaker A: Das war es leider.
+
+[02:44] Speaker F: Ich war ziemlich flach gelegen.
+
+[02:48] Speaker D: Dieses Coaching ist quasi echt so ein
+
+[02:50] Speaker B: bisschen unabhängig davon wie schnell ihr seid.
+
+[02:53] Speaker A: Wenn es durch ist, ist es durch.
+
+[02:55] Speaker B: Die Aufzeichnungen sind da und ihr habt alle Zeit der Welt zu warten, bis ihr die Zeit habt das Zeug zu lernen, in Einsatz zu bringen. Alles super. Aber hey, du hast schon was in
+
+[03:03] Speaker A: Einsatz gebracht, funktioniert soweit, kommst zurecht, hat gepasst.
+
+[03:12] Speaker F: Ich habe auch was mit HTML programmieren lassen wegen unserem Fuhrpark, dass der uns anzeigt, welche Winterreifen, Sommerreifen, Wechsel und so weiter, was dieses Jahr ansteht, welche TÜVs nur anstehen und so weiter ist einfach Excel oftmals mit unserer ganzen Übersicht und verschiedenen Reiter einfach zu unübersichtlich.
+
+[03:38] Speaker A: Verstehe Ja das ist doch meistens schon
+
+[03:40] Speaker D: mal die schnellste Abhilfe, wenn unübersichtliche Dinge übersichtlich gemacht werden.
+
+[03:44] Speaker A: Ja schön schön, schön, schön.
+
+[03:47] Speaker F: So Natürlich mit dem Netzi frei und GitHub von letzter Stunde, das muss ich alles noch mal wiederholen. Da hatte ich einen richtigen kompletten Hänger, den habe ich bis heute noch. Ich wollte es nachholen, aber ich war so flach gelegen, hatte keine Chance.
+
+[04:04] Speaker D: Das ist kein Problem.
+
+[04:06] Speaker B: Das ist nicht wie in der Schule, wo man sagt man hat es gelernt, man muss es jetzt noch verstehen.
+
+[04:11] Speaker A: So läuft dieses Coaching nicht. Das ist eher so, dass man irgendwann ein Bedürfnis hat und sagt Mensch, wir müssen jetzt irgendeine Website live bringen.
+
+[04:18] Speaker B: Das hat doch der Marco mal gezeigt, wie das geht. Wie war jetzt das noch gleich? Und dann benutzt man es und dann hat man aber auch einen echten Grund und nicht nur Hausaufgaben machen, damit der Lehrer cool ist, sondern einfach damit man
+
+[04:29] Speaker A: Ergebnisse erreicht und dem Moment muss man
+
+[04:31] Speaker B: es aufarbeiten, dann dauert es ein bisschen und dann wenn man es irgendwann anwendet,
+
+[04:35] Speaker A: geil, jetzt habe ich das Ergebnis erreicht,
+
+[04:37] Speaker B: dann sitzt die Kiste und so soll es idealerweise laufen. Halt einmal eine Sache, die ich euch beibringe, jetzt halt nicht sofort gebraucht wird, sondern erst in drei Monaten, dann schaut man es halt in drei Monaten nochmal nach.
+
+[04:47] Speaker A: Ist ja alles auf Band. So wo sind denn die anderen zwei? Die haben gar nicht, muss ich kurz
+
+[04:53] Speaker B: mal meine E Mails nochmal checken.
+
+[04:55] Speaker A: Haben die was gesagt hast, habe ich nichts gekriegt.
+
+[04:57] Speaker C: Ich kann gleich mal Ich habe auch noch mal eine Frage. Was ist denn heute eigentlich genau das Thema? Weil ich habe ein ganz großes Schnittstellenproblem. Ich würde gerne, dass Discord, egal ob es jetzt in der Desktop Variante oder in der Code Variante, einfach mal Dinge selber tut. Aber es sagt mir immer, es darf es nicht. Vor allen Dingen in der Konstellation mit Microsoft, also SharePoint Seiten schreiben, auslesen, Teams Dinge tun. Es will es einfach nicht und ich kriege es nicht dazu, das zu wollen.
+
+[05:29] Speaker B: Ja, also eure Themenwünsche haben gegenüber der standardmäßigen Agenda immer Vorrang. Deswegen machen wir das gerne heute, weil es ist so, ich bringe euch einen Haufen Zeug bei. Also theoretisch, hi Andreas, grüß dich. Theoretisch ist, guten Morgen, in dem Curriculum so viel Inhalt vorgesehen, dass die meisten das gar nicht verarbeiten können, weil du bräuchtest Fulltime, um das alles, was ich euch beibringe, zu verarbeiten. Mir ist es inzwischen immer lieber, wenn man zwei, drei Themen am Ende weglässt, aber dafür euch bei den Themen, die ihr wirklich braucht, unterstützt. Und deswegen können wir das halt gern
+
+[06:03] Speaker A: machen, Zusammen mit dem, was der Marvin
+
+[06:05] Speaker B: erzählt hat, wo er Andreas für dich auch kurzer Recap. Marvin hat Klage gegen Claude Code eingelegt,
+
+[06:12] Speaker F: weil er
+
+[06:15] Speaker A: der checkt nicht, was ich will.
+
+[06:18] Speaker D: Können wir das Sammelklage machen?
+
+[06:20] Speaker C: Ich finde den eigentlich nur unhöflich, wenn ich E Mails rausschreiben will, dann nehme ich immer die Ergebnisse aus Cloud und spack den ChatGPT.
+
+[06:29] Speaker A: Ja, können wir machen.
+
+[06:31] Speaker B: Es ging um das Thema Optik. Wenn man Dokumente anfertigen lassen will und sagt Mensch, so viel Teilnahme Stand die
+
+[06:37] Speaker D: Schriftart, so viel RAM, Bildpositionierung, ordentlich und
+
+[06:40] Speaker A: halt ein hübsches PDF machen, dann macht
+
+[06:43] Speaker B: Claude es mit den Inhalten alles schön und nett, aber das mit der Positionierung ist halt irgendwie scheiße.
+
+[06:49] Speaker D: Die Erfahrung, die ich gemacht habe, wenn ich da ein Grätschen darf, ist Claude Code ist da sehr bauernartig, während die Browser Version da deutlich optisch freundlicher sich darstellt.
+
+[07:08] Speaker B: Wenn ihr euch mal zurück daran erinnert, wie KI eigentlich funktioniert, dann wisst ihr
+
+[07:12] Speaker A: noch, dass das ein Next Token Prediction ist. Das heißt, es ist wirklich egal, wie
+
+[07:16] Speaker B: krass das Zeug ist, was wir damit
+
+[07:18] Speaker A: bauen, es ist und bleibt eine Maschine,
+
+[07:20] Speaker B: die das nächstwahrscheinlichste Wort vorhersagt. Solche Maschinen beschränken sich auf die Welt der Information. Das heißt, die Information darüber zu
+
+[07:31] Speaker A: Wie
+
+[07:32] Speaker B: sieht die Welt in Worten ausgedrückt?
+
+[07:33] Speaker C: Aus.
+
+[07:34] Speaker A: Wenn ihr einen Blinden Wie sieht ein hübsches PDF aus? Dann wird der Blinde Ich habe davon gehört, vernünftige Seitenränder, sonst sieht es irgendwie
+
+[07:44] Speaker B: doof fürs Auge aus und so weiter. Wenn ihr den Blinden dann weißt du,
+
+[07:48] Speaker A: was das wirklich bedeutet, wenn diese Seitenränder fehlen, damit sie keine Ahnung, Menschen haben mir berichtet, sieht doof aus.
+
+[07:56] Speaker B: Und genau in der Lage befinden sich Sprachmodelle immer. Deswegen eigentlich ist es auch schon die Antwort für dich, Marvin.
+
+[08:05] Speaker A: Man fragt hier wirklich einen Blinden, was
+
+[08:08] Speaker B: er schöner findet optisch, weißt du, er
+
+[08:11] Speaker A: transportiert ja nur Informationen, egal wie schlau er ist.
+
+[08:15] Speaker B: Und er kann ja nur durch das
+
+[08:16] Speaker A: Gelernte Ja, okay, ich habe gelernt, Ein
+
+[08:19] Speaker B: Seitenabstand von 5 sind umgerechnet 123 Pixel. Und du kannst ihm jetzt natürlich, wie du schon gemerkt hast, durch präzise Anweisungen verdammt noch mal, der Seitenabstand hat genau so groß zu sein. Ich sag's dir auch gerne in Druckbuchstaben, Dann kann er das auch tun.
+
+[08:36] Speaker A: Aber er wird niemals aus eigenem Geschmack
+
+[08:39] Speaker D: heraus sagen können oh, das sieht jetzt
+
+[08:41] Speaker B: aber gut aus, so lassen wir es. Er wird immer sagen, Marvin hat gesagt 123 Pixel Linksabstand und so weiter.
+
+[08:47] Speaker A: Verstehst du, was ich meine?
+
+[08:48] Speaker B: Das heißt, er hat diesen Geschmack, wo
+
+[08:50] Speaker A: Claude selbst so extrem proaktiv ist Und
+
+[08:53] Speaker B: du Ich mache das schon so, dass es dir gefallen wird. Und du Hey, du machst es schon so, dass es mir gefallen wird in Sachen Informationen, in Sachen Formulierungen und so weiter. Auch wenn die Janine vielleicht bei der Formulierung ihrer E Mail widerspricht.
+
+[09:07] Speaker A: Aber da können wir mit arbeiten, weißt
+
+[09:09] Speaker B: du, da kannst du System Prompting anders setzen. Da kannst du Hey, du, schau mal, ich zeig dir mal 100 Vergleichs E Mails, die waren gut, die waren schlecht und dann können wir da so ein Style Guide machen, alles machbar. Aber sobald es geht, mit den zwei
+
+[09:21] Speaker A: Augen irgendwie ein Stück Stil zu haben und aus einem Gefühl heraus, was die
+
+[09:27] Speaker B: KI teilweise schon hat, zu entscheiden, das
+
+[09:29] Speaker A: ist schön und das ist nicht schön. Vergiss es not what it's made for. Aber an der Stelle kommen Vision Modelle ins Spiel.
+
+[09:39] Speaker B: Ihr wisst ja alle, diese Sprachmodelle, die
+
+[09:43] Speaker A: wir nutzen, das ist ja nur eine Form der KI.
+
+[09:47] Speaker B: Das ist eine KI, die trainiert wurde, die nächstwahrscheinlichsten Worte vorherzusagen. Aber es gibt ja auch Bild KIs,
+
+[09:55] Speaker A: Bildgenerierende, Bildanalysierende KIs
+
+[10:00] Speaker B: und das sind ja
+
+[10:01] Speaker A: einfach nur andere Modelle. Und die können ja mittels Harness, also
+
+[10:06] Speaker B: mittels Ihr wisst alle, dass die KI Funktionen aufrufen kann. Und eine Funktion aufzurufen, kann ja auch
+
+[10:12] Speaker D: bedeuten, einen Subagenten zu launchen. Und dieser Subagent, der muss nicht immer Next Token Prediction sein, der kann auch Vision Modell sein.
+
+[10:20] Speaker A: Und wenn der Marvin jetzt Hey, mach mal ein PDF, mach das mal so hübsch wie du kannst.
+
+[10:25] Speaker B: Versuch mal vor allem um die Inhalte zu kümmern, aber mach mal so ein
+
+[10:28] Speaker A: bisschen nach den Best Practices, was du
+
+[10:30] Speaker B: gelernt hast, Seitenränder, Zeilenabstände, Bildpositionierung, Überschrift und so weiter.
+
+[10:34] Speaker D: Und dann gibt das Ganze mal an
+
+[10:36] Speaker A: ein Vision Modell und ein Vision Modell
+
+[10:39] Speaker B: wird das Ganze als Bild identifizieren als Pixel. Ein Vision Modell wird jetzt klar durch Zusammensetzung der Pixeler kennt, ist es ein
+
+[10:45] Speaker A: A und das ist ein B, aber
+
+[10:46] Speaker B: dafür ist es eh nicht da. Ein Vision Modell kann dann erkennen, dass es Ah, schau mal, wir haben es
+
+[10:50] Speaker A: hier grundsätzlich mit einem weißen Papier zu tun, mit schwarzer Schrift. Macht erstmal Sinn.
+
+[10:56] Speaker B: Wir haben hier oben rechts ein Bild positioniert. Das sieht irgendwie aus, als würde das Bild und Schrift sich überlappen. Das soll, glaube ich, so nicht sein. Das hätte das LLM nur gesehen, wenn
+
+[11:04] Speaker A: es in den Code geguckt hätte, in
+
+[11:05] Speaker B: den HTML Code, aber es hätte es wie ein Blinder wieder nur über Programmiercode verstehen können und sagen anscheinend liegen die übereinander.
+
+[11:14] Speaker A: Aber das hätte er. Der Unterschied ist ein Vision Modell hätte das proaktiv gesehen. Ein Vision Modell hätTe draufgeguckt Hey, da liegt der Code über dem Bild. Eine programmierende KI hätte sich den Code angeguckt, hätte sich auf den Inhalt konzentriert,
+
+[11:28] Speaker B: Der Inhalt ist doch super. Und dann hättest du gesagt ja, aber hallo, da liegt doch das Bild und der Text voll übereinander, Bist du doof?
+
+[11:33] Speaker A: Und dann hab ich oh ja, jetzt
+
+[11:35] Speaker B: wo ich speziell nach diesem Fehler gesucht
+
+[11:37] Speaker A: habe, sehe ich auch den Das hat was mit Fokus zu tun. Was der eine das ist das dümmere
+
+[11:44] Speaker B: und lustigere Beispiel, ist wahrscheinlich ein bisschen
+
+[11:45] Speaker A: wie Männer und Frauen.
+
+[11:47] Speaker B: Die Frau wird also die meisten Frauen, ohne jetzt da irgendwie zu sehr unterteilen zu wollen, aber die meisten Frauen werden
+
+[11:53] Speaker A: den Fleck auf dem Hemd einfach sehen,
+
+[11:55] Speaker B: während der man Das ist mir erst jetzt aufgefallen, wo du mich darauf hingewiesen hast und andersrum bei anderen Themen. Und ja, da muss man einfach ein bisschen so eine Awareness dafür entwickeln, mit welchen Pappenheimern man zu tun hat. Das heißt, was du machen kannst, ist,
+
+[12:14] Speaker A: du kannst einen Style Guide entwickeln. Wenn du jetzt sagst okay, ich mache
+
+[12:17] Speaker B: jetzt für die WFB, mache ich jetzt hier häufiger mal Dokumente, dann kannst du in einem Markdown einen Style Guide speichern
+
+[12:22] Speaker A: und kannst Pass mal auf, das ist
+
+[12:24] Speaker B: unser Logo, das liegt in dem Ordner gespeichert, das ist immer oben rechts zu
+
+[12:28] Speaker A: positionieren, kriegt er hin.
+
+[12:30] Speaker B: Du kannst außerdem Unser Farbschema ist 30 Prozent Rot, 20 Prozent Weiß, 50 Prozent Schwarz. Überschriften sind bei uns immer in Schwarz. Sublines, Headlines sind bei uns immer kursiv. Das sind Informationen. Damit könnte ein Blinder was anfangen. Sobald du jetzt ich erwarte von dir
+
+[12:50] Speaker A: Stilistik und Optik, wird er okay, ich versuch's. Warum sagt jetzt der Andreas, dass Cloud AI besser ist als Cloud Code? Weil Cloud AI dafür gebaut, also vom
+
+[13:03] Speaker B: System Prompt her ja anders ist, während es ja von der Engine das Gleiche Es ist ja auch nur ein Opus 4.8, aber der System prompt, der dahinter liegt, heiß Du bist eine multimodale KI.
+
+[13:12] Speaker D: Das heißt, du kannst Bild, du kannst
+
+[13:14] Speaker B: Audio, du kannst Text und du sprichst mit einem Otto Normalverbraucher und der weiß normalerweise überhaupt nicht, was er will, weil die verstehen KI meistens nicht, die die normale KI benutzen. Und du musst selber in der Lage sein zu okay, jetzt benutzt man Bildmodell, Vision Modell und so weiter.
+
+[13:29] Speaker A: Während im Code System Prompt drinsteht, vor
+
+[13:31] Speaker B: dir sitzt ein KI Profi, der weiß genau, was er braucht, Der wird dir auch sagen, was du brauchst.
+
+[13:36] Speaker A: Aber Just in Case, im Standard Use
+
+[13:38] Speaker B: Case, bist du eine Coding KI. Das heißt, wenn jemand schau dir das an, dann guckst du dir verdammt nochmal
+
+[13:43] Speaker D: den HTML Code an, sonst machst du
+
+[13:45] Speaker A: hier gar nichts, Weil wenn der Code Nutzer will, dass du ein Salt machst,
+
+[13:50] Speaker B: dann wird der schon nutzen.
+
+[13:52] Speaker A: Vision Modell.
+
+[13:52] Speaker B: Das heißt, du gehst einfach davon aus, dass ein Profi dahinter sitzt und der wird sich präzise artikulieren darüber, welche Werkzeuge zu nutzen sind.
+
+[14:01] Speaker A: Das ist der Unterschied im System Prompting
+
+[14:03] Speaker B: zwischen aller Welt KI und fortgeschrittenen KI.
+
+[14:07] Speaker A: Macht Sinn.
+
+[14:12] Speaker B: Ja, das macht schon Sinn.
+
+[14:13] Speaker E: Da bin ich nämlich auch drüber gestolpert, dass dieses Prompting gar nicht so einfach ist, wie ich immer dachte. Also gerade wenn es ins Detail geht. Ich Sag mal, wenn 80 Prozent der Anwendungen, was auch immer gemacht sind und ich dann aber mach mal das, mach
+
+[14:24] Speaker A: mal das, machen wir das.
+
+[14:25] Speaker E: Und sich dann wirklich präzise auszudrücken. Oft unterstellt, dass das jetzt ja eigentlich trivial sein sollte. Aber deswegen ist was, welches Modell und aus welchem Blick betrachtet das Modell sozusagen die Aufgabe immer noch mal ein ganz wichtiger Aspekt.
+
+[14:41] Speaker A: Deswegen gehe ich in dieses Coaching immer mit so vielen Menschen Metaphern rein und
+
+[14:45] Speaker D: stellt euch vor, ihr trefft einen intelligenten Typen auf dem Bordstein, der weiß nichts über eure Firma.
+
+[14:50] Speaker B: Und genauso ist es Stell dir vor,
+
+[14:52] Speaker A: du stellst einen neuen Mitarbeiter ein Prompting.
+
+[14:56] Speaker B: Eigentlich ist es eine Schande, dass das Prompting heißt.
+
+[14:59] Speaker D: Es sollte eigentlich Kommunikation heißen, weil wenn
+
+[15:02] Speaker A: du einen Mitarbeiter ansprichst, dann ist es
+
+[15:06] Speaker B: auch ein guter Vergleich.
+
+[15:07] Speaker A: Wenn man Claude AI heiß Du triffst
+
+[15:12] Speaker B: einen fremden Menschen, der dir gegenüber erstmal total offen ist und mit allem rechnet. Und mit dem habe ich jetzt wahrscheinlich einen Smalltalk und sollte auf jedes Thema gefasst sein. Vielleicht geht es um Kids, dass die anstrengend sind. Vielleicht geht es ums Wetter.
+
+[15:25] Speaker D: Vielleicht geht es darum, dass die Bäckerei da drüben heute leider geschlossen hat.
+
+[15:27] Speaker A: Weißt du, während Cloud Code heißt, mit
+
+[15:29] Speaker D: einem Mitarbeiter zu sprechen, der auf einen
+
+[15:32] Speaker A: ganz bestimmten Bereich angelernt ist. Dieser Mitarbeiter erwartet von dir als Chef,
+
+[15:37] Speaker D: dass du mit ihm Fachterminus der eigenen
+
+[15:40] Speaker B: Firma, der eigenen Branche sprichst, dass du sein Berufsbild verstehst.
+
+[15:44] Speaker D: Und ob du es jetzt Also ich würde es eher Kommunikation als Prompting nennen,
+
+[15:48] Speaker A: wo man Hey, der Chef, der kennt mein Berufsbild.
+
+[15:52] Speaker B: Wenn der will, dass ich etwas auf
+
+[15:54] Speaker D: eine bestimmte Art und Weise mache, dann
+
+[15:55] Speaker A: wird er es schon sagen.
+
+[15:56] Speaker B: Und wenn er es nicht gesagt hat, gehe ich davon aus, dass er es nicht will.
+
+[16:00] Speaker A: Und das ist das, wo ich Sprecht mit dem Ding, als wäre es euer Mitarbeiter.
+
+[16:06] Speaker D: Und wenn man sich da ein bisschen diese Lage reinversetzt, dann wird man anfangen, mit dem Ding anders zu reden. Die meisten sind nämlich noch eher geprägt
+
+[16:13] Speaker A: durch Google und sprechen mit dem Ding eher wie mit Google und Geh auf den Desktop, öffne diese Datei, mach jenes, diese kurzen, knappen Dinger. Aber da fehlt der Kontext.
+
+[16:26] Speaker B: Wie erwarte ich in dem Moment, dass du es machst? Ja, war doch klar, dass ich das
+
+[16:30] Speaker D: so gemeint habe, ne?
+
+[16:30] Speaker A: War es nicht, ist eine Übungssache und
+
+[16:36] Speaker B: wie du schon sagst, wahrscheinlich schwieriger als
+
+[16:38] Speaker D: man denkt, wenn man da einfach sich
+
+[16:39] Speaker A: so plötzlich rein katapultiert wie ihr in diese Welt.
+
+[16:44] Speaker B: Ihr seid ja auch in der Ausnahmesituation.
+
+[16:45] Speaker A: Die KI Welt geht nicht davon aus, dass es solche Coachings hier gibt. Die KI Welt geht davon aus, es
+
+[16:52] Speaker B: gibt Menschen, die befassen sich mit dem
+
+[16:53] Speaker D: Thema langsam wie ich damals über Jahre
+
+[16:56] Speaker A: hinweg und wachsen da rein und es
+
+[16:58] Speaker D: gibt die Leute, die nutzen es für immer.
+
+[17:00] Speaker E: Nur
+
+[17:02] Speaker B: schreib mir eine E Mail, dann
+
+[17:03] Speaker D: machen wir was weiß ich, generieren wir mal schnell ein Bild.
+
+[17:06] Speaker A: Das sind die zwei Nutzertypen, wofür diese Maschinen gebaut wurden, Dass jetzt Leute wieder
+
+[17:11] Speaker D: herkommen und sagen, ich zahle ein bisschen Geld und dafür lasse ich mir jetzt
+
+[17:13] Speaker B: hier alles in ein paar Wochen richtig reinknallen.
+
+[17:17] Speaker D: Das ist jetzt auch nicht unbedingt momentan
+
+[17:19] Speaker A: der Durchschnittsmensch, für den diese Dinger halt gebaut wurden.
+
+[17:24] Speaker D: Na gut, damit vielleicht genug zu den Awareness Themen. Wenn deine Frage beantwortet, Marvin, würde ich mal zu Janine rüber hüpfen. Andreas, du bist glaube ich in dem Moment erst dazu gestoßen.
+
+[17:36] Speaker A: Janine meinte, was steht heute auf der Agenda? Auf der Agenda, weil sie hat ein Schnittstellenproblem.
+
+[17:42] Speaker D: Magst du mal ein bisschen mehr dazu erzählen? Janine
+
+[17:47] Speaker C: Also ich habe das Problem, dass ich nicht direkt meine Sachen in Microsoft Produkte integrieren lassen kann. Also ich kann zwar eine Word erstellen, Ich kann eine Excel Datei erstellen lassen, aber ich kann jetzt nicht weder über Cloud Code noch über die Desktop Variante Ihm arbeite mir direkt im SharePoint eine bestimmte Seite aus oder greife auf die Informationen dieser Seite zu, egal ob ich eingeloggt bin oder nicht. Da sagt er mir kein Problem drauf.
+
+[18:15] Speaker D: OK, sprechen wir über Schnittstellen, weil ich sehe, ich glaube das Problem zu sehen, du gehst zu Claude und Claude, du hast ein bisschen Wissensmanagement, er weiß Dinge
+
+[18:27] Speaker B: über dich, aber er weiß jetzt nicht
+
+[18:28] Speaker D: speziell über deine Firmen Microsoft Infrastruktur Bescheid.
+
+[18:31] Speaker B: Du wirst ihm wahrscheinlich gesagt, hey, ich hätte Lust drauf, dass du im SharePoint
+
+[18:35] Speaker D: für mich Dinge bearbeitest, zum Beispiel eine Excel Tabelle, die im SharePoint liegt. Was hast du ihm sonst noch gegeben?
+
+[18:41] Speaker B: Also welche Instruktionen, wie er auf den
+
+[18:43] Speaker D: SharePoint zugreifen kann, hast du ihm gegeben?
+
+[18:46] Speaker C: Ich habe ihn tatsächlich nur gefragt, Ich habe gesagt, so ich habe hier eine SharePoint, also wir nutzen Microsoft 365 in der aktuellsten Variante. Ich habe hier einen SharePoint, habe ihm einen Screenshot gegeben von unserer Startseite und habe gesagt, ich hätte jetzt gerne hier Dinge hinzugefügt oder er soll meine Links, die da drauf sind, prüfen und gucken, ob die noch aktuell sind. Und dann sagt er, er hat mir eine super lange Antwort gegeben, dass das angeblich für mich viel zu kompliziert wäre, das einzurichten.
+
+[19:15] Speaker D: Okay, dann soll er es halt für dich einrichten.
+
+[19:18] Speaker C: Habe ich dann auch gefragt, sind wir dann abgebrochen.
+
+[19:23] Speaker A: OK, pass auf.
+
+[19:26] Speaker D: Grundsätzlich folgendes.
+
+[19:29] Speaker A: Es ist so. Stell dir vor, du bist Cloud Code, du kannst nichts außer next dem User zu antworten und du kannst in der
+
+[19:41] Speaker D: Eingabeaufforderung Befehle ausführen, dank unseres Harnesses. Mehr kannst du nicht. Jetzt ist es am Ende des Horizonts,
+
+[19:52] Speaker A: ist die ganze Microsoft Suite da, sind
+
+[19:54] Speaker D: die ganzen Sharepoints und so weiter.
+
+[19:55] Speaker B: Der will da irgendwie rankommen.
+
+[19:58] Speaker A: Klar könnte er jetzt deinen Desktop bedienen.
+
+[20:00] Speaker D: Wir wissen aber alle inzwischen, dass Desktop
+
+[20:02] Speaker A: Bedienung cheaten ist und nur im äußersten
+
+[20:05] Speaker D: Notfall gemacht werden muss. Ihr wisst alle warum.
+
+[20:07] Speaker A: Weil Desktop Bedienung läuft ja immer so, dass er okay, ich mache jetzt einen
+
+[20:11] Speaker D: Screenshot von meinem Desktop, dann wird mir
+
+[20:13] Speaker B: ein extra Modell diesen Screenshot umwandeln in Wörter, die mir beschreiben, was wo auf
+
+[20:18] Speaker D: dem Screenshot zu sehen ist.
+
+[20:19] Speaker B: Dann berechne ich die Position des Buttons, auf den ich klicken will, dann löse
+
+[20:22] Speaker D: ich die Klickaktion auf und dann fängt das Ganze von vorne aus. Dann muss ich wieder ein Screenshot machen und gucken, was passiert ist und bis
+
+[20:28] Speaker A: du dich da durchgeklickt hast, Mahlzeit.
+
+[20:31] Speaker D: Also er wird zum Ergebnis kommen, dauert 24 Stunden für das, was du in 10 Sekunden machst. Also übertrieben, aber sagen wir drei Minuten für das, was Du in fünf Sekunden machst.
+
+[20:40] Speaker A: Besser sind ja diese ominösen API Calls.
+
+[20:44] Speaker B: Wer von euch weiß ganz grob, was
+
+[20:46] Speaker D: ein API Call ist?
+
+[20:52] Speaker E: Wir müssen ihm ja irgendwie sagen, greif mal hier irgendwie auf die Plattform zu mit Zugangsdaten und dazu brauchst du die API wahrscheinlich.
+
+[20:59] Speaker A: Genau, API heißt Application Programmable Interface, Fancy Word.
+
+[21:10] Speaker D: Schauen wir uns genau an, was das jetzt wieder bedeutet.
+
+[21:12] Speaker A: Aber das Wort Interface heißt Schnittstelle und
+
+[21:15] Speaker B: das verrät dir, dass das die Antwort
+
+[21:17] Speaker D: auf deine Frage ist. API ist ich versuche euch kurz ohne mein sehr unbeliebt gewordenes iPad mit den
+
+[21:25] Speaker A: Theoriestunden kurz zu erklären, was es damit auf sich hat. Und wenn ihr Bock habt, gehen wir
+
+[21:29] Speaker B: tiefer, aber nicht tiefer als wir müssen,
+
+[21:31] Speaker D: wenn ihr das nicht wollt.
+
+[21:35] Speaker B: Wir schreiben das Jahr 2000.
+
+[21:37] Speaker D: Das Internet existiert. Keiner nutzt es so richtig. Aber die ersten Programmierer, so wie ihr jetzt mit KI auch, sind schon dran und gucken, was geht damit alles.
+
+[21:47] Speaker A: Und der Programmierer Olaf sitzt in seinem
+
+[21:50] Speaker D: Kämmerchen und schreibt eine Buchhaltungssoftware für Datev zum Beispiel. Und Datev wird gerade programmiert.
+
+[21:56] Speaker A: So, und jetzt kommt es dazu, dass
+
+[21:59] Speaker B: er okay, meine Buchhaltungssoftware wird von Menschen bedient. Wie wird Software ideal von Menschen bedient?
+
+[22:05] Speaker D: Naja, wir machen halt so ein hübsches Fenster.
+
+[22:07] Speaker B: Frontend, sagen wir dazu, Da positionieren wir Buttons und wir machen es bewusst so, dass der Mensch quasi Eingabezeilen und Buttons
+
+[22:13] Speaker A: hat und Rückgabe Visuals.
+
+[22:16] Speaker D: Das heißt, irgendwas wird euch irgendwo angezeigt. Das heißt, wenn der Mensch was in den Computer reinkriegen will, kann er die Tastatur dafür nutzen, irgendwo was reintippen, er kann irgendwo klicken.
+
+[22:22] Speaker B: Und wenn das Programm ihm was zeigen
+
+[22:24] Speaker D: will, dann nutzt es halt eine grafische Oberfläche. Die haben wir programmiert.
+
+[22:27] Speaker A: Das ist die Schnittstelle. Tastatur und Maus ist eure Schnittstelle in
+
+[22:31] Speaker D: die digitale Welt und der Computer wird eure Eingaben immer auf eine bestimmte Art und Weise verarbeiten.
+
+[22:36] Speaker B: Programmierer haben bewusst für euch Knöpfe und
+
+[22:40] Speaker D: Eingabezahlen gebaut, damit ihr nicht mehr denken
+
+[22:42] Speaker A: müsst, Weil sobald ihr euer Zeug losgeworden
+
+[22:44] Speaker D: seid in eurer Sprache, macht der Computer
+
+[22:46] Speaker A: im Hintergrund den Rest, übersetzt es in seine Sprache, rödelt und übersetzt das Ergebnis
+
+[22:52] Speaker D: wieder in eurer Sprache und zeigt euch was an.
+
+[22:53] Speaker A: Das ist eine Schnittstelle.
+
+[22:56] Speaker B: Irgendwann kam es dann dazu, dass es
+
+[22:57] Speaker A: hieß, wir wollen jetzt euer Firmen ERP mit Datev verbinden. Das heißt ja jetzt, dass Dativ irgendwie
+
+[23:09] Speaker B: plötzlich von eurem ERP bedient werden will.
+
+[23:11] Speaker A: Also nicht mehr von Menschen, sondern Software
+
+[23:14] Speaker B: will jetzt Informationen an eine andere Software senden. Und dafür hat man sich dann Gedanken gemacht. Jahre später hat man sich die gleichen
+
+[23:22] Speaker A: Gedanken mit Kabeln gemacht. Wie können wir eine einheitliche Schnittstelle bauen, sodass jede Software mit jeder anderen Software, wenn wir das möchten, kommunizieren kann. Und das ist API, Das ist ein Protokoll.
+
+[23:35] Speaker D: Protokoll ist in der IT Welt nichts
+
+[23:36] Speaker B: anderes als in Sprache.
+
+[23:37] Speaker D: Wir haben uns hier auf Deutsch geeinigt.
+
+[23:39] Speaker A: Softwarehersteller haben sich auf API geeinigt. Und API ist also die Schnittstelle, die irgendwie so speziell ist, dass klar, was will man dem anderen mitteilen, aber so
+
+[23:52] Speaker B: offen wiederum ist, dass man da eine ganze Menge darüber mitteilen kann, wie eine Sprache.
+
+[23:55] Speaker D: Wir haben eine Grammatik, wir haben Vokabeln,
+
+[23:57] Speaker A: aber innerhalb dieses Raumes können wir uns frei bewegen. So, und API ist nichts anderes.
+
+[24:01] Speaker D: Und jetzt hat man folgendes gemacht.
+
+[24:03] Speaker B: Man hat sich so ein bisschen darauf
+
+[24:04] Speaker A: geeinigt, OK, derjenige, der eine Software anbietet, der bietet eine API an. In dem Fall wäre es DATEV. DATEV bietet eine API und innerhalb dieser API gibt es Funktionalitäten.
+
+[24:21] Speaker B: Diese Funktionalitäten sind so gebaut, dass man zum Beispiel Mensch, wir sind ja die
+
+[24:25] Speaker A: DATEV, was gern denn unsere Kunden bzw.
+
+[24:28] Speaker B: Unsere Software, die uns ansprechen will, mit uns machen wollen. Die wollen da Belege reinkriegen, die wollen da irgendwelche Buchungssätze durchführen, die wollen Belege rausholen, die wollen eine Umsatzsteuervoranmeldung abgeben, lauter so ein Zeug.
+
+[24:40] Speaker D: Also nehmen wir doch jetzt mal diese genormte Sprache API, wie auch immer die
+
+[24:44] Speaker A: aussehen mag und bauen da drin verschiedene feste Funktionalitäten. Funktion Nummer 1 Beleg in Dativ reinkriegen.
+
+[24:53] Speaker D: Funktion Nummer 2 Beleg automatisch einer Transaktion zuordnen. Funktion Nummer 3 Keine Ahnung, Bilanz rausziehen, wie auch immer.
+
+[25:02] Speaker B: So, und wenn jetzt jemand unsere API
+
+[25:05] Speaker A: benutzen will, machen wir Wir schreiben in
+
+[25:09] Speaker B: einer Dokumentation auf, was unsere API alles kann. Wir schreiben Paper, da schreiben wir Hallo
+
+[25:15] Speaker A: Welt, ich bin die DATEV API.
+
+[25:18] Speaker B: Wer mich nutzen will, der kann auf mich zugreifen.
+
+[25:20] Speaker D: Wie das genau im Detail funktioniert, ist
+
+[25:22] Speaker B: jetzt mal wurscht, aber ich habe die
+
+[25:24] Speaker D: Funktionalitäten, Belegbuchen und so weiter.
+
+[25:26] Speaker B: Man spricht von Endpoints übrigens. Endpoints deswegen, weil ich bin eine Bibliothek
+
+[25:31] Speaker D: aus ganz vielen Funktionalitäten und die sind
+
+[25:33] Speaker B: wie auf einer Speisekarte in verschiedenen Bereichen. Es gibt Pizza, Pasta, Dessert, Salate.
+
+[25:38] Speaker D: Und wenn du zu mir kommst und
+
+[25:40] Speaker A: sagst, du willst eine Pizza Salami mit extra Peperoni, scharf und größe Mittel, dann
+
+[25:46] Speaker D: kommst du bei mir wie so eine Bibliothek Und so, ich würde gerne zu den Pizzen. Was haben wir da?
+
+[25:49] Speaker A: Schinken. Nehmen wir die Schinkenpizza, welche Größe? Wir nehmen die mittlere Schinkenpizza, Das ist
+
+[25:55] Speaker D: der Endpunkt, Das ist der letzte Punkt in dieser Funktionsnavigation.
+
+[26:01] Speaker A: Und deswegen spricht man von Endpunkten. Und wenn ihr Software in Zukunft einkauft,
+
+[26:06] Speaker B: das ist wahrscheinlich vor allem für dich,
+
+[26:08] Speaker D: Andreas, interessant als Geschäftsführer, Andreas ist glaube ich da busy dann wenn ihr Software einkauft in Zukunft, dann werdet ihr Ja,
+
+[26:17] Speaker A: OK, hat das Ding API.
+
+[26:21] Speaker B: Warum sollte es API haben? Weil die Schnittstelle zu uns Menschen, die
+
+[26:26] Speaker A: wird immer unwichtiger, dass das Ding in
+
+[26:28] Speaker B: Zukunft von einer anderen Software Ergo-KI bedient werden.
+
+[26:31] Speaker A: Kann. That's the hack of our time.
+
+[26:33] Speaker D: Darum geht es heutzutage, Weil wir wollen ja nicht wieder Menschen einstellen, der die Software bedienen muss. Wir wollen uns von KI bedienen lassen.
+
+[26:39] Speaker B: Also suchen wir nicht die Schnittstelle zum
+
+[26:41] Speaker D: Menschen und das sind schöne tolle Wow,
+
+[26:43] Speaker B: sieht das hier toll aus. Sondern wir suchen die Schnittstelle zur Software.
+
+[26:47] Speaker A: Und die Schnittstelle zur Software ist nur
+
+[26:49] Speaker D: so gut wie die Funktionen, die dadurch offengelegt werden. Bringt ja nichts, wenn ich ein Buchhaltungsprogramm
+
+[26:53] Speaker A: habe, wo ich sage, über das Frontend, wo ich klicken kann, kann ich Sachen machen, aber über die API kann man
+
+[26:59] Speaker B: nur drei davon machen.
+
+[27:01] Speaker A: Das heißt, wir brauchen Endpunkte.
+
+[27:02] Speaker D: Endpunkte, die alle Funktionalitäten, die das Programm schlussendlich hat, abbilden.
+
+[27:07] Speaker A: Früher war es so, man hatte Frontend
+
+[27:10] Speaker B: mit 638 Möglichkeiten und dann hat man
+
+[27:13] Speaker A: sich überlegt, diese eine Möglichkeit, die wollen
+
+[27:17] Speaker B: Leute auch über eine andere Software machen. Das heißt, wir programmieren jetzt einen Endpunkt
+
+[27:20] Speaker A: dafür Und dann war es Mensch, die
+
+[27:22] Speaker B: Sache, die können wir jetzt auch über
+
+[27:23] Speaker D: Endpunkte über API lösen.
+
+[27:25] Speaker B: Cool, dann kann jetzt eine andere Software
+
+[27:27] Speaker A: quasi in Dativ was reinbuchen.
+
+[27:28] Speaker D: So hat es angefangen.
+
+[27:30] Speaker B: Irgendwann war das so weit, dass man
+
+[27:31] Speaker A: gesagt Boah, es gibt so viel Software,
+
+[27:33] Speaker B: die mit anderer Software interagiert. Ihr kennt euren Google Kalender irgendwo integrieren
+
+[27:38] Speaker A: in Cloud AI, das ist eine Integration.
+
+[27:41] Speaker B: Oder dass ihr Boah, ich will in
+
+[27:43] Speaker A: meinem SharePoint irgendwelche Rechte vergeben. Und dann sagen wir mal, im SharePoint
+
+[27:47] Speaker B: habt ihr eine PDF liegen, eine Lohnabrechnung
+
+[27:50] Speaker A: und ihr wollt einstellen, für wen ist
+
+[27:51] Speaker B: diese Lohnabrechnung zu sehen?
+
+[27:53] Speaker A: Naja, nur für Tobias Zitzmann, weil es
+
+[27:55] Speaker B: ist ja seine Lohnabrechnung und die darf sonst keiner sehen.
+
+[27:58] Speaker A: Dann wollt ihr automatisch, dass diese Rechte, wer das sehen darf, propagiert werden, also
+
+[28:04] Speaker D: quasi mitgeteilt werden an andere Software, damit
+
+[28:07] Speaker B: überall, wo diese Lohnabrechnung liegt, auch diese Rechte gleich mitgegeben werden.
+
+[28:11] Speaker D: Die Lohnabrechnung von Tobias Tittzmann darf nur
+
+[28:13] Speaker B: von Tobias Zitzmann und von seinem Chef
+
+[28:15] Speaker A: eingesehen werden, sonst von niemandem.
+
+[28:17] Speaker B: Das gilt für alle Programme, die bei
+
+[28:18] Speaker D: uns potenziell Dokumente beinhalten.
+
+[28:20] Speaker A: Macht Sinn.
+
+[28:20] Speaker D: Und diese Information, die muss zwischen den Programmen geteilt werden über API logischerweise.
+
+[28:25] Speaker A: Es gibt nur API, sonst gibt es nichts. So, und jetzt war man also irgendwann
+
+[28:30] Speaker D: im Zeitalter, wo wir gesagt haben, alles
+
+[28:32] Speaker A: was wir über Frontend machen, müssen wir auch über API machen können.
+
+[28:35] Speaker B: Nicht, hey, die Funktion stellen wir uns
+
+[28:37] Speaker D: auch über API zur Verfügung.
+
+[28:38] Speaker A: Nee, nee, alles tut du completo, alles.
+
+[28:42] Speaker D: Und jetzt sind wir in dem Zeitalter,
+
+[28:44] Speaker B: wo teilweise über API sogar mehr geht
+
+[28:46] Speaker D: als über das Frontend, wo wir sagen,
+
+[28:48] Speaker A: ah, okay, über das Frontend kannst du
+
+[28:50] Speaker D: hier klicken für Rechnung buchen und da klicken für so und so.
+
+[28:53] Speaker A: Aber den Sonderfall Rechnungen über Reverse Charge
+
+[28:56] Speaker B: Paragraph B buchen ohne Mehrwertsteuer und schieß mich tot.
+
+[28:59] Speaker A: Das geht nur über Abnehmen. Da sind wir inzwischen. So, und jetzt möchte ich, dass ihr
+
+[29:08] Speaker D: mal folgendes kurz macht.
+
+[29:11] Speaker A: Janine, würdest du mal kurz mal dein Bildschirm teilen?
+
+[29:17] Speaker C: Muss ganz kurz dazu sagen, dass es sein kann, dass ich vielleicht gleich in einen anderen Termin kurz rein muss. Ich hoffe, dass ich nicht muss
+
+[29:26] Speaker A: bei jemand anderem, falls du weg musst.
+
+[29:29] Speaker D: Ganz kurz. Fabian verspätet sich, aber das habt ihr wahrscheinlich schon gemerkt.
+
+[29:34] Speaker A: Okay, aber der kommt noch gut zu wissen.
+
+[29:36] Speaker D: Der kommt auf jeden Fall.
+
+[29:37] Speaker A: Ja, ist klar, ist klar.
+
+[29:39] Speaker C: Aber was du gerade erzählt hast mit diesem Google Kalender API Schnittstelle, wie man das hinkriegt, dass wenn du uns das einmal oder mir das einmal zeigen könntest,
+
+[29:49] Speaker A: wir gehen es jetzt richtig an, ich
+
+[29:51] Speaker B: werde mit euch jetzt nicht den Google Kalender, alles gut. Ich werde euch zeigen, wie das gesamte
+
+[29:55] Speaker A: Thema Schnittstellen funktioniert, weil ihr wisst alle,
+
+[29:58] Speaker D: KI wurde ein Stück mächtiger dadurch, dass wir den richtigen Kontext geliefert haben. Und ihr wisst, was es damit auf sich hat.
+
+[30:04] Speaker B: Was meint ihr, wie wichtig das ist,
+
+[30:05] Speaker D: wenn ihr alle möglichen Schnittstellen liefert?
+
+[30:07] Speaker A: Hier, ich zeige euch mal was. Kennt ihr, die
+
+[30:13] Speaker D: sieht scheiße aus, aber
+
+[30:16] Speaker A: kennt ihr Die neue Wavefare 2 von Meta? Diese Brille hier, ich muss mal meinen
+
+[30:23] Speaker D: Hintergrund hier ausschalten, der nervt mich.
+
+[30:25] Speaker A: Gib mir mal eine Sekunde.
+
+[30:27] Speaker D: Hintergründe und Effekte.
+
+[30:28] Speaker A: Ah, jetzt perfekt. Diese Brille hier hat hier eine Kamera
+
+[30:34] Speaker D: und da eine Kamera.
+
+[30:37] Speaker A: Die hat hier ein Touchpanel und da einen Knopf und hier hat sie Vibrationssensoren
+
+[30:41] Speaker D: die über meine Gehörknöchelchen hier vorne mir Musik und Sprache in mein Ohr leiten
+
+[30:47] Speaker A: können Diese Brille hier wenn ich jetzt aufsetze so jetzt sage ich mal hey
+
+[30:56] Speaker D: meta, was ist 3785 mal 13?
+
+[31:02] Speaker A: Spricht sie nicht mit mir? Hallo Meta, bist du da? Ich glaube die ist aus. Hey Meta, kannst du mich hören? Hey Meta, kannst du mir mal bitte
+
+[31:19] Speaker D: sagen was sind 3718 x 539. 192 99592 so könnt ihr nachrechnen die Brille hat gerade mit mir gesprochen das
+
+[31:34] Speaker C: ist ja voll das Cheat Denken für Schul.
+
+[31:37] Speaker A: Jetzt pass mal auf Hey Meta schießt. Er sieht ein Schreibtisch mit einem Laptop
+
+[31:54] Speaker D: darauf Videokonferenz mit fünf Teilnehmern Marvin Händel, Janine Klein, Tobias Andreas Meiser und Marco her. So das hat er mir jetzt innerhalb von 5 Sekunden gesagt ich hätte jetzt auf ein Foto schießen können, hätte mir das später von der Brille runterladen können und so weiter.
+
+[32:06] Speaker A: So das ist ein Stück Hardware, das
+
+[32:07] Speaker D: ist mächtig, aber das ist im Endeffekt
+
+[32:09] Speaker A: nichts anderes als zwei Kameras, ein kleines Vibrationsmikrofon.
+
+[32:14] Speaker B: Die Einzelteile hier drin sind jetzt technisch nicht überwältigend, es ist einfach nur cool,
+
+[32:19] Speaker D: dass das alles in so ein kleines Gestell inzwischen rein passt.
+
+[32:21] Speaker B: Okay, haut jetzt keiner vom Hocker.
+
+[32:23] Speaker D: Wir wissen alle, dass es so kleine Bauteile heutzutage gibt. Gab es den James Bond Filmen vor 20 Jahren, jetzt gibt es das wirklich aber wirklich cooles.
+
+[32:29] Speaker A: Die ist per Bluetooth mit meinem Handy verbunden. So und auf meinem Handy sitzt momentan
+
+[32:35] Speaker D: noch die Meta App, ich programmiere aber
+
+[32:37] Speaker A: gerade schon eine eigene und die wiederum hat eine API Schnittstelle zu einer LLM.
+
+[32:43] Speaker B: Das ist also nichts anderes als eine
+
+[32:44] Speaker D: kompliziertere Anbindung wie ihr habt so eine
+
+[32:48] Speaker A: LLM aber im Endeffekt wird auch nur
+
+[32:50] Speaker B: kurz über ein Transkribierungsmodell schlussendlich schnell ein
+
+[32:54] Speaker D: Prompt geschickt plus eventuell auch ein Bild, weil das Ding kann ja auch Fotos schießen.
+
+[32:59] Speaker A: So das Interessante ist jetzt die API
+
+[33:03] Speaker D: Schnittstelle zum LLM das heißt ihr greift ja eh schon alle die ganze Zeit auf LLMs zu.
+
+[33:09] Speaker A: Ich auch, aber ich mache es über API. Das heißt die Software, die hier drauf
+
+[33:14] Speaker B: läuft, die damit verbunden ist,
+
+[33:18] Speaker A: hat eine API Schnittstelle zu verschiedenen Endpunkten dieser KI.
+
+[33:25] Speaker D: Das ist dann so Endgame Schnittstellenanbindung. Und deswegen bringe ich euch heute nicht
+
+[33:29] Speaker B: bei, wie ihr euren Google Kalender anbindet,
+
+[33:31] Speaker D: sondern ich bringe euch bei, wie Schnittstellen funktionieren. Weil wenn ihr Bock habt, kauft ihr
+
+[33:35] Speaker A: auch Hardware eurer Wahl, baut Schnittstellen selbst,
+
+[33:39] Speaker B: bindet KI eurer Wahl an und die KI kriegt natürlich nicht nur LLM Fähigkeiten, sondern Tools und und damit wird sie
+
+[33:45] Speaker D: zum Agenten und greift auf euer Wissensmanagement
+
+[33:48] Speaker A: zu, verarbeitet Bilder, die vor euch sind,
+
+[33:50] Speaker D: sagt euch, wann euer nächster Termin ist,
+
+[33:51] Speaker A: fasst euch das letzte Meeting zusammen oder
+
+[33:53] Speaker B: programmiert euch schnell live on the fly
+
+[33:56] Speaker A: eine Software, weil sie natürlich mit Cloud Code verbunden ist. Das ist die Macht der Schnittstellen plus LLM plus Tools plus Context Engineering.
+
+[34:06] Speaker D: Und so kommt es am Ende alles ein bisschen zusammen.
+
+[34:10] Speaker B: Ihr habt am Ende dieses Gruppen Coachings vielleicht keine Erfahrung damit, aber ihr wisst,
+
+[34:13] Speaker D: dass es geht und ihr habt alle Basics dazu. Die Erfahrung müsst ihr euch dann selbst ein bisschen einsammeln.
+
+[34:17] Speaker B: Dafür haben wir hier nicht genug Zeit.
+
+[34:18] Speaker D: Aber deswegen geben wir das Thema Schnittstellen jetzt gerade an.
+
+[34:22] Speaker A: So, nur mal kurz, um zu sehen,
+
+[34:23] Speaker D: wo die Reise hingeht. Jetzt würde ich trotzdem mal den Marvin,
+
+[34:28] Speaker A: wenn es okay ist, bitten, seinen Bildschirm zu teilen.
+
+[34:31] Speaker D: Jetzt fangen wir nämlich trotzdem mal so ein bisschen bei Null an mit dem Thema Schnittstellen. Marvin, lass uns mal
+
+[34:50] Speaker A: dein Cloud Code mit einer Schnittstelle verbinden. Wie wäre es denn,
+
+[35:00] Speaker B: Wir haben hier mehrere. Wir haben natürlich die ganze Welt der Schnittstellen offen. Wir brauchen einen Anbieter mit einer API.
+
+[35:08] Speaker A: Jetzt könnten wir folgendes Wir könnten eine andere KI triggern über API. Das heißt von daher, dass API ja
+
+[35:16] Speaker D: universal kompatibel ist von jedem Gerät zu jedem Gerät.
+
+[35:24] Speaker A: Achso, ich soll den Prompt diktieren.
+
+[35:26] Speaker E: Ne, ich wollte jetzt nur Ich wollte ihn mal fragen, mit welchen sinnvollen Anwendungen ich jetzt hier die API verbinden kann, was jetzt bei mir Sinn macht.
+
+[35:33] Speaker D: Wir machen das mal folgendermaßen.
+
+[35:34] Speaker A: Wir starten gleich mal mit einer API,
+
+[35:36] Speaker D: die du sowieso noch häufiger brauchen wirst. Telegram Bots selber bauen. Du hast auch schon Telegram Account, das weiß ich, weil mein Telegram hat mir neulich gesagt, Marvin Hänsel hat jetzt auch
+
+[35:50] Speaker B: Telegram, hat mir Telegram sofort Bescheid gegeben.
+
+[35:53] Speaker C: Was ist Telegram?
+
+[35:54] Speaker E: Ich habe kein Telegram.
+
+[35:55] Speaker A: Doch
+
+[35:58] Speaker D: irgendwie hat dein Clock anscheinend hergestellt.
+
+[36:02] Speaker A: Telegram ist der Konkurrent zu WhatsApp im
+
+[36:05] Speaker D: Prinzip einfach nur, aber bekannt geworden für
+
+[36:08] Speaker A: andere Stärken, außer WhatsApp.
+
+[36:10] Speaker D: Machen wir es folgendermaßen.
+
+[36:13] Speaker A: Warte mal Marvin,
+
+[36:18] Speaker B: vielleicht habe ich dich gleich verwechselt.
+
+[36:19] Speaker D: Marvin, dann warst du es doch nicht. Na gut, macht nichts. Machen wir folgendes. Ja, das wird er jetzt nicht wissen, weil das hat er sich bestimmt nicht ins Wissensmanagement gespart. Kannst ja mal fragen.
+
+[36:31] Speaker A: Wir machen Geh doch mal bitte ins Internet und öffne mal Telegram.
+
+[36:40] Speaker D: Wir bauen heute unseren ersten Telegram Chatbot mit allem drum und dran. Genau. Übrigens funktioniert genauso wie WhatsApp, mit dem Unterschied, dass WhatsApp paar mehr zicken bei der Integration macht. So, jetzt müsstest du mal auf deinem Handy die Telegram App runterladen.
+
+[36:57] Speaker B: Ihr könnt alle gleich mitmachen, wenn ihr Lust habt.
+
+[37:01] Speaker D: Telegram ist ein Chatbot bzw. Ein Messenger Dienst wie WhatsApp und wir werden statt auf der anderen Seite Menschen zu haben, auf der anderen Seite KIs haben, mit denen wir sprechen.
+
+[37:19] Speaker A: So, ladet euch mal Telegram runter, erstellt
+
+[37:22] Speaker B: euch da mal Account.
+
+[37:23] Speaker A: Das ist super easy und es reicht,
+
+[37:26] Speaker D: wenn ihr es alle erstmal,
+
+[37:30] Speaker A: wobei ich
+
+[37:31] Speaker D: wollte sagen, am Handy macht, aber ihr könnt es auch direkt am PC mitmachen.
+
+[37:35] Speaker A: Ihr kennt alle WhatsApp Web am Rechner.
+
+[37:39] Speaker D: Das ist genau das Gleiche hier, wenn man einfach sagt, hey, ich will meine Telegram Nachrichten jetzt auch am Rechner lesen können.
+
+[37:46] Speaker A: So, dann macht mal kurz in Ruhe
+
+[37:48] Speaker D: und sagt noch mal Bescheid, wenn ihr soweit seid.
+
+[37:54] Speaker C: Gibt es irgendeinen sinnvollen Grund, Telegram zu nutzen, wenn das niemand hat, den ich kenne?
+
+[38:01] Speaker A: Weißt du, wen du kennst?
+
+[38:03] Speaker C: KI, Ja, aber ich nutze halt selber eh nur WhatsApp und vielleicht noch Signal,
+
+[38:09] Speaker D: aber ja, aber du wirst, wenn du mit Telegram schreibst, wirst du nicht mit anderen Menschen schreiben. Du wirst mit KI Chatbots schreiben, die
+
+[38:18] Speaker B: wir für dich gebaut haben, damit du jederzeit.
+
+[38:21] Speaker A: Du wirst bestimmte KIs bauen, die deins sind.
+
+[38:26] Speaker D: Dies willst du nicht immer über Cloud Code zur Verfügung haben, sondern am Handy über einen Chat, über ein Chatprogramm deiner Wahl. WhatsApp zickt da ein bisschen rum, weil
+
+[38:34] Speaker A: die wollen das nicht so.
+
+[38:34] Speaker D: Die wollen eher Mensch to Mensch Kommunikation bleiben. Während Telegram bekannt dafür geworden ist, dass es ganz leicht anwendbar ist an alles Mögliche über API. Und du willst zum Beispiel Hey Mensch,
+
+[38:45] Speaker A: ich habe da meinen kleinen KI Chatbot,
+
+[38:47] Speaker B: der hilft mir immer bei einer bestimmten
+
+[38:48] Speaker D: Sache, vor allem von unterwegs aus. Da muss ich nicht mal auf Code zugreifen.
+
+[38:53] Speaker C: Gibt es da, finde ich extra eigentlich diese App Möglichkeit, dass man das auf dem, dass man vom Handy aus auf dem.
+
+[39:02] Speaker A: Believe me, you will see the advantage.
+
+[39:05] Speaker D: Ich weiß genau, woran du denkst. Und du denkst davon, dass du Code
+
+[39:09] Speaker B: ja auch remote controllern kannst.
+
+[39:11] Speaker D: Ja, kannst du. Aber manchmal willst du auch einfach kein Cloud benutzen, weil du willst einfach nichts programmieren oder HTML schreiben oder irgendwie so Geschichten machen. Manchmal willst du einfach nur ein Hörbuch zugeschickt bekommen, das individualisiert ist und dir in den nächsten 5 Minuten was über ein bestimmtes Thema erzählt.
+
+[39:27] Speaker E: Wie kann es sein, dass mir jetzt
+
+[39:29] Speaker A: jemand schon schreibt, wer ist denn Benni? Kann ich dir nicht sagen. Keine Ahnung, das macht mir gerade irgendwie Angst.
+
+[39:41] Speaker C: Ich hab's noch nicht installiert.
+
+[39:44] Speaker E: Ich bin jetzt aber angemeldet, glaube ich. Also hier siehst du ja am Desktop, sieht gut aus.
+
+[39:48] Speaker A: Genau. So, Marvin, mach mal folgendes. Hast einen Account, bist du angemeldet, gehst
+
+[39:57] Speaker D: du mal zu Cloud Code.
+
+[40:02] Speaker A: So, jetzt gebe ich dir mal ein
+
+[40:04] Speaker D: Prompt über den Chat, wie immer gerade
+
+[40:09] Speaker B: eben einen Telegram Account erstellt und Marco
+
+[40:12] Speaker A: meinte, Telegram ist besonders beliebt dafür, Bots darüber anzubinden.
+
+[40:17] Speaker D: Würdest du mir mal einen Chatbot erstellen?
+
+[40:21] Speaker A: Am besten über den Botfather. Dafür darfst du mein Chrome benutzen, entweder über Playwright oder über Cloud in Chrome. Schau mal, was da ist. Benutze dann meinen Browser und erstell für
+
+[40:33] Speaker B: mich den Bot, denn ich habe keine
+
+[40:35] Speaker D: Lust, das selbst machen zu müssen.
+
+[40:40] Speaker A: Hast du irgendeine Browser bedienende KI schon mal gehabt?
+
+[40:46] Speaker E: Browser bedienende KI? Nicht, dass ich wüsste.
+
+[40:50] Speaker A: Na, dann wird es Zeit.
+
+[40:52] Speaker D: Dann lernen sie jetzt ganz schön viel
+
+[40:53] Speaker A: auf einmal, was mit API Schnittstellen so alles möglich ist.
+
+[40:57] Speaker D: Achso, ne, sollte hier Claude geben. Genau, das gibt es jetzt mal.
+
+[41:00] Speaker A: Claude.
+
+[41:01] Speaker B: Jetzt wird sich Claude wahrscheinlich gleich.
+
+[41:03] Speaker A: Also ich habe jetzt folgendes mir gewünscht. Ich möchte in deinem Telegram ein Chatbot anbinden, denn wir selber bauen für dich
+
+[41:13] Speaker D: durch das Mal
+
+[41:17] Speaker B: und dafür muss man
+
+[41:18] Speaker D: in Telegram ein paar Sachen machen und
+
+[41:20] Speaker B: du hast überhaupt keine Lust, das selber zu machen.
+
+[41:22] Speaker A: Also lässt du KI deinen Browser bedienen und er soll das für dich machen.
+
+[41:26] Speaker B: KI kann nämlich deinen Browser bedienen
+
+[41:30] Speaker A: und
+
+[41:30] Speaker D: wir werden das jetzt.
+
+[41:38] Speaker E: Claud Chrome ist
+
+[41:41] Speaker A: eine Browser Extension, die
+
+[41:43] Speaker B: Claude Zugriff auf deinen Browser gestattet.
+
+[41:46] Speaker A: Es gibt aber noch eine zweite, die heißt Playwright.
+
+[41:48] Speaker D: Die sehe ich schon auf deinem Desktop, auf deinem Bildschirm gerade, dass er damit spielt.
+
+[41:52] Speaker A: Es ist beides möglich, beides.
+
+[41:54] Speaker D: Zwei leicht verschiedene Programme.
+
+[41:57] Speaker A: Playwright ist dann ein extra Browser. Cloud.
+
+[41:59] Speaker B: Chrome lebt im Chrome Browser, wie der Name schon sagt.
+
+[42:02] Speaker D: Playwright ist ein extra Browser, der sich öffnet, der nur quasi für KI Bedienung gebaut wurde. Genau, wir gucken uns das dann gleich mal an. Wir benutzen jetzt erstmal ein paar Tools. Ihr müsst die alle nicht perfekt kennen.
+
+[42:19] Speaker B: Wir lernen die dann mit der Zeit kennen.
+
+[42:21] Speaker D: Jetzt gucken wir uns erstmal das Ergebnis
+
+[42:22] Speaker B: an und lernen ein bisschen was über Schnittstellen.
+
+[42:26] Speaker D: So, wie soll ein Bot heißen? Gib ihm am besten mal bei viertens. Sag ihm mal Marvins Hörbuchbot.
+
+[42:36] Speaker A: Hörbuchbot, Ja genau.
+
+[42:43] Speaker D: Welchen Telegram Username sagt, passend zum Botname. Das lasse ich dann Username raussuchen. Genau. So, wer kann mir denn erklären, was ein Bot ist? Das Wort fliegt ja schon lange im
+
+[43:09] Speaker A: Universum rum, aber na jemand, der ohne
+
+[43:14] Speaker E: Menscheneinwirkung automatisiert anhand der Informationen, die er irgendwie zur Verfügung gestellt hat, kommuniziert,
+
+[43:21] Speaker A: Ne?
+
+[43:22] Speaker D: Das ist ein ganz schön hart getunter Bot.
+
+[43:24] Speaker A: Ein Bot ist viel simpler. Bot ist erstmal nur ein kleines Stück Computer, was als Schnittstelle wirkt.
+
+[43:35] Speaker D: Das heißt, wenn ihr zum Beispiel ein Computerspiel spielt und in diesem Computerspiel gibt es so einen Charakter, den man nicht selbst spielen kann, NPC sagt man dazu, so ein kleines Männchen oder so, wo kein Mensch hinter steckt, dann ist das erstmal ein Bot.
+
+[43:49] Speaker B: In diesem Bot kann später eine KI leben und diesen Bot wie so eine
+
+[43:53] Speaker D: Hülle bedienen oder so, oder auch nicht.
+
+[43:55] Speaker B: Aber der Bot ist erstmal nur diese kleine Hülle, die ist ziemlich dumm, die kann nicht besonders viel, aber die kann dann quasi Computer, also an API zum
+
+[44:04] Speaker D: Beispiel angebunden werden und so weiter über Schnittstellen. Wir gucken uns das gleich an.
+
+[44:10] Speaker A: Also stellt euch eine Roboterhülle vor. Daher kommt Bot ist von Robot und es heißt Bot, weil es ist erstmal
+
+[44:17] Speaker B: nur ein leerer Roboter, eine Hülle von
+
+[44:18] Speaker D: dem Roboter, Da ist nichts drin.
+
+[44:25] Speaker A: So, jetzt lest ruhig mal so ein bisschen mit, was dein Cloud Code macht.
+
+[44:29] Speaker B: Dein Cloud Code plant nämlich gerade die
+
+[44:31] Speaker D: Browserbedienung, die notwendig ist.
+
+[44:42] Speaker A: Andreas, du bist wieder da, oder?
+
+[44:46] Speaker D: Ja, okay. Ne, passt. Alles gut. Passt parallel am Mitarbeiter.
+
+[44:53] Speaker A: Passt fast.
+
+[44:54] Speaker D: Ich hatte nur vorhin warst du bei mir irgendwie weg deswegen. Aber passt, ich war die ganze Zeit da.
+
+[44:59] Speaker A: Alright, alright. Gut,
+
+[45:05] Speaker D: er muss dieses Playwright Ding noch installieren, das funktioniert noch nicht, aber das machen wir nicht zu unserem Problem. Das löst er für uns.
+
+[45:12] Speaker E: Wenn er mir so Fragen stellt wie gebt ihr Zugangsdaten ein und ich möchte das lieber im Browser machen und also er erwartet, aber ich mache es im Chat, dann sage ich immer, hier will ich nicht, öffne mir im Browser und ich gebe die Daten ein, oder?
+
+[45:23] Speaker A: Genau, das ist deutlich sicherer aus Sicherheitsgründen
+
+[45:26] Speaker E: sicherheitsrelevanter, sagen wir es mal so.
+
+[45:29] Speaker A: Genau, bestimmte Daten gebe ich ihm, ehrlich
+
+[45:32] Speaker D: gesagt, weil Zugriff auf Telegram, solange Telegram leer ist, ist völlig unkritisch, weil, naja, niemand kann mit diesen Daten was anfangen mit einem leeren Telegram Account. Aber wenn man es natürlich sauber macht, dann macht man es genauso.
+
+[45:45] Speaker A: Jetzt siehst du, dass sich ein neuer Browser geöffnet hat.
+
+[45:47] Speaker B: Der ist auch recht clean, Das ist
+
+[45:49] Speaker D: ein Browser, der ist am Chrome Design
+
+[45:52] Speaker A: eben inspiriert, aber der hat halt eine neue Sitzung.
+
+[45:56] Speaker D: Da musst du jetzt noch mal dich kurz einloggen mit deinem QR Code. Das funktioniert ja aber auch analog zu Firefox. Gibt zwei, drei kleine andere Hürden noch,
+
+[46:14] Speaker A: habe ich jetzt gemerkt, aber ja, ist
+
+[46:17] Speaker B: glaube ich noch nicht so wirklich stabil
+
+[46:18] Speaker D: mit Firefox, aber es funktioniert.
+
+[46:28] Speaker A: Ich habe gar nichts gemacht.
+
+[46:31] Speaker E: Ich würde einfach nur den QR Code scannen.
+
+[46:34] Speaker D: Genau, scan mal nur, du müsstest. Mach mal unten einen Rechtsklick auf dein Chrome.
+
+[46:42] Speaker A: Da sind zwei Fenster offen.
+
+[46:44] Speaker D: Das eine ist nämlich Rechtsklick. Okay, normalen Klick, da sind nämlich mehrere.
+
+[46:52] Speaker A: Ah ja, okay.
+
+[46:53] Speaker D: Den linken, der war es, glaube ich, oder? Wo ist der jetzt hin?
+
+[46:59] Speaker A: Machen wir dieses Fenster klein, weil das ist ja das von Menschen bediente Fenster her.
+
+[47:04] Speaker D: Irgendwo ist doch dieses andere Fenster jetzt. Wo ist denn das jetzt hin, wenn nicht immer mal Claude Code checken.
+
+[47:12] Speaker A: Mal gucken, was er gerade sagt, ob
+
+[47:15] Speaker D: er es vielleicht geschlossen hat oder so. Ah ja, lass ihn mal kurz machen. Es kann sein, dass er es gerade geschlossen hat, weil er noch mal was anders programmieren wollte.
+
+[47:27] Speaker A: So, jetzt musst du scannen.
+
+[47:32] Speaker B: So, und jetzt gehst du bitte kurz
+
+[47:34] Speaker D: zu Claude Code hin und sagst, hey, ich habe dich eingeloggt, du kannst weitermachen.
+
+[47:42] Speaker E: Eingeloggt und du kannst jetzt gerne weitermachen.
+
+[47:48] Speaker A: So, ihr seht jetzt also wirklich Browserbedienung mittels KI. So, on the Fly nebenher eigentlich ein
+
+[47:57] Speaker D: riesen Feature, was eine eigene Stunde verdient.
+
+[48:01] Speaker E: Wie viele Leute haben hier, die haben alle Telegram.
+
+[48:06] Speaker D: Genau, du hast Zugriff auf deine Kontakte gewährt anscheinend. Und diese Menschen aus deinen Kontakten haben auch Telegram. Genau, ob die es nutzen, wahrscheinlich nicht, aber sie haben es installiert und einen Account.
+
+[48:24] Speaker E: Bisher hatte ich Telegram immer nur aus kritischen politischen Ecken mitbekommen oder aus Russland oder was auch immer.
+
+[48:37] Speaker B: Ja, aber es ist inzwischen in ganz
+
+[48:39] Speaker D: Europa eigentlich vertreten und Telegram ist einfach
+
+[48:42] Speaker B: ein bisschen für die Developer Community bekannt
+
+[48:44] Speaker D: geworden und die wollen auch gar nichts anderes mehr. Die wollen gar nicht so. Ich schreibe hier mit ganz vielen Menschen. Telegram ist bekannt dafür, dass es einfach inzwischen für Programmierungszwecke benutzt wird. Deswegen ist es so wie Cloud Code
+
+[48:57] Speaker A: auch jetzt nicht so extrem bekannt. Schau mal auf Escape drauf, damit das
+
+[49:04] Speaker D: von der Warteschlange in dein Ding reinrutscht, in dein Kontext Window. Jetzt hast du zweimal fürs Cape gehauen. Ne, hast du nicht.
+
+[49:13] Speaker A: Passt, Passt perfekt.
+
+[49:15] Speaker D: Genau. So,
+
+[49:20] Speaker E: ich hoffe, ich scheiter hier nicht gleich an meinen Token.
+
+[49:25] Speaker A: Schauen wir mal.
+
+[49:28] Speaker D: Je schwergewichtiger die Anliegen, desto mehr Tokens werden verbrannt.
+
+[49:33] Speaker E: Also Wochending geht immer, aber dieser Fünf Stunden Rhythmus, der ist immer ein bisschen kritisch. Was können wir denn mit dem Telegram Bot machen, wenn wir den jetzt haben? Der kann denn für mich,
+
+[49:53] Speaker B: das verstehst
+
+[49:53] Speaker D: du noch gar nicht, wenn du die Schnittstelle nicht verstehst.
+
+[49:56] Speaker E: Aber theoretisch habe ich denn, sag ich mal, Telegram Bot auf mein Handy und kann den dann sagen, ey, mach mal bei Cloud Code Aufgabe A oder B,
+
+[50:06] Speaker D: wenn du die Schnittstelle dafür hergestellt hast. Ich glaube, er möchte noch mal, dass du dich einloggst. Ich glaube, er probiert noch ein bisschen rum. Wahrscheinlich noch nicht so sicher mit dem Playwright zu sein.
+
+[50:19] Speaker B: Wir machen langsam mit der Frage, Also die wird beantwortet sein, aber die Antwort ist, du kannst alles damit.
+
+[50:29] Speaker D: Die Frage ist natürlich, wie und wie funktionieren diese Mechaniken dahinter. So, jetzt sag ihm nochmal einfach nur
+
+[50:38] Speaker A: done, also D O N, dass er
+
+[50:41] Speaker D: weiß ist erledigt und dann schicks ab und haut es wieder direkt rein in die Verarbeitung. Genau, Sag ihm mal, ich bin eingeloggt.
+
+[51:17] Speaker A: Was hat er denn?
+
+[51:18] Speaker D: Was stellt er sich denn heute so an?
+
+[51:26] Speaker E: Ich soll einfach nur Enter drücken.
+
+[51:37] Speaker A: Was denn?
+
+[51:40] Speaker D: So, jetzt ist er nämlich doch auf Claude Chrome umgestiegen, so wie es aussieht von Playwright. Warum auch immer er sich jetzt für was anderes entschieden hat. Frag ihn mal bitte, warum er nicht Playwright nutzt. Da bist du schon eingeloggt gewesen.
+
+[51:57] Speaker A: Wie wird es geschrieben?
+
+[51:58] Speaker D: Playwhite Play. Ja, passt. So, da ist eigentlich noch ein W dazwischen, aber der weiß doch, was du meinst. Also eigentlich mit wr quasi. Räumen das mal durch dazwischen. Mach mal, mach mal Escape räumlich dazwischen.
+
+[52:31] Speaker A: Jetzt ist Marvin weg. Tobias Andreas, läuft es bei euch
+
+[52:42] Speaker F: ist eine Bearbeitung?
+
+[52:50] Speaker D: Er hat irgendwie Probleme. Automationsskript hat Timing Probleme. Das ist zu dynamisch und komplex für die zuverlässige Automation.
+
+[53:01] Speaker E: Der hat gerade den ganzen Browser geschlossen.
+
+[53:06] Speaker D: Ich sollte jetzt mit.
+
+[53:09] Speaker A: Genau, genau, ich möchte was zeigen.
+
+[53:14] Speaker D: Ach schau mal, da kommt der Fabian
+
+[53:16] Speaker A: dazu,
+
+[53:19] Speaker D: aber irgendwie funktioniert es nicht. Ja, schauen wir uns an. Der stolpert anscheinend ein bisschen so in den ersten Schritten. So, Mavi, du bist aber noch da, oder?
+
+[53:28] Speaker E: Ne, der schließt immer den Browser und dann seid ihr logischerweise weg.
+
+[53:33] Speaker D: OK, dann braucht ihr mal. Hi Fabian, grüß dich. Dann braucht er ein bisschen ein Prompt. Also pass mal auf, du kriegst jetzt mal einen Prompt von mir.
+
+[53:42] Speaker A: Hey Claude, hier ist der Instructor von
+
+[53:45] Speaker D: Marvin in Sachen KI und Automatisierung.
+
+[53:47] Speaker A: Marvin lernt hier gerade mehrere Dinge auf einmal.
+
+[53:50] Speaker D: Wir befassen uns heute mit der Fähigkeit von KI, den Browser zu bedienen und dafür möchten wir das ausschließlich erstmal Playwright gehen wird. Ich möchte, dass du die Sachen nicht
+
+[53:59] Speaker B: überverkomplizierst, sondern dass du hier einfach Playwright
+
+[54:03] Speaker A: benutzt, um den Browser zu bedienen.
+
+[54:06] Speaker D: Playwright war schon offen und Marvin hatte sich auch schon eingeloggt über den QR Code.
+
+[54:13] Speaker B: In zweiter Instanz befassen wir uns heute
+
+[54:15] Speaker A: mit API Schnittstellen und möchten als Beispiel
+
+[54:19] Speaker D: ein Telegram Bot programmieren bzw. Von dir über Browserbedienung machen lassen.
+
+[54:24] Speaker A: Wir werden dann, sobald der Bot steht, später ein GPT daran anschließen und wir
+
+[54:30] Speaker B: werden auch ein Text to Speech Tool
+
+[54:34] Speaker D: anschließen, damit wir uns Hörbücher machen lassen können.
+
+[54:37] Speaker A: Bitte gehe jetzt möglichst unkompliziert durch den Prozess. Wenn du etwas brauchst, sag Bescheid, aber
+
+[54:42] Speaker D: experimentiere nicht zu viel herum. Die Standard Best Practices, um sowas zu
+
+[54:46] Speaker B: machen, sind eigentlich ziemlich simpel.
+
+[54:55] Speaker A: So, jetzt hast du Prompt bekommen.
+
+[55:01] Speaker F: Also mir hat jetzt der Bussfaser geschrieben
+
+[55:04] Speaker A: mit
+
+[55:07] Speaker F: use this token to access the API.
+
+[55:11] Speaker D: Super.
+
+[55:12] Speaker A: Da gibt's einfach die ganze Nachricht an
+
+[55:14] Speaker D: Claude Code, diese ganze komplexe Nachricht, der weiß damit was anzufangen.
+
+[55:20] Speaker E: Ich unterbreche den jetzt hier wieder bitte
+
+[55:23] Speaker F: alles komplett mit Edit Boots, Boot Settings, Web Apps, Games, ne?
+
+[55:30] Speaker A: Dieser lange Token drin steht.
+
+[55:33] Speaker D: Komplizierte Token, genau.
+
+[55:37] Speaker B: So Fabian, du hörst mich schon,
+
+[55:44] Speaker D: Hi.
+
+[55:44] Speaker A: Da würde ich dich kurz up to
+
+[55:45] Speaker D: speed bringen, dass du weißt, worum gerne wir kamen heute.
+
+[55:50] Speaker B: Und Janine hat gesagt, Mensch Marco, ich würde gerne mehr über diese Schnittstellen verstehen.
+
+[55:55] Speaker A: Einfach mal so, wie kann ich ein
+
+[55:56] Speaker B: Klo dann verschiedene Sachen anbinden, Wie funktionieren
+
+[55:58] Speaker D: diese Schnittstellen, diese ganze, das eröffnet mir die ganze Welt.
+
+[56:02] Speaker B: Wir haben dann kurz ein bisschen über API gesprochen, das ist dir wahrscheinlich schon im Begriff.
+
+[56:06] Speaker D: Genau.
+
+[56:08] Speaker B: Und haben jetzt gesagt, pass mal auf,
+
+[56:09] Speaker D: API ist grundsätzlich das, was Software mit Software kommunizieren lässt. Normalerweise ist alles am Computer gebaut, dass
+
+[56:14] Speaker B: wir mit Programmen Programmen, aber irgendwann muss auch Software mit Software und im KI Zeitalter, wenn KI unsere Software bedienen soll,
+
+[56:22] Speaker D: dann ist ja Software mit Software quasi
+
+[56:24] Speaker B: der heiße Scheiß, während Mensch zu Software immer weniger wird. Wir haben uns heute ein Beispiel geschnappt
+
+[56:30] Speaker D: und haben gesagt, wir machen jetzt, wir lassen mal einen Telegram Bot bauen, also wir benutzen mal Telegram, kennst du wahrscheinlich.
+
+[56:38] Speaker B: Und in Telegram wollen wir nicht mit einem anderen Menschen sprechen, sondern wir wollen
+
+[56:41] Speaker D: an der anderen Seite der Leitung mal
+
+[56:43] Speaker B: eine KI haben, dass wir quasi eine KI über Telegram.
+
+[56:46] Speaker A: Und diese KI, die wird immer über API sozusagen getriggert. Dafür brauchen wir aber erstmal einen Bot.
+
+[56:52] Speaker B: Also wie wenn wir mit einem anderen Menschen einen Chat eröffnen, eröffnen wir diesmal aber keinen Chat mit einem Menschen, sondern
+
+[56:57] Speaker A: halt mit einem Bot. Und in diesem Bot steckt eine KI drin und das bauen wir jetzt.
+
+[57:02] Speaker B: Und weil wir gleich ganz cool sein wollen, machen wir das Ganze nicht händisch,
+
+[57:06] Speaker A: sondern wir benutzen eine browserbedienende KI. Das bedeutet, wir sagen zu unserer KI,
+
+[57:11] Speaker B: hey, benutz du den Browser, mach du
+
+[57:12] Speaker D: das alles, ich habe gar keinen Bock
+
+[57:13] Speaker A: mich damit selbst zu befassen.
+
+[57:16] Speaker B: Und dafür gibt es grundsätzlich zwei Möglichkeiten.
+
+[57:19] Speaker D: Es gibt bei Cloud Code einmal die
+
+[57:21] Speaker B: sogenannte Cloud in Chrome Extension, Dann kann
+
+[57:24] Speaker A: dein Cloud in deinen Chrome Browser klicken, screenshotten, gucken was abgeht und so weiter. Und es gibt auch das Playwright MCP, das nutzt Marvin hier gerade im Screen Sharing, das ist ein bisschen stabiler, das
+
+[57:35] Speaker B: hat so andere Vor und Nachteile.
+
+[57:36] Speaker D: Es ist halt einfach eine Konkurrenz dazu
+
+[57:39] Speaker B: und sagt sein der stolpert hier gerade noch ein bisschen bei Marvin, bei Tobias
+
+[57:43] Speaker D: hat schon geklappt und wir sagen im
+
+[57:45] Speaker B: Endeffekt hey, richte mir mal diesen Telegram Bot ein. Ich will gar nicht wissen, wie es geht.
+
+[57:48] Speaker D: Mach einfach. Ich werde euch das später erklären.
+
+[57:50] Speaker B: Aber erstmal kommen wir zum Ergebnis.
+
+[57:54] Speaker D: Genau, das war jetzt der ganz kurze Recap. Also ich habe auch schon versucht ein paar Schnittstellen zu bauen. Ich habe es mit Programmen versucht, die selbst der API hatten. Das hat gut funktioniert direkt. Hat aber ein Portal, wo es quasi keine API gab. Da hat er dann auch erst gestreikt und hat ne, das kann er nicht. Und dann hat er irgendwie was versucht. Ich habe mich dann eingeloggt, habe alles durchgeklickt. Ich weiß jetzt den Begriff nicht mehr genau, aber der hat sich das irgendwie gemerkt, hat geguckt, was da passiert und hat dann im Nachhinein gesagt, es kann doch eine Schnittstelle bauen und das hat dann auch funktioniert.
+
+[58:32] Speaker A: Es gibt häufig, also es gibt immer
+
+[58:35] Speaker B: der Weg, der immer geht, aber der, wie sagt man, am unelegantesten ist, ist
+
+[58:40] Speaker D: die Browserbedienung, weil er dann na gut,
+
+[58:42] Speaker B: über die menschliche Schnittstelle komme ich immer
+
+[58:43] Speaker A: rein, mach dann halt ein Screenshot, vermisst das Bild, schaut, welche Knöpfe sind da,
+
+[58:49] Speaker D: dann kann er einen Klick auflösen auf
+
+[58:51] Speaker B: eine XY Position und so weiter.
+
+[58:52] Speaker D: Das dauert halt alles, weil bis der mal sein Bild verarbeitet.
+
+[58:57] Speaker B: Aber so kommt er gerade wenn man viel Zeit ihm gibt, so kommt er eigentlich immer zum Ziel und spätestens dann, also so kann er sich eigentlich einen
+
+[59:05] Speaker D: API Zugang selber rausholen, ohne dass du da irgendwas bedienen musst bei Microsoft Azure
+
+[59:09] Speaker A: und so ein Spaß.
+
+[59:10] Speaker E: Marco, soll ich hier mal ja sagen?
+
+[59:14] Speaker B: So, pass auf, bevor du ihm ja
+
+[59:15] Speaker A: sagst, kurz zur Erklärung, geh mal bitte
+
+[59:18] Speaker D: jetzt, geh mal jetzt öffne mal deinen
+
+[59:20] Speaker A: Browser, den er auch benutzt hat.
+
+[59:24] Speaker E: Der ist ja wieder zu, den hat er wieder geschlossen.
+
+[59:27] Speaker B: Dann öffne mal dein normales Telegram.
+
+[59:28] Speaker D: Das hast du, glaube ich, auch noch
+
+[59:29] Speaker A: offen auf dem Handy oder so, dass
+
+[59:32] Speaker D: es alles sehen können. Genau, einfach nochmal Telegram aufmachen.
+
+[59:36] Speaker B: Da bist du wahrscheinlich auch immer noch eingeloggt,
+
+[59:40] Speaker D: weil das dürfte sich merken, den Login.
+
+[59:42] Speaker A: Genau. So, jetzt seht ihr hier oben den Botfather. Jetzt ist es grundsätzlich so, ein Bot ist, also wenn du links lauter Chats offen hast mit ganz vielen Menschen, dann
+
+[59:56] Speaker B: sind das alles keine Bots.
+
+[59:58] Speaker A: Wenn du einen Chat offen hast, der
+
+[60:00] Speaker B: erstmal eine leere Hülle ist, wo kein
+
+[60:02] Speaker A: Bot, wo kein Mensch dahin ist, dann ist es ein Bot. Warum Von Robot die leere Hülle?
+
+[60:08] Speaker B: Und sowas zu programmieren, ist eigentlich relativ kompliziert, ehrlich gesagt.
+
+[60:12] Speaker A: Telegram hat dafür den Botfather erschaffen.
+
+[60:15] Speaker B: Der Name ist, glaube ich, angelehnt an Godfather.
+
+[60:18] Speaker A: Und der Botfather, der gibt euch quasi
+
+[60:21] Speaker B: die Möglichkeit, wenn du mal ein bisschen
+
+[60:22] Speaker A: hochscrollst im Chat, das ist Der Botfather,
+
+[60:26] Speaker B: der hi, grüß dich. Du kannst hier ein paar Befehle eingeben, zum Beispiel NewBot und das hat er jetzt auch gemacht.
+
+[60:33] Speaker A: Wenn du nochmal ein bisschen runter scrollst.
+
+[60:36] Speaker D: Er hat jetzt eingegeben Newbot, Das hat
+
+[60:38] Speaker A: er gemacht für dich. Und dann hat er okay, alles klar, du willst einen neuen Bot erstellen, wie soll er heißen? Und dann hat er den Namen eingegeben
+
+[60:44] Speaker B: und dann hat er okay, alles klar, das ist der Name, wie wir ihn ansprechen. Du brauchst aber auch so eine Art Username, wie wenn du dich einloggst. Es gibt den Displaying Name und den
+
+[60:51] Speaker D: Username, wenn man das so kennt von manchen Sachen. Und dann gibt es jetzt hier diesen
+
+[60:55] Speaker B: Bot Namen und den User Usernamen. Und jetzt Hey, alles klar, ich habe dein Bot generiert.
+
+[61:00] Speaker A: Das ist jetzt eine leere Roboterhülle, die kann erstmal gar nichts, aber die ist da, diese Hülle, wie so ein Harness bei einer KI. Und hier ist übrigens dein API Key, mit dem du dich authentifizieren kannst, dass du bist.
+
+[61:11] Speaker B: Und damit kannst du dein Roboter Leben reinbringen, was auch immer du mit dieser Bothülle machen willst.
+
+[61:15] Speaker D: Aber jetzt existiert erstmal dieser leere Bot,
+
+[61:17] Speaker A: der kann nichts, das ist nur eine Hülle. So, und jetzt wollen wir folgendes Jetzt wollen wir Wir wollen, dass eine KI mittels diesen Bots mit dir sprechen kann.
+
+[61:32] Speaker B: Und der Bot ist sozusagen die Roboterhülle, die von der KI benutzt werden kann. Und du sagst Und du sagst ihm
+
+[61:39] Speaker A: Hey, wir möchten das LLM von OpenAI benutzen. GPT 5.5 zum Beispiel. Jetzt ist meine Hast du schon einen ChatGPT Account?
+
+[61:53] Speaker E: Ich habe einen von der Arbeit aus, aber den würde ich jetzt hier ungern
+
+[61:56] Speaker D: Ja, den nimmst du mal nicht.
+
+[62:03] Speaker E: Kann ich nicht meinen normalen Cloud Account nehmen?
+
+[62:06] Speaker B: Kannst du auch.
+
+[62:07] Speaker D: Es ist jetzt grundsätzlich so, wenn du
+
+[62:10] Speaker B: über API eine KI ansprichst, dann ist
+
+[62:13] Speaker D: das ein anderer Zugangskanal, wie wenn du
+
+[62:15] Speaker A: es über ein normales Frontend ansprichst.
+
+[62:16] Speaker B: Und die rechnen dann auch extra ab.
+
+[62:19] Speaker D: Du hast dann also eine nutzungsbasierte Kostenabrechnung,
+
+[62:24] Speaker A: die sind relativ günstig.
+
+[62:25] Speaker D: Wir gucken uns das dann auch an,
+
+[62:26] Speaker A: was das genau kostet und so weiter. Ich persönlich würde jedem empfehlen, OpenAI immer
+
+[62:32] Speaker B: zur Hand zu haben, weil es sind
+
+[62:33] Speaker D: momentan die Marktvorreiter, mit denen man am meisten machen kann.
+
+[62:36] Speaker B: Später kann man dann auf Spezialmodelle, Datenschutzgrund
+
+[62:39] Speaker D: und sonst was ausweichen.
+
+[62:40] Speaker B: Aber ein guter startpunkt ist immer OpenAI.
+
+[62:42] Speaker E: Reicht da denn auch der kostenfreie Open Account?
+
+[62:45] Speaker D: Nein, also andersrum.
+
+[62:48] Speaker A: Du brauchst gar kein ChatGPT Account, weil ChatGPT, wie wir alle wissen, ist eine Browser Anwendung.
+
+[62:54] Speaker B: Browseranwendung.
+
+[62:55] Speaker D: Stellt deine Nachrichten durch ans LLM.
+
+[62:57] Speaker B: Du möchtest aber über API zugreifen.
+
+[62:59] Speaker D: Das ist eine ganz andere Welt.
+
+[63:02] Speaker A: Diese Welt müsst ihr euch zwangsreise reinbegeben.
+
+[63:05] Speaker B: Da beginnt erstmal die fortgeschrittene KI Nutzung.
+
+[63:07] Speaker A: Wirklich.
+
+[63:07] Speaker D: Wir gucken uns das jetzt alles in Ruhe an. Ich würde dir empfehlen, Ehrlich gesagt, dann 5 Euro Guthaben mal, ich glaube, du kriegst sogar 5 Euro geschenkt von denen
+
+[63:16] Speaker B: und das 5 Euro Guthaben mal aufzubrauchen. Damit kommst du ziemlich weit und wenn
+
+[63:19] Speaker D: du dann irgendwann Bock hast, kannst du mehr machen, musst du aber auch nicht.
+
+[63:23] Speaker B: Ich würde es jetzt trotzdem, wenn es
+
+[63:25] Speaker D: für dich okay ist, an deinem Beispiel durchexerzieren.
+
+[63:30] Speaker B: Wir müssen uns jetzt mal eins kurz
+
+[63:32] Speaker D: klar machen und dafür brauche ich jetzt irgendwie trotzdem mal kurz mein iPad, weil
+
+[63:35] Speaker B: sonst wird es ein bisschen unübersichtlich. Mal bitte kurz mein iPad.
+
+[63:40] Speaker E: Soll ich jetzt parallel schon mal OpenAI nochmal Zugang anlegen oder was?
+
+[63:44] Speaker B: Ja, mach mal. Geh mal bitte auf Google und google mal Platform OpenAI. Genau.
+
+[63:56] Speaker A: Und da gehst du jetzt mal rein
+
+[63:59] Speaker B: und da legst du jetzt mein Account bitte an.
+
+[64:03] Speaker A: Ich bin gleich bei euch. So,
+
+[64:25] Speaker F: sollen wir das auch machen, Marco, Oder einfach nur zugucken?
+
+[64:29] Speaker A: Ich würde es euch empfehlen mitzumachen. Ja, Also.
+
+[64:49] Speaker D: Wunderbar.
+
+[64:50] Speaker A: Account ist kreiert. Jetzt machst du mal folgendes. Jetzt klickst du mal links.
+
+[64:58] Speaker B: Also du befindest dich jetzt in der Entwicklerplattform von OpenAI, deswegen die Dinger heißen meistens Platform oder Development Studio oder irgendwie sowas, wo man dann schon weiß, okay, das ist irgendwie so für die Entwickler.
+
+[65:10] Speaker A: Du hast jetzt links grundsätzlich die Möglichkeit,
+
+[65:13] Speaker B: einen API Schlüssel auszustellen.
+
+[65:15] Speaker A: Ein API Schlüssel ist immer der Key zu Hey, ich habe einen Account und
+
+[65:20] Speaker B: das ist der Schlüssel zu meinem Account.
+
+[65:22] Speaker A: Früher gab es Username und Passwort.
+
+[65:24] Speaker B: Ein API Key dient dem gleichen Zweck, nur dass es eben nur noch ein Schlüssel ist, ohne dass man zwei Sachen braucht. Du kannst jetzt gerne mal so einen Schlüssel erstellen. Den nennst du jetzt einfach mal. Nenne ihn jetzt mal Telegram.
+
+[65:42] Speaker A: Genau. Kannst jetzt mal Secret, Genau, Secret Keys.
+
+[65:50] Speaker B: Und das ist jetzt dein Schlüssel.
+
+[65:51] Speaker A: Den kopierst du und den darfst du
+
+[65:53] Speaker B: jetzt gerne ihm auch in roher Form geben.
+
+[65:57] Speaker A: Wen ihm?
+
+[65:58] Speaker B: Den Botfather, ne, unserem Cloud Code einfach.
+
+[66:00] Speaker E: Aber bist jetzt schlau, den API Schlüssel in den Cloud Code reinzuschmeißen.
+
+[66:06] Speaker A: Das ist für den Moment in Ordnung.
+
+[66:08] Speaker B: Wir werden später eine sichere Variante kennenlernen, aber momentan ist dieser Schlüssel, den können wir auch einfach wieder löschen, wenn wir wissen, wie wir es besser machen.
+
+[66:14] Speaker A: Das würde jetzt aber
+
+[66:18] Speaker B: steht da schon was?
+
+[66:19] Speaker A: Einfach so abschicken.
+
+[66:20] Speaker B: Dann wird er schon mal Der wird
+
+[66:22] Speaker A: sofort wissen, was das für eine Form
+
+[66:24] Speaker B: von Schlüssel ist und was es damit auf sich hat. So, jetzt muss ich auch kurz bei
+
+[66:28] Speaker D: mir einen Code bestätigen, damit ich in unser Meeting reinkomme. Eine Sekunde.
+
+[66:43] Speaker E: Hier siehst du, solltest du sofort den Open Air Dashboard rewalken.
+
+[66:49] Speaker B: Alles gut, alles gut, keine Angst, ich bin da, es kann nichts passieren.
+
+[66:59] Speaker D: Ich würde jetzt nicht empfehlen, eine Million
+
+[67:01] Speaker B: Euro Guthaben auf diesen Schlüssel draufzuladen und ihn dann in der Öffentlichkeit preiszugeben, Aber momentan handelt es sich hier um ein 0 Euro Guthaben.
+
+[67:09] Speaker A: Das ist jetzt nicht so besonders schützenswert,
+
+[67:11] Speaker B: deswegen ist alles in Ordnung.
+
+[67:14] Speaker A: So, perfekt. Sag ihm mal bitte, er soll es mit 5.5 bauen.
+
+[67:24] Speaker B: Und sag ihm mal einfach nur als LLM anschließen. So, den Rest schauen wir uns gleich an.
+
+[67:35] Speaker A: Gut, also ihr werdet so, wer ist
+
+[67:40] Speaker B: denn jetzt gerade noch richtig bei sich beschäftigt und am Bauen mal kurz die Hand hoch.
+
+[67:45] Speaker C: Ich musste ja gerade kurz weg. Ich habe es jetzt geschafft, dieses Telegram Account Ding anzulegen und der hat mir gesagt, dass er einen Test erstellt hat.
+
+[67:55] Speaker A: Wunderbar, kein Problem.
+
+[67:56] Speaker C: Aber Claude Code rattert noch im Hintergrund. Ich weiß aber nicht, was er da tut.
+
+[68:00] Speaker A: Kein Problem.
+
+[68:01] Speaker B: Ich würde euch alle bitten, kurz die Arbeit zu unterbrechen und kurz meiner Erklärung mit Augen und Ohren zu folgen. Marvin, du kannst auch kurz das Bildschirm teilen beenden. Wir machen dann gleich da weiter. Es kommt jetzt der Punkt wo einfach das Verständnis ein bisschen nachziehen muss zu dem, was wir hier eigentlich tun. So, teil mal ruhig den Screenshare. Genau. So, und jetzt bitte alle Augen Kurz auf mein iPad. Gut, alle da. Ja, wir haben gelernt, wie ein LLM funktioniert.
+
+[68:32] Speaker A: So, und wir haben auch gelernt, dass
+
+[68:35] Speaker B: wir in dieses LLM Prompt reinwerfen können
+
+[68:37] Speaker A: und dann gibt es uns Tokens zurück.
+
+[68:39] Speaker B: Wir haben uns bis jetzt zum Beispiel
+
+[68:42] Speaker A: über chatgpt.de in unserem Browser eingeloggt und
+
+[68:48] Speaker B: haben dann hier unsere Nachrichten reingeschrieben.
+
+[68:50] Speaker A: Dann war ChatGPT als Oberfläche so freundlich
+
+[68:53] Speaker B: und hat für uns das LLM konsultiert. Und das, was das LLM uns zurückgegeben hat, hat ChatGPT uns hier in einer Nachricht angezeigt.
+
+[69:00] Speaker A: Selbiges tun wir mit Cloud Code. Cloud Code ist eine Oberfläche, wir nennen es Harness.
+
+[69:09] Speaker B: Diese Oberfläche konsultiert das LLM, teilt dem LLM natürlich auch mit, dass es die Nachrichten in Cloud Code anzeigt. Und das Schöne ist ja, dass das LLM dann sagen Cool, wenn mir mein Nutzer was schreibt, dann kann ich ihm natürlich hier eine Antwort geben. Ich kann aber auch in einer bestimmten Sprache Tool Calling zum Ausdruck bringen. Und Cloud Code hat ja dann quasi
+
+[69:31] Speaker A: wie so ein Harness aussenrum und hier
+
+[69:34] Speaker D: drin liegen ja dann Werkzeuge, haben wir
+
+[69:36] Speaker B: gelernt, wisst ihr Bescheid? Und ich als LLM kann ja Hey, das ist eine Nachricht an meinen Nutzer und ich würde aber auch gerne ein Tool auslösen. Und dann wird Cloud Code als Programm Hey, mein LLM hat mir die Anweisung gegeben, jetzt HTML Datei generieren, jetzt HTML Datei schreiben. So funktioniert das, was wir hier bisher nutzen.
+
+[69:57] Speaker A: Jetzt ist es All Diese Programme, also Cloud Code und ChatGPT, die müssen immer an das LLM, was ja meistens in
+
+[70:05] Speaker B: den USA auf dem Rechenzentrum liegt, müssen ja eure ganzen Tokens als Prompt dahin schicken. Und dann schickt euch das LLM was zurück.
+
+[70:12] Speaker A: Das funktioniert im Hintergrund nur über API.
+
+[70:14] Speaker B: Das hier ist eine Software zu Software Schnittstelle. Das hat euch bisher überhaupt nicht zu interessieren gehabt. Es lief einfach und ihr musstet euch gar keine Gedanken darüber machen. Ich teile euch jetzt aber hiermit mit, dass hier einfach nur eine API Schnittstelle ist und in diese Programme eingebacken sind diese API Aufrufe, die hey, LLM OpenAI, ich bin hier Cloud Code von Marvel
+
+[70:34] Speaker A: Hänsel in Deutschland und ich hätte übrigens
+
+[70:36] Speaker B: hier einen Prompt und kannst du mir bitte hier Next Token Prediction machen und so weiter.
+
+[70:40] Speaker A: Das passiert die ganze Zeit im Hintergrund. Was wir jetzt machen, wir wollen jetzt
+
+[70:45] Speaker B: auch so einen API Call quasi triggern an ein LLM, aber wir wollen hier
+
+[70:51] Speaker A: unsere Custom bzw. Customized Oberfläche. Das heißt, wir bauen eine Software und diese Software, die soll das LLM nutzen und die Software heißt nicht Close Code und die heißt nicht chatgpt de. Diese Software, die könnte sein euer eigener HTML Code, die könnte auch sein euer
+
+[71:15] Speaker B: eigener Chatbot, was im Prinzip ein HTML
+
+[71:19] Speaker A: Code wäre auf eurer hauseigenen Website. Das kann aber auch sein euer eigener Telegram Bot. So ein Telegram Bot ist ja auch
+
+[71:32] Speaker B: wieder nur eine Hülle und wir wollen
+
+[71:34] Speaker A: in diese Hülle quasi API Calls triggern. Der Hey, wenn ich im Telegram Bot hier oben was reinschreibe, dann möchte Das ist ein Bot. Der Bot ist eine leere Hülle.
+
+[71:43] Speaker B: Wenn ich in diese leere Hülle eine
+
+[71:45] Speaker A: Nachricht reinschreibe, passiert richtig gar nichts, weil es eine leere Hülle ist.
+
+[71:49] Speaker B: Wenn ich mit einem leeren Roboter rede und bei dem Angriff und Hallo Roboter, dann wird der sich nicht bewegen, weil das ist ein Stück Metall, das ist leer, aber es ist dafür gebaut, dass
+
+[71:57] Speaker A: da Sachen drin gebaut werden. Das ist ein Bot. Und wenn ich jetzt in diesen Bot Mechanik einbaue, also einen Programmcode einbaue, der
+
+[72:06] Speaker B: Wenn ich hier eine Nachricht eingebe und dann auf Abschicken klick, wie man es halt in WhatsApp und Telegram so machen
+
+[72:10] Speaker A: kann, dann möchte ich, dass du diese Nachricht nimmst und als Prompt behandelst und per API an ein LLM schickst.
+
+[72:17] Speaker B: Wir sprechen jetzt hier speziell über das LLM OpenAI GPT später gerne auch andere für den Moment aber mal das, womit wir vertraut sind, also Anthropic und OpenAI
+
+[72:28] Speaker A: und die Antwort, die möchte ich gerne als Chatnachricht zurückbekommen.
+
+[72:34] Speaker B: Genau das ist es, was Sie gerade machen.
+
+[72:37] Speaker A: Jetzt ist es, diese Hülle zu bauen
+
+[72:39] Speaker B: erstmal und diesen Bot zu erstellen, ist normalerweise ein bisschen Programmiererarbeit. Wir wollten uns das sparen und haben
+
+[72:45] Speaker A: Hey, Telegram ist ja so freundlich und
+
+[72:48] Speaker B: und lässt uns über diesen Botfather mit
+
+[72:50] Speaker A: einem Slash Command solche Bots erstellen.
+
+[72:52] Speaker B: Deswegen nutzen wir da Telegram, weil es besonders easy ist. Dass das Ding jetzt bei Marvin so ein bisschen gestolpert ist. War ein bisschen schade für den Show Demo Effekt.
+
+[73:00] Speaker A: Normalerweise geht es mit einem Prompt, aber
+
+[73:02] Speaker B: ihr wisst alle, wie es ist. Beim zweiten Mal klappt es dann.
+
+[73:06] Speaker A: Das Interessante ist, wir können diesen Bot jetzt, können wir jetzt programmieren lassen von unserem Cloud Code.
+
+[73:13] Speaker B: Das heißt, wir können jetzt zu Cloud
+
+[73:14] Speaker A: Code sagen, hey, greif doch mal über
+
+[73:17] Speaker B: API auf Telegram zu und programmier uns diese Hülle hier oben bitte mal so, dass immer wenn ich hier was reinschreibe,
+
+[73:24] Speaker A: das automatisch an ChatGPT geht.
+
+[73:27] Speaker B: Beachtung, was auch von ChatGPT benutzt wird.
+
+[73:30] Speaker A: ChatGPT ist ja eine Anwendung, die via
+
+[73:34] Speaker B: API von dieser LLM profitiert.
+
+[73:37] Speaker A: Kommt ihr damit klar soweit.
+
+[73:41] Speaker B: Und wir wollen auch von diesem LLM profitieren, aber nicht via ChatGPT, sondern via Telegram, das auch nur auf GPT 5.5 den Motor quasi zugreift, unser LLM.
+
+[73:51] Speaker A: Und genau das bauen wir hier gerade.
+
+[73:53] Speaker B: Ob wir jetzt später Anwendung A, B,
+
+[73:55] Speaker A: C oder D an die API CDE oder F anbinden, ist mir erstmal egal.
+
+[73:59] Speaker B: Wir lernen gerade diese Schnittstelle genauso. Das hier sind ja alles API Schnittstellen, diese zwei hier. Und wir haben jetzt ein Programm quasi mit einem anderen Programm verbunden, Auch das hier ist eine API Schnittstelle. Und später werden wir dann uns vielleicht, wenn wir es schaffen, noch anschauen, wie die Janine mit ihrem Cloud Code auf hier drüben Windows zugreifen kann und das wird auch nur API sein, nicht Windows,
+
+[74:21] Speaker A: sondern Microsoft, wollte ich sagen. So, machen wir weiter im Text.
+
+[74:27] Speaker B: Marvin, einmal wieder den Bildschirm teilen,
+
+[74:31] Speaker A: halbwegs klar soweit, was ich da erklärt habe. Von der Logik her erstmal nur OK,
+
+[74:39] Speaker B: kein Einspruch,
+
+[74:41] Speaker E: Aber der neue Bot, der jetzt gebaut wurde, ist jetzt nicht der Botfaser, sondern der hier.
+
+[74:47] Speaker B: Genau, jetzt siehst du hier Marvin Hörbuch Bot und da kannst du jetzt einmal oben rechts auf Start klicken. Dieser Knopf ist eine Sicherheitsfunktion, damit der sich nicht von alleine kreieren kann. Und jetzt ist links in deiner Chatleiste
+
+[75:01] Speaker A: ist jetzt ein Chatverlauf, auch ein Chatverlauf,
+
+[75:04] Speaker B: wo kein anderer Mensch am anderen Ende der Leitung sitzt, sondern ein leeres Stück Hülle.
+
+[75:09] Speaker A: Und jetzt kannst du mal kurz auf Claude gehen.
+
+[75:15] Speaker B: So, dem genehmigt jetzt mal durch, was er da zu tun hat.
+
+[75:24] Speaker A: So, und er wird jetzt in diese
+
+[75:25] Speaker B: leere Roboterhülle eine Funktionalität einbauen. Immer wenn du was reinschreibst, dann soll
+
+[75:30] Speaker A: das wie ein Prompt behandelt werden, der zu GPT 5.5 geschickt wird.
+
+[75:33] Speaker E: Aber dafür müssen wir ihm erstmal den Prompt geben, dass er das macht.
+
+[75:38] Speaker A: Das macht er gerade schon.
+
+[75:39] Speaker E: Und woher weiß er das? Das haben wir ihm noch gar nicht gesagt. Oder ist.
+
+[75:41] Speaker A: Es war in meinem Prompt vorhin schon inkludiert. Achso, okay.
+
+[75:45] Speaker B: Genau, das war schon angewiesen.
+
+[75:58] Speaker A: Genau. So jetzt ist es Flo muss jetzt erstmal die API von OpenAI verstehen. OpenAI sagt nä hey, wenn jemand mit
+
+[76:08] Speaker B: mein NLMS sprechen will, gibt es zwei Zugangskanäle.
+
+[76:11] Speaker A: Entweder ihr kommt über ChatGPT, das ist unser hauseigener Zugang, oder ihr baut euch
+
+[76:15] Speaker B: euren eigenen Zugang zu unseren KI Modellen. Das ist dann über API. Daran könnt ihr anschließen, was ihr wollt,
+
+[76:20] Speaker A: aber ihr müsst programmieren können oder jemanden haben, der programmieren kann. Idee erstmal klar von den API Schnittstellen. So, du siehst schon, er baut jetzt
+
+[76:38] Speaker B: Ich gucke dir das mal genau an.
+
+[76:39] Speaker A: Write Desktop Marvin Hörbuchbot und jetzt bot JavaScript.
+
+[76:43] Speaker B: Das ist eine Datei, die hat er jetzt geschrieben.
+
+[76:44] Speaker A: Das ist ein Skript.
+
+[76:46] Speaker B: Dieses Skript wird er über API in
+
+[76:48] Speaker A: den Bot reinpflanzen, in den Telegram Bot,
+
+[76:51] Speaker B: damit der Telegram Bot einen Automatismus hat, der quasi immer die Nachrichten an OpenAI weiterleitet.
+
+[77:09] Speaker E: Und entsprechend so viele Bots bauen, wie ich wollen würde.
+
+[77:12] Speaker A: Richtig.
+
+[77:13] Speaker B: Ich habe auch ganz bestimmte Bots für ganz bestimmte Zwecke.
+
+[77:16] Speaker A: Ich habe für meine Mitarbeiter bestimmte Bots
+
+[77:19] Speaker B: gebaut, die helfen meinen Mitarbeitern wirklich ganz deutlich bei ihrer Arbeit.
+
+[77:23] Speaker C: Ich habe noch mal eine Frage an der Warum brauche ich einen Telegram Bot, um mit ChatGPT zu kommunizieren, wenn ich nicht ich könnte auch einfach ChatGPT öffnen.
+
+[77:34] Speaker B: Ja, stell dir vor und dann auf
+
+[77:35] Speaker C: das Modell und dann brauche ich auch keine Extrakosten, weil das nicht anders abgerechnet wird. Ich verstehe gerade den Sinn auch nicht,
+
+[77:42] Speaker A: weil die Use Cases noch fehlen und es ist verständlich. Ich gebe dir ein Beispiel Use Case.
+
+[77:47] Speaker B: Wenn ich jetzt dann mit euch heute durch bin, setze ich mich ins Autofahren nach Nürnberg und halte einen Vortrag.
+
+[77:54] Speaker A: So, diesen Vortrag habe ich nicht vorbereitet, den kenne ich.
+
+[77:57] Speaker B: Ich weiß auch noch gar nicht, vor wem ich diesen Vortrag halte, weil ich lebe im KI Zeitalter und da mache
+
+[78:01] Speaker A: ich Wenn ich jetzt mit euch durch bin, dann gebe ich an meinen Cloud Code, gebe ich jetzt dann ein Prompt
+
+[78:06] Speaker B: und der wird so Hey, ich fahre nach Nürnberg zu den sogenannten Aktiv Senioren und für den halte ich heute einen Vortrag.
+
+[78:14] Speaker A: Bitte recherchiere die mal Wer sind die eigentlich und
+
+[78:21] Speaker B: was wollen die eigentlich von
+
+[78:22] Speaker A: mir für einen Vortrag haben? Der Chef von denen hat nämlich mal
+
+[78:26] Speaker B: mit meinem Kollegen telefoniert, Hey, kann der
+
+[78:29] Speaker A: Marco bei uns auch mal einen Vortrag halten?
+
+[78:30] Speaker B: Und mein Kollege macht er bestimmt. Und da haben die besprochen, worum es
+
+[78:34] Speaker A: in dem Vortrag gehen soll.
+
+[78:35] Speaker B: Das wurde auch aufgezeichnet, dieses Gespräch.
+
+[78:38] Speaker A: Ich habe jetzt Hey Claude, ich sitze jetzt eine Dreiviertelstunde im Auto und ich
+
+[78:44] Speaker B: würde gerne ein Hörbuch darüber erhalten.
+
+[78:47] Speaker A: In diesem Hörbuch soll mir genau geschildert werden, wer sind die?
+
+[78:51] Speaker B: Was wurde da besprochen? Was sollst du vortragen und so weiter. Ich hätte gerne, lieber Clo, dass du
+
+[78:57] Speaker A: Claude Code, hab mit Telegram gar nichts
+
+[78:59] Speaker B: zu tun, mal den ganzen Kontext reinlädst, aus Google Host, aus den E Mails Host, aus den Transkript holst, die Aktivsenioren recherchierst und dann ein Skript für Marco
+
+[79:07] Speaker A: vorbereitest, mit dem genau geschildert wird, was
+
+[79:10] Speaker B: du da eigentlich denen erzählen sollst.
+
+[79:13] Speaker A: So, und dieses Skript wirst du dann
+
+[79:15] Speaker B: zu einem Hörbuch machen, zu einer MP Datei. Dafür gibt es Dienste, da schickst du
+
+[79:19] Speaker A: einen Text hin und die schicken dir ein MP zurück.
+
+[79:22] Speaker B: Hat auch nichts mit Telegram zu tun, ist dann aber API Call an einen
+
+[79:25] Speaker D: Dienst und dieser Dienst schickt dir eine MP zurück.
+
+[79:27] Speaker A: Und diese MP, die hätte ich gerne,
+
+[79:29] Speaker B: dass du mir die an Markus Telegram
+
+[79:31] Speaker A: Hörbuchbot schickst, weil ich kann dann während
+
+[79:33] Speaker B: der Autofahrt bekomme ich mein Telegram eine
+
+[79:36] Speaker A: MP Datei geschickt auf meinem Handy, wie
+
+[79:39] Speaker B: so eine WhatsApp Sprachnachricht, die jemand schickt und kann die einfach über mein Autoding abspielen. Und hier kam zum Beispiel Telegram ins Spiel, dass ich Mensch, ich habe in Telegram eine MP Datei geschickt bekommen, dafür benötigt Telegram keinen. Also wir bauen hier gerade eine KI
+
+[79:53] Speaker A: ein in Telegram, dafür brauche ich keine
+
+[79:55] Speaker B: KI für das, was ich gerade erzähl. Dafür in einem Bot einfach nur mir
+
+[79:59] Speaker A: von Cloud Code über den API einen
+
+[80:02] Speaker B: MP schicken zu lassen, sodass ich mir im Auto ein Hörbuch darüber hören kann,
+
+[80:05] Speaker A: was mich komplett brieft, braucht keine KI.
+
+[80:08] Speaker B: Jetzt kann ich aber dann jetzt nehmen wir mal an, ich hätte das Gleiche gemacht, was der Marvin hier gerade macht und hätte noch eine KI zusätzlich in
+
+[80:15] Speaker A: den Telegram Bot drin.
+
+[80:17] Speaker B: Jetzt kann ich während der Fahrt eine Sprachnachricht zurückschicken, weil ich will ja jetzt nicht tippen beim Fahren. Ich will nur da reinquatschen in mein Handy und kann sagen Ey du, danke für das Briefing, fand ich gut. Ich hätte aber noch mal eine Rückfrage. Dieses jenes, folgendes Rückfrage ABC, Dann kann Telegram jetzt sagen, aha, ich bin ja
+
+[80:35] Speaker A: angeschlossen an OpenAI, ich schicke jetzt das
+
+[80:38] Speaker D: komplette Hörbuch inklusive Markus kompletter Audio zurück
+
+[80:44] Speaker B: an Markus Claude Code oder an GPT 5.5 an eine KI eben welche KI auch immer. Marco hat nochmal die Rückfrage zu den Aktivsenioren. Jetzt kann die KI für mich Dinge
+
+[80:55] Speaker A: erledigen und kann die Antwort schicken.
+
+[80:58] Speaker B: Und wenn wir das zwischengeschaltet haben, kann die Antwort sogar wieder zu einem neuen Hörbuch gebastelt werden, damit Marco hören kann und nicht lesen muss.
+
+[81:05] Speaker A: Und plötzlich kann ich während dem Autofahren über Text to Speech und Speech to Text, das sind die beiden Konversionskanäle, mit einer KI flüssig kommunizieren und kann dann
+
+[81:19] Speaker B: vielleicht, wenn die KI die richtigen Werkzeuge hat, ihr alle wisst inzwischen, was Werkzeuge sind, sogar mit meinem Wissensmanagement eingebunden, mein Google Mail eingebunden, meine Aufzeichnungen von diesem heutigen Meeting eingebunden, alles. Das heißt, am Ende geht es nur
+
+[81:34] Speaker A: noch darum zu Der Telegram Bot ist
+
+[81:38] Speaker B: nur noch Mittler, Mittler in dem Fall
+
+[81:39] Speaker A: von ein Hörbuch und für KI Nachrichten, Es wäre mit Cloud Code auf dem Weg zwar möglich, eine Remote Session zu
+
+[81:47] Speaker B: steuern, aber Cloud Code kann mir kein MP schicken.
+
+[81:50] Speaker A: Das geht nicht. Dafür ist Telegram der perfekte Platzhalter, weil
+
+[81:54] Speaker B: da kann man das ist ja gebaut
+
+[81:55] Speaker A: für Sprachnachricht und das ist ein Use Case, wo ich irgendwann drauf kam, wie könnte ich das mit Cloud Code lösen? Und ja klar, du nimmst WhatsApp und
+
+[82:06] Speaker B: WhatsApp hieß dann aber ne, boah, die WhatsApp Interaktion ist so ekelhaft und so friemelig, nutzt da mal lieber Telegram.
+
+[82:11] Speaker A: Die sind für sowas gebaut.
+
+[82:13] Speaker B: So kam Telegram zustande und ihr werdet es lieben lernen. Jeder lernt es lieben. Und später gibt es dann aber andere Applikationen. Manche Dinge wollt ihr nicht an Telegram
+
+[82:21] Speaker A: schicken, manches wollt ihr an eure App
+
+[82:23] Speaker D: schicken, die eure To Do Listen haben.
+
+[82:25] Speaker A: Manchmal wollt ihr Microsoft SharePoint kontaktieren.
+
+[82:27] Speaker B: Das ist auch nur eine App, wo ein API Calling gemacht wird.
+
+[82:32] Speaker A: Ihr müsst es machen, ihr werdet es
+
+[82:33] Speaker B: fühlen lernen, wenn ihr es macht. Fabian macht schon ein bisschen, der weiß das glaube ich schon zu schätzen mit den API Calls, aber es kommt dann langsam.
+
+[82:43] Speaker A: So, der Bot läuft. Machen wir folgendes hier. Also mein Bot, ja, schreib mal. So, jetzt steht oben schon Typing es ist ein Fehler aufgetreten. Cool, was machen wir da am besten?
+
+[83:08] Speaker B: Oha, welcher? Ich glaube, das wird immer der Fehler jetzt auftreten.
+
+[83:12] Speaker A: So, folgendes. Geh doch mal zu Cloud Code und
+
+[83:18] Speaker B: sag ihm mal, es ist ein Fehler aufgetreten.
+
+[83:24] Speaker A: Check die Logs, check die Log. Ja, ist okay, er macht es.
+
+[83:30] Speaker B: Wahrscheinlich kommt er selber auf die Idee, die Logs zu checken. Was kann denn die Telegram API noch so außer Nachrichten zu schicken?
+
+[83:38] Speaker A: Naja, sie kann Logfiles geben und in
+
+[83:42] Speaker B: den Logfiles steht im Hintergrund genau der Fehler. Euer Cloud Code kann jetzt also in die Telegram Logfiles reingucken und kann sich diesen Fehler genau angucken. Angucken mehr als ihr davon seht. Wisst ihr noch, was ich euch erzählt habe darüber, dass man über API inzwischen mehr kann als über das Frontend. Das ist ein Beispiel dafür. Über das Frontend bekommt ihr keine ordentlichen Fehler angezeigt, nur dass es einen gibt.
+
+[84:03] Speaker A: So, was ist passiert? Ich zeige noch mal Kurz auf meinem iPad.
+
+[84:17] Speaker B: So, ihr seht mein iPad wieder,
+
+[84:22] Speaker A: könnt ihr sehen. Ja,
+
+[84:25] Speaker B: was ist gerade passiert? Wir waren ja gerade eben hier in
+
+[84:29] Speaker A: Telegram, das ist ja unser Telegram Bot hier, der da. So,
+
+[84:35] Speaker B: gerade eben hast du in Telegram eine Nachricht reingeschrieben. Der Telegram Bot ist jetzt so programmiert,
+
+[84:40] Speaker A: dass er diese Nachricht ans LLM schickt. Das LLM hat geantwortet, aber nur, dass es einen Fehler gibt. Mehr kriegen wir nicht. Also Claude Code darum. Hey Claude, kontaktiere doch bitte mal Telegram über API.
+
+[84:55] Speaker B: Und da gibt es ja verschiedene Endpunkte, verschiedene Funktionalitäten und eine Funktionalität davon. Du müsstest bitte mal gucken, welcher Fehler das war.
+
+[85:02] Speaker A: Und er hat gesagt, ich habe hier ein Error Code. Error 429 Error Codes sind standardisiert.
+
+[85:08] Speaker B: Jeder weiß, wie bei der Polizei, jeder weiß, was ein ist. 429 heißt nicht zureichendes Limit.
+
+[85:13] Speaker A: Das heißt, ChatGPT hat gesagt, hey, ich antworte dir gern, aber es kostet was. Und du mein Lieber, hast hier noch kein Guthaben drin.
+
+[85:23] Speaker B: Also auf diesem API Schlüssel liegt noch kein Guthaben.
+
+[85:25] Speaker A: Das heißt, du dürftest jetzt mal bitte erstmal ein Guthaben aufladen und dann werde ich antworten.
+
+[85:35] Speaker B: Zeige ich dir einmal bitte den Bildschirm. Du hast schon Bildschirm geteilt.
+
+[85:39] Speaker A: Moment, ich quitte hier wieder. So, du hast jetzt einmal,
+
+[85:46] Speaker B: geh mal
+
+[85:47] Speaker A: links auf Dein, geh mal auf Settings. Oh ne, achso, Warte mal kurz. Ja, gib mal Organisation Name ein, gib
+
+[86:06] Speaker B: mal ein Marvin Privat. Ich glaube, man muss da so einen Organisationsnamen vergeben,
+
+[86:20] Speaker A: Ne?
+
+[86:21] Speaker B: Kannst du später, kannst du unten invite later. Brauchen wir nicht, brauchen wir auch nicht, weil wir haben schon den Key. Genau. Und jetzt sagt er dir, jetzt schlägt er dir vor, deine ersten Dinge, Ich würde dir mal empfehlen, 5 Dollar draufzuladen, die knüpfe ich den mal bei uns mal ab.
+
+[86:40] Speaker A: So, genau.
+
+[86:42] Speaker B: Amerikanische Dienste lieben Kreditkarten. Das ist leider so. Ich habe eine, da laufen nur solche solche Geschichten drüber.
+
+[86:57] Speaker D: Alles cool, dass du schon alles gespeichert hast.
+
+[87:10] Speaker A: Was will er denn jetzt? Nee, warte mal.
+
+[87:21] Speaker D: Ja, probier es noch mal. Eigentlich nicht. Ich schätze mal, dass er deine Kreditkarte sagt, weil die nur bis September.
+
+[87:39] Speaker A: Ah ne, jetzt hat es geklappt.
+
+[87:41] Speaker D: Zumindest sieht es aus.
+
+[87:58] Speaker B: Cool, hat geklappt, perfekt. Jetzt machst du mal folgendes. Jetzt siehst du hier schon deinen Verbrauch und so weiter. Sieht man hier alles wunderbar.
+
+[88:07] Speaker A: Fünf Dollar hast du noch drauf. Jetzt kannst du einfach deinen Chatbot noch mal was fragen.
+
+[88:15] Speaker E: So, neues Spiel, neues Glück, wie geht's dir?
+
+[88:21] Speaker A: So, oben steht wieder Typing.
+
+[88:23] Speaker B: Es wird also schon ausgelöst, als würde der andere tippen.
+
+[88:27] Speaker A: So, das war jetzt die Antwort einer KI. Du hast jetzt deinen eigenen Harness gebaut. Du hast jetzt deinen eigenen Chatbot, der quasi läuft. Das ist jetzt ChatGPT durch dein eigenes Fenster, was hier läuft.
+
+[88:45] Speaker B: So, kannst du hier mal, das dauert manchmal ein paar Minuten, zeitverzögert, bis sich das aktualisiert.
+
+[88:50] Speaker A: So, jetzt machen wir so, es ist ja ein Hörbuch Bot.
+
+[88:56] Speaker B: Du kannst jetzt, das ist jetzt GPT 5.5, das heißt, du kannst mit dem fast alles machen, was du mit ChatGPT machen kannst.
+
+[89:03] Speaker A: Nur, dass es durch dein eigenes Windows zum Einsatz kommt.
+
+[89:07] Speaker E: Und der läuft ja auch auf meinem Smartphone jetzt richtig in der Telegram App.
+
+[89:11] Speaker A: Genau, genau. Und ist auch angebunden.
+
+[89:13] Speaker B: So, jetzt wollen wir erstmal kurz die Kosten checken. Was wird denn dieser Spaß uns jetzt kosten?
+
+[89:18] Speaker A: Dafür gehst du noch mal Auf das Platform OpenAI, was du oben noch offen hast.
+
+[89:22] Speaker B: Und da gehst du jetzt mal, wo
+
+[89:25] Speaker A: sind denn hier die Preise nochmal?
+
+[89:28] Speaker B: Gib mal, ja, ne, weißt du was?
+
+[89:32] Speaker A: Gib mal in Google ein OpenAI API Pricing.
+
+[89:41] Speaker B: Ja, da sind wir richtig.
+
+[89:42] Speaker A: Genau. So, Jetzt wirst du da sehen, das
+
+[89:49] Speaker B: sind jetzt die drei beliebtesten Modelle.
+
+[89:52] Speaker A: So und jetzt ist es so, Preisangaben sind immer pro Millionen Tokens. Es gibt Input Tokens, das ist das,
+
+[90:00] Speaker B: was ihr der KI alles gebt und
+
+[90:01] Speaker A: es gibt Output Tokens.
+
+[90:04] Speaker B: Jetzt ist es grundsätzlich so, eure Eingaben sind normalerweise sehr groß, weil du schickst ja meistens nicht nur eine Nachricht, du
+
+[90:12] Speaker A: schickst ja noch zum Beispiel Cloud Code
+
+[90:14] Speaker B: schickt ja noch deine ganzen Skripte mit und die ganzen Markdown Dateien und die Befehle und das ganze Zeug, während das, was die KI euch ausgibt, meistens nur ganz kurz ist. Dafür kostet es aber auch 30 Dollar pro Million Tokens. Ihr alle wisst inzwischen, wie viel eine Million Tokens sind. Das, was Marvin gerade geschrieben hat, war
+
+[90:35] Speaker A: Wie viel Tokens 10?
+
+[90:38] Speaker B: Keine Ahnung.
+
+[90:41] Speaker A: So, jetzt gehst du mal kurz zu Claude Code, jetzt sagst du ihm mal, wie viel hat meine Nutzung bisher gekostet?
+
+[90:52] Speaker B: Das geht so nicht.
+
+[90:53] Speaker D: Du musst das genau.
+
+[90:55] Speaker B: Und du kannst ihm ja auch frag
+
+[90:57] Speaker A: ihn mal, was die Nutzung gekostet hat,
+
+[91:02] Speaker B: Kannst du mir auch schnell den Tipp hinterher schicken. Eine Million kosten 5 Euro Eingabe, 30
+
+[91:09] Speaker D: Euro Ausgabe oder Dollar.
+
+[91:14] Speaker B: Sonst musst du das recherchieren, weißt du, wird auch selber drauf kommen.
+
+[91:16] Speaker A: Aber dann sparst du ihm Zeit. Er guckt jetzt in die Logfiles und guckt quasi,
+
+[91:33] Speaker B: wie viel Token du schon kommuniziert hast mit dem und dann kann er rückwärts rechnen und seine Ausgaben berechnen.
+
+[91:41] Speaker D: Also warte mal, naja, du kannst ihm
+
+[91:44] Speaker B: Schau doch einfach, welche Nachrichten geschickt wurden.
+
+[91:51] Speaker E: Schau einfach, welche Nachrichten geschickt wurden und rechne das dann runter.
+
+[91:55] Speaker A: Es gibt jetzt auch von OpenAI eine Schnittstelle über.
+
+[91:59] Speaker B: API, da könnt ihr direkt eure tatsächlichen Verbrauch abrufen. Da könnt ihr euch so ein Usage Dashboard bauen, wo ihr solche Anzeige Wie viel habe ich denn schon verbraucht? Aber das ist ein bisschen das mach machen wir heute mal nicht.
+
+[92:14] Speaker A: So, jetzt war es so, du hast
+
+[92:17] Speaker B: jetzt insgesamt 0,0002 Dollar verbraucht und die Antwort war wahrscheinlich 0,040045 Dollar. 0,4 Cent hat es jetzt gekostet.
+
+[92:30] Speaker A: Jetzt ist es so, jetzt wenn du noch mal kurz auf deinen Browser gehst, auf diese Kostenübersicht, dann siehst du jetzt,
+
+[92:39] Speaker B: da gibt es verschiedene Modelle. Es gibt das ältere 5.4 Modell, das
+
+[92:43] Speaker A: kostet genau die Hälfte und es gibt 5.4 Mini.
+
+[92:47] Speaker B: So und wenn du jetzt mal drück
+
+[92:50] Speaker A: mal unten diese Cookies bitte weg, scroll mal runter.
+
+[92:55] Speaker B: Ah ja, drück mal da auf detaillierte
+
+[92:57] Speaker A: Preisgestaltung, drück mal darauf, da wollte ich hin.
+
+[93:02] Speaker B: Da siehst du, dass es noch deutlich mehr Modelle gibt.
+
+[93:04] Speaker A: Es gibt 5.5, 5.5 Pro, 5.4, 5.4 Mini, 5.4 Nano.
+
+[93:11] Speaker B: Schau dir mal die Kosten von Nano an, im Gegensatz zu den Kosten von 5.5.
+
+[93:20] Speaker A: Das ist billig. Das ist richtig billig.
+
+[93:22] Speaker B: Eine Million geschriebene Tokens, das Shape für ein paar Tage kosten 20 Cent.
+
+[93:32] Speaker A: Jetzt weißt du, womit du es zu
+
+[93:34] Speaker B: tun hast, wenn du mit copilot schreibst,
+
+[93:36] Speaker A: mit Microsoft copilot, da steckt das da
+
+[93:39] Speaker B: per API dahinter angeschlossen. Dahinter, die haben zwar noch ein Data
+
+[93:41] Speaker A: Privacy Agreement, aber das ist die Maschine,
+
+[93:43] Speaker B: die dahinter steckt, eine angeschlossene API. Das gleiche gibt es von ganz ganz vielen anderen Anbietern.
+
+[93:50] Speaker A: GPT ist nur der größte Open.
+
+[93:54] Speaker B: Du kannst jetzt mal zu Claude gehen und sagen, stell mal Bitte um auf 5, das reicht nämlich von der Intelligenz.
+
+[93:59] Speaker A: Völlig kurze
+
+[94:02] Speaker B: Was wird wahrscheinlich der Unterschied
+
+[94:03] Speaker A: zwischen Nano Mini und Normal sein? Wer kann mir das beantworten?
+
+[94:09] Speaker E: Eventuell der Wissenshintergrund, die Anzahl der Informationen.
+
+[94:14] Speaker B: Genau, also ganz kurz, ich bin gestern
+
+[94:17] Speaker E: zum ersten Mal, habe ich die Info bekommen bei unserem Arbeitsaccount, wo Nano läuft, wo 5 Prozent läuft und ich oft im Thinking Modus arbeite. Wir haben diesen Team Account, 23 Dollar, glaube ich, da für drei Leute oder für jeden, weiß ich gar nicht genau. Zum ersten Mal an die Stelle gekommen, wo er gesagt hat, ich muss bis zum 17. Juni warten, bis ich wieder weitermachen kann.
+
+[94:37] Speaker B: Ich glaube, dass diese Team Accounts anscheinend irgendwie auch restriktiert werden neuerdings.
+
+[94:42] Speaker A: Kann natürlich sein,
+
+[94:51] Speaker E: Achso, Ich habe jetzt 5 Dollar bezahlt, kann zwischen den Modellen aber immer wechseln und entsprechend, welches Modell ich gerade habe, wird es dann quasi abgerechnet.
+
+[94:59] Speaker B: Du hast jetzt ein Guthaben bei OpenAI und das kannst du einlösen gegen alles, was die an Dienstleistungen anbieten, noch viel mehr an, als du bis jetzt kennst. Du kennst bis jetzt nur die LLM
+
+[95:08] Speaker A: Modelle, von denen in der Liste gesehen,
+
+[95:12] Speaker B: die bieten über 8, 28 verschiedene Modellsorten an, also 28 verschiedene, nicht über
+
+[95:21] Speaker A: das sind die ganzen Chat Modelle.
+
+[95:24] Speaker B: Weiter runter gehst, siehst du, dass es multimodale Modelle gibt.
+
+[95:29] Speaker A: Das ist GPT, das ist noch mal
+
+[95:32] Speaker B: was anderes, das schauen wir uns auch noch an.
+
+[95:35] Speaker A: So, dann haben wir Image Generation Models.
+
+[95:39] Speaker B: Du siehst schon alles, was man irgendwie von normalen KI so kennt. Können wir hier bei API auch Videogenerierungsmodelle, Der kann dir Videogenerierung zuschicken als Datei, Transkribierungsmodelle, was WhisperFlow im Prinzip macht.
+
+[96:04] Speaker E: Und wäre es jetzt so, ich müsste dann immer sagen, wenn ich ein Video haben will und ich hätte jetzt genügend Budget, wechsel mal erstmal zu GPT. Achso, ist ja Transkript, sagen wir mal Video Sora 2 oder wenn ich sage, ich brauche ein Video, switcht er denn generell in diesem Modell, weil er weiß ja, das liegt in dem Account mit vor, ne? Muss ich ihm wahrscheinlich proaktiv sagen.
+
+[96:26] Speaker A: Gehst zu deinem Cloud Code und hey,
+
+[96:30] Speaker B: oh, warte mal, mein Internet ist ganz schlecht, Hört man mich gut? Warte mal, ich wechsel mal kurz in
+
+[96:35] Speaker A: mein Hotspot eine Sekunde,
+
+[96:39] Speaker B: damit das hier
+
+[96:40] Speaker A: so nicht so rumspackt. So hört ihr mich jetzt ein bisschen?
+
+[96:53] Speaker B: Ich hoffe jetzt wird es flüssiger.
+
+[96:57] Speaker A: Ihr geht Du gehst zu Cloud Code
+
+[96:59] Speaker B: und hey, ich möchte gerne die API von OpenAI nutzen. Dort soll mir ein Bild generiert werden. Claude Code wird sich dann die Dokumentation angucken und wird Welchen Endpunkt müssen wir dafür aufrufen? Der macht es dann im Detail. Wir können uns das noch im Detail anschauen, wie das genau funktioniert, aber Claude Code wird das recherchieren. Wie sieht der Endpunkt aus? Wie heißt der? Wie muss ich den aufrufen? Was braucht der für Informationen und so weiter. Ja, okay, du kannst Du kannst ihm
+
+[97:30] Speaker A: jetzt mal sagen, pass auf, machen wir folgendermaßen. Ich würde jetzt mal einen Prompt geben. Marvin
+
+[97:41] Speaker B: OK, ich habe jetzt also zum
+
+[97:43] Speaker A: ersten Mal Telegram installiert.
+
+[97:45] Speaker B: Ich habe einen Bot erschaffen lassen. Marco hat mir erklärt, das ist eine leere Roboterhülle, die erstmal nichts kann und wir haben diese Roboterhülle mit einem Automatismus ausgestattet, der meinen Nachrichten automatisch an das
+
+[97:56] Speaker A: LLM GPT 5.4 Mini weiterleitet. Das kostet mich also, wenn ich jetzt
+
+[98:02] Speaker B: eine Million Tokens da reinhauen würde, 75 Cent und wenn er mir mit einer million Tokens antwortet, 4 Dollar 50, das habe ich verstanden. Jetzt haben wir das Ganze aber doch Hörbuchbot genannt.
+
+[98:13] Speaker A: Das heißt, ich habe das deswegen so
+
+[98:16] Speaker B: benennen lassen, weil ich möchte, dass mir
+
+[98:17] Speaker A: da Hörbücher hingeschickt werden. Lieber Claude, bitte mach mir doch mal so Hörbuch. Ich möchte, dass du dafür folgendes Du also Claude Code schreibst einen Text, der schön zum Vorlesen ist.
+
+[98:30] Speaker B: Schreib mir doch mal zum Beispiel einen
+
+[98:33] Speaker A: Anfänger geeigneten Text darüber, der ungefähr fünf Minuten Vorlesezeit hat.
+
+[98:37] Speaker B: Wie genau eigentlich API nun wirklich funktioniert.
+
+[98:41] Speaker A: Ich möchte das wirklich verstehen.
+
+[98:43] Speaker B: Benutze aber bitte keine allzu schwierigen Fachwörter oder erkläre alle Das sollst du erstmal als Text machen.
+
+[98:50] Speaker A: Dann gehst du bitte zu OpenAI, zu deren Text to Speech Service.
+
+[98:54] Speaker B: Der ist ja auch über API erreichbar
+
+[98:57] Speaker A: und schickst da einmal den Text hin
+
+[98:59] Speaker B: und lässt dir dann die MP zurückgeben.
+
+[99:01] Speaker A: Dann haben wir quasi die API von OpenAI benutzt, um einen Text zu Sprache konvertieren zu lassen. Und diese Datei, die schickst du mir
+
+[99:10] Speaker B: dann auf mein Telegram Bot.
+
+[99:12] Speaker A: Wichtig zum Verständnis ist, dass Telegram vorher
+
+[99:15] Speaker B: überhaupt nicht im Spiel war. Cloud Code macht einen API Call an
+
+[99:19] Speaker A: OpenAI und benutzt deren Text to Speech Service.
+
+[99:22] Speaker B: OpenAI nimmt einen Text entgegen und schickt
+
+[99:24] Speaker A: den vorgelesenen Text als MP zurück. Das ist erstmal eine Datei, die ordert Cloud Code und die bekommt Cloud Code.
+
+[99:32] Speaker B: Damit wir dann das Ganze aber schnell
+
+[99:33] Speaker A: mobil verfügbar machen, möchte ich das an meinen Telegram Bot schicken lassen.
+
+[99:39] Speaker B: Und deswegen schickst du mir die MP
+
+[99:40] Speaker A: Datei dann bitte an meinen Telegram Bot.
+
+[99:43] Speaker B: Das ist auch das erste Mal, dass der Telegram Bot in diesem Work, in diesem Arbeitsablauf hier zum Einsatz kommt. Alle verstanden?
+
+[99:54] Speaker A: So, diesen Prompt, den darfst du jetzt mal gerne dein Flow Code geben.
+
+[100:16] Speaker B: Hätten der ein komisches Diktator daraus gemacht?
+
+[100:18] Speaker A: Naja, wird schon passen. So, gucken wir uns mal.
+
+[100:26] Speaker B: Er wird jetzt wahrscheinlich sehr genau erklären, was er macht.
+
+[100:28] Speaker A: Erstens, ich schreibe den Text.
+
+[100:32] Speaker B: Zweitens, Open May I Text to Speech zu MP machen.
+
+[100:36] Speaker A: Das ist eine API Funktionalität, die bietet euch OpenAI an. Und dann die MP, die könntest du
+
+[100:44] Speaker B: natürlich auch Du müsstest jetzt kein Telegram nutzen. Du kannst die MP auf dem Desktop speichern lassen. Aber bei Telegram ist es angenehmer, weil dann kannst du das Handy in die Hand nehmen, kannst die Sprachnachricht abspielen und kannst mit deinem Handy durch die Wohnung
+
+[100:53] Speaker A: laufen oder beim Autofahren hören.
+
+[100:55] Speaker B: Telegram ist nur jetzt ein Beispiel gewesen,
+
+[100:57] Speaker A: um euch zu zeigen, was API kann und was Bots sind.
+
+[101:03] Speaker B: Janine hat sich bei dir die Frage jetzt auch langsam geklärt, warum Telegram Sinn machen könnte.
+
+[101:10] Speaker C: Ja, so langsam verstehe ich das. Was ich jetzt noch nicht verstanden habe, ist, wie ich quasi über Telegram das Claude starte, damit der mir diese Sachen dann über die API Schnittstelle zu dem
+
+[101:22] Speaker B: Text, also eine Sache zu clarifizieren.
+
+[101:27] Speaker A: Kurz, du wirst Telegram am Anfang nicht,
+
+[101:32] Speaker B: Also du startest kein Claude über Telegram oder so.
+
+[101:35] Speaker A: Du gehst zu Claude und Hey Claude,
+
+[101:37] Speaker B: von Telegram will ich erst mal gar nichts gewusst haben.
+
+[101:38] Speaker A: Mach mal, mach mal, schreib mal einen
+
+[101:40] Speaker B: Text, mach mal ein Hörbuch draus, wie auch immer.
+
+[101:43] Speaker A: Und wenn die Kiste fertig ist, dann
+
+[101:44] Speaker B: schickst du es mir nur noch an
+
+[101:45] Speaker A: Telegram, weil Telegram ist das Ding, was
+
+[101:47] Speaker B: ich im Auto gerade zur Hand habe. Und Telegram kann im Gegensatz zu Cloud Code MP Dateien direkt abspielen in der Telegram App, weil die Telegram App ist so freundlich und kann Sprachnachrichten abspielen.
+
+[101:56] Speaker A: Das kann die Code App nicht. Das heißt, Telegram ist nur noch am
+
+[102:01] Speaker B: Ende dieser Arbeit quasi ein mittler Tool schickt das Ergebnis per Brieftaube. Weißt du, Telegram ist die Brieftaube, so nach dem Motto, Aber alles davor mit der Brieftaube erstmal nichts zu tun gehabt. Alles gut.
+
+[102:18] Speaker A: Schick jetzt einen.
+
+[102:23] Speaker B: Ja, schick mal kurz eine Nachricht an
+
+[102:25] Speaker A: den Telegram Bot, das hat jetzt was Technisches.
+
+[102:28] Speaker B: Mach einfach mal, was er von dir
+
+[102:29] Speaker A: will hier drin jetzt.
+
+[102:31] Speaker E: Ja, bei Cloud.
+
+[102:32] Speaker B: Ne, ne, schick eine Nachricht an Marvin Servobot. Also das müsst ihr einfach mal kurz in dem Hörbuchbot drin machen.
+
+[102:37] Speaker A: Telegram.
+
+[102:39] Speaker B: Ne Marvin, öffne mal dein Telegram.
+
+[102:41] Speaker E: Sorry, Ich werde ja schon wieder angeschrieben von Leuten.
+
+[102:48] Speaker B: Da oben ist genau.
+
+[102:51] Speaker E: Ja, habe ich doch.
+
+[102:54] Speaker A: Genau.
+
+[102:54] Speaker B: Und da schickt es mal Hallo hin, irgendeine Nachricht.
+
+[102:58] Speaker A: Ja, genau. Und jetzt sagt Claude mal, dass du es erledigt hast.
+
+[103:02] Speaker B: Claude hat da noch mal kurz eine Nachricht gebraucht.
+
+[103:07] Speaker C: Gut,
+
+[103:11] Speaker B: ich weiß gar nicht, was das hier tun ein Fehler ist. Übrigens, diese Menschen, also ich auch, das ist auch der Grund, warum du Nachrichten bekommen hast, die haben in ihrer Telegram-Bot ein Ping bekommen. Von wegen Marvin Hänsel ist jetzt auch auf Telegram und die haben wahrscheinlich da drauf gedrückt und haben dir direkt geschrieben. Hi Marvin, der andere hat dir auch schon geschrieben.
+
+[103:30] Speaker A: Irgend so ein Typ bei mir hat das jetzt, glaube ich, aber mein Hörbuch
+
+[103:34] Speaker E: sehen die jetzt, also mein Bot sehen die nicht.
+
+[103:36] Speaker B: Die sehen Nur, ne, die sehen dein Bot nicht.
+
+[103:38] Speaker A: Dein Bot gehört dir.
+
+[103:39] Speaker B: Diese nur Marvin Hänsel ist jetzt auf Telegram registriert. WhatsApp ist da nicht so offensiv und zeigt gleich allen, dass du jetzt WhatsApp hast. War aber früher auch mal so, haben sie abgestellt, weil sie sich damit ganz schön unbeliebt gemacht haben. Auf Telegram ist es halt noch so.
+
+[103:53] Speaker A: Tut aber eigentlich nichts zur Sache.
+
+[103:59] Speaker C: Noch mal eine technische Frage. Sorry, ich habe das ja jetzt hier alles installiert bzw. Eingerichtet auf meinem Laptop, den ich ja hauptsächlich zu Hause nutze. Ich habe ja aber auch noch einen Arbeits PC. Wie kriege ich das jetzt hin, dass alles, was wir jetzt hier machen, auch auf dem Rechner auf Arbeit direkt zur Verfügung steht und nutzbar ist und umgekehrt.
+
+[104:25] Speaker A: Du hinterlegst in deiner globalen Cloud MD
+
+[104:28] Speaker B: auf jedem Rechner die Information, wir haben
+
+[104:30] Speaker A: Telegram, wir haben einen Bot und das ist der Schlüssel.
+
+[104:33] Speaker C: Aber das muss ich händisch machen. Das kann das nicht irgendwie.
+
+[104:37] Speaker B: Du kannst Cloud Code, hey, schreib mal alles, was andere Cloud Code Instanzen wissen
+
+[104:43] Speaker A: müssen in der Datei, schickst die Datei
+
+[104:45] Speaker B: per E Mail rüber und drüben sagst hey, ich habe hier eine Datei schreiben lassen, schau selber rein, wirst du Bescheid wissen.
+
+[104:51] Speaker A: Mäßig, so ein bisschen hemdsärmelig.
+
+[104:54] Speaker B: Oder du hey, lad das in meinen sharepoint hoch und dann sagst du dem
+
+[104:58] Speaker A: anderen, du holst dir aus meinem sharepoint,
+
+[104:59] Speaker B: was wir jetzt noch nicht gemacht haben. Aber geht ja dann auch.
+
+[105:06] Speaker C: Das Problem habe ich tatsächlich grundsätzlich, weil ich auf zwei verschiedenen Rechnern mit sehr unterschiedlichen Themenbereichen.
+
+[105:12] Speaker A: Dafür ist übrigens da, ne?
+
+[105:15] Speaker C: Das habe ich nicht verstanden.
+
+[105:18] Speaker A: Okay, jetzt ist die Frage,
+
+[105:26] Speaker B: Hast du seit der letzten Stunde mal versucht, das, was wir da gemacht hatten mit Sachen
+
+[105:31] Speaker A: in GitHub und dann GitHub ist eine Cloud.
+
+[105:33] Speaker C: Ja, ich habe das, der macht da Dinge. Keine Ahnung, ich habe sogar eine komplette Lernwebsite für meine Kinder online gestellt über Netlify, die verschiedene Benutzerprofile hat und verschiedene Übungsaufgaben. Alles das klappt irgendwie. Ich hab's, also ich kann es einwenden, aber ich kann es ehrlich gesagt nicht erklären oder verstehen so richtig.
+
+[105:53] Speaker B: Janine, weißt du was, Vergiss mal alles,
+
+[105:55] Speaker A: was du gelernt hast. GitHub ist eine Cloud.
+
+[105:58] Speaker B: Du kennst OneDrive und du kennst OneDrive und du KENNST auch hier SharePoint.
+
+[106:03] Speaker A: Ja, GitHub ist die dritte Lösung. Die Cloud kannst Dateien drin speichern.
+
+[106:11] Speaker C: Ich weiß nicht, wie ich darauf zugreifen kann irgendwie. Ich finde das immer nicht.
+
+[106:14] Speaker B: GitHub ist dafür gebaut, dass der Zugriff eher über API funktioniert, als über irgendwelche Oberflächen, weil GitHub halt sich auf Developer spezialisiert hat und nicht auf Normalos.
+
+[106:26] Speaker A: Und deswegen sagst du, weißt du was,
+
+[106:28] Speaker B: wie du jetzt in GitHub den Scheiß reinbringst, das ist Claude Problem, der macht
+
+[106:32] Speaker A: einen API Call, du weißt aber, es ist da.
+
+[106:36] Speaker C: Okay, das heißt, wenn ich das auf dem einen Rechner sage, pack das in mein GitHub, könnte ich auf dem anderen Rechner, hol mal alles da raus, was du noch nicht kennst.
+
+[106:44] Speaker A: Exaktamente, okay, das glaube ich mal machen. Viel mehr ist es nicht. Und wenn dann der andere sagt, ich
+
+[106:51] Speaker B: finde es irgendwie nicht, dann sagst du, dann muss ich mein Claude sagen, hey, der andere sagt, er findet mich, ich kenne mich damit nicht aus, aber schreib mal irgendwo rein, wo genau wie was,
+
+[107:00] Speaker A: schreib es in den Markdown und dann
+
+[107:01] Speaker B: gebe ich dem anderen die Markdown.
+
+[107:04] Speaker A: Wir könnten da jetzt tiefer gehen, müssen wir aber nicht.
+
+[107:08] Speaker C: Würde mir jetzt erstmal an der Stelle auch schon reichen.
+
+[107:10] Speaker B: Ich glaube, ich muss ja hier eine Lösung und kein Studium von GitHub.
+
+[107:14] Speaker E: Apropos Markdown, da hatten wir ja alles. Sollten wir ihm jetzt immer regelmäßig sagen, was er noch reinzuschreiben hat, wenn wir irgendwie spezieller werden wollen oder kann es erstmal so, wie wir es ursprünglich vorbereitet haben, laufen?
+
+[107:26] Speaker A: Dein Dokumentmanagement System, dein Businessmanagement, die Markdown Datei, die globale, die Claude MD, die
+
+[107:35] Speaker B: kann erstmal so bleiben. Du kannst immer mal wieder sagen, hey, dass wir jetzt diesen Telegram haben und dass wir auf dem, wenn ich in Zukunft sage, ich möchte ein Hörbuch, dann meine ich damit immer, schick mir ein MP, das du über openitext to Speech
+
+[107:50] Speaker A: erzeugt hast, an mein Hörbuchboard, außer ich
+
+[107:52] Speaker B: wünsche explizit was anderes. Das wäre ein sinnvoller neuer Antrag in
+
+[107:56] Speaker A: deine Cloud MD, das werde ich nachher mal machen. So, der hat jetzt einen Text geschrieben,
+
+[108:06] Speaker D: den Text hat er auch Marco Josh vorhin Kurz erwähnt, dass WhatsApp irgendwie nicht so gut anzusprechen wäre, weil ich bin jetzt gar kein Telegram User und kenne auch aktuell wahrscheinlich keinen, der es nutzt. Ich kenne auch WhatsApp, wo auch Chatbots laufen. Ich war mal in Urlaub und Da konnte man den jeden alles fragen und er hat alles gewusst. Das wird ja so eine ähnliche Lösung sein.
+
+[108:30] Speaker A: Ja, ja, das.
+
+[108:31] Speaker D: Also ist es einfach nur schwieriger oder? Also ist auch möglich.
+
+[108:35] Speaker B: Das ist genauso möglich.
+
+[108:37] Speaker A: WhatsApp.
+
+[108:37] Speaker B: Es ist einfach so, WhatsApp hat da so ein Authentifizierungsverfahren. Da musst du heben oder den Code nach da und dann dieses und dann jenes und dann folgendes und man kommt
+
+[108:44] Speaker A: da genauso zum Ziel.
+
+[108:46] Speaker B: Aber um jetzt euch heute das mal schnell Also ich persönlich habe es gerne auf Telegram, weil du kannst in Telegram mit diesem Botfather so wunderbar zack, Zack,
+
+[108:53] Speaker A: zack, Bot kreiert, fertig. In WhatsApp ist es immer ein WhatsApp Hack Mac.
+
+[108:57] Speaker B: Aber das ist ja auch klug für euch machen kann und es halt einfach nur länger dauert.
+
+[109:00] Speaker A: Spricht überhaupt nichts dagegen, das in WhatsApp zu machen.
+
+[109:04] Speaker E: Aber denk mal nicht, du kennst niemanden, der nicht bei Telegram ist. Also ich bin jetzt auch erst seit einer halben Stunde da und gibt schon ein paar Leute.
+
+[109:13] Speaker B: Die Leute nutzen es auch teilweise. Aber also ich persönlich benutze es nicht
+
+[109:16] Speaker A: für Mensch zu Mensch Kontakt.
+
+[109:17] Speaker B: Ich nutze es nur für Mensch zu KI Kontakt.
+
+[109:20] Speaker A: Ich zeige euch jetzt mal mein Telegram,
+
+[109:24] Speaker B: damit wir mal ein bisschen Inspiration bekommen. Was macht man denn damit jetzt eigentlich?
+
+[109:28] Speaker D: Der Gedanke war jetzt nur einen Schritt weiter, so wie ich es halt schon mal kennengelernt habe, wenn man das jetzt für die Firma nutzen möchte und jemand anderes meldet sich in der Regel per WhatsApp mittlerweile. Ja gut, wenn dort quasi das alles eingestellt wäre und nicht dann noch die Variante läuft.
+
+[109:46] Speaker B: Das geht natürlich.
+
+[109:47] Speaker A: Das geht so.
+
+[109:48] Speaker B: Ich zeige euch jetzt mal.
+
+[109:49] Speaker A: Ihr seht jetzt mein Telegram hier. Ihr seht hier zum Beispiel meine Coaching Carla. So, der Bot heißt so Coaching Carla
+
+[109:59] Speaker B: hat hier unten ein Menü, das kann man da auch rein programmieren. Und beim Menü kann ich auswählen, dass ich heute und hier seht ihr alle meine Termine, die ich heute habe. Und Hier oben steht COA 3 Grundausbildung, das seid ihr. Da drücke ich drauf. Und jetzt sagt er mir, dass er
+
+[110:16] Speaker A: mir gestern Abend um 22 Uhr schon mit Zeichen ein Briefing vorbereitet hat. Und in diesem Briefing steht quasi genau
+
+[110:27] Speaker B: drin, was ich mit euch die letzten Male gemacht habe. Das ist ein Automatismus, der läuft über API jeden Abend um 22 Uhr, guckt
+
+[110:35] Speaker A: in meinen Kalender und Hey, was hat Marco morgen für Termine Und jedes Mal,
+
+[110:39] Speaker B: wenn er sieht, dass ich eine Grundausbildung habe oder ein Einzelcoaching, dann holt er sich alle vergangenen Trans Skripte, Die liegen alle an einem bestimmten Ort. Das ist alles schon von mir vorbereitet immer. Und dann wird er OK, Marco muss
+
+[110:51] Speaker A: jetzt als Coach Folgendes wissen, was letztes Mal gemacht wurde.
+
+[110:54] Speaker B: Außerdem gibt es mein Curriculum. Da steht drin, welche Themen ich den Leuten beibringen möchte.
+
+[110:58] Speaker A: Und dann sieht Das hat er den Leuten beigebracht.
+
+[111:00] Speaker B: So haben sich die Leute damit gefühlt. Der Fabian, der kannte schon API. Für den Marvin war es jetzt noch relativ neu. So und so weiter. Das weiß der dann alles, weil der
+
+[111:08] Speaker A: hat ja das Transkript.
+
+[111:10] Speaker B: Das ist also eine LLM Anfrage, die da über API läuft.
+
+[111:14] Speaker A: Und der prompt Hey, du bist ein Briefing LLM, Du schreibst Briefings für den
+
+[111:20] Speaker B: Coach Marco, hier sind die letzten fünf Transkripte, die werden alle mitgeliefert. Und du, Marco, was hat die Gruppe letztes Mal gemacht? Wie haben Sie sich dabei gefühlt?
+
+[111:28] Speaker A: Was steht jetzt? Hier ist das Curriculum.
+
+[111:30] Speaker B: Du sagst Marco, was wurde schon gemacht vom Curriculum? Was steht eigentlich an?
+
+[111:35] Speaker A: Aber entgegen dem Curriculum? Worauf hat die Gruppe Bock?
+
+[111:38] Speaker B: So wie heute, Weil die Janine quasi
+
+[111:41] Speaker A: Schnittstellen ins Spiel gebracht hat und so weiter.
+
+[111:43] Speaker B: Und das wurde gestern Abend alles vorbereitet,
+
+[111:46] Speaker A: in die Datenbank gelegt und heute gehe
+
+[111:49] Speaker B: ich zu meiner Coaching Carla und Hey,
+
+[111:50] Speaker A: Coaching Carla, was haben wir für Briefings,
+
+[111:52] Speaker B: die für heute vorbereitet wurden? Da kann ich hier auf heute klicken
+
+[111:55] Speaker A: und Carla, schau mal, Marco, hier sind alle Briefings für heute und ich würde gerne das für Cohort 3 sehen.
+
+[112:02] Speaker B: Dann sagt ja, pass auf, Cohort 3 haben wir hier.
+
+[112:04] Speaker A: Wie möchtest du das Briefing erhalten? Als Text oder als Audio? Ich Ja, als Text. So, jetzt habe ich hier den kompletten Text.
+
+[112:13] Speaker B: Das ist jetzt im Prinzip eine Datenbankabfrage aus meinem Superbase gewesen. Ist auch wieder nur Schnittstellen.
+
+[112:18] Speaker A: Klar ist es ein bisschen komplexer, aber im Wesentlichen ist dieser Bot so gebaut, dass wenn ich das auswähle, dann holt
+
+[112:25] Speaker B: er sich über API aus meiner Datenbank
+
+[112:27] Speaker A: das Briefing, was gestern Abend schon vorbereitet wurde.
+
+[112:30] Speaker B: Das sind alles API Calls, die da gemacht wurden. Und hier heute ist Cohort 3 Grundausbildung
+
+[112:35] Speaker A: mit Session 6 dran.
+
+[112:36] Speaker B: Wieder Mittwoch von 10 bis 12 inhaltlich kommst du aus dem Blog, in dem er Wissensmanagement mit Logbuch Learning Decisions aufgebaut hat. Bliblablub Beim letzten Mal dokumentierte beim letzten
+
+[112:46] Speaker A: dokumentierten Mal kam Tobias direkt mit Frust
+
+[112:48] Speaker B: rein, sein Wissensmanagement war aus seiner Sicht zerschossen, Er hatte viel wiederholt und verstanden nicht warum bliblablub.
+
+[112:54] Speaker A: Und das ist jetzt das ganze Briefing,
+
+[112:55] Speaker B: was letztes Mal passiert ist und was
+
+[112:57] Speaker A: dieses Mal passieren sollte. So, und jetzt kann ich auch hier oben klicken als Audio.
+
+[113:03] Speaker B: Jetzt drücke ich da drauf und jetzt
+
+[113:05] Speaker A: generiert der über OpenAI Text to Speech, knallt er diesen Text jetzt an OpenAI und hey, OpenAI, schick mir diesen Text
+
+[113:13] Speaker B: mal bitte als Briefing zurück und zwar als Audio, also einfach als MP.
+
+[113:17] Speaker A: Und sobald die MP fertig ist, wird
+
+[113:19] Speaker B: die gleich hier unten erscheinen. Und so kann ich jederzeit, während ich im Auto sitzen, sage boah, ich habe in zehn Minuten jetzt meine Kohorte hier
+
+[113:27] Speaker A: mit Fabian und Co.
+
+[113:29] Speaker B: Und jetzt möchte ich schnell mir mein Briefing reinknallen. Hey, Coaching Carla, schick mir das mal schnell bitte das Audio.
+
+[113:34] Speaker A: Ich sitze im Auto.
+
+[113:35] Speaker B: So in zwei Minuten ist hier eine Audiodatei und die kann ich mir anhören.
+
+[113:40] Speaker A: Das ist jetzt eine Menge Integration, aber
+
+[113:43] Speaker B: ihr seht, Integration mit Integration mit Integration fängt langsam richtig an Spaß zu machen. Jetzt warten wir mal kurz auf mein Audio. Ich weiß nicht, ob das noch kommt. Marvin, hast du dein Audio schon bekommen?
+
+[113:54] Speaker F: Ne,
+
+[113:57] Speaker A: meins ist da. Seht ihr hier fünf Minuten kann ich jetzt auf Play drücken, lädt er jetzt kurz runter.
+
+[114:02] Speaker B: Ist wie eine klassische Memo. Kann euch das mal. Ich habe das jetzt mal runtergeladen, Ich kann euch das mal hier in den Chat reinteilen, könnt ihr euch mal kurz anhören.
+
+[114:17] Speaker A: Moment, dauert Moment. Ich habe euch eine Chatnachricht geschickt, da
+
+[114:20] Speaker B: könnt ihr euch die MP mal anhören, die ich gerade in Telegram mir anhören könnte.
+
+[114:27] Speaker A: So, und ihr lernt von mir hier
+
+[114:30] Speaker B: die Grundlagen, was es braucht, um Integration mit Integration mit Integration zu machen. Und so macht man sich sein Leben leichter, muss aber ein bisschen Fantasie dafür haben.
+
+[114:40] Speaker A: Wie ihr schon merkt, Hört schon jemand.
+
+[114:57] Speaker C: Also bei mir hat das tatsächlich mit dem MP Senden auch funktioniert. Aber ich habe noch einen anderen Punkt und zwar Claude Code hat mich jetzt darauf hingewiesen, dass dieser Bot gar nicht immer aktiv ist. Also ich kann den nicht einfach vom Handy aus jetzt anschreiben, wenn auf meinem Rechner das nicht gestartet ist.
+
+[115:14] Speaker A: Das stimmt nicht.
+
+[115:16] Speaker B: Entweder ist es speziell konfiguriert oder halluziniert, Weiß ich nicht.
+
+[115:20] Speaker C: Also er hat gesagt, wenn ich das auf dem Rechner hier schließe, dann kann ich Also er hat Moment, was hat er geschrieben? Auf dem Handy läuft der Bot nicht, aber ich konnte ja auf dem Handy diesen Chat starten und da Er hat geschrieben, die Telegram App. Also er hat irgendein Bild versucht mir das als Vergleich zu erklären.
+
+[115:45] Speaker B: Tu doch mal das am Rechner beschließen und probierst du einfach aus.
+
+[115:50] Speaker A: Challenge ihn einfach mal und sagt, ich
+
+[115:51] Speaker B: glaube, es geht schon Und wenn nicht, dann kannst du später Hey, mach, dass es geht.
+
+[115:56] Speaker A: Ich behaupte aber es geht jetzt schon. Gut, meine Lieben, jetzt passt mal auf,
+
+[116:01] Speaker B: die Stunde geht zu Ende und ich habe eine Hausaufgabe für euch, damit das hier alles langsam sitzt. Ich würde euch bitten, diese Hausaufgabe zu
+
+[116:08] Speaker A: machen, denn heute ist der Eintritt in die echte KI Welt geschehen.
+
+[116:12] Speaker B: Die ganze Macht der KI liegt zu
+
+[116:14] Speaker A: euren Füßen, aber ihr fühlt euch noch
+
+[116:15] Speaker B: ein bisschen überfordert und es ist normal.
+
+[116:17] Speaker A: Aber wenn ihr diese Sachen meistert, baut ihr alles. Dann gibt es nichts mehr, was es nicht mehr gibt, der API Calls gemeistert habt.
+
+[116:24] Speaker B: Ich möchte euch jetzt eine Hausaufgabe geben.
+
+[116:27] Speaker A: Teil es Kurz auf meinem iPad. So, moment. So,
+
+[116:45] Speaker D: also
+
+[116:49] Speaker A: hausaufgabe,
+
+[116:53] Speaker D: doppelpunkt.
+
+[116:57] Speaker A: Erstens genauer mit API befassen. Doppelpunkt. Was ist ein Endpoint?
+
+[117:22] Speaker D: Entschuldigung, falsch geschrieben.
+
+[117:24] Speaker A: Endpoint, man, ich hab's nicht so mit dem Schönschreiben. Endpoint B. Welche endpoints hat OpenAI? So, spezialhausaufgabe für janine. Welche endpoints? At Microsoft azure. Azure geschrieben bei sharepoint.
+
+[118:19] Speaker B: Könnt euch das auch einfach screenshotten oder abfotografieren, wenn ihr wollt, dann müsst ihr es euch nicht aufschreiben.
+
+[118:24] Speaker A: So, und dann ist eure zweite große Hausaufgabe. Programm bauen, Doppelpunkt. Mindestens eine API Schnittstelle eurer Wahl plus Architekturdiagramm dazu. Mal.
+
+[119:01] Speaker B: Mal mir das nächste Mal zeigen.
+
+[119:03] Speaker A: So, ihr wisst, ein Architekturdiagramm ist das,
+
+[119:06] Speaker B: was ich euch schon gezeigt hab.
+
+[119:08] Speaker A: LLM GPT 5.4 Mini.
+
+[119:15] Speaker B: Das ist ein Baustein.
+
+[119:17] Speaker A: So, das Ganze läuft in Telegram. So,
+
+[119:27] Speaker B: Telegram hat Außerdem Zugriff auf OpenAI.
+
+[119:33] Speaker A: Text to Speech, das ist die Kiste, die MP aus Text macht. So, das ist ein Architekturdiagramm.
+
+[119:39] Speaker B: Einfach damit ihr mal versteht, welche Bausteine
+
+[119:41] Speaker A: reden hier mit welchen. Hier ist API, hier ist API, API und so weiter.
+
+[119:49] Speaker B: Ich will, dass ihr anfangt, eure Komponenten zu begreifen, weil nur wer seine Komponenten begreift, kann später andere Sachen bauen als die Beispiele, die ich euch gezeigt habe.
+
+[119:58] Speaker A: Und wenn ihr es ordentlich macht, macht
+
+[120:00] Speaker B: er viel mehr als das bisschen was. Das hier ist eigentlich nur Qualitätssicherstellung meines Coachings, was ich hier mach. Eigentlich will ich, dass ihr hier Hausaufgabe 3, 4, 5, 6 und 7 selber auf Ideen kommt und Mensch, jetzt könnte ich ja mein Buchhaltungsprogramm mal lieber Close Code ansteuern. Die haben ja eine API. Haben die eine API?
+
+[120:15] Speaker A: Können wir mal recherchieren und so weiter. Hey Claude, recherchier mal.
+
+[120:19] Speaker B: Kam ich daran über API? Wenn ja, wie?
+
+[120:21] Speaker A: Ah, brauche ich einen Schlüssel? Wo kriege ich den her?
+
+[120:23] Speaker B: Einfach mal so ein bisschen machen.
+
+[120:25] Speaker A: Langsam da durchbeißen durch diesen Dschungel.
+
+[120:27] Speaker B: Das ist ein Dschungel und ihr geht da mit der Ding durch mit der Sichel und ich kann euch die Reise nicht vereinfachen. Ich kann euch nur zeigen, was hinter dem Dschungel ist und euch motivieren, euch
+
+[120:38] Speaker A: da mal durch zu beißen.
+
+[120:39] Speaker B: Befasst euch damit, sich dann hier reinzusetzen. Ich habe das nicht verstanden letztes Mal. Das zählt jetzt nicht mehr als Ausrede. Ihr habt KI. KI ist der perfekte Erklärbär. Den habt ihr jeden Tag, den ganzen
+
+[120:50] Speaker A: Tag bei euch flachliegen.
+
+[120:52] Speaker B: Ist okay als Ausleger. Aber alles andere ist so, dass ich Wer es jetzt dann nicht begreift, der will es nicht begreifen. Also jetzt ist es wirklich so, dass
+
+[120:59] Speaker A: er sagt, mit API und Cloud Code
+
+[121:03] Speaker B: könnt ihr alles bauen. Programme, die sind Millionen wert.
+
+[121:07] Speaker A: Natürlich braucht ihr ein bisschen Erfahrung.
+
+[121:09] Speaker B: Welche Anbieter gibt es? Was haben die für eine API?
+
+[121:12] Speaker A: Sowas wie Text to Speech, was ich euch geklärt habe.
+
+[121:14] Speaker B: Das muss man erstmal ergründen.
+
+[121:15] Speaker A: Muss man erst mal drauf kommen, dass das gibt.
+
+[121:17] Speaker B: Naja, aber man kommt halt nur drauf, weil man Was könnte ich damit jetzt so machen?
+
+[121:21] Speaker A: Kann man ein bisschen recherchieren. Hey Claude, gib mir mal Inspiration. Ah, OK, sowas gibt es. Cool.
+
+[121:26] Speaker B: Und ich kann euch nicht jedes Tool dieser Welt zeigen. Ich kann euch aber zeigen, dass es
+
+[121:31] Speaker A: Schnittstellen gibt und dass die ganze Welt inzwischen Schnittstellen baut.
+
+[121:36] Speaker B: Und nächstes Mal kommt ihr hoffentlich mit 1000 Fragen. Ich habe das entdeckt und das entdeckt und das entdeckt, aber ich habe es nicht ganz verstanden.
+
+[121:42] Speaker A: Aber ich würde es gerne verstehen.
+
+[121:43] Speaker B: Und dann bezahlt ihr ja nicht wiederum dafür, dass ich sagt na gut, bevor ihr jetzt selber durchkauen müsst, zeige ich euch jetzt. Dafür bin ich ja dann da, damit ich euch Was ich mir monatelang gekauft habe, zeige ich euch in fünf Minuten,
+
+[121:55] Speaker A: aber ihr müsst mit dem Bedarf dann hier reinkommen.
+
+[121:58] Speaker B: Wir werden hier irgendwann zu einer Umsetzungsbegleitung werden. Also es kommt der Tag, an dem
+
+[122:02] Speaker A: ich euch sage, ich bring euch jetzt nichts mehr bei.
+
+[122:05] Speaker B: Die 12 Einheiten sind durch. Wir haben aber dann noch 12 weitere
+
+[122:08] Speaker A: vor uns, wo wir eine Umsetzungsbegleitung machen.
+
+[122:10] Speaker B: Und da habt ihr richtig große Sachen
+
+[122:12] Speaker A: im Kopf, die ihr bauen wollt.
+
+[122:13] Speaker B: Ich will für mich oder für meine Firma was richtig Geiles bauen. Da sind noch ein paar Stunden, da ist noch ein bisschen Zeit, bis ihr
+
+[122:19] Speaker A: euch das vorstellen müsst. Aber dann kommt ihr zu mir und
+
+[122:21] Speaker B: sagt, Marco, ich baue ja das Hilfe mal, welche API nehme ich da? Welche Schnittstelle nehme ich da? Cloud Code nehme ich da, 5.5 oder 5.5 mini oder vielleicht die anderen, die wir noch gelernt haben, Was mache ich denn da?
+
+[122:31] Speaker A: Da müsst aber ihr auf mich zukommen und es soll jetzt langsam beginnen. Ihr müsst euren Bedarf im Kopf jetzt entwickeln, weil sonst kann ich euch in keiner Umsetzung begleiten.
+
+[122:40] Speaker B: Das hat noch Zeit, aber das muss jetzt beginnen.
+
+[122:47] Speaker A: Ich muss los.
+
+[122:48] Speaker B: Noch irgendwelche abschließenden Fragen?
+
+[122:51] Speaker C: Nein, aber noch mal der Hinweis, dass ich nächste Woche nicht dabei bin.
+
+[122:55] Speaker A: OK, schade, habe ich habe schon gar
+
+[122:56] Speaker D: nicht auf dem Schirm gehabt
+
+[123:00] Speaker F: und ich eventuell übernächste Woche, weil ich da im Urlaub bin.
+
+[123:04] Speaker A: Okay, alles klar.
+
+[123:05] Speaker B: Ja gut, nicht die Aufzeichnung, aber das macht ihr dann schon so, wie es euch passt.
+
+[123:10] Speaker A: Cool.
+
+[123:11] Speaker B: Dann, es war heute sehr spontan, das war überhaupt nicht das Curriculum, was ich geplant hatte, aber ich hatte auch aufgrund von Janines Kommentar anfangs, aber dann aufgrund von allen anderen auch das Gefühl, dass
+
+[123:21] Speaker A: diese Schnittstellenthematik mal einfach so ein bisschen
+
+[123:24] Speaker B: klarifiziert werden musste, die eh schon im Einsatz war, aber jetzt hoffentlich ein bisschen mehr begriffen ist.
+
+[123:29] Speaker A: Befasst euch damit. Cool, schöne Woche, bis bald. 
