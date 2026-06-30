@@ -13,6 +13,7 @@
   --s5:#0891B2; --s5l:#ECFEFF; --s5d:#0E7490;
   --s6:#E11D48; --s6l:#FFF1F2; --s6d:#9F1239;
   --s7:#6D28D9; --s7l:#F5F3FF; --s7d:#4C1D95;
+  --s9:#14B8A6; --s9l:#F0FDFA; --s9d:#0F766E;
   --bg:#F1F5F9; --white:#FFFFFF; --dark:#0F172A;
   --text:#1E293B; --muted:#64748B; --border:#E2E8F0;
   --learn-bg:#FFFBEB; --learn-br:#F59E0B;
@@ -44,6 +45,7 @@ a{color:inherit;}
 .tab-btn.active-s6{color:var(--s6);border-bottom-color:var(--s6);}
 .tab-btn.active-s7{color:var(--s7);border-bottom-color:var(--s7);}
 .tab-btn.active-s8{color:var(--s7);border-bottom-color:var(--s7);}
+.tab-btn.active-s9{color:var(--s9);border-bottom-color:var(--s9);}
 .tab-new{background:var(--s3);color:#fff;font-size:.65rem;padding:2px 6px;border-radius:10px;font-weight:700;}
 
 /* ── LAYOUT ──────────────────── */
@@ -84,6 +86,7 @@ a{color:inherit;}
 .card-accent-s5{border-left:4px solid var(--s5);}
 .card-accent-s6{border-left:4px solid var(--s6);}
 .card-accent-s7{border-left:4px solid var(--s7);}
+.card-accent-s9{border-left:4px solid var(--s9);}
 
 /* ── WIDE CARD (full width) ──── */
 .card-wide{background:var(--white);border-radius:var(--r);padding:28px;box-shadow:0 1px 4px rgba(0,0,0,.07);border:1px solid var(--border);margin-bottom:20px;}
@@ -132,6 +135,7 @@ code{background:#F1F5F9;color:#BE185D;padding:1px 5px;border-radius:4px;font-siz
 .hero-s5{background:linear-gradient(135deg,#0E7490,#0891B2,#22D3EE);color:#fff;}
 .hero-s6{background:linear-gradient(135deg,#9F1239,#E11D48,#FB7185);color:#fff;}
 .hero-s7{background:linear-gradient(135deg,#4C1D95,#6D28D9,#8B5CF6);color:#fff;}
+.hero-s9{background:linear-gradient(135deg,#0F766E,#14B8A6,#2DD4BF);color:#fff;}
 /* ── PROJECT CARD ─────────────── */
 .proj-card{background:var(--white);border-radius:var(--r);padding:24px;box-shadow:0 2px 8px rgba(0,0,0,.08);border:1px solid var(--border);position:relative;overflow:hidden;}
 .proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;}
@@ -237,7 +241,7 @@ footer{text-align:center;padding:28px;color:var(--muted);font-size:.8rem;margin-
     <div class="hdr-title">Synclaro KI-Coaching</div>
     <div class="hdr-sub">Lernplattform · Gruppencoaching Mai 2026</div>
   </div>
-  <div class="hdr-badge">7 Kapitel · Mai 2026</div>
+  <div class="hdr-badge">9 Kapitel · bis Juni 2026</div>
 </header>
 
 <!-- ═══════════════ TABS ════════════════ -->
@@ -273,6 +277,10 @@ footer{text-align:center;padding:28px;color:var(--muted);font-size:.8rem;margin-
   <button class="tab-btn" data-s="8" onclick="show(8)">
     <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#6D28D9" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#6D28D9" font-weight="700">8</text></svg>
     🗂️ Meine Projekte
+  </button>
+  <button class="tab-btn" data-s="9" onclick="show(9)">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#14B8A6" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#14B8A6" font-weight="700">6</text></svg>
+    Session 6 · 17. Juni
   </button>
 </nav>
 
@@ -2684,13 +2692,312 @@ Wissensdateien &gt;200 Zeilen: NUR Executive Summary + Kapitelverzeichnis (erste
 
 </div><!-- end s8 -->
 
+<!-- ══════════════════════════════════════════════════════════
+     SESSION 6 — 17. JUNI 2026
+══════════════════════════════════════════════════════════ -->
+<div id="s9" class="session" style="display:none">
+
+  <div class="hero hero-s9">
+    <div class="hero-icon">🗄️</div>
+    <div>
+      <h2>Session 6 — Datenbanken, Supabase &amp; DMS</h2>
+      <p>Das fehlende Herzstück: Daten nicht in Excel, sondern in einer richtigen Datenbank speichern. SQL live erklärt — ein Dokumentenmanagementsystem in Echtzeit aufgebaut und per MCP direkt mit Claude verbunden.</p>
+      <div class="hero-meta">
+        <span class="hero-tag">📅 17. Juni 2026</span>
+        <span class="hero-tag">⏱ ~2 Stunden</span>
+        <span class="hero-tag">🗄️ Supabase live</span>
+        <span class="hero-tag">📊 SQL erklärt</span>
+        <span class="hero-tag">🔗 MCP-Server</span>
+        <span class="hero-tag">📂 DMS aufgebaut</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- THEMENÜBERBLICK -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s9)"></div><h3>Themen dieser Session</h3></div>
+  <div class="grid-3">
+    <div class="card" style="border-top:3px solid var(--s9);text-align:center;">
+      <div style="font-size:1.8rem;margin-bottom:6px;">🗄️</div>
+      <div class="card-title" style="justify-content:center;font-size:.9rem;">Datenbanken</div>
+      <p style="font-size:.82rem;color:var(--muted);">Excel für Menschen — SQL-Datenbank für Maschinen. Warum jedes Programm ein "Datenherz" braucht.</p>
+    </div>
+    <div class="card" style="border-top:3px solid var(--s9);text-align:center;">
+      <div style="font-size:1.8rem;margin-bottom:6px;">🔤</div>
+      <div class="card-title" style="justify-content:center;font-size:.9rem;">SQL live</div>
+      <p style="font-size:.82rem;color:var(--muted);">CREATE, INSERT, SELECT — DMS-Tabelle erstellt, 151 Testdatensätze eingefügt, Auswertungen auf Knopfdruck.</p>
+    </div>
+    <div class="card" style="border-top:3px solid var(--s9);text-align:center;">
+      <div style="font-size:1.8rem;margin-bottom:6px;">🔗</div>
+      <div class="card-title" style="justify-content:center;font-size:.9rem;">Claude + Supabase via MCP</div>
+      <p style="font-size:.82rem;color:var(--muted);">MCP-Server verbindet Claude direkt mit Supabase — kein manuelles SQL mehr, Claude agiert autonom in der DB.</p>
+    </div>
+  </div>
+
+  <!-- STATUS-RUNDE -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s9)"></div><h3>Status-Runde — Was hat die Gruppe umgesetzt?</h3></div>
+  <div class="grid-2">
+    <div class="card card-accent-s9">
+      <div class="card-title">🎯 Marvin (ZFG) — Highlights</div>
+      <ul>
+        <li style="margin-bottom:6px;"><strong>Firmendossier als Hörbuch:</strong> Vor Betriebsbesuch per KI erstellt → auf dem Weg dorthin gehört → besser vorbereitet</li>
+        <li style="margin-bottom:6px;"><strong>HeyGen Avatar-API:</strong> Erklärvideo generiert — weniger zufrieden (kein KI-Problem, sondern Erwartungsproblem)</li>
+        <li style="margin-bottom:6px;"><strong>Schach-Coach App (Lichess-API):</strong> HTML live auf GitHub/Netlify — Partienanalyse-Chat auf Vereinsspieler-Niveau</li>
+        <li><strong>Telegram Gegneranalyse:</strong> Lichess-Profil → KI-Analyse → Hörbuch direkt per Telegram empfangen</li>
+      </ul>
+    </div>
+    <div class="card card-accent-s9">
+      <div class="card-title">🏗️ Andreas &amp; Fabian</div>
+      <p style="font-weight:600;margin-bottom:6px;">Andreas:</p>
+      <ul style="margin-bottom:12px;">
+        <li style="margin-bottom:4px;">Mehrere kleine Tools ohne Verknüpfung gebaut</li>
+        <li><strong>Bautagesbericht-Tool:</strong> Wetterdaten via API + Excel-Baudoku → Word-Dateien automatisch; ordnerbasiert, manuell befüllt</li>
+      </ul>
+      <p style="font-weight:600;margin-bottom:6px;">Fabian:</p>
+      <ul>
+        <li style="margin-bottom:4px;">Telegram-Bot läuft — aber nur solange Claude lokal offen ist</li>
+        <li>Nächster Schritt: Online-Hosting via Render.com</li>
+        <li>Planauskünfte-Integration teilweise fertig</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card card-accent-s9" style="margin-top:16px;">
+    <div class="card-title">📋 Tobias — Zwei konkrete Projektideen</div>
+    <div class="grid-2" style="margin-top:10px;">
+      <div>
+        <p><strong>Projekt 1: E-Rechnungen-Automation</strong></p>
+        <p style="font-size:.88rem;margin-top:6px;color:var(--muted);">E-Rechnungen aus Rechnungspostfach → automatisch in richtigen DATEV-Mandanten → PDF im richtigen Projektordner auf dem Laufwerk ablegen. Kein manuelles Nacharbeiten mehr.</p>
+      </div>
+      <div>
+        <p><strong>Projekt 2: Ausschreibungsportale-Monitor</strong></p>
+        <p style="font-size:.88rem;margin-top:6px;color:var(--muted);">KI überwacht automatisch 5 Portale nach vorgegebenen Suchbegriffen → liefert wöchentlich relevante Ausschreibungen. Ideal für Browser-Automatisierung aus Session 5.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WARUM DATENBANKEN -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s9)"></div><h3>Das fehlende Herzstück: Datenbanken</h3></div>
+  <div class="card-wide">
+    <div class="cw-title">❤️ Das "Datenherz" eines jeden Programms</div>
+    <p style="margin-bottom:16px;">Allen Teilnehmern fehlte dasselbe: ein zentraler, maschinenlesbarer Datenspeicher. Excel und Ordner funktionieren für Menschen — für Automatismen braucht man Datenbanken.</p>
+    <div class="grid-2">
+      <div>
+        <table class="tbl">
+          <tr><th>Excel / Ordner</th><th>Datenbank (Supabase)</th></tr>
+          <tr><td>Für Menschen gebaut</td><td>Für Maschinen gebaut</td></tr>
+          <tr><td>Formeln per Hand</td><td>SQL per KI generiert</td></tr>
+          <tr><td>Langsam bei großen Daten</td><td>Blitzschnell, skalierbar</td></tr>
+          <tr><td>Schwer für Programme</td><td>Direkte API-Schnittstellen</td></tr>
+          <tr><td>Kein Echtzeit-Zugriff</td><td>Immer aktuell, von überall</td></tr>
+        </table>
+      </div>
+      <div>
+        <p style="font-weight:700;margin-bottom:8px;">Warum Supabase?</p>
+        <ul style="padding-left:18px;font-size:.88rem;">
+          <li style="margin-bottom:5px;">Günstig (kostenlos startbar)</li>
+          <li style="margin-bottom:5px;">Besonders gut von KI bedienbar</li>
+          <li style="margin-bottom:5px;">DSGVO-konform betreibbar</li>
+          <li style="margin-bottom:5px;">Via MCP direkt von Claude steuerbar</li>
+          <li>SQL + Dateispeicher + Edge Functions (APIs) in einem</li>
+        </ul>
+        <div class="quote" style="margin-top:12px;">"Eine Datenbank ist nichts anderes als eine Sammlung von Excel-Tabellen — nur für Maschinen." — Marco Heer</div>
+      </div>
+    </div>
+    <div class="learn" style="margin-top:16px;">
+      <div class="learn-head">💡 Das Datenherz eines Programms</div>
+      <ul>
+        <li><strong>Datenbank</strong> — strukturierte, maschinenlesbare Datenhaltung (Supabase)</li>
+        <li><strong>Dateispeicher</strong> — für PDFs, Bilder, Dokumente (Supabase Storage)</li>
+        <li><strong>Ausführende Funktionen</strong> — Automatismen: OCR, E-Mail-Trigger, Benachrichtigungen</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SQL -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s9)"></div><h3>SQL — Die Sprache der Datenbanken</h3></div>
+  <div class="grid-2">
+    <div class="card card-accent-s9">
+      <div class="card-title">🔤 Was ist SQL?</div>
+      <p>SQL (Structured Query Language) ist die Programmiersprache für Datenbanken. Man schreibt es nicht selbst — KI generiert SQL auf Anfrage. Man führt es aus und bekommt das Ergebnis.</p>
+      <div class="quote" style="margin-top:10px;">"Das sind Excel-Tabellen auf Koks." — Marco Heer</div>
+      <div class="learn" style="margin-top:12px;">
+        <div class="learn-head">💡 Die drei Grundbefehle</div>
+        <ul>
+          <li><code>CREATE TABLE</code> — Tabelle erstellen &amp; Struktur definieren</li>
+          <li><code>INSERT INTO</code> — Datensätze einfügen</li>
+          <li><code>SELECT</code> — Daten abfragen &amp; auswerten</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card card-accent-s9">
+      <div class="card-title">🔴 Live in der Session — DMS-Tabelle</div>
+      <ol style="padding-left:18px;font-size:.88rem;">
+        <li style="margin-bottom:6px;">ChatGPT generiert CREATE-Statement für <em>dms_documents</em> (Typ, Status, Datum, Quelle, E-Mail-Absender, OCR-Text, Mitarbeiter...)</li>
+        <li style="margin-bottom:6px;">Statement in Supabase SQL-Editor → Ausführen → Erfolg ✓</li>
+        <li style="margin-bottom:6px;">KI generiert 150 realistische Testdatensätze (Rechnungen, Angebote, Lieferscheine, Stundenzettel...)</li>
+        <li style="margin-bottom:6px;">INSERT ausgeführt → <strong>151 Einträge</strong> in der Tabelle</li>
+        <li>Fehler im SQL → einfach zurück an KI → automatisch korrigiert</li>
+      </ol>
+      <div class="praxis" style="margin-top:12px;">
+        <div class="praxis-head">✅ Strategische Abfragen auf Knopfdruck</div>
+        <ul>
+          <li>Wann gibt es Dokumenten-Überlast?</li>
+          <li>Welcher Mitarbeiter hängt hinterher? (Erledigungsquote in %)</li>
+          <li>Wie viele Rechnungen sind eingegangen?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- MCP SERVER -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s9)"></div><h3>Claude + Supabase via MCP-Server</h3></div>
+  <div class="card-wide">
+    <div class="cw-title">🔗 MCP = Direkt-Schnittstelle zwischen Claude und der Datenbank</div>
+    <div class="grid-2" style="margin-top:8px;">
+      <div>
+        <p><strong>Was ist ein MCP-Server?</strong></p>
+        <p style="margin-top:8px;font-size:.88rem;">MCP (Model Context Protocol) = eine für KI optimierte API-Schnittstelle. Claude versteht Datenbankoperationen als direkte "Tools" — ohne manuelles SQL-Kopieren.</p>
+        <div class="code" style="margin-top:14px;">
+          <span class="code-comment">// Früher (ohne MCP):</span><br>
+          KI schreibt SQL<br>
+          → Mensch kopiert SQL<br>
+          → Mensch führt SQL aus<br>
+          <br>
+          <span class="code-comment">// Jetzt (mit MCP):</span><br>
+          KI schreibt SQL<br>
+          → <span class="code-cmd">KI führt SQL direkt aus</span><br>
+          → Ergebnis sofort verfügbar
+        </div>
+      </div>
+      <div>
+        <p><strong>Was Claude nach MCP-Einrichtung autonom kann:</strong></p>
+        <ul style="margin-top:8px;padding-left:18px;font-size:.88rem;">
+          <li style="margin-bottom:5px;">Tabellen in Supabase erstellen</li>
+          <li style="margin-bottom:5px;">Daten direkt in die DB einfügen</li>
+          <li style="margin-bottom:5px;">Daten abfragen und auswerten</li>
+          <li style="margin-bottom:5px;">Programme bauen, die sich aus der DB speisen</li>
+          <li>Kein manuelles SQL-Kopieren mehr nötig</li>
+        </ul>
+        <div class="learn" style="margin-top:12px;">
+          <div class="learn-head">💡 Noch wichtig (To-Do)</div>
+          <ul>
+            <li>MCP-Server anlegen</li>
+            <li>Supabase mit Claude verbinden</li>
+            <li>📺 Video ab 11:40 Uhr nachspielen</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DMS KONZEPT -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s9)"></div><h3>DMS — Dokumentenmanagementsystem als Anwendungsfall</h3></div>
+  <div class="card-wide">
+    <div class="cw-title">📂 Die vollständige DMS-Prozesskette (Ziel)</div>
+    <div class="code">
+<span class="code-comment">// 1. EINGANG (automatisch):</span><br>
+E-Mail empfangen → PDF-Anhang erkannt<br>
+→ OCR (Mistral-API) liest Dokumententext aus<br>
+→ KI kategorisiert: Rechnung / Angebot / Lieferschein / ...<br>
+→ SQL INSERT → Eintrag in dms_documents<br>
+<br>
+<span class="code-comment">// 2. VERWALTUNG (HTML-Weboberfläche):</span><br>
+HTML-App → Supabase SELECT → Tabelle anzeigen<br>
+Filter: Typ, Status, Datum, Mitarbeiter, Absender<br>
+Drag &amp; Drop: PDF direkt hochladen<br>
+<br>
+<span class="code-comment">// 3. HANDLUNGSBEDARFE (Automatismen):</span><br>
+Rechnung erkannt → Prüfaufgabe erzeugen<br>
+Rückstand &gt; 10 Dokumente → Alarm<br>
+Genehmigt → PDF automatisch weiterleiten
+    </div>
+    <div class="grid-2" style="margin-top:16px;">
+      <div class="learn">
+        <div class="learn-head">💡 ZFGs Idee: Schachabteilung automatisieren</div>
+        <ul>
+          <li>Sprachnachricht an Telegram: "Neues Mitglied: Max Muster, 15.03.1990, max@mail.de"</li>
+          <li>OpenAI: Speech-to-Text → Daten strukturiert extrahieren</li>
+          <li>SQL INSERT → Mitgliederdatenbank in Supabase</li>
+          <li>GitHub-Script löst automatisch Geburtstags-Mail aus</li>
+        </ul>
+      </div>
+      <div class="praxis">
+        <div class="praxis-head">🔧 To-Do für ZFG</div>
+        <ul>
+          <li>Supabase-Konto anlegen</li>
+          <li>SQL-Tabelle für DMS einrichten</li>
+          <li>DMS als HTML-App erstellen lassen</li>
+          <li>OCR via Mistral-API einbauen</li>
+          <li>Drag &amp; Drop ergänzen</li>
+          <li>MCP-Server einrichten</li>
+          <li>📺 Video ab 11:40 Uhr nachspielen</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARCHITEKTUR -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s9)"></div><h3>Die vollständige App-Architektur (Stand Session 6)</h3></div>
+  <div class="card-wide">
+    <div class="cw-title">🏗️ Alle Bausteine zusammen</div>
+    <div class="code">
+<span class="code-comment">// FRONTEND:</span><br>
+HTML-App <span class="code-val">(Netlify-Hosting)</span><br>
+&nbsp;&nbsp;↕ API-Calls<br>
+<span class="code-comment">// BACKEND / DATENBANK:</span><br>
+Supabase <span class="code-val">(PostgreSQL + Dateispeicher + Edge Functions)</span><br>
+&nbsp;&nbsp;↕ MCP-Server<br>
+<span class="code-comment">// KI-STEUERUNG:</span><br>
+Claude Code <span class="code-val">(baut alle Schichten)</span><br>
+&nbsp;&nbsp;↕ API<br>
+<span class="code-comment">// EXTERNE DIENSTE:</span><br>
+OpenAI (LLM, TTS, OCR) · Telegram · Wetter · Lichess ...<br>
+&nbsp;&nbsp;↕ GitHub<br>
+<span class="code-comment">// VERSIONIERUNG &amp; DEPLOY:</span><br>
+GitHub Repository <span class="code-val">(Auto-Deploy zu Netlify)</span>
+    </div>
+    <div class="learn" style="margin-top:14px;">
+      <div class="learn-head">💡 Das große Bild</div>
+      <ul>
+        <li>Programm (HTML) + Hosting (Netlify) + Schnittstellen (API) + Datenbank (Supabase) = vollständige App</li>
+        <li>Claude Code baut alle Schichten — du gibst die Richtung vor</li>
+        <li>Nächster Schritt: Eigene Projekte mit dieser Architektur umsetzen</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- KERNAUSSAGEN -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s9)"></div><h3>Kernaussagen der Session</h3></div>
+  <div class="grid-2">
+    <div class="card card-accent-s9">
+      <div class="card-title">💬 Marco Heer</div>
+      <div class="quote">"Datenbanken sind Excel-Tabellen auf Koks."</div>
+      <div class="quote">"Früher haben Programmierer Datenbanken von Hand programmiert, befüllt und abgefragt. Jetzt schreibt KI das SQL — und via MCP führt sie es direkt aus."</div>
+      <div class="quote">"Es gibt 100 verschiedene Wege, wie Daten reinkommen — Webformular, Sprachnachricht, E-Mail, API. Welchen wähle ich?"</div>
+      <div class="quote">"Claude baut nur die Infrastruktur. Danach läuft sie autark — unabhängig davon, ob Claude offen ist oder nicht."</div>
+    </div>
+    <div class="card card-accent-s9">
+      <div class="card-title">🔮 Ausblick &amp; nächste Schritte</div>
+      <p style="margin-bottom:10px;">Nächste Sessions: Umsetzungsbegleitung — die eigenen Projekte der Teilnehmer werden konkret weitergebaut.</p>
+      <table class="tbl">
+        <tr><th>Werkzeug</th><th>Zweck</th></tr>
+        <tr><td>supabase.com</td><td>Datenbank + Storage + Edge Functions</td></tr>
+        <tr><td>SQL Editor</td><td>SQL-Befehle direkt in Supabase ausführen</td></tr>
+        <tr><td>MCP-Server</td><td>Claude ↔ Supabase Direktverbindung</td></tr>
+        <tr><td>Mistral-API</td><td>OCR — Dokumente maschinell auslesen</td></tr>
+        <tr><td>Render.com</td><td>Telegram-Bot dauerhaft online hosten</td></tr>
+      </table>
+    </div>
+  </div>
+
+</div><!-- end s9 -->
+
 <footer>
   Synclaro KI-Coaching · Gruppencoaching Mai 2026 &nbsp;·&nbsp; Erstellt mit Claude Code (claude-sonnet-4-6) &nbsp;·&nbsp; Offline-fähig · keine externen Abhängigkeiten
 </footer>
 
 <script>
 function show(n){
-  ['s1','s2','s3','s4','s5','s6','s7','s8'].forEach(id=>{
+  ['s1','s2','s3','s4','s5','s6','s7','s8','s9'].forEach(id=>{
     const el=document.getElementById(id);
     if(el) el.style.display='none';
   });
