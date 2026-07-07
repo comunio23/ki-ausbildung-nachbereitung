@@ -14,6 +14,7 @@
   --s6:#E11D48; --s6l:#FFF1F2; --s6d:#9F1239;
   --s7:#6D28D9; --s7l:#F5F3FF; --s7d:#4C1D95;
   --s9:#14B8A6; --s9l:#F0FDFA; --s9d:#0F766E;
+  --s10:#D97706; --s10l:#FFFBEB; --s10d:#92400E;
   --bg:#F1F5F9; --white:#FFFFFF; --dark:#0F172A;
   --text:#1E293B; --muted:#64748B; --border:#E2E8F0;
   --learn-bg:#FFFBEB; --learn-br:#F59E0B;
@@ -46,6 +47,7 @@ a{color:inherit;}
 .tab-btn.active-s7{color:var(--s7);border-bottom-color:var(--s7);}
 .tab-btn.active-s8{color:var(--s7);border-bottom-color:var(--s7);}
 .tab-btn.active-s9{color:var(--s9);border-bottom-color:var(--s9);}
+.tab-btn.active-s10{color:var(--s10);border-bottom-color:var(--s10);}
 .tab-new{background:var(--s3);color:#fff;font-size:.65rem;padding:2px 6px;border-radius:10px;font-weight:700;}
 
 /* ── LAYOUT ──────────────────── */
@@ -87,6 +89,7 @@ a{color:inherit;}
 .card-accent-s6{border-left:4px solid var(--s6);}
 .card-accent-s7{border-left:4px solid var(--s7);}
 .card-accent-s9{border-left:4px solid var(--s9);}
+.card-accent-s10{border-left:4px solid var(--s10);}
 
 /* ── WIDE CARD (full width) ──── */
 .card-wide{background:var(--white);border-radius:var(--r);padding:28px;box-shadow:0 1px 4px rgba(0,0,0,.07);border:1px solid var(--border);margin-bottom:20px;}
@@ -136,6 +139,7 @@ code{background:#F1F5F9;color:#BE185D;padding:1px 5px;border-radius:4px;font-siz
 .hero-s6{background:linear-gradient(135deg,#9F1239,#E11D48,#FB7185);color:#fff;}
 .hero-s7{background:linear-gradient(135deg,#4C1D95,#6D28D9,#8B5CF6);color:#fff;}
 .hero-s9{background:linear-gradient(135deg,#0F766E,#14B8A6,#2DD4BF);color:#fff;}
+.hero-s10{background:linear-gradient(135deg,#92400E,#D97706,#FBBF24);color:#fff;}
 /* ── PROJECT CARD ─────────────── */
 .proj-card{background:var(--white);border-radius:var(--r);padding:24px;box-shadow:0 2px 8px rgba(0,0,0,.08);border:1px solid var(--border);position:relative;overflow:hidden;}
 .proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;}
@@ -144,6 +148,11 @@ code{background:#F1F5F9;color:#BE185D;padding:1px 5px;border-radius:4px;font-siz
 .proj-card-3::before{background:var(--s4);}
 .proj-card-4::before{background:var(--s2);}
 .proj-card-5::before{background:var(--s6);}
+.proj-card-6::before{background:var(--s5);}
+.proj-card-7::before{background:var(--s9);}
+.proj-card-8::before{background:var(--s7);}
+.proj-card-9::before{background:var(--s10);}
+.proj-card-10::before{background:var(--s3);}
 .proj-icon{font-size:2.2rem;margin-bottom:12px;}
 .proj-name{font-size:1.05rem;font-weight:800;color:var(--dark);margin-bottom:6px;}
 .proj-desc{font-size:.87rem;color:var(--muted);margin-bottom:12px;line-height:1.6;}
@@ -241,7 +250,7 @@ footer{text-align:center;padding:28px;color:var(--muted);font-size:.8rem;margin-
     <div class="hdr-title">Synclaro KI-Coaching</div>
     <div class="hdr-sub">Lernplattform · Gruppencoaching Mai 2026</div>
   </div>
-  <div class="hdr-badge">9 Kapitel · bis Juni 2026</div>
+  <div class="hdr-badge">10 Kapitel · bis Juli 2026</div>
 </header>
 
 <!-- ═══════════════ TABS ════════════════ -->
@@ -266,21 +275,22 @@ footer{text-align:center;padding:28px;color:var(--muted);font-size:.8rem;margin-
     <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#0891B2" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#0891B2" font-weight="700">5</text></svg>
     Session 5 · 10. Juni
   </button>
-  <button class="tab-btn" data-s="6" onclick="show(6)">
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#0891B2" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#0891B2" font-weight="700">6</text></svg>
-    🧠 WM V2
-  </button>
-  <button class="tab-btn" data-s="7" onclick="show(7)">
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#E11D48" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#E11D48" font-weight="700">7</text></svg>
-    🔧 Betriebsanleitung
-  </button>
-  <button class="tab-btn" data-s="8" onclick="show(8)">
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#6D28D9" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#6D28D9" font-weight="700">8</text></svg>
-    🗂️ Meine Projekte
-  </button>
   <button class="tab-btn" data-s="9" onclick="show(9)">
     <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#14B8A6" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#14B8A6" font-weight="700">6</text></svg>
     Session 6 · 17. Juni
+  </button>
+  <button class="tab-btn" data-s="10" onclick="show(10)">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><rect width="14" height="14" rx="3" fill="#D97706" opacity=".2"/><text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#D97706" font-weight="700">7</text></svg>
+    Session 7 · 1. Juli
+  </button>
+  <button class="tab-btn" data-s="6" onclick="show(6)">
+    🧠 Wissensmanagement V2
+  </button>
+  <button class="tab-btn" data-s="7" onclick="show(7)">
+    🔧 Betriebsanleitung
+  </button>
+  <button class="tab-btn" data-s="8" onclick="show(8)">
+    🗂️ Meine Projekte
   </button>
 </nav>
 
@@ -2549,17 +2559,110 @@ Wissensdateien &gt;200 Zeilen: NUR Executive Summary + Kapitelverzeichnis (erste
     <div class="hero-icon">🗂️</div>
     <div>
       <h2>Meine Projekte — Was ich mit Claude Code gebaut habe</h2>
-      <p>Von der einfachen Zeiterfassung bis zum Vergabevermerk-Generator mit PDF-Export. Diese Apps entstanden innerhalb weniger Wochen — jede mit einem Prompt als Startpunkt.</p>
+      <p>Von der einfachen Zeiterfassung bis zu Live-Systemen mit eigener Datenbank, OCR-Erkennung und Telegram-Anbindung. Diese Apps entstanden innerhalb weniger Wochen — jede mit einem Prompt als Startpunkt, Stand: Anfang Juli 2026.</p>
       <div class="hero-meta">
         <span class="hero-tag">🌐 Netlify Live-Apps</span>
-        <span class="hero-tag">📱 Offline-fähige HTML-Apps</span>
-        <span class="hero-tag">🔧 Google Apps Script</span>
+        <span class="hero-tag">🗄️ Supabase-Datenbanken</span>
+        <span class="hero-tag">🤖 Telegram-Bot</span>
         <span class="hero-tag">📄 PDF/Word/Excel-Export</span>
       </div>
     </div>
   </div>
 
-  <div class="sec-head"><div class="sec-dot" style="background:var(--s7)"></div><h3>5 Apps — entstanden im Coaching</h3></div>
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s10)"></div><h3>Neueste Projekte — Juni/Juli 2026: Von HTML-Tools zu Live-Systemen mit Datenbank</h3></div>
+
+  <div class="grid-2">
+
+    <!-- PROJEKT: DMS -->
+    <div class="proj-card proj-card-6">
+      <div class="proj-icon">🗄️</div>
+      <div class="proj-name">DMS — Dokumentenmanagementsystem</div>
+      <div class="proj-desc">Belege und Dokumente per Foto/Upload einreichen, automatische Texterkennung per Mistral-OCR, Kategorisierung und Ablage in einer echten SQL-Datenbank (Supabase). Das Beispielprojekt aus Session 6, inzwischen produktiv im Einsatz.</div>
+      <div>
+        <span class="proj-tag">Supabase</span>
+        <span class="proj-tag">Mistral OCR</span>
+        <span class="proj-tag">Edge Functions</span>
+        <span class="proj-tag">SQL-Datenbank</span>
+      </div>
+      <div class="learn" style="margin-top:12px;">
+        <div class="learn-head">💡 Stolperstein: Pixtral ≠ Mistral OCR</div>
+        <p style="font-size:.84rem;color:#78350F;">Mistral bietet mehrere Modelle an — das Bildanalyse-Modell "Pixtral" kann keine PDFs lesen, das eigentliche OCR-Modell "Mistral OCR" schon. Verwechslung kostete zunächst Zeit, wurde in Session 7 aufgeklärt.</p>
+      </div>
+    </div>
+
+    <!-- PROJEKT: KATHARINENHOF FUHRPARK -->
+    <div class="proj-card proj-card-7">
+      <div class="proj-icon">🚗</div>
+      <div class="proj-name">Katharinenhof Fuhrpark-Manager</div>
+      <div class="proj-desc">Von Google Sheets komplett auf Supabase/SQL umgestellt. Automatische TÜV-Mailerinnerung, DSGVO-Prüfung durchgeführt und offener Datenbankzugriff durch echten Supabase-Auth-Login abgesichert (Row Level Security).</div>
+      <div>
+        <span class="proj-tag">Supabase</span>
+        <span class="proj-tag">Row Level Security</span>
+        <span class="proj-tag">GitHub Actions</span>
+        <span class="proj-tag">DSGVO-geprüft</span>
+      </div>
+      <div style="margin-top:12px;">
+        <div class="proj-live">🌐 Live: fuhrpark-katharinenhof.netlify.app</div>
+      </div>
+      <div class="praxis" style="margin-top:12px;">
+        <div class="praxis-head">🔧 Sicherheitslücke geschlossen</div>
+        <p style="font-size:.84rem;">Jeder mit der Netlify-URL konnte zuvor die komplette Datenbank lesen/schreiben. Fix: Row-Level-Security + echter Login — Frontend blieb dabei optisch unverändert.</p>
+      </div>
+    </div>
+
+    <!-- PROJEKT: CHESS COACH -->
+    <div class="proj-card proj-card-8">
+      <div class="proj-icon">♟️</div>
+      <div class="proj-name">Chess Coach App</div>
+      <div class="proj-desc">Eröffnungscoach mit Lichess-Datenbank und Claude-Chat, Gegner-Scouting samt Trainingsmodus — und neu: eine Partien-Verwaltung, die handschriftliche Turnierformulare per Foto einliest (OCR), die Züge automatisch aufs Brett überträgt und mit Stockfish sowie Claude analysierbar macht.</div>
+      <div>
+        <span class="proj-tag">Lichess-API</span>
+        <span class="proj-tag">Mistral OCR</span>
+        <span class="proj-tag">Stockfish-Engine</span>
+        <span class="proj-tag">Claude-Chat</span>
+      </div>
+      <div style="margin-top:12px;">
+        <div class="proj-live">🌐 Live: chess-coach-app-713.netlify.app</div>
+      </div>
+    </div>
+
+    <!-- PROJEKT: HÖRBUCH-BOT -->
+    <div class="proj-card proj-card-9">
+      <div class="proj-icon">🎧</div>
+      <div class="proj-name">Marvin-Hörbuch-Bot (Telegram)</div>
+      <div class="proj-desc">Persönlicher Telegram-Bot: erzeugt auf Zuruf Hörbücher zu beliebigen Themen (Wetter, Fachdossiers, Schach-Scouting) per KI-Sprachausgabe. Läuft inzwischen nicht mehr lokal, sondern als Supabase Edge Function — reagiert auch auf Sprachnachrichten wie "Heimweg" mit einer Live-Verkehrsansage.</div>
+      <div>
+        <span class="proj-tag">Telegram-Bot</span>
+        <span class="proj-tag">Supabase Edge Function</span>
+        <span class="proj-tag">OpenAI TTS</span>
+        <span class="proj-tag">Whisper</span>
+      </div>
+      <div class="learn" style="margin-top:12px;">
+        <div class="learn-head">💡 Vom Dauerbetrieb zur Cloud</div>
+        <p style="font-size:.84rem;color:#78350F;">Musste anfangs dauerhaft auf dem eigenen PC laufen (lokales Polling). Migration auf Supabase Edge Functions + Webhook macht ihn 24/7 erreichbar, ganz ohne laufenden Rechner.</p>
+      </div>
+    </div>
+
+    <!-- PROJEKT: MALLORCA TRIP -->
+    <div class="proj-card proj-card-10">
+      <div class="proj-icon">🏖️</div>
+      <div class="proj-name">Gruppenreise-Website (Mallorca)</div>
+      <div class="proj-desc">Private Beispielanwendung außerhalb der Handwerks-Praxis: gemeinsame, passwortgeschützte Reiseseite für 6 Personen mit Live-Packliste, Wunschliste, Fotos und Chatbot — alle Änderungen synchronisieren live über Supabase Realtime auf allen Geräten gleichzeitig.</div>
+      <div>
+        <span class="proj-tag">Supabase Realtime</span>
+        <span class="proj-tag">Netlify Functions</span>
+        <span class="proj-tag">OpenAI-Chatbot</span>
+        <span class="proj-tag">Live-Sync</span>
+      </div>
+      <div class="praxis" style="margin-top:12px;">
+        <div class="praxis-head">🔧 Warum interessant fürs Coaching?</div>
+        <p style="font-size:.84rem;">Zeigt, dass dasselbe Supabase+Netlify-Muster aus den Handwerksprojekten 1:1 auch für private Zwecke funktioniert — echte Mehrbenutzer-Synchronisation ganz ohne eigenen Server.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s7)"></div><h3>5 Apps — entstanden im Coaching (Start)</h3></div>
 
   <div class="grid-2">
 
@@ -2687,6 +2790,11 @@ Wissensdateien &gt;200 Zeilen: NUR Executive Summary + Kapitelverzeichnis (erste
       <div style="font-size:1.8rem;margin-bottom:6px;">📄</div>
       <div class="card-title" style="justify-content:center;font-size:.9rem;">Multi-Format-Export</div>
       <p style="font-size:.82rem;color:var(--muted);">Vergabevermerk-Generator — PDF + Word + Excel gleichzeitig. Claude Code beherrscht auch komplexe Dokumenten-Workflows</p>
+    </div>
+    <div class="card" style="text-align:center;border-top:3px solid var(--s5);">
+      <div style="font-size:1.8rem;margin-bottom:6px;">🗄️</div>
+      <div class="card-title" style="justify-content:center;font-size:.9rem;">Echte Datenbank statt Excel</div>
+      <p style="font-size:.82rem;color:var(--muted);">DMS, Fuhrpark-Manager, Chess Coach — alle inzwischen auf Supabase umgestellt: mehrgerätefähig, in Echtzeit, mit Login abgesichert</p>
     </div>
   </div>
 
@@ -2991,13 +3099,316 @@ GitHub Repository <span class="code-val">(Auto-Deploy zu Netlify)</span>
 
 </div><!-- end s9 -->
 
+<!-- ══════════════════════════════════════════════════════════
+     SESSION 7 — 1. JULI 2026
+══════════════════════════════════════════════════════════ -->
+<div id="s10" class="session" style="display:none">
+
+  <div class="hero hero-s10">
+    <div class="hero-icon">🕵️</div>
+    <div>
+      <h2>Session 7 — Awareness-Testing, Architektur &amp; Datenschutz</h2>
+      <p>Warum "prüf nochmal alles" bei Claude nicht funktioniert — und der 6-Schritte-Workflow, der stattdessen 95 % des eigenen Testens übernimmt. Außerdem: die komplette DMS-Architektur mit Edge Functions, und ein Datenschutz-Entscheidungsbaum für echte Kundendaten.</p>
+      <div class="hero-meta">
+        <span class="hero-tag">📅 1. Juli 2026</span>
+        <span class="hero-tag">🧪 Autonomes Testing</span>
+        <span class="hero-tag">🧩 Edge Functions</span>
+        <span class="hero-tag">🔒 DSGVO</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PERSÖNLICHE NOTIZEN -->
+  <div class="sec-head"><div class="sec-dot" style="background:var(--s10)"></div><h3>Persönliche Notizen &amp; To-Do (ZFG)</h3></div>
+  <div class="card-wide card-accent-s10">
+    <div class="cw-title">📝 Ausgangspunkt: "Prüf nochmal alles" funktioniert nicht zuverlässig</div>
+    <p style="font-size:.9rem;">Beim Fuhrparkmanager-Umbau auf Supabase wurde ein neues Auto im Frontend korrekt angezeigt — tauchte aber trotz Prompt "prüf noch mal alles auf Richtigkeit" nicht in der SQL-Datenbank auf. Korrektur kostete eine halbe Stunde und zwei Anläufe. Genau dieses Erlebnis war der Auslöser für das Hauptthema der Session.</p>
+    <div class="learn" style="margin-top:12px;">
+      <div class="learn-head">✅ To-Do-Liste</div>
+      <ul style="padding-left:18px;">
+        <li>Mailerinnerung für Fuhrparkmanager bauen (Alarm &lt; 60 Tage)</li>
+        <li>Awareness-Testing-Workflow bei eigenen Projekten anwenden</li>
+        <li>Architekturdiagramm des eigenen Projekts selbst zeichnen (Hausaufgabe)</li>
+        <li>Reasoning-Effort-Regler bewusst vor jedem Prompt einstellen</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- STATUS-RUNDE -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s10)"></div><h3>Status-Runde — Was hat die Gruppe umgesetzt?</h3></div>
+  <div class="grid-2">
+    <div class="pcard"><div class="pcard-name">Fabian</div><div class="pcard-role">Teilnehmer</div><div class="pcard-built">DMS-Hausaufgabe: bei Mistral-OCR hängengeblieben, weil versehentlich <span>Pixtral</span> (Bildmodell) statt <span>Mistral OCR</span> verwendet wurde. Ansonsten fertig: PDF-Upload und Testdaten funktionieren.</div></div>
+    <div class="pcard"><div class="pcard-name">Andreas</div><div class="pcard-role">Teilnehmer</div><div class="pcard-built">Kein neuer App-Fortschritt — Fokus auf Fragen zur eigenen CLAUDE.md-Struktur: eine übergeordnete Datei + je Projekt eine eigene, inkl. "Versuchsprojekte".</div></div>
+    <div class="pcard"><div class="pcard-name">Tobias</div><div class="pcard-role">Teilnehmer</div><div class="pcard-built">Aus dem Urlaub zurück: Wissensdatenbank für neues Programm "Bautask" gebaut — passwortgeschütztes HTML-Dashboard, reine Frage-Antwort-Sammlung, <span>keine API-Aufrufe</span> aus dem HTML (daher unkritisch bei API-Key-Sicherheit).</div></div>
+    <div class="pcard"><div class="pcard-name">Marvin (ZFG)</div><div class="pcard-role">HWK-Berater</div><div class="pcard-built"><span>Fuhrparkmanager</span> erfolgreich von Google Sheets auf Supabase/SQL umgestellt — dabei den Awareness-Bug entdeckt. DMS mit Mistral-OCR ebenfalls fertiggestellt.</div></div>
+    <div class="pcard"><div class="pcard-name">Janine</div><div class="pcard-role">Neu/wieder dabei</div><div class="pcard-built">Grundsatzdiskussion mit ihrem Mann (beide nutzen Claude, berufliche Überschneidungen bei Geodaten/QGIS) — wie baut man <span>ein</span> gemeinsames System statt drei getrennte? Sehr aktiv im Datenschutz-Exkurs zu US-Servern.</div></div>
+  </div>
+
+  <!-- HAUPTTHEMA: AWARENESS-TESTING -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s10)"></div><h3>1. Hauptthema — Warum "Prüf nochmal alles" nicht funktioniert</h3></div>
+  <div class="card-wide">
+    <div class="cw-title">🕵️ Das eigentliche Problem ist kein Qualitäts-, sondern ein Awareness-Problem</div>
+    <p style="font-size:.9rem;">KI findet und behebt Fehler dort zuverlässig, wo sie hinschaut. Das Problem sind Stellen, an die sie schlicht nicht hinschaut — der Prompt "Schau nochmal, ob alles passt" sagt ihr nicht, WOHIN sie schauen soll.</p>
+    <div class="warn" style="margin-top:12px;padding:12px 16px;background:var(--warn-bg);border:1.5px solid var(--warn-br);border-radius:var(--r-sm);">
+      <strong>🚫 Dieser Prompt ist verboten:</strong> „Jetzt schau noch mal, ob alles in Ordnung ist und gut läuft."
+    </div>
+  </div>
+
+  <div class="card-wide" style="margin-top:16px;">
+    <div class="cw-title">✅ Der empfohlene 6-Schritte-Workflow</div>
+    <table class="tbl">
+      <tr><th>Schritt</th><th>Aktion</th></tr>
+      <tr><td>1</td><td>NICHT fragen: "Schau nochmal, ob alles passt" (siehe oben)</td></tr>
+      <tr><td>2</td><td><code>/post</code> — alles Gebaute/Gelernte ins Wissensmanagement sichern</td></tr>
+      <tr><td>3</td><td><code>/compact</code> — Kontextfenster verdichten, Claude "frisch im Kopf" für die Testphase</td></tr>
+      <tr><td>4</td><td>Codebase-Analyse — jede Funktionalität, jeden Datenfluss sichtbar machen</td></tr>
+      <tr><td>5</td><td>Autonome Testung per Browser-Usage inkl. MCP-Datenbank-Verifikation</td></tr>
+      <tr><td>6</td><td>Reasoning Effort auf <strong>Ultracode</strong> stellen</td></tr>
+    </table>
+
+    <p style="margin-top:14px;font-size:.87rem;"><strong>Schritt 4 — Codebase-Analyse (reine Awareness-Herstellung):</strong></p>
+    <div class="code">
+Führe jetzt nochmal eine Codebase-Analyse durch, in der du dir nochmal<br>
+jede Funktionalität auf den Schirm rufst, die es gibt. Dazu gehört:<br>
+jeder Datenspeicherort<br>
+jeder Datenfluss<br>
+jede Datenverarbeitung<br>
+jede User-Interaktion im Frontend (also alle Knöpfe, alle Eingabefenster,<br>
+alle Links, alles, was irgendwie testbar ist)
+    </div>
+
+    <p style="margin-top:14px;font-size:.87rem;"><strong>Schritt 5 — Autonome Testung mittels Browser-Usage (der zentrale Prompt der Session):</strong></p>
+    <div class="code">
+Autonome Testung mittels Browser-Usage von Frontend: Sämtliche<br>
+Funktionalitäten, die geklickt werden können oder getippt werden können,<br>
+müssen entweder über Chrome oder über Playwright komplett autonom<br>
+getestet werden. Außerdem müssen dann alle Konsequenzen gemessen werden:<br>
+Datenbank-Einträge, Weiterleitungen, Erwartungshaltungen, die man eben<br>
+einfach haben darf, wenn man im Frontend irgendetwas macht. Außerdem<br>
+müssen alle weiteren Features, die dieses Programm bzw. diese Anwendung,<br>
+die wir gemacht haben, hat, getestet werden. Erstelle ein umfangreiches<br>
+Testing-Szenario, wie es von einem professionellen Softwarehaus<br>
+erschaffen würde, um sowohl Datensicherheit als auch User Experience und<br>
+Datenflüsse komplett autonom durchzutesten. Teste das komplett autonom<br>
+durch, gib das Testing-Protokoll dann noch mal an einen Subagenten, um<br>
+zu überprüfen, ob wirklich alles gut gelaufen ist.
+    </div>
+    <p style="margin-top:10px;font-size:.87rem;">Tool-Use-Muster: <strong>Browser Usage → MCP Supabase-Check → ggf. Fehlerbehebung.</strong> Claude öffnet dabei selbst einen Browser, klickt jeden möglichen Klick durch, prüft per MCP direkt in Supabase, ob z. B. ein neu angelegter Datensatz wirklich angekommen ist, und liest zusätzlich die Entwicklerkonsole auf Fehlermeldungen aus.</p>
+    <div class="quote" style="margin-top:10px;">"Diese ganze Testung, die ihr sonst eigentlich mit Klicken und Machen tun müsstet, kann man von KI abverlangen. Dauert halt ein Weilchen länger, dann geht ihr halt einen Kaffee trinken." — Marco Heer</div>
+    <p style="margin-top:8px;font-size:.85rem;color:var(--muted);">Ersetzt laut Marco Heer ca. 95 % des eigenen manuellen Testings. Wichtig: die Prompt-Kette nicht blind wiederverwenden, sondern selbst nachformulieren — das trainiert den Transfer auf eigene Projekte.</p>
+  </div>
+
+  <!-- REASONING EFFORT / ULTRACODE -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s10)"></div><h3>2. Reasoning Effort &amp; Ultracode — Subagenten-Konzept</h3></div>
+  <div class="card-wide">
+    <table class="tbl">
+      <tr><th>Stufe</th><th>Verhalten</th></tr>
+      <tr><td>Niedrig</td><td>Für "Pümpelaufgaben" — schnelle, unwichtige Anfragen, Antwort oft in ~5 Sekunden</td></tr>
+      <tr><td>Mittel</td><td>Standard-Denkaufwand</td></tr>
+      <tr><td>Max</td><td>Denkt sehr lange nach (bis ~20 Min), sinnvoll bei komplexen Sachverhalten</td></tr>
+      <tr><td><strong>Ultracode</strong></td><td>Standardmäßig hoher Denkaufwand <strong>plus</strong> autonomes Ausschwärmen von Subagenten</td></tr>
+    </table>
+    <p style="margin-top:12px;font-size:.9rem;">Statt selbst im Hauptkontext eine aufwändige Codebase-Analyse durchzuführen (und dabei viele Tokens zu verbrauchen), delegiert Claude solche Teilaufgaben an Subagenten, die autonom arbeiten und nur ein knappes, verdichtetes Ergebnis zurückliefern — Claude wird so zum Koordinator.</p>
+    <div class="quote" style="margin-top:10px;">"Und das hat dann halt nur ein paar tausend Token gekostet statt ein paar hunderttausend." — Marco Heer</div>
+    <div class="quote">"Ich bediene das Reasoning-Effort-Ding ungefähr so viel wie die Kupplung beim Autofahren." — Marco Heer</div>
+    <div class="learn" style="margin-top:12px;">
+      <div class="learn-head">💡 Wichtiger technischer Hinweis</div>
+      <p style="font-size:.85rem;color:#78350F;">Der Reasoning-Effort-Regler lässt sich nur direkt an der Konversations-Quelle ändern — nicht, solange eine Session per Remote Control ferngesteuert wird.</p>
+    </div>
+  </div>
+
+  <!-- REMOTE CONTROL / NEUES INTERFACE -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s10)"></div><h3>3. Remote Control &amp; das neue Claude-Interface</h3></div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">📡 Remote Control (<code>/RC</code>)</div>
+      <ul style="padding-left:18px;font-size:.87rem;">
+        <li style="margin-bottom:6px;">Schaltet die Session fernsteuerbar — von jedem Gerät mit demselben Account</li>
+        <li style="margin-bottom:6px;">Ursprünglicher Rechner muss dabei durchgehend eingeschaltet bleiben</li>
+        <li style="margin-bottom:6px;">Praktisch: abends am Handy noch eine große Testaufgabe über Nacht anstoßen</li>
+        <li>Empfehlung: alle potenziell später benötigten Sessions direkt auf RC schalten</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">🖥️ Claude-App statt Terminal</div>
+      <ul style="padding-left:18px;font-size:.87rem;">
+        <li style="margin-bottom:6px;">"Ordner öffnen" statt manuellem <code>cd</code> im Terminal</li>
+        <li style="margin-bottom:6px;">Bis zu 99 parallele Sitzungen möglich (Chat-Multitasking)</li>
+        <li style="margin-bottom:6px;">Kontextfenster-Auslastung und Abo-Kontingent direkt sichtbar</li>
+        <li>Modellauswahl direkt im Interface</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card-wide" style="margin-top:12px;">
+    <div class="cw-title">🔐 Berechtigungsstufen</div>
+    <table class="tbl">
+      <tr><th>Modus</th><th>Verhalten</th></tr>
+      <tr><td>Änderungen akzeptieren</td><td>Darf nichts neu anlegen, aber kleinere Änderungen ohne Rückfrage</td></tr>
+      <tr><td>Planmodus</td><td>Reines Schreibverbot, nur Planung — nützlich für Vorab-Planung größerer Projekte</td></tr>
+      <tr><td>Auto-Modus</td><td>Fast alles erlaubt, nur wirklich kritische Aktionen brauchen Absegnung — <strong>von Marco Heer als Dauereinstellung empfohlen</strong></td></tr>
+    </table>
+  </div>
+
+  <!-- CLAUDE.MD GLOBAL VS LOKAL -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s10)"></div><h3>4. CLAUDE.md — Globale vs. lokale Projektdateien</h3></div>
+  <div class="card-wide">
+    <p style="font-size:.9rem;">Claude sucht bei Sessionstart <strong>immer und exakt</strong> nach Dateien namens <code>CLAUDE.md</code>: einmal global (z. B. im Nutzerverzeichnis) und dann alle lokalen entlang des Pfades zum Projektordner. Liegt keine dort, wird nichts gelesen — das ist kein Fehler.</p>
+    <div class="grid-2" style="margin-top:12px;">
+      <div class="card" style="margin:0;">
+        <div class="card-title" style="font-size:.9rem;">🌍 Global</div>
+        <p style="font-size:.85rem;">Übergeordnete Regeln, die für ALLES gelten — Verhaltensregeln, allgemeine Prinzipien.</p>
+      </div>
+      <div class="card" style="margin:0;">
+        <div class="card-title" style="font-size:.9rem;">📁 Lokal (pro Projekt)</div>
+        <p style="font-size:.85rem;">Nur für dieses eine Projekt relevant — z. B. "hier liegt Supabase", DSGVO-Verweis.</p>
+      </div>
+    </div>
+    <div class="learn" style="margin-top:12px;">
+      <div class="learn-head">💡 Marco Heers eigene globale CLAUDE.md als Vorbild</div>
+      <ul style="padding-left:18px;font-size:.85rem;color:#78350F;">
+        <li style="margin-bottom:4px;"><strong>Vier Prinzipien</strong> (nach Andrej Karpathy): Annahmen offenlegen, bei Mehrdeutigkeit Optionen nennen, minimaler Code, gezielte statt komplette Neuschreibung</li>
+        <li style="margin-bottom:4px;"><strong>Drei-Agenten-Architektur:</strong> ein Bauender, ein ständig Kritisierender, ein externer Quality-Checker</li>
+        <li><strong>Multi-Model-Cross-Check</strong> über OpenRouter: GPT-5.4, Kimi K2.6, Qwen 3.6 schauen zusätzlich mit</li>
+      </ul>
+    </div>
+    <p style="margin-top:12px;font-size:.87rem;"><strong>Empfehlung zu DSGVO:</strong> nicht in die globale CLAUDE.md schreiben (sprengt den Fokus), sondern nur ein kurzer Verweis in der lokalen — vollständige DSGVO-Prüfung am Ende als eigener Subagenten-Auftrag:</p>
+    <div class="code">
+Launch einen Subagenten. Das war alles, was wir hier gemacht haben,<br>
+DSGVO-kritisch beleuchten und sofort Bescheid geben, wie wir das zu tun<br>
+haben, damit es jetzt nicht nur technisch gut gedacht ist, sondern auch<br>
+DSGVO-technisch gut gedacht ist.
+    </div>
+  </div>
+
+  <!-- DATENSCHUTZ-EXKURS -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s10)"></div><h3>5. Datenschutz-Exkurs — Der Entscheidungsbaum (PII, AVV, DPA)</h3></div>
+  <div class="card-wide">
+    <p style="font-size:.9rem;"><strong>PII</strong> (Personally Identifiable Information) = alles, was Rückschluss auf eine konkrete Person zulässt. Zwei Vertragswerke regeln den Umgang damit:</p>
+    <table class="tbl" style="margin-top:8px;">
+      <tr><th>Kürzel</th><th>Bedeutung</th><th>Regelt</th></tr>
+      <tr><td>AVV</td><td>Auftragsverarbeitungsvertrag</td><td>Speicherung von Daten</td></tr>
+      <tr><td>DPA</td><td>Data Privacy Agreement</td><td>Verarbeitung von Daten</td></tr>
+    </table>
+    <p style="margin-top:10px;font-size:.87rem;">Wichtig: Sobald Daten in den USA gespeichert/verarbeitet werden, wird die Wirksamkeit eines AVV nach aktueller DSGVO-Linie faktisch ausgehebelt.</p>
+    <div class="cw-title" style="margin-top:16px;">🌳 Der Entscheidungsbaum</div>
+    <div class="code">
+1. Dürfen wir die Daten so verarbeiten/speichern?<br>
+   Ja → weitermachen · Nein → weiter zu 2.<br>
+<br>
+2. Können wir AVV/DPA abschließen, um es zu dürfen?<br>
+   Ja → weitermachen (Ausnahme z.B. Gesundheitsdaten) · Nein → weiter zu 3.<br>
+<br>
+3. Verarbeitung/Speicherung auf konforme Lösung umstellen:<br>
+   → Lokal hosten (lokale Supabase-Instanz, lokales KI-Modell/OCR)<br>
+   → Datensatz vorher anonymisieren/pseudonymisieren<br>
+   → Proxy-Modell: lokales Modell prüft Prompt vorab, nur Unkritisches<br>
+     geht an die öffentliche/US-KI
+    </div>
+    <div class="grid-2" style="margin-top:12px;">
+      <div class="card" style="margin:0;">
+        <div class="card-title" style="font-size:.9rem;">✅ Praktisch unkritisch</div>
+        <p style="font-size:.85rem;">Reines Programmieren/Testen, private Nutzung mit eigenen Testdaten — hier spielt DSGVO praktisch keine Rolle.</p>
+      </div>
+      <div class="card" style="margin:0;">
+        <div class="card-title" style="font-size:.9rem;">⚠️ Relevant wird es bei…</div>
+        <p style="font-size:.85rem;">Echten (Kunden-)Daten im Firmeneinsatz — und deutlich kritischer beim Verkauf an Dritte.</p>
+      </div>
+    </div>
+    <p style="margin-top:12px;font-size:.87rem;">Mistral ist EU-ansässig — sobald ein AVV mit Mistral besteht, ist die OCR-Verarbeitung weitgehend datenschutzkonform nutzbar.</p>
+    <div class="warn" style="margin-top:12px;padding:12px 16px;background:var(--warn-bg);border:1.5px solid var(--warn-br);border-radius:var(--r-sm);">
+      <strong>🔑 API-Keys niemals im HTML/Frontend:</strong> Wird das HTML weitergegeben, "fliegt der Schlüssel mit durch die Gegend". Lösung: API-Calls über eine Edge Function (Backend) statt direkt aus dem Frontend.
+    </div>
+  </div>
+
+  <!-- FRONTEND VS BACKEND -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s10)"></div><h3>6. Von der HTML-Seite zum richtigen Programm</h3></div>
+  <div class="card-wide">
+    <p style="font-size:.9rem;">Anhand von Fabians DMS demonstriert: eine reine HTML-Datei (lokaler Dateipfad in der URL-Zeile) ist ein reines Frontend — Eingaben landen meist nur lokal im Browser, keine Kollaboration. Für ein produktives Programm braucht es immer <strong>Frontend UND Backend</strong>.</p>
+    <p style="margin-top:12px;font-size:.87rem;"><strong>Praxis-Prompt für den Umbau:</strong></p>
+    <div class="code">
+Wir möchten das Ganze gerne jetzt zu einem ordentlichen Programm umbauen.<br>
+Würdest du dafür bitte einmal zunächst ein auf Localhost gehostetes<br>
+Programm daraus machen? Mach gerne eine Sicherheitskopie des Programms<br>
+vorher (idealerweise über Versionskontrolle/GitHub für Disaster Recovery).
+    </div>
+    <p style="margin-top:10px;font-size:.85rem;color:var(--muted);">Danach: neue Session im definierten Projektordner starten — nur so werden automatisch die richtigen CLAUDE.md-Dateien eingelesen und Claude behält den Kontext, statt mit Informationen überhäuft zu werden.</p>
+  </div>
+
+  <!-- DMS ARCHITEKTUR -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s10)"></div><h3>7. Vollständige DMS-Architektur (am Whiteboard erarbeitet)</h3></div>
+  <div class="card-wide">
+    <div class="cw-title">🏗️ Die Bausteine und ihre Reihenfolge</div>
+    <div class="code">
+1. PROGRAMMIERER (Claude Code) → baut Frontend + richtet Datenbank ein<br>
+<br>
+2. FRONTEND (HTML, z.B. auf Netlify) → zeigt Daten aus Supabase,<br>
+   Drag &amp; Drop-Fenster für Dokumente<br>
+<br>
+3. Datei landet NICHT direkt in der Datenbank, sondern im<br>
+   DATEISPEICHER (Supabase Storage) → triggert eine EDGE FUNCTION<br>
+<br>
+4. EDGE FUNCTION:<br>
+   Schritt 1 — OCR: Mistral OCR (OCR Latest, NICHT Pixtral!) liest Text<br>
+   Schritt 2 — DSGVO-Prüfung: sensible Daten? ja/nein<br>
+   Schritt 3 — Kategorisierung per KI-Aufruf (Rechnung/Angebot/...)<br>
+   Schritt 4 — Handlungsbedarf: z.B. Rechnung &gt; 50€ → Telegram-Freigabe<br>
+<br>
+5. Edge Function schreibt Ergebnis zurück in die DATENBANK<br>
+<br>
+6. CLAUDE ↔ SUPABASE über MCP-Server: Direktzugriff ohne Kopieren<br>
+<br>
+7. Optional: Edge Function löst Telegram-Nachricht aus<br>
+   (z.B. "Monatliche Auswertung an Marvin senden")
+    </div>
+    <p style="margin-top:12px;font-size:.87rem;">Eine Edge Function ist kein fertiges Anbieter-Produkt, sondern <strong>selbst geschriebener Code</strong> (wie ein Python-/JS-Skript), der bei Supabase läuft — dort, wo die Daten sind, unabhängig von der eigenen Hardware, abgesichert durch den mit Supabase geschlossenen AVV.</p>
+    <div class="quote" style="margin-top:12px;">"Datenspeicherung hat in einer Datenbank zu erfolgen, Dateispeicherung hat in einem Dateispeicher zu erfolgen. KI-Calls haben nicht aus dem HTML raus zu erfolgen, sondern aus einer Edge Function heraus. Das ist der Unterschied zwischen Vibe-Coding und professionalisierter Architektur." — Marco Heer</div>
+  </div>
+
+  <!-- AUSBLICK -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s10)"></div><h3>8. Ausblick — nächste Themen</h3></div>
+  <div class="card-wide">
+    <ul style="padding-left:18px;font-size:.88rem;">
+      <li style="margin-bottom:6px;"><strong>RAG / Vektordatenbanken:</strong> für sehr große Dateimengen (komplette DSGVO als PDF, viele DMS-Dokumente) — angekündigt als "wahrscheinlich das Komplexeste, was ich euch jemals beibringen werde"</li>
+      <li style="margin-bottom:6px;">Andere KI-Modelle als Critic/Qualitätsprüfer neben Anthropic einsetzen (Multi-Model-Cross-Check)</li>
+      <li style="margin-bottom:6px;">Subagenten im Detail (bisher nur angerissen)</li>
+      <li>Mögliche Umstellung von wöchentlichen Gruppensessions auf individuelle Umsetzungsbegleitung — die Themen sind inzwischen so komplex, dass Übungszeit wichtiger ist als neuer Stoff</li>
+    </ul>
+    <div class="quote" style="margin-top:10px;">"Ohne Anwendung müssen wir das jede drei Wochen wiederholen und dann geht es wieder verloren. Das geht nur mit Üben." — Marco Heer</div>
+  </div>
+
+  <!-- KERNAUSSAGEN -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s10)"></div><h3>Kernaussagen der Session</h3></div>
+  <div class="grid-2">
+    <div class="card card-accent-s10">
+      <div class="card-title">💬 Marco Heer</div>
+      <div class="quote">"KI hat nicht das Problem, dass das, was sie auf dem Schirm hat, schlecht gebaut ist. KI hat das Problem, dass irgendwo Fehlerchen sind, wo sie gar nicht erst hingeguckt hat."</div>
+      <div class="quote">"Ultracode bedeutet, dass standardmäßig auf hoch gestellt wird, aber dass die Möglichkeit besteht, Subagenten autonom ausschwärmen zu lassen."</div>
+      <div class="quote">"Im programmierten Code haben Variablen niemals irgendwas verloren. Keys sind eben schon Variablen — die liegen verschlüsselt, das geht dann schon."</div>
+    </div>
+    <div class="card card-accent-s10">
+      <div class="card-title">🔧 Wichtige Werkzeuge</div>
+      <table class="tbl">
+        <tr><th>Werkzeug</th><th>Zweck</th></tr>
+        <tr><td><code>/post</code> / <code>/compact</code></td><td>Wissen sichern, dann Kontext verdichten vor der Testphase</td></tr>
+        <tr><td>Ultracode</td><td>Höchster Denkaufwand + autonomes Subagenten-Ausschwärmen</td></tr>
+        <tr><td>Browser-Usage + MCP</td><td>Autonomes End-to-End-Testen inkl. DB-Verifikation</td></tr>
+        <tr><td>Remote Control (<code>/RC</code>)</td><td>Session ortsunabhängig fernsteuerbar machen</td></tr>
+        <tr><td>Mistral OCR vs. Pixtral</td><td>OCR-Modell vs. reines Bildmodell — nicht verwechseln</td></tr>
+        <tr><td>Edge Functions</td><td>Backend-Logik, sicherer Ort für API-Keys</td></tr>
+        <tr><td>AVV / DPA</td><td>Vertragsgrundlagen für Speicherung / Verarbeitung</td></tr>
+      </table>
+    </div>
+  </div>
+
+</div><!-- end s10 -->
+
 <footer>
   Synclaro KI-Coaching · Gruppencoaching Mai 2026 &nbsp;·&nbsp; Erstellt mit Claude Code (claude-sonnet-4-6) &nbsp;·&nbsp; Offline-fähig · keine externen Abhängigkeiten
 </footer>
 
 <script>
 function show(n){
-  ['s1','s2','s3','s4','s5','s6','s7','s8','s9'].forEach(id=>{
+  ['s1','s2','s3','s4','s5','s6','s7','s8','s9','s10'].forEach(id=>{
     const el=document.getElementById(id);
     if(el) el.style.display='none';
   });
@@ -3011,7 +3422,7 @@ function show(n){
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-document.addEventListener('DOMContentLoaded',()=>show(4));
+document.addEventListener('DOMContentLoaded',()=>show(10));
 </script>
 </body>
 </html>
