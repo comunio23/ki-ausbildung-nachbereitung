@@ -15,6 +15,7 @@
   --s7:#6D28D9; --s7l:#F5F3FF; --s7d:#4C1D95;
   --s9:#14B8A6; --s9l:#F0FDFA; --s9d:#0F766E;
   --s10:#D97706; --s10l:#FFFBEB; --s10d:#92400E;
+  --s11:#4F46E5; --s11l:#EEF2FF; --s11d:#3730A3;
   --bg:#F1F5F9; --white:#FFFFFF; --dark:#0F172A;
   --text:#1E293B; --muted:#64748B; --border:#E2E8F0;
   --learn-bg:#FFFBEB; --learn-br:#F59E0B;
@@ -48,6 +49,7 @@ a{color:inherit;}
 .tab-btn.active-s8{color:var(--s7);border-bottom-color:var(--s7);}
 .tab-btn.active-s9{color:var(--s9);border-bottom-color:var(--s9);}
 .tab-btn.active-s10{color:var(--s10);border-bottom-color:var(--s10);}
+.tab-btn.active-s11{color:var(--s11);border-bottom-color:var(--s11);}
 .tab-new{background:var(--s3);color:#fff;font-size:.65rem;padding:2px 6px;border-radius:10px;font-weight:700;}
 
 /* ── LAYOUT ──────────────────── */
@@ -90,6 +92,19 @@ a{color:inherit;}
 .card-accent-s7{border-left:4px solid var(--s7);}
 .card-accent-s9{border-left:4px solid var(--s9);}
 .card-accent-s10{border-left:4px solid var(--s10);}
+.card-accent-s11{border-left:4px solid var(--s11);}
+/* ── PROMPT CARDS ─────────────── */
+.prompt-card{background:var(--white);border:1px solid var(--border);border-left:4px solid var(--s11);border-radius:var(--r);padding:20px 22px;margin-bottom:18px;box-shadow:0 2px 8px rgba(0,0,0,.05);}
+.prompt-head{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap;}
+.prompt-title{font-size:1.02rem;font-weight:800;color:var(--dark);}
+.prompt-badge{font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:20px;background:var(--s11l);color:var(--s11d);}
+.prompt-sub{font-size:.86rem;color:var(--muted);margin-bottom:12px;}
+.prompt-box{position:relative;background:#0F172A;border-radius:var(--r-sm);padding:16px 18px;padding-top:42px;}
+.prompt-text{color:#E2E8F0;font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;font-size:.82rem;line-height:1.6;white-space:pre-wrap;word-break:break-word;}
+.copy-btn{position:absolute;top:9px;right:10px;background:var(--s11);color:#fff;border:none;border-radius:6px;padding:6px 12px;font-size:.76rem;font-weight:700;cursor:pointer;transition:background .15s;display:inline-flex;align-items:center;gap:5px;}
+.copy-btn:hover{background:var(--s11d);}
+.copy-btn.copied{background:#059669;}
+.prompt-when{font-size:.8rem;color:var(--s11d);background:var(--s11l);border-radius:var(--r-sm);padding:8px 12px;margin-top:12px;}
 
 /* ── WIDE CARD (full width) ──── */
 .card-wide{background:var(--white);border-radius:var(--r);padding:28px;box-shadow:0 1px 4px rgba(0,0,0,.07);border:1px solid var(--border);margin-bottom:20px;}
@@ -140,6 +155,7 @@ code{background:#F1F5F9;color:#BE185D;padding:1px 5px;border-radius:4px;font-siz
 .hero-s7{background:linear-gradient(135deg,#4C1D95,#6D28D9,#8B5CF6);color:#fff;}
 .hero-s9{background:linear-gradient(135deg,#0F766E,#14B8A6,#2DD4BF);color:#fff;}
 .hero-s10{background:linear-gradient(135deg,#92400E,#D97706,#FBBF24);color:#fff;}
+.hero-s11{background:linear-gradient(135deg,#3730A3,#4F46E5,#818CF8);color:#fff;}
 /* ── PROJECT CARD ─────────────── */
 .proj-card{background:var(--white);border-radius:var(--r);padding:24px;box-shadow:0 2px 8px rgba(0,0,0,.08);border:1px solid var(--border);position:relative;overflow:hidden;}
 .proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;}
@@ -291,6 +307,9 @@ footer{text-align:center;padding:28px;color:var(--muted);font-size:.8rem;margin-
   </button>
   <button class="tab-btn" data-s="8" onclick="show(8)">
     🗂️ Meine Projekte
+  </button>
+  <button class="tab-btn" data-s="11" onclick="show(11)">
+    💬 Prompt-Sammlung
   </button>
 </nav>
 
@@ -3402,13 +3421,200 @@ vorher (idealerweise über Versionskontrolle/GitHub für Disaster Recovery).
 
 </div><!-- end s10 -->
 
+<!-- ══════════════════════════════════════════════════════════
+     PROMPT-SAMMLUNG
+══════════════════════════════════════════════════════════ -->
+<div id="s11" class="session" style="display:none">
+
+  <div class="hero hero-s11">
+    <div class="hero-icon">💬</div>
+    <div>
+      <h2>Prompt-Sammlung — Deine geprüften Standard-Prompts</h2>
+      <p>Nie wieder bei null anfangen: Hier liegen deine wichtigsten Prompts, sortiert nach Thema. Auf „Kopieren" klicken, in Claude Code einfügen, ggf. anpassen — fertig. Ideal am Ende einer Bauphase, bevor du eine Anwendung wirklich nutzt.</p>
+      <div class="hero-meta">
+        <span class="hero-tag">🧪 Funktionsprüfung</span>
+        <span class="hero-tag">🛡️ Sicherheit</span>
+        <span class="hero-tag">🔒 DSGVO</span>
+        <span class="hero-tag">✨ Sorgfalt</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-wide card-accent-s11">
+    <div class="cw-title">📌 So nutzt du die Sammlung</div>
+    <p style="font-size:.9rem;">Jeder Prompt hat einen <strong>Kopieren-Button</strong> oben rechts. Die Prompts sind so formuliert, dass Claude Code sie eigenständig ausführen kann. Kombiniere sie ruhig: erst <em>Sorgfalt</em> beim Bauen, dann <em>Funktionsprüfung</em>, dann <em>Sicherheit</em> und <em>DSGVO</em> vor dem Livegang. Passe Platzhalter wie [Anwendung] an dein Projekt an.</p>
+  </div>
+
+  <!-- ══ FUNKTIONSPRÜFUNG ══ -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s11)"></div><h3>🧪 Funktionsprüfung — Autonomes Testing (Awareness)</h3></div>
+
+  <div class="prompt-card">
+    <div class="prompt-head">
+      <span class="prompt-title">Der vollständige 6-Schritte-Workflow</span>
+      <span class="prompt-badge">Marco Heer · Session 7</span>
+    </div>
+    <div class="prompt-sub">Der komplette Ablauf gegen das „prüf nochmal alles"-Problem. Schritt für Schritt eingeben — oder als Ganzes übergeben.</div>
+    <div class="prompt-box">
+      <button class="copy-btn" onclick="copyPrompt(this)">📋 Kopieren</button>
+      <div class="prompt-text">Wir gehen jetzt von der Bauphase in die Testphase über. Bitte arbeite die folgenden Schritte der Reihe nach ab:
+
+1. Frage mich NICHT einfach "ist alles in Ordnung?" — das reicht nicht.
+
+2. Führe ein /post durch, damit alles bisher Gebaute im Wissensmanagement gesichert ist.
+
+3. Führe ein /compact durch, damit du frisch im Kopf bist, aber weiterhin weißt, worum es geht.
+
+4. Führe eine vollständige Codebase-Analyse durch, in der du dir jede Funktionalität auf den Schirm rufst. Dazu gehört:
+   - jeder Datenspeicherort
+   - jeder Datenfluss
+   - jede Datenverarbeitung
+   - jede User-Interaktion im Frontend (alle Knöpfe, alle Eingabefenster, alle Links, alles, was irgendwie testbar ist)
+
+5. Autonome Testung mittels Browser-Usage des Frontends: Sämtliche Funktionalitäten, die geklickt oder getippt werden können, testest du komplett autonom über Chrome oder Playwright. Miss dabei ALLE Konsequenzen:
+   - Datenbank-Einträge (prüfe direkt in der Datenbank, ob der Datensatz wirklich angekommen ist)
+   - Weiterleitungen
+   - berechtigte Erwartungshaltungen, die man hat, wenn man im Frontend etwas tut
+   - die Entwicklerkonsole auf Fehlermeldungen
+   Teste außerdem alle weiteren Features dieser Anwendung. Erstelle ein umfangreiches Testing-Szenario, wie es ein professionelles Softwarehaus aufsetzen würde, um Datensicherheit, User Experience und Datenflüsse komplett autonom durchzutesten. Teste das vollständig autonom durch und gib das Testing-Protokoll anschließend an einen Subagenten weiter, der überprüft, ob wirklich alles gut gelaufen ist.
+
+6. Stelle den Reasoning Effort auf Ultracode.</div>
+    </div>
+    <div class="prompt-when">💡 Wann? Immer am Übergang von „gebaut" zu „soll jetzt genutzt werden" — insbesondere bei Apps mit Datenbank (Supabase), wo Frontend und DB auseinanderlaufen können.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-head">
+      <span class="prompt-title">Kompakt-Variante (nur die autonome Testung)</span>
+      <span class="prompt-badge">Kurzform</span>
+    </div>
+    <div class="prompt-sub">Wenn Wissen schon gesichert ist und du nur schnell die eigentliche Prüfung anstoßen willst.</div>
+    <div class="prompt-box">
+      <button class="copy-btn" onclick="copyPrompt(this)">📋 Kopieren</button>
+      <div class="prompt-text">Führe eine autonome Testung dieser Anwendung mittels Browser-Usage durch. Rufe dir zuerst jede Funktionalität, jeden Datenspeicherort, jeden Datenfluss und jede User-Interaktion im Frontend auf den Schirm. Teste dann sämtliche klick- und tippbaren Funktionen komplett autonom über Chrome oder Playwright und miss jeweils die Konsequenzen: Landet der Datensatz wirklich in der Datenbank? Stimmen Weiterleitungen? Gibt es Fehler in der Entwicklerkonsole? Erstelle ein professionelles Testing-Szenario, teste vollständig autonom durch und lass das Ergebnis abschließend von einem Subagenten gegenprüfen.</div>
+    </div>
+  </div>
+
+  <!-- ══ SICHERHEIT ══ -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s11)"></div><h3>🛡️ Sicherheitsprüfung — Security Awareness</h3></div>
+
+  <div class="prompt-card">
+    <div class="prompt-head">
+      <span class="prompt-title">Vollständiges Security-Audit</span>
+      <span class="prompt-badge">Vor dem Livegang</span>
+    </div>
+    <div class="prompt-sub">Prüft die häufigsten Schwachstellen von KI-gebauten HTML/JS-Web-Apps: offengelegte API-Keys, ungeschützte Datenbanken, fehlende Authentifizierung.</div>
+    <div class="prompt-box">
+      <button class="copy-btn" onclick="copyPrompt(this)">📋 Kopieren</button>
+      <div class="prompt-text">Starte einen Subagenten für ein gründliches Sicherheits-Audit dieser Anwendung. Gehe vor wie ein Senior-Security-Experte für Web-Apps und prüfe systematisch auf einwandfreie Sicherheitsvorkehrungen:
+
+1. GEHEIMNISSE / API-KEYS
+   - Liegt irgendwo ein API-Key, Passwort oder Token im Frontend-Code (HTML/JS), das mit ausgeliefert wird? Solche Schlüssel dürfen niemals im Client landen.
+   - Werden KI-/API-Calls direkt aus dem HTML gemacht? Falls ja: auf eine Edge Function oder serverseitige Function umstellen, wo der Schlüssel verschlüsselt/als Umgebungsvariable liegt.
+
+2. DATENBANK-ZUGRIFF (falls Supabase o.ä.)
+   - Ist Row Level Security (RLS) aktiv? Gibt es versehentlich offene Policies (z.B. "anon" darf alles lesen/schreiben/löschen)?
+   - Kann ein Fremder mit der reinen Frontend-URL über den öffentlichen Key die komplette Datenbank auslesen oder verändern?
+
+3. AUTHENTIFIZIERUNG
+   - Ist ein echter Login vorhanden oder nur ein Klartext-Passwortvergleich im Code?
+   - Werden Sitzungen/Token sicher gehandhabt?
+
+4. DATENFLÜSSE & EINGABEN
+   - Werden Nutzereingaben validiert? Bestehen Injection-Risiken?
+   - Werden Fehler beim Speichern still verschluckt (scheinbar erfolgreich, obwohl nichts gespeichert wurde)?
+
+5. HOSTING / DEPLOYMENT
+   - Liegen Secrets korrekt als Umgebungsvariablen (Netlify/Supabase/GitHub) und nicht im Repository?
+
+Erstelle einen priorisierten Befund (kritisch / hoch / mittel / niedrig) mit konkreter Fundstelle und jeweils einem umsetzbaren Lösungsvorschlag. Behebe im Anschluss nach meiner Freigabe die kritischen Punkte, ohne bestehende Funktionalität oder Optik zu verändern.</div>
+    </div>
+    <div class="prompt-when">💡 Merke (Session 7): „Ein HTML mit API-Schlüssel einfach rumreichen ist nicht gut." Sobald ein Frontend eine KI/API direkt anspricht, muss der Schlüssel über eine Edge Function laufen — nie im Client.</div>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-head">
+      <span class="prompt-title">Schnell-Check: API-Keys &amp; Weitergabe</span>
+      <span class="prompt-badge">Kurzform</span>
+    </div>
+    <div class="prompt-sub">Bevor du eine HTML-Datei oder App an Kollegen/Kunden weitergibst.</div>
+    <div class="prompt-box">
+      <button class="copy-btn" onclick="copyPrompt(this)">📋 Kopieren</button>
+      <div class="prompt-text">Ich möchte diese Anwendung an andere weitergeben. Marco hat gesagt: ein HTML mit API-Schlüssel einfach herumreichen ist nicht sicher. Prüfe bitte, ob irgendein API-Key, Passwort oder geheimes Token im ausgelieferten Frontend-Code steckt, und ob KI-/API-Calls direkt aus dem HTML gemacht werden. Falls ja, zeige mir elegant, wie wir das absichern (z.B. über eine Edge Function mit dem Schlüssel als serverseitiges Secret), ohne die Bedienung zu verändern.</div>
+    </div>
+  </div>
+
+  <!-- ══ DSGVO ══ -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s11)"></div><h3>🔒 DSGVO-Prüfung — Datenschutz</h3></div>
+
+  <div class="prompt-card">
+    <div class="prompt-head">
+      <span class="prompt-title">DSGVO-Audit per Subagent</span>
+      <span class="prompt-badge">Am Projektende</span>
+    </div>
+    <div class="prompt-sub">Prüft die fertige Anwendung gegen die DSGVO — anhand des Entscheidungsbaums PII → AVV/DPA → konforme Lösung aus Session 7.</div>
+    <div class="prompt-box">
+      <button class="copy-btn" onclick="copyPrompt(this)">📋 Kopieren</button>
+      <div class="prompt-text">Starte einen Subagenten, der alles, was wir in dieser Anwendung gebaut haben, DSGVO-kritisch beleuchtet und mir sofort Bescheid gibt, wie wir es umsetzen müssen — damit es nicht nur technisch gut gedacht ist, sondern auch datenschutztechnisch. Prüfe entlang dieses Entscheidungsbaums:
+
+1. Werden personenbezogene Daten (PII) verarbeitet oder gespeichert? PII = alles, was einen Rückschluss auf eine konkrete Person zulässt (Name, Geburtsdatum, Ausweis-/Kundennummer in Verbindung mit Namen usw.). Liste konkret auf, welche Datenfelder betroffen sind.
+
+2. Dürfen wir diese Daten so verarbeiten/speichern?
+   - Falls nicht: Lässt es sich durch einen Auftragsverarbeitungsvertrag (AVV, regelt Speicherung) bzw. ein Data Privacy Agreement (DPA, regelt Verarbeitung) mit den genutzten Anbietern erlauben? Nenne die betroffenen Dienste (z.B. Supabase, Anbieter der KI/OCR, Hosting) und ob dort ein AVV/DPA verfügbar ist.
+   - Achtung: Werden Daten in den USA gespeichert/verarbeitet, wird ein AVV nach aktueller DSGVO-Linie faktisch ausgehebelt. Weise mich darauf hin, wo US-Dienste im Spiel sind.
+
+3. Falls weiterhin nicht zulässig: Schlage konkrete konforme Alternativen vor —
+   - lokal hosten (z.B. lokale Datenbank-Instanz, lokal laufendes KI-/OCR-Modell),
+   - Datensatz vorher anonymisieren/pseudonymisieren (identifizierende Merkmale entfernen),
+   - Proxy-Modell (lokales Modell prüft jeden Prompt vorab; nur unkritische Inhalte gehen an eine öffentliche/US-KI).
+
+Bitte beziehe dich auf die relevanten DSGVO-Artikel (u.a. Art. 5, 25, 28, 30, 32, 44) und gib mir am Ende eine priorisierte Maßnahmenliste. Du bist keine Rechtsberatung — es geht um eine solide technische Datenschutz-Einschätzung.</div>
+    </div>
+    <div class="prompt-when">💡 Tipp: Den vollständigen Gesetzestext hast du lokal als <code>Amtsblatt_EU_DSGVO.pdf</code> auf dem Desktop — den kannst du dem Subagenten als Prüfgrundlage beilegen.</div>
+  </div>
+
+  <div class="card" style="border:1.5px solid var(--s11);background:var(--s11l);">
+    <div class="card-title" style="color:var(--s11d);">📖 DSGVO-Gesetzestext zum Nachschlagen</div>
+    <p style="font-size:.88rem;">Für schnelle Artikel-Recherche (Definitionen, Betroffenenrechte, Auftragsverarbeitung):</p>
+    <ul style="font-size:.88rem;padding-left:18px;margin-top:6px;">
+      <li style="margin-bottom:4px;"><a href="https://dsgvo-gesetz.de/" target="_blank" rel="noopener" style="color:var(--s11d);font-weight:700;">dsgvo-gesetz.de</a> — vollständige DSGVO, artikelweise durchsuchbar (deutsch, mit Erwägungsgründen)</li>
+      <li style="margin-bottom:4px;"><a href="https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32016R0679" target="_blank" rel="noopener" style="color:var(--s11d);font-weight:700;">EUR-Lex (Verordnung 2016/679)</a> — amtliche Fassung der EU</li>
+      <li>Lokal auf deinem Desktop: <code>Amtsblatt_EU_DSGVO.pdf</code></li>
+    </ul>
+  </div>
+
+  <!-- ══ SORGFALT ══ -->
+  <div class="sec-head" style="margin-top:8px;"><div class="sec-dot" style="background:var(--s11)"></div><h3>✨ Sorgfalt &amp; Qualität — beim Bauen</h3></div>
+
+  <div class="prompt-card">
+    <div class="prompt-head">
+      <span class="prompt-title">Sorgfältig arbeiten statt schneller Prototyp</span>
+      <span class="prompt-badge">Dein Prompt</span>
+    </div>
+    <div class="prompt-sub">An den Anfang eines Bau-Auftrags stellen, damit das Ergebnis wie ein durchdachtes Werkzeug wirkt.</div>
+    <div class="prompt-box">
+      <button class="copy-btn" onclick="copyPrompt(this)">📋 Kopieren</button>
+      <div class="prompt-text">Arbeite bitte sehr sorgfältig.
+
+Die Anwendung soll nicht wie ein schneller Prototyp wirken, sondern wie ein sauber durchdachtes internes Werkzeug für Verwaltungs- und Projektarbeit.
+
+Achte besonders auf:
+- einfache Bedienung
+- zuverlässige Exporte
+
+Wenn du beim Aufbau Annahmen treffen musst, triff bitte pragmatische Annahmen und dokumentiere sie kurz. Frage nur dann nach, wenn eine Umsetzung ohne Rückfrage nicht sinnvoll möglich ist.</div>
+    </div>
+    <div class="prompt-when">💡 Wann? Direkt zu Beginn eines neuen Bau-Auftrags — setzt den Qualitätsanspruch, bevor der erste Code entsteht.</div>
+  </div>
+
+</div><!-- end s11 -->
+
 <footer>
   Synclaro KI-Coaching · Gruppencoaching Mai 2026 &nbsp;·&nbsp; Erstellt mit Claude Code (claude-sonnet-4-6) &nbsp;·&nbsp; Offline-fähig · keine externen Abhängigkeiten
 </footer>
 
 <script>
 function show(n){
-  ['s1','s2','s3','s4','s5','s6','s7','s8','s9','s10'].forEach(id=>{
+  ['s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11'].forEach(id=>{
     const el=document.getElementById(id);
     if(el) el.style.display='none';
   });
@@ -3420,6 +3626,30 @@ function show(n){
   const btn=document.querySelector('[data-s="'+n+'"]');
   if(btn) btn.className='tab-btn active-s'+n;
   window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function copyPrompt(btn){
+  const box=btn.closest('.prompt-box').querySelector('.prompt-text');
+  const text=box.innerText;
+  const done=()=>{
+    const orig=btn.innerHTML;
+    btn.innerHTML='✓ Kopiert';
+    btn.classList.add('copied');
+    setTimeout(()=>{btn.innerHTML=orig;btn.classList.remove('copied');},1600);
+  };
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done).catch(()=>fallbackCopy(text,done));
+  }else{
+    fallbackCopy(text,done);
+  }
+}
+function fallbackCopy(text,cb){
+  const ta=document.createElement('textarea');
+  ta.value=text;ta.style.position='fixed';ta.style.opacity='0';
+  document.body.appendChild(ta);ta.focus();ta.select();
+  try{document.execCommand('copy');}catch(e){}
+  document.body.removeChild(ta);
+  if(cb)cb();
 }
 
 document.addEventListener('DOMContentLoaded',()=>show(10));
